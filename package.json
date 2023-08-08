@@ -1,7 +1,7 @@
 {
-  "name": "keyval-design-system",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@keyval-org/design-system",
+  "version": "0.1.2",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,5 +20,18 @@
     "reactflow": "11.7.4",
     "styled-components": "6.0.7",
     "typescript": "5.1.6"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "./src/index.tsx",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyval-dev/design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyval-dev/design-system/issues"
+  },
+  "homepage": "https://github.com/keyval-dev/design-system#readme"
 }
