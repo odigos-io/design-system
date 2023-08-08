@@ -7,7 +7,7 @@ export const LoaderWrapper = styled.div`
   height: 100%;
 `;
 
-export const Loader = styled.div`
+export const StyledLoader = styled.div`
   width: 48px;
   height: 48px;
   border: 4px solid;

@@ -3,7 +3,7 @@ import { SearchInputWrapper, StyledSearchInput } from "./search.input.styled";
 import Glass from "@/assets/icons/glass.svg";
 import X from "@/assets/icons/X.svg";
 
-interface KeyvalSearchInputProps {
+interface SearchInputProps {
   placeholder?: string;
   value?: string;
   onChange?: (e: any) => void;
@@ -13,7 +13,7 @@ interface KeyvalSearchInputProps {
   showClear?: boolean;
 }
 
-export function KeyvalSearchInput({
+export function SearchInput({
   placeholder = "Search",
   value = "",
   onChange = () => {},
@@ -21,7 +21,7 @@ export function KeyvalSearchInput({
   containerStyle = {},
   inputStyle = {},
   showClear = true,
-}: KeyvalSearchInputProps) {
+}: SearchInputProps) {
   const clear = value
     ? () =>
         onChange({

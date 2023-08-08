@@ -13,7 +13,7 @@ export const CheckboxWrapper = styled.div<CheckboxWrapperProps>`
   opacity: ${({ disabled }) => (disabled ? "0.5" : "1")};
 `;
 
-export const Checkbox = styled.span`
+export const CheckboxItem = styled.span`
   width: 16px;
   height: 16px;
   border: ${({ theme }) => `solid 1px ${theme.colors.light_grey}`};

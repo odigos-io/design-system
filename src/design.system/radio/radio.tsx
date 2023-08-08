@@ -1,6 +1,6 @@
 import React, { useState, FC, ChangeEvent } from "react";
 import { RadioButtonContainer, RadioButtonBorder } from "./radio.styled";
-import { KeyvalText } from "@/design.system/text/text";
+import { Text } from "@/design.system/text/text";
 import Checked from "../../assets/icons/checked-radio.svg";
 interface RadioButtonProps {
   label?: string;
@@ -8,7 +8,7 @@ interface RadioButtonProps {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const KeyvalRadioButton: FC<RadioButtonProps> = ({
+export const RadioButton: FC<RadioButtonProps> = ({
   label = "",
   onChange,
   value,
@@ -22,7 +22,7 @@ export const KeyvalRadioButton: FC<RadioButtonProps> = ({
       <div onClick={handleChange}>
         {value ? <Checked width={25} height={25} /> : <RadioButtonBorder />}
       </div>
-      <KeyvalText>{label}</KeyvalText>
+      <Text>{label}</Text>
     </RadioButtonContainer>
   );
 };

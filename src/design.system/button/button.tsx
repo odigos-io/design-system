@@ -6,7 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
 }
 
-export const KeyvalButton: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   variant = "primary",
   children,
   style,

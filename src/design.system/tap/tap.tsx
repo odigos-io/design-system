@@ -1,4 +1,4 @@
-import { KeyvalText } from "@/design.system/text/text";
+import { Text } from "@/design.system/text/text";
 import React from "react";
 import styled from "styled-components";
 
@@ -27,7 +27,7 @@ const TapWrapper = styled.div<TapWrapperProps>`
     selected ? theme.colors.dark_blue : "transparent"};
 `;
 
-export function KeyvalTap({
+export function Tap({
   title = "",
   tapped,
   children,
@@ -41,14 +41,14 @@ export function KeyvalTap({
       style={{ ...style, cursor: onClick ? "pointer" : "auto" }}
     >
       {children}
-      <KeyvalText
+      <Text
         weight={400}
         size={14}
         color={tapped ? "#CCD0D2" : "#8B92A5"}
         style={{ cursor: onClick ? "pointer" : "auto" }}
       >
         {title}
-      </KeyvalText>
+      </Text>
     </TapWrapper>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import { Loader, LoaderWrapper } from "./loader.styled";
+import { StyledLoader, LoaderWrapper } from "./loader.styled";
 
-export function KeyvalLoader() {
+export function Loader() {
   return (
     <LoaderWrapper>
-      <Loader />
+      <StyledLoader />
     </LoaderWrapper>
   );
 }

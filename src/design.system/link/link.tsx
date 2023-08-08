@@ -1,8 +1,8 @@
 import React from "react";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 import { styled } from "styled-components";
 
-interface KeyvalLinkProps {
+interface LinkProps {
   value: string;
   onClick?: () => void;
 }
@@ -14,10 +14,10 @@ const LinkContainer = styled.div`
   }
 `;
 
-export function KeyvalLink({ value, onClick }: KeyvalLinkProps) {
+export function Link({ value, onClick }: LinkProps) {
   return (
     <LinkContainer onClick={onClick}>
-      <KeyvalText color="#0EE6F3">{value}</KeyvalText>
+      <Text color="#0EE6F3">{value}</Text>
     </LinkContainer>
   );
 }

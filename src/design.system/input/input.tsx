@@ -6,7 +6,7 @@ import {
   LabelWrapper,
   DisplayIconsWrapper,
 } from "./input.styled";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 import EyeOpenIcon from "@/assets/icons/eye-open.svg";
 import EyeCloseIcon from "@/assets/icons/eye-close.svg";
 interface InputProps {
@@ -18,7 +18,7 @@ interface InputProps {
   style?: React.CSSProperties;
 }
 
-export function KeyvalInput({
+export function Input({
   label,
   value,
   onChange,
@@ -36,9 +36,9 @@ export function KeyvalInput({
     <>
       {label && (
         <LabelWrapper>
-          <KeyvalText size={14} weight={600}>
+          <Text size={14} weight={600}>
             {label}
-          </KeyvalText>
+          </Text>
         </LabelWrapper>
       )}
       <StyledInputContainer
@@ -64,9 +64,9 @@ export function KeyvalInput({
       </StyledInputContainer>
       {error && (
         <ErrorWrapper>
-          <KeyvalText size={14} color={"#FD3F3F"}>
+          <Text size={14} color={"#FD3F3F"}>
             {error}
-          </KeyvalText>
+          </Text>
         </ErrorWrapper>
       )}
     </>

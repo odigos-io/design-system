@@ -1,4 +1,4 @@
-import { KeyvalText } from "@/design.system/text/text";
+import { Text } from "@/design.system/text/text";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,12 +15,12 @@ const TagWrapper = styled.div`
   border-radius: 10px;
 `;
 
-export function KeyvalTag({ title = "", color = "#033869" }: TagProps) {
+export function Tag({ title = "", color = "#033869" }: TagProps) {
   return (
     <TagWrapper style={{ backgroundColor: color }}>
-      <KeyvalText weight={500} size={13} color={"#CCD0D2"}>
+      <Text weight={500} size={13} color={"#CCD0D2"}>
         {title}
-      </KeyvalText>
+      </Text>
     </TagWrapper>
   );
 }

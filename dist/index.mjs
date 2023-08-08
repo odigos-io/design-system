@@ -1519,6 +1519,15 @@ function KeyvalModal({ children, closeModal, config }) {
     /* @__PURE__ */ React.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React.createElement(ModalHeader, null, /* @__PURE__ */ React.createElement(KeyvalText, { weight: 500, color: palette_default.text.dark_button }, config.title)), /* @__PURE__ */ React.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React.createElement(close_modal_default, null)), /* @__PURE__ */ React.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React.createElement(ModalFooter, null, /* @__PURE__ */ React.createElement(PrimaryButton, { onClick: config.footer.primaryBtnAction }, /* @__PURE__ */ React.createElement(KeyvalText, { size: 14, weight: 500, color: "#5c5c5c" }, config.footer.primaryBtnText))))
   )));
 }
+
+// src/design.system/theme.provider/theme.provider.tsx
+import React27 from "react";
+import { ThemeProvider } from "styled-components";
+var ThemeProviderWrapper = ({
+  children
+}) => {
+  return /* @__PURE__ */ React27.createElement(ThemeProvider, { theme: palette_default }, children);
+};
 export {
   DangerZone,
   FloatBox,
@@ -1542,6 +1551,7 @@ export {
   KeyvalTap,
   KeyvalText,
   KeyvalTooltip,
-  KeyvalVideo
+  KeyvalVideo,
+  ThemeProviderWrapper
 };
 //# sourceMappingURL=index.mjs.map

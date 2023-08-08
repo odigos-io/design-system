@@ -11,13 +11,7 @@ type TextProps = {
   size?: number;
 };
 
-export function KeyvalText({
-  children,
-  color,
-  style,
-  weight,
-  size,
-}: TextProps) {
+export function Text({ children, color, style, weight, size }: TextProps) {
   return (
     <TextWrapper
       style={{

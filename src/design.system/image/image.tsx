@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-interface KeyvalImageProps {
+interface ImageProps {
   src: string;
   alt?: string;
   width?: number;
@@ -13,13 +13,13 @@ const IMAGE_STYLE: React.CSSProperties = {
   borderRadius: 10,
 };
 
-export function KeyvalImage({
+export function ImageComponent({
   src,
   alt,
   width = 56,
   height = 56,
   style = {},
-}: KeyvalImageProps) {
+}: ImageProps) {
   return (
     <Image
       src={src}

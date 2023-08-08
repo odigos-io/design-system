@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CloseIcon from "@/assets/icons/close.svg";
 import PlayerIcon from "@/assets/icons/player.svg";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 import {
   ImagePreviewWrapper,
   PlayerIconWrapper,
@@ -17,11 +17,7 @@ type VideoComponentProps = {
   thumbnail?: string | undefined;
 };
 
-export function KeyvalVideo({
-  videoSrc,
-  title,
-  thumbnail,
-}: VideoComponentProps) {
+export function Video({ videoSrc, title, thumbnail }: VideoComponentProps) {
   const [isLarge, setIsLarge] = useState(false);
   const [pause, setPause] = useState(true);
 
@@ -36,9 +32,9 @@ export function KeyvalVideo({
 
   const renderSmallView = (): JSX.Element => (
     <>
-      <KeyvalText size={16} weight={600}>
+      <Text size={16} weight={600}>
         {title}
-      </KeyvalText>
+      </Text>
       <ImagePreviewWrapper onClick={handleClick} url={thumbnail}>
         <PlayerIconWrapper>
           <PlayerIcon width={30} />
@@ -50,9 +46,9 @@ export function KeyvalVideo({
   const renderLargeView = (): JSX.Element => (
     <LargeVideoContainer>
       <LargeVideoHeader>
-        <KeyvalText size={20} weight={600}>
+        <Text size={20} weight={600}>
           {title}
-        </KeyvalText>
+        </Text>
         <CloseIcon onClick={handleClose} style={{ cursor: "pointer" }} />
       </LargeVideoHeader>
       {!pause ? (

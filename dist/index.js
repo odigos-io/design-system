@@ -896,6 +896,9 @@ __export(src_exports, {
     },
     KeyvalVideo: function() {
         return KeyvalVideo;
+    },
+    ThemeProviderWrapper: function() {
+        return ThemeProviderWrapper;
     }
 });
 module.exports = __toCommonJS(src_exports);
@@ -2010,6 +2013,15 @@ function KeyvalModal(param) {
         color: "#5c5c5c"
     }, config.footer.primaryBtnText)))))));
 }
+// src/design.system/theme.provider/theme.provider.tsx
+var import_react29 = __toESM(require("react"));
+var import_styled_components24 = require("styled-components");
+var ThemeProviderWrapper = function(param) {
+    var children = param.children;
+    return /* @__PURE__ */ import_react29.default.createElement(import_styled_components24.ThemeProvider, {
+        theme: palette_default
+    }, children);
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     DangerZone: DangerZone,
@@ -2034,6 +2046,7 @@ function KeyvalModal(param) {
     KeyvalTap: KeyvalTap,
     KeyvalText: KeyvalText,
     KeyvalTooltip: KeyvalTooltip,
-    KeyvalVideo: KeyvalVideo
+    KeyvalVideo: KeyvalVideo,
+    ThemeProviderWrapper: ThemeProviderWrapper
 });
 //# sourceMappingURL=index.js.map

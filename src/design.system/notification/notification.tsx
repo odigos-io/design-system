@@ -3,22 +3,18 @@ import {
   NotificationContainer,
   StyledNotification,
 } from "./notification.styled";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 import CloseIcon from "@/assets/icons/X-blue.svg";
 import SuccessIcon from "@/assets/icons/success-notification.svg";
 import ErrorIcon from "@/assets/icons/error-notification.svg";
 
-interface KeyvalNotificationProps {
+interface NotificationProps {
   type: "success" | "error" | "warning" | "info";
   message: string;
   onClose?: () => void;
 }
 
-export function KeyvalNotification({
-  type,
-  message,
-  onClose,
-}: KeyvalNotificationProps) {
+export function Notification({ type, message, onClose }: NotificationProps) {
   useEffect(() => {
     const id = setTimeout(() => {
       onClose && onClose();
@@ -51,9 +47,9 @@ export function KeyvalNotification({
     <NotificationContainer>
       <StyledNotification style={getNotificationStyle()}>
         {getIcon()}
-        <KeyvalText weight={500} size={14}>
+        <Text weight={500} size={14}>
           {message}
-        </KeyvalText>
+        </Text>
         <CloseIcon onClick={onClose} />
       </StyledNotification>
     </NotificationContainer>

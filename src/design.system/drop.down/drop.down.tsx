@@ -7,15 +7,15 @@ import {
   DropdownItem,
   DropdownListWrapper,
 } from "./drop.down.styled";
-import { KeyvalText } from "../text/text";
-import { KeyvalSearchInput } from "../search.input/search.input";
+import { Text } from "../text/text";
+import { SearchInput } from "../search.input/search.input";
 import { useOnClickOutside } from "@/hooks";
 
 interface DropDownItem {
   id: number;
   label: string;
 }
-interface KeyvalDropDownProps {
+interface DropDownProps {
   data: DropDownItem[];
   onChange: (item: DropDownItem) => void;
   childComp?: React.ReactNode;
@@ -31,13 +31,13 @@ const CONTAINER_STYLE = {
 };
 const SEARCH_INPUT_STYLE = { background: "transparent" };
 
-export function KeyvalDropDown({
+export function DropDown({
   data = [],
   onChange,
   childComp,
   width = 260,
   value,
-}: KeyvalDropDownProps) {
+}: DropDownProps) {
   const [isOpen, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>(value || null);
   const [isHover, setHover] = useState<any>(false);
@@ -83,7 +83,7 @@ export function KeyvalDropDown({
       </DropdownWrapper>
       {isOpen && (
         <DropdownBody>
-          <KeyvalSearchInput
+          <SearchInput
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
             placeholder="Search"
@@ -97,7 +97,7 @@ export function KeyvalDropDown({
                 key={item.id}
                 onClick={(e: any) => handleItemClick(item)}
               >
-                <KeyvalText>{item.label}</KeyvalText>
+                <Text>{item.label}</Text>
                 <div>{childComp}</div>
               </DropdownItem>
             ))}

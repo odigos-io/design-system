@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Question from "@/assets/icons/question.svg";
 import { TooltipContentWrapper, TooltipWrapper } from "./tooltip.styled";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 
-export function KeyvalTooltip(props: any) {
+export function Tooltip(props: any) {
   let timeout: ReturnType<typeof setTimeout>;
   const [active, setActive] = useState(false);
 
@@ -22,9 +22,9 @@ export function KeyvalTooltip(props: any) {
     <TooltipWrapper onMouseEnter={showTip} onMouseLeave={hideTip}>
       {active && (
         <TooltipContentWrapper>
-          <KeyvalText size={12} weight={500}>
+          <Text size={12} weight={500}>
             {props.content}
-          </KeyvalText>
+          </Text>
         </TooltipContentWrapper>
       )}
       <Question />

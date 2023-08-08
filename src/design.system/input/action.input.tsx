@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { StyledActionInputContainer, StyledActionInput } from "./input.styled";
-import { KeyvalButton } from "../button/button";
-import { KeyvalText } from "../text/text";
+import { Button } from "../button/button";
+import { Text } from "../text/text";
 import theme from "@/styles/palette";
 
 interface InputProps {
@@ -12,7 +12,7 @@ interface InputProps {
   style?: React.CSSProperties;
 }
 
-export function KeyvalActionInput({
+export function ActionInput({
   value,
   onChange,
   style = {},
@@ -31,11 +31,11 @@ export function KeyvalActionInput({
           autoComplete="off"
         />
 
-        <KeyvalButton onClick={onAction}>
-          <KeyvalText size={14} weight={500} color={theme.text.dark_button}>
+        <Button onClick={onAction}>
+          <Text size={14} weight={500} color={theme.text.dark_button}>
             {"Save"}
-          </KeyvalText>
-        </KeyvalButton>
+          </Text>
+        </Button>
       </StyledActionInputContainer>
     </>
   );

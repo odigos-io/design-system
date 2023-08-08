@@ -1,5 +1,5 @@
 import * as React from 'react';
-import React__default, { FC, ChangeEvent, ButtonHTMLAttributes } from 'react';
+import React__default, { FC, ChangeEvent, ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface RadioButtonProps {
     label?: string;
@@ -217,4 +217,9 @@ interface Props {
 
 declare function KeyvalModal({ children, closeModal, config }: Props): React.JSX.Element;
 
-export { DangerZone, FloatBox, KeyvalActionInput, KeyvalButton, KeyvalCard, KeyvalCheckbox, KeyvalDataFlow, KeyvalDropDown, KeyvalImage, KeyvalInput, KeyvalLink, KeyvalLoader, KeyvalModal, KeyvalNotification, KeyvalRadioButton, KeyvalSearchInput, KeyvalSelectedCounter, KeyvalSwitch, KeyvalTag, KeyvalTap, KeyvalText, KeyvalTooltip, KeyvalVideo };
+interface ThemeProviderWrapperProps {
+    children: ReactNode;
+}
+declare const ThemeProviderWrapper: React__default.FC<ThemeProviderWrapperProps>;
+
+export { DangerZone, FloatBox, KeyvalActionInput, KeyvalButton, KeyvalCard, KeyvalCheckbox, KeyvalDataFlow, KeyvalDropDown, KeyvalImage, KeyvalInput, KeyvalLink, KeyvalLoader, KeyvalModal, KeyvalNotification, KeyvalRadioButton, KeyvalSearchInput, KeyvalSelectedCounter, KeyvalSwitch, KeyvalTag, KeyvalTap, KeyvalText, KeyvalTooltip, KeyvalVideo, ThemeProviderWrapper };
