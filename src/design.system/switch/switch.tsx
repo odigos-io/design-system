@@ -5,7 +5,6 @@ import {
   SwitchInputWrapper,
   SwitchToggleWrapper,
 } from "./switch.styled";
-import { SETUP } from "@/utils/constants";
 
 interface KeyvalSwitchProps {
   toggle: boolean;
@@ -18,7 +17,7 @@ export function KeyvalSwitch({
   toggle,
   handleToggleChange,
   style,
-  label = SETUP.MENU.SELECT_ALL,
+  label = "Select All",
 }: KeyvalSwitchProps) {
   return (
     <SwitchInputWrapper>

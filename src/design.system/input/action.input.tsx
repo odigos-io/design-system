@@ -3,7 +3,6 @@ import { StyledActionInputContainer, StyledActionInput } from "./input.styled";
 import { KeyvalButton } from "../button/button";
 import { KeyvalText } from "../text/text";
 import theme from "@/styles/palette";
-import { ACTION } from "@/utils/constants";
 
 interface InputProps {
   value: string;
@@ -34,7 +33,7 @@ export function KeyvalActionInput({
 
         <KeyvalButton onClick={onAction}>
           <KeyvalText size={14} weight={500} color={theme.text.dark_button}>
-            {ACTION.SAVE}
+            {"Save"}
           </KeyvalText>
         </KeyvalButton>
       </StyledActionInputContainer>

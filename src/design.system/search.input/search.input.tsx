@@ -3,7 +3,6 @@ import { SearchInputWrapper, StyledSearchInput } from "./search.input.styled";
 import Glass from "@/assets/icons/glass.svg";
 import X from "@/assets/icons/X.svg";
 
-import { SETUP } from "@/utils/constants";
 interface KeyvalSearchInputProps {
   placeholder?: string;
   value?: string;
@@ -15,7 +14,7 @@ interface KeyvalSearchInputProps {
 }
 
 export function KeyvalSearchInput({
-  placeholder = SETUP.MENU.SEARCH_PLACEHOLDER,
+  placeholder = "Search",
   value = "",
   onChange = () => {},
   loading = false,

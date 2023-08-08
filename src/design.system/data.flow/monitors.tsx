@@ -4,7 +4,12 @@ import Metrics from "@/assets/icons/chart-line-grey.svg";
 import MetricsFocus from "@/assets/icons/chart-line-blue.svg";
 import Traces from "@/assets/icons/tree-structure-grey.svg";
 import TracesFocus from "@/assets/icons/tree-structure-blue.svg";
-import { SETUP } from "@/utils/constants";
+
+const MONITORS = {
+  LOGS: "Logs",
+  METRICS: "Metrics",
+  TRACES: "Traces",
+};
 
 export type MonitoringOption = {
   title: string;
@@ -20,7 +25,7 @@ export const MONITORING_OPTIONS = [
       notFocus: () => Logs(),
       focus: () => LogsFocus(),
     },
-    title: SETUP.MONITORS.LOGS,
+    title: MONITORS.LOGS,
     type: "logs",
     tapped: true,
   },
@@ -30,7 +35,7 @@ export const MONITORING_OPTIONS = [
       notFocus: () => Metrics(),
       focus: () => MetricsFocus(),
     },
-    title: SETUP.MONITORS.METRICS,
+    title: MONITORS.METRICS,
     type: "metrics",
     tapped: true,
   },
@@ -40,7 +45,7 @@ export const MONITORING_OPTIONS = [
       notFocus: () => Traces(),
       focus: () => TracesFocus(),
     },
-    title: SETUP.MONITORS.TRACES,
+    title: MONITORS.TRACES,
     type: "traces",
     tapped: true,
   },
