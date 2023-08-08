@@ -53,7 +53,7 @@ const MonitorsListWrapper = styled.div`
   gap: 8px;
 `;
 
-export default memo(({ data, isConnectable }: any) => {
+export default function DestinationNode({ data, isConnectable }: any) {
   function renderMonitors() {
     return MONITORING_OPTIONS.map((monitor) => (
       <IconWrapper
@@ -93,4 +93,4 @@ export default memo(({ data, isConnectable }: any) => {
       />
     </DestinationNodeContainer>
   );
-});
+}

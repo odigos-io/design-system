@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Handle, Position } from "reactflow";
 import { KeyvalMiddleware } from "@/assets/icons/overview";
 
-export default memo(({ isConnectable }: any) => {
+export default function NamespaceNode({ isConnectable }: any) {
   return (
     <div>
       <Handle
@@ -20,4 +20,4 @@ export default memo(({ isConnectable }: any) => {
       />
     </div>
   );
-});
+}

@@ -7,8 +7,8 @@ import ReactFlow, {
   ReactFlowProvider,
 } from "reactflow";
 import CenterNode from "./keyval.middleware";
-import NamespaceNode from "./namespace.node";
-import DestinationNode from "./destination.node";
+import NamespaceNode from "./namespace.node.tsx";
+import DestinationNode from "./destination.node.tsx";
 import "reactflow/dist/style.css";
 import { ControllerWrapper, DataFlowContainer } from "./data.flow.styled";
 import { IDataFlow } from "./types";
