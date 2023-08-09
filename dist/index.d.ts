@@ -1,17 +1,21 @@
 import * as React from 'react';
-import React__default, { FC, ChangeEvent, ButtonHTMLAttributes, ReactNode } from 'react';
+import React__default, { FC, ChangeEvent, ReactNode } from 'react';
 
 interface RadioButtonProps {
     label?: string;
     value?: string;
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
-declare const KeyvalRadioButton: FC<RadioButtonProps>;
+declare const RadioButton: FC<RadioButtonProps>;
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
     variant?: "primary" | "secondary";
+    children: any;
+    onClick?: () => void;
+    style?: object;
+    disabled?: boolean;
 }
-declare const KeyvalButton: FC<ButtonProps>;
+declare const Button: FC<ButtonProps>;
 
 type FloatBoxProps = {
     style?: object;
@@ -28,19 +32,19 @@ type TextProps = {
     color?: string;
     size?: number;
 };
-declare function KeyvalText({ children, color, style, weight, size, }: TextProps): React__default.JSX.Element;
+declare function Text({ children, color, style, weight, size }: TextProps): React__default.JSX.Element;
 
 interface CardProps {
     children: React__default.ReactNode;
     focus?: any;
 }
-declare function KeyvalCard({ children, focus }: CardProps): React__default.JSX.Element;
+declare function Card({ children, focus }: CardProps): React__default.JSX.Element;
 
 interface TagProps {
     title: string;
     color?: string;
 }
-declare function KeyvalTag({ title, color }: TagProps): React__default.JSX.Element;
+declare function Tag({ title, color }: TagProps): React__default.JSX.Element;
 
 interface TapProps {
     icons: object;
@@ -50,22 +54,22 @@ interface TapProps {
     children?: React__default.ReactNode;
     style?: React__default.CSSProperties;
 }
-declare function KeyvalTap({ title, tapped, children, style, onClick, }: TapProps): React__default.JSX.Element;
+declare function Tap({ title, tapped, children, style, onClick, }: TapProps): React__default.JSX.Element;
 
 interface DropDownItem {
     id: number;
     label: string;
 }
-interface KeyvalDropDownProps {
+interface DropDownProps {
     data: DropDownItem[];
     onChange: (item: DropDownItem) => void;
     childComp?: React__default.ReactNode;
     width?: number;
     value?: DropDownItem | null;
 }
-declare function KeyvalDropDown({ data, onChange, childComp, width, value, }: KeyvalDropDownProps): React__default.JSX.Element;
+declare function DropDown({ data, onChange, childComp, width, value, }: DropDownProps): React__default.JSX.Element;
 
-interface KeyvalSearchInputProps {
+interface SearchInputProps {
     placeholder?: string;
     value?: string;
     onChange?: (e: any) => void;
@@ -74,46 +78,46 @@ interface KeyvalSearchInputProps {
     inputStyle?: any;
     showClear?: boolean;
 }
-declare function KeyvalSearchInput({ placeholder, value, onChange, loading, containerStyle, inputStyle, showClear, }: KeyvalSearchInputProps): React__default.JSX.Element;
+declare function SearchInput({ placeholder, value, onChange, loading, containerStyle, inputStyle, showClear, }: SearchInputProps): React__default.JSX.Element;
 
-interface KeyvalSwitchProps {
+interface SwitchProps {
     toggle: boolean;
     handleToggleChange: () => void;
     style?: object;
     label?: string;
 }
-declare function KeyvalSwitch({ toggle, handleToggleChange, style, label, }: KeyvalSwitchProps): React__default.JSX.Element;
+declare function Switch({ toggle, handleToggleChange, style, label, }: SwitchProps): React__default.JSX.Element;
 
-interface KeyvalCheckboxProps {
+interface CheckboxProps {
     value: boolean;
     onChange: () => void;
     label?: string;
     disabled?: boolean;
 }
-declare function KeyvalCheckbox({ onChange, value, label, disabled, }: KeyvalCheckboxProps): React__default.JSX.Element;
+declare function Checkbox({ onChange, value, label, disabled, }: CheckboxProps): React__default.JSX.Element;
 
 interface SelectedCounterProps {
     total: number;
     selected: number;
 }
-declare function KeyvalSelectedCounter({ total, selected, }: SelectedCounterProps): React__default.JSX.Element;
+declare function SelectedCounter({ total, selected }: SelectedCounterProps): React__default.JSX.Element;
 
-interface KeyvalLinkProps {
+interface LinkProps {
     value: string;
     onClick?: () => void;
 }
-declare function KeyvalLink({ value, onClick }: KeyvalLinkProps): React__default.JSX.Element;
+declare function Link({ value, onClick }: LinkProps): React__default.JSX.Element;
 
-declare function KeyvalTooltip(props: any): React__default.JSX.Element;
+declare function Tooltip(props: any): React__default.JSX.Element;
 
-interface KeyvalImageProps {
+interface ImageProps {
     src: string;
     alt?: string;
     width?: number;
     height?: number;
     style?: React__default.CSSProperties;
 }
-declare function KeyvalImage({ src, alt, width, height, style, }: KeyvalImageProps): React__default.JSX.Element;
+declare function ImageComponent({ src, alt, width, height, style, }: ImageProps): React__default.JSX.Element;
 
 interface InputProps$1 {
     label?: string;
@@ -123,7 +127,7 @@ interface InputProps$1 {
     error?: string;
     style?: React__default.CSSProperties;
 }
-declare function KeyvalInput({ label, value, onChange, type, error, style, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;
@@ -132,23 +136,23 @@ interface InputProps {
     type?: string;
     style?: React__default.CSSProperties;
 }
-declare function KeyvalActionInput({ value, onChange, style, onAction, }: InputProps): JSX.Element;
+declare function ActionInput({ value, onChange, style, onAction, }: InputProps): JSX.Element;
 
 type VideoComponentProps = {
     videoSrc: string;
     title?: string;
     thumbnail?: string | undefined;
 };
-declare function KeyvalVideo({ videoSrc, title, thumbnail, }: VideoComponentProps): React__default.JSX.Element;
+declare function Video({ videoSrc, title, thumbnail }: VideoComponentProps): React__default.JSX.Element;
 
-declare function KeyvalLoader(): React__default.JSX.Element;
+declare function Loader(): React__default.JSX.Element;
 
-interface KeyvalNotificationProps {
+interface NotificationProps {
     type: "success" | "error" | "warning" | "info";
     message: string;
     onClose?: () => void;
 }
-declare function KeyvalNotification({ type, message, onClose, }: KeyvalNotificationProps): React__default.JSX.Element;
+declare function Notification({ type, message, onClose }: NotificationProps): React__default.JSX.Element;
 
 interface DataFlowNode {
     id: string;
@@ -215,11 +219,11 @@ interface Props {
     children: JSX.Element | JSX.Element[];
 }
 
-declare function KeyvalModal({ children, closeModal, config }: Props): React.JSX.Element;
+declare function Modal({ children, closeModal, config }: Props): React.JSX.Element;
 
 interface ThemeProviderWrapperProps {
     children: ReactNode;
 }
 declare const ThemeProviderWrapper: React__default.FC<ThemeProviderWrapperProps>;
 
-export { DangerZone, FloatBox, KeyvalActionInput, KeyvalButton, KeyvalCard, KeyvalCheckbox, KeyvalDataFlow, KeyvalDropDown, KeyvalImage, KeyvalInput, KeyvalLink, KeyvalLoader, KeyvalModal, KeyvalNotification, KeyvalRadioButton, KeyvalSearchInput, KeyvalSelectedCounter, KeyvalSwitch, KeyvalTag, KeyvalTap, KeyvalText, KeyvalTooltip, KeyvalVideo, ThemeProviderWrapper };
+export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };

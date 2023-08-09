@@ -1,5 +1,5 @@
 import { FloatBox } from "@/design.system/float.box/float.box";
-import { KeyvalText } from "@/design.system/text/text";
+import { Text } from "@/design.system/text/text";
 import React from "react";
 import {
   StepItemTextWrapper,
@@ -35,12 +35,12 @@ export default function StepItem({
           <Done />
         ) : (
           <FloatingBoxTextWrapper disabled={status !== Status.Active}>
-            <KeyvalText weight={700}>{index}</KeyvalText>
+            <Text weight={700}>{index}</Text>
           </FloatingBoxTextWrapper>
         )}
       </FloatBox>
       <StepItemTextWrapper disabled={status !== Status.Active}>
-        <KeyvalText weight={600}>{title}</KeyvalText>
+        <Text weight={600}>{title}</Text>
       </StepItemTextWrapper>
       {!isLast && <StepItemBorder />}
     </StepItemWrapper>

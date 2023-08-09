@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Handle, Position } from "reactflow";
 import { styled } from "styled-components";
-import { KeyvalText } from "@/design.system";
+import { Text } from "@/design.system";
 import { Folder } from "@/assets/icons/overview";
 
 const NamespaceContainer = styled.div`
@@ -24,12 +24,12 @@ export default memo(({ data, isConnectable }: any) => {
     <NamespaceContainer>
       <Folder width={32} />
       <TextWrapper>
-        <KeyvalText size={14} weight={600}>
+        <Text size={14} weight={600}>
           {data?.name}
-        </KeyvalText>
-        <KeyvalText
+        </Text>
+        <Text
           color={"#8b92a5"}
-        >{`${data?.totalAppsInstrumented} Apps Instrumented`}</KeyvalText>
+        >{`${data?.totalAppsInstrumented} Apps Instrumented`}</Text>
       </TextWrapper>
       <Handle
         type="source"

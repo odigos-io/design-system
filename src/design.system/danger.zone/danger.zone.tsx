@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import { KeyvalText } from "../text/text";
+import { Text } from "../text/text";
 import theme from "@/styles/palette";
 
 const DangerZoneWrapper = styled.div`
@@ -50,15 +50,15 @@ export function DangerZone({
   return (
     <>
       <DangerZoneWrapper>
-        <KeyvalText size={14} weight={600}>
+        <Text size={14} weight={600}>
           {title}
-        </KeyvalText>
-        <KeyvalText size={12}>{subTitle}</KeyvalText>
+        </Text>
+        <Text size={12}>{subTitle}</Text>
         <DangerButtonWrapper>
           <DangerButton onClick={onClick}>
-            <KeyvalText weight={500} size={14} color={theme.colors.error}>
+            <Text weight={500} size={14} color={theme.colors.error}>
               {btnText}
-            </KeyvalText>
+            </Text>
           </DangerButton>
         </DangerButtonWrapper>
       </DangerZoneWrapper>

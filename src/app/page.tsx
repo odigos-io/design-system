@@ -1,3 +1,6 @@
+"use client";
+import { Checkbox } from "..";
+
 export default function Home() {
-  return null;
+  return <Checkbox value={true} onChange={() => {}} label="Hello World" />;
 }

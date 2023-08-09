@@ -1,9 +1,13 @@
-import React, { ButtonHTMLAttributes, FC } from "react";
+import React, { ButtonHTMLAttributes, FC, ReactNode } from "react";
 import { StyledButton, ButtonContainer } from "./button.styled";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
   // Additional custom props if needed
   variant?: "primary" | "secondary";
+  children: any;
+  onClick?: () => void;
+  style?: object;
+  disabled?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({

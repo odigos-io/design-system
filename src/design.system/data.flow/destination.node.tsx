@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Handle, Position } from "reactflow";
 import { styled } from "styled-components";
-import { KeyvalImage, KeyvalText } from "@/design.system";
+import { Image, Text } from "@/design.system";
 import { MONITORING_OPTIONS } from "./monitors";
 
 interface IconWrapperProps {
@@ -70,17 +70,17 @@ export default function DestinationNode({ data, isConnectable }: any) {
   return (
     <DestinationNodeContainer>
       <NodeDataWrapper>
-        <KeyvalImage
+        <Image
           src={data?.destination_type?.image_url}
           width={40}
           height={40}
           style={IMAGE_STYLE}
         />
         <TextWrapper>
-          <KeyvalText size={14} weight={600}>
+          <Text size={14} weight={600}>
             {data?.destination_type?.display_name}
-          </KeyvalText>
-          <KeyvalText color={"#8b92a5"}>{data?.name}</KeyvalText>
+          </Text>
+          <Text color={"#8b92a5"}>{data?.name}</Text>
         </TextWrapper>
       </NodeDataWrapper>
       <MonitorsListWrapper>{renderMonitors()}</MonitorsListWrapper>

@@ -40,13 +40,7 @@ var TextWrapper = styled2.p`
 `;
 
 // src/design.system/text/text.tsx
-function KeyvalText({
-  children,
-  color,
-  style,
-  weight,
-  size
-}) {
+function Text({ children, color, style, weight, size }) {
   return /* @__PURE__ */ React2.createElement(
     TextWrapper,
     {
@@ -65,7 +59,7 @@ function KeyvalText({
 var checked_radio_default = "./checked-radio-QJNJNSOQ.svg";
 
 // src/design.system/radio/radio.tsx
-var KeyvalRadioButton = ({
+var RadioButton = ({
   label = "",
   onChange,
   value
@@ -73,7 +67,7 @@ var KeyvalRadioButton = ({
   function handleChange() {
     onChange && onChange({});
   }
-  return /* @__PURE__ */ React3.createElement(RadioButtonContainer, null, /* @__PURE__ */ React3.createElement("div", { onClick: handleChange }, value ? /* @__PURE__ */ React3.createElement(checked_radio_default, { width: 25, height: 25 }) : /* @__PURE__ */ React3.createElement(RadioButtonBorder, null)), /* @__PURE__ */ React3.createElement(KeyvalText, null, label));
+  return /* @__PURE__ */ React3.createElement(RadioButtonContainer, null, /* @__PURE__ */ React3.createElement("div", { onClick: handleChange }, value ? /* @__PURE__ */ React3.createElement(checked_radio_default, { width: 25, height: 25 }) : /* @__PURE__ */ React3.createElement(RadioButtonBorder, null)), /* @__PURE__ */ React3.createElement(Text, null, label));
 };
 
 // src/design.system/button/button.tsx
@@ -104,7 +98,7 @@ var StyledButton = styled3.button`
 `;
 
 // src/design.system/button/button.tsx
-var KeyvalButton = ({
+var Button = ({
   variant = "primary",
   children,
   style,
@@ -182,7 +176,7 @@ var CardContainer = styled5.div`
 `;
 
 // src/design.system/card/card.tsx
-function KeyvalCard({ children, focus = false }) {
+function Card({ children, focus = false }) {
   return /* @__PURE__ */ React6.createElement(CardContainer, { selected: focus || void 0 }, children);
 }
 
@@ -196,8 +190,8 @@ var TagWrapper = styled6.div`
   gap: 10px;
   border-radius: 10px;
 `;
-function KeyvalTag({ title = "", color = "#033869" }) {
-  return /* @__PURE__ */ React7.createElement(TagWrapper, { style: { backgroundColor: color } }, /* @__PURE__ */ React7.createElement(KeyvalText, { weight: 500, size: 13, color: "#CCD0D2" }, title));
+function Tag({ title = "", color = "#033869" }) {
+  return /* @__PURE__ */ React7.createElement(TagWrapper, { style: { backgroundColor: color } }, /* @__PURE__ */ React7.createElement(Text, { weight: 500, size: 13, color: "#CCD0D2" }, title));
 }
 
 // src/design.system/tap/tap.tsx
@@ -212,7 +206,7 @@ var TapWrapper = styled7.div`
   border: ${({ theme: theme2, selected }) => `1px solid ${selected ? "transparent" : theme2.colors.dark_blue}`};
   background: ${({ theme: theme2, selected }) => selected ? theme2.colors.dark_blue : "transparent"};
 `;
-function KeyvalTap({
+function Tap({
   title = "",
   tapped,
   children,
@@ -228,7 +222,7 @@ function KeyvalTap({
     },
     children,
     /* @__PURE__ */ React8.createElement(
-      KeyvalText,
+      Text,
       {
         weight: 400,
         size: 14,
@@ -351,7 +345,7 @@ var glass_default = "./glass-BCM6GGHZ.svg";
 var X_default = "./X-H3IN6ZOP.svg";
 
 // src/design.system/search.input/search.input.tsx
-function KeyvalSearchInput({
+function SearchInput({
   placeholder = "Search",
   value = "",
   onChange = () => {
@@ -414,7 +408,7 @@ var CONTAINER_STYLE = {
   background: "transparent"
 };
 var SEARCH_INPUT_STYLE = { background: "transparent" };
-function KeyvalDropDown({
+function DropDown({
   data = [],
   onChange,
   childComp,
@@ -452,7 +446,7 @@ function KeyvalDropDown({
     },
     /* @__PURE__ */ React10.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React10.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
   ), isOpen && /* @__PURE__ */ React10.createElement(DropdownBody, null, /* @__PURE__ */ React10.createElement(
-    KeyvalSearchInput,
+    SearchInput,
     {
       value: searchFilter,
       onChange: (e) => setSearchFilter(e.target.value),
@@ -467,7 +461,7 @@ function KeyvalDropDown({
       key: item.id,
       onClick: (e) => handleItemClick(item)
     },
-    /* @__PURE__ */ React10.createElement(KeyvalText, null, item.label),
+    /* @__PURE__ */ React10.createElement(Text, null, item.label),
     /* @__PURE__ */ React10.createElement("div", null, childComp)
   )))));
 }
@@ -513,7 +507,7 @@ var SwitchButtonWrapper = styled10.span`
 `;
 
 // src/design.system/switch/switch.tsx
-function KeyvalSwitch({
+function Switch({
   toggle,
   handleToggleChange,
   style,
@@ -526,7 +520,7 @@ function KeyvalSwitch({
       onClick: handleToggleChange
     },
     /* @__PURE__ */ React11.createElement(SwitchButtonWrapper, { disabled: toggle || void 0 })
-  ), label && /* @__PURE__ */ React11.createElement(KeyvalText, { size: 14 }, label));
+  ), label && /* @__PURE__ */ React11.createElement(Text, { size: 14 }, label));
 }
 
 // src/design.system/checkbox/checkbox.tsx
@@ -542,24 +536,21 @@ var CheckboxWrapper = styled11.div`
   pointer-events: ${({ disabled }) => disabled ? "none" : "auto"};
   opacity: ${({ disabled }) => disabled ? "0.5" : "1"};
 `;
-var Checkbox = styled11.span`
+var CheckboxItem = styled11.span`
   width: 16px;
   height: 16px;
   border: ${({ theme: theme2 }) => `solid 1px ${theme2.colors.light_grey}`};
   border-radius: 4px;
 `;
 
-// src/assets/icons/checkbox-rect.svg
-var checkbox_rect_default = "./checkbox-rect-MLG44VTN.svg";
-
 // src/design.system/checkbox/checkbox.tsx
-function KeyvalCheckbox({
+function Checkbox({
   onChange,
   value,
   label = "",
   disabled = false
 }) {
-  return /* @__PURE__ */ React12.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React12.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React12.createElement(Checkbox, null), /* @__PURE__ */ React12.createElement(KeyvalText, { size: 14 }, label));
+  return /* @__PURE__ */ React12.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React12.createElement("div", null, "Test") : /* @__PURE__ */ React12.createElement(CheckboxItem, null), /* @__PURE__ */ React12.createElement(Text, { size: 14 }, label));
 }
 
 // src/design.system/selected.counter/selected.counter.tsx
@@ -580,11 +571,8 @@ var SelectedCounterWrapper = styled12.div`
 var check_default = "./check-RBBYOT2T.svg";
 
 // src/design.system/selected.counter/selected.counter.tsx
-function KeyvalSelectedCounter({
-  total,
-  selected
-}) {
-  return /* @__PURE__ */ React13.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ React13.createElement(check_default, null), /* @__PURE__ */ React13.createElement(KeyvalText, { size: 13, weight: 500 }, `${selected} / ${total}`));
+function SelectedCounter({ total, selected }) {
+  return /* @__PURE__ */ React13.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ React13.createElement(check_default, null), /* @__PURE__ */ React13.createElement(Text, { size: 13, weight: 500 }, `${selected} / ${total}`));
 }
 
 // src/design.system/link/link.tsx
@@ -596,8 +584,8 @@ var LinkContainer = styled13.div`
     cursor: pointer !important;
   }
 `;
-function KeyvalLink({ value, onClick }) {
-  return /* @__PURE__ */ React14.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React14.createElement(KeyvalText, { color: "#0EE6F3" }, value));
+function Link({ value, onClick }) {
+  return /* @__PURE__ */ React14.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React14.createElement(Text, { color: "#0EE6F3" }, value));
 }
 
 // src/design.system/tooltip/tooltip.tsx
@@ -630,7 +618,7 @@ var TooltipContentWrapper = styled14.div`
 `;
 
 // src/design.system/tooltip/tooltip.tsx
-function KeyvalTooltip(props) {
+function Tooltip(props) {
   let timeout;
   const [active, setActive] = useState3(false);
   const showTip = () => {
@@ -642,7 +630,7 @@ function KeyvalTooltip(props) {
     clearInterval(timeout);
     setActive(false);
   };
-  return /* @__PURE__ */ React15.createElement(TooltipWrapper, { onMouseEnter: showTip, onMouseLeave: hideTip }, active && /* @__PURE__ */ React15.createElement(TooltipContentWrapper, null, /* @__PURE__ */ React15.createElement(KeyvalText, { size: 12, weight: 500 }, props.content)), /* @__PURE__ */ React15.createElement(question_default, null));
+  return /* @__PURE__ */ React15.createElement(TooltipWrapper, { onMouseEnter: showTip, onMouseLeave: hideTip }, active && /* @__PURE__ */ React15.createElement(TooltipContentWrapper, null, /* @__PURE__ */ React15.createElement(Text, { size: 12, weight: 500 }, props.content)), /* @__PURE__ */ React15.createElement(question_default, null));
 }
 
 // src/design.system/image/image.tsx
@@ -651,7 +639,7 @@ import React16 from "react";
 var IMAGE_STYLE = {
   borderRadius: 10
 };
-function KeyvalImage({
+function ImageComponent({
   src,
   alt,
   width = 56,
@@ -737,7 +725,7 @@ var eye_open_default = "./eye-open-ECPQFKVQ.svg";
 var eye_close_default = "./eye-close-SRDYBMNB.svg";
 
 // src/design.system/input/input.tsx
-function KeyvalInput({
+function Input({
   label,
   value,
   onChange,
@@ -749,7 +737,7 @@ function KeyvalInput({
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React17.createElement(React17.Fragment, null, label && /* @__PURE__ */ React17.createElement(LabelWrapper, null, /* @__PURE__ */ React17.createElement(KeyvalText, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React17.createElement(
+  return /* @__PURE__ */ React17.createElement(React17.Fragment, null, label && /* @__PURE__ */ React17.createElement(LabelWrapper, null, /* @__PURE__ */ React17.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React17.createElement(
     StyledInputContainer,
     {
       active: !!value || void 0,
@@ -766,7 +754,7 @@ function KeyvalInput({
       }
     ),
     type === "password" && /* @__PURE__ */ React17.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React17.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React17.createElement(eye_close_default, { width: 16, height: 16 }))
-  ), error && /* @__PURE__ */ React17.createElement(ErrorWrapper, null, /* @__PURE__ */ React17.createElement(KeyvalText, { size: 14, color: "#FD3F3F" }, error)));
+  ), error && /* @__PURE__ */ React17.createElement(ErrorWrapper, null, /* @__PURE__ */ React17.createElement(Text, { size: 14, color: "#FD3F3F" }, error)));
 }
 
 // src/design.system/input/action.input.tsx
@@ -804,7 +792,7 @@ var theme = {
 var palette_default = theme;
 
 // src/design.system/input/action.input.tsx
-function KeyvalActionInput({
+function ActionInput({
   value,
   onChange,
   style = {},
@@ -820,7 +808,7 @@ function KeyvalActionInput({
       onChange: handleChange,
       autoComplete: "off"
     }
-  ), /* @__PURE__ */ React18.createElement(KeyvalButton, { onClick: onAction }, /* @__PURE__ */ React18.createElement(KeyvalText, { size: 14, weight: 500, color: palette_default.text.dark_button }, "Save"))));
+  ), /* @__PURE__ */ React18.createElement(Button, { onClick: onAction }, /* @__PURE__ */ React18.createElement(Text, { size: 14, weight: 500, color: palette_default.text.dark_button }, "Save"))));
 }
 
 // src/design.system/video/video.tsx
@@ -890,11 +878,7 @@ var LargeVideoContainer = styled16.div`
 `;
 
 // src/design.system/video/video.tsx
-function KeyvalVideo({
-  videoSrc,
-  title,
-  thumbnail
-}) {
+function Video({ videoSrc, title, thumbnail }) {
   const [isLarge, setIsLarge] = useState5(false);
   const [pause, setPause] = useState5(true);
   const handleClick = () => {
@@ -904,8 +888,8 @@ function KeyvalVideo({
     setIsLarge(false);
     setPause(true);
   };
-  const renderSmallView = () => /* @__PURE__ */ React19.createElement(React19.Fragment, null, /* @__PURE__ */ React19.createElement(KeyvalText, { size: 16, weight: 600 }, title), /* @__PURE__ */ React19.createElement(ImagePreviewWrapper, { onClick: handleClick, url: thumbnail }, /* @__PURE__ */ React19.createElement(PlayerIconWrapper, null, /* @__PURE__ */ React19.createElement(player_default, { width: 30 }))));
-  const renderLargeView = () => /* @__PURE__ */ React19.createElement(LargeVideoContainer, null, /* @__PURE__ */ React19.createElement(LargeVideoHeader, null, /* @__PURE__ */ React19.createElement(KeyvalText, { size: 20, weight: 600 }, title), /* @__PURE__ */ React19.createElement(close_default, { onClick: handleClose, style: { cursor: "pointer" } })), !pause ? /* @__PURE__ */ React19.createElement(StyledLargeVideo, { src: videoSrc, autoPlay: true, controls: true }) : /* @__PURE__ */ React19.createElement(
+  const renderSmallView = () => /* @__PURE__ */ React19.createElement(React19.Fragment, null, /* @__PURE__ */ React19.createElement(Text, { size: 16, weight: 600 }, title), /* @__PURE__ */ React19.createElement(ImagePreviewWrapper, { onClick: handleClick, url: thumbnail }, /* @__PURE__ */ React19.createElement(PlayerIconWrapper, null, /* @__PURE__ */ React19.createElement(player_default, { width: 30 }))));
+  const renderLargeView = () => /* @__PURE__ */ React19.createElement(LargeVideoContainer, null, /* @__PURE__ */ React19.createElement(LargeVideoHeader, null, /* @__PURE__ */ React19.createElement(Text, { size: 20, weight: 600 }, title), /* @__PURE__ */ React19.createElement(close_default, { onClick: handleClose, style: { cursor: "pointer" } })), !pause ? /* @__PURE__ */ React19.createElement(StyledLargeVideo, { src: videoSrc, autoPlay: true, controls: true }) : /* @__PURE__ */ React19.createElement(
     ImagePreviewWrapper,
     {
       url: thumbnail,
@@ -928,7 +912,7 @@ var LoaderWrapper = styled17.div`
   align-items: center;
   height: 100%;
 `;
-var Loader = styled17.div`
+var StyledLoader = styled17.div`
   width: 48px;
   height: 48px;
   border: 4px solid;
@@ -947,8 +931,8 @@ var Loader = styled17.div`
 `;
 
 // src/design.system/loader/loader.tsx
-function KeyvalLoader() {
-  return /* @__PURE__ */ React20.createElement(LoaderWrapper, null, /* @__PURE__ */ React20.createElement(Loader, null));
+function Loader() {
+  return /* @__PURE__ */ React20.createElement(LoaderWrapper, null, /* @__PURE__ */ React20.createElement(StyledLoader, null));
 }
 
 // src/design.system/notification/notification.tsx
@@ -987,11 +971,7 @@ var success_notification_default = "./success-notification-MZSTWMDU.svg";
 var error_notification_default = "./error-notification-6T6JZGKS.svg";
 
 // src/design.system/notification/notification.tsx
-function KeyvalNotification({
-  type,
-  message,
-  onClose
-}) {
+function Notification({ type, message, onClose }) {
   useEffect3(() => {
     const id = setTimeout(() => {
       onClose && onClose();
@@ -1016,7 +996,7 @@ function KeyvalNotification({
         return {};
     }
   }
-  return /* @__PURE__ */ React21.createElement(NotificationContainer, null, /* @__PURE__ */ React21.createElement(StyledNotification, { style: getNotificationStyle() }, getIcon(), /* @__PURE__ */ React21.createElement(KeyvalText, { weight: 500, size: 14 }, message), /* @__PURE__ */ React21.createElement(X_blue_default, { onClick: onClose })));
+  return /* @__PURE__ */ React21.createElement(NotificationContainer, null, /* @__PURE__ */ React21.createElement(StyledNotification, { style: getNotificationStyle() }, getIcon(), /* @__PURE__ */ React21.createElement(Text, { weight: 500, size: 14 }, message), /* @__PURE__ */ React21.createElement(X_blue_default, { onClick: onClose })));
 }
 
 // src/design.system/data.flow/index.tsx
@@ -1077,8 +1057,8 @@ var TextWrapper2 = styled19.div`
   gap: 10px;
 `;
 var namespace_node_default = memo2(({ data, isConnectable }) => {
-  return /* @__PURE__ */ React23.createElement(NamespaceContainer, null, /* @__PURE__ */ React23.createElement(folder_default, { width: 32 }), /* @__PURE__ */ React23.createElement(TextWrapper2, null, /* @__PURE__ */ React23.createElement(KeyvalText, { size: 14, weight: 600 }, data?.name), /* @__PURE__ */ React23.createElement(
-    KeyvalText,
+  return /* @__PURE__ */ React23.createElement(NamespaceContainer, null, /* @__PURE__ */ React23.createElement(folder_default, { width: 32 }), /* @__PURE__ */ React23.createElement(TextWrapper2, null, /* @__PURE__ */ React23.createElement(Text, { size: 14, weight: 600 }, data?.name), /* @__PURE__ */ React23.createElement(
+    Text,
     {
       color: "#8b92a5"
     },
@@ -1208,14 +1188,14 @@ function DestinationNode({ data, isConnectable }) {
     ));
   }
   return /* @__PURE__ */ React24.createElement(DestinationNodeContainer, null, /* @__PURE__ */ React24.createElement(NodeDataWrapper, null, /* @__PURE__ */ React24.createElement(
-    KeyvalImage,
+    ImageComponent,
     {
       src: data?.destination_type?.image_url,
       width: 40,
       height: 40,
       style: IMAGE_STYLE2
     }
-  ), /* @__PURE__ */ React24.createElement(TextWrapper3, null, /* @__PURE__ */ React24.createElement(KeyvalText, { size: 14, weight: 600 }, data?.destination_type?.display_name), /* @__PURE__ */ React24.createElement(KeyvalText, { color: "#8b92a5" }, data?.name))), /* @__PURE__ */ React24.createElement(MonitorsListWrapper, null, renderMonitors()), /* @__PURE__ */ React24.createElement(
+  ), /* @__PURE__ */ React24.createElement(TextWrapper3, null, /* @__PURE__ */ React24.createElement(Text, { size: 14, weight: 600 }, data?.destination_type?.display_name), /* @__PURE__ */ React24.createElement(Text, { color: "#8b92a5" }, data?.name))), /* @__PURE__ */ React24.createElement(MonitorsListWrapper, null, renderMonitors()), /* @__PURE__ */ React24.createElement(
     Handle3,
     {
       type: "target",
@@ -1321,7 +1301,7 @@ function DangerZone({
   btnText,
   onClick
 }) {
-  return /* @__PURE__ */ React26.createElement(React26.Fragment, null, /* @__PURE__ */ React26.createElement(DangerZoneWrapper, null, /* @__PURE__ */ React26.createElement(KeyvalText, { size: 14, weight: 600 }, title), /* @__PURE__ */ React26.createElement(KeyvalText, { size: 12 }, subTitle), /* @__PURE__ */ React26.createElement(DangerButtonWrapper, null, /* @__PURE__ */ React26.createElement(DangerButton, { onClick }, /* @__PURE__ */ React26.createElement(KeyvalText, { weight: 500, size: 14, color: palette_default.colors.error }, btnText)))));
+  return /* @__PURE__ */ React26.createElement(React26.Fragment, null, /* @__PURE__ */ React26.createElement(DangerZoneWrapper, null, /* @__PURE__ */ React26.createElement(Text, { size: 14, weight: 600 }, title), /* @__PURE__ */ React26.createElement(Text, { size: 12 }, subTitle), /* @__PURE__ */ React26.createElement(DangerButtonWrapper, null, /* @__PURE__ */ React26.createElement(DangerButton, { onClick }, /* @__PURE__ */ React26.createElement(Text, { weight: 500, size: 14, color: palette_default.colors.error }, btnText)))));
 }
 
 // src/design.system/modal/modal.tsx
@@ -1491,7 +1471,7 @@ var ModalFooter = styled23.footer`
 var close_modal_default = "./close-modal-BFP7HTRU.svg";
 
 // src/design.system/modal/modal.tsx
-function KeyvalModal({ children, closeModal, config }) {
+function Modal({ children, closeModal, config }) {
   const modalRef = useRef2(null);
   const handleClickOutside = () => closeModal();
   const handleKeyPress = useCallback((event) => {
@@ -1516,7 +1496,7 @@ function KeyvalModal({ children, closeModal, config }) {
         animationDelay: "0"
       }
     },
-    /* @__PURE__ */ React.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React.createElement(ModalHeader, null, /* @__PURE__ */ React.createElement(KeyvalText, { weight: 500, color: palette_default.text.dark_button }, config.title)), /* @__PURE__ */ React.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React.createElement(close_modal_default, null)), /* @__PURE__ */ React.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React.createElement(ModalFooter, null, /* @__PURE__ */ React.createElement(PrimaryButton, { onClick: config.footer.primaryBtnAction }, /* @__PURE__ */ React.createElement(KeyvalText, { size: 14, weight: 500, color: "#5c5c5c" }, config.footer.primaryBtnText))))
+    /* @__PURE__ */ React.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React.createElement(ModalHeader, null, /* @__PURE__ */ React.createElement(Text, { weight: 500, color: palette_default.text.dark_button }, config.title)), /* @__PURE__ */ React.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React.createElement(close_modal_default, null)), /* @__PURE__ */ React.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React.createElement(ModalFooter, null, /* @__PURE__ */ React.createElement(PrimaryButton, { onClick: config.footer.primaryBtnAction }, /* @__PURE__ */ React.createElement(Text, { size: 14, weight: 500, color: "#5c5c5c" }, config.footer.primaryBtnText))))
   )));
 }
 
@@ -1529,29 +1509,29 @@ var ThemeProviderWrapper = ({
   return /* @__PURE__ */ React27.createElement(ThemeProvider, { theme: palette_default }, children);
 };
 export {
+  ActionInput,
+  Button,
+  Card,
+  Checkbox,
   DangerZone,
+  KeyvalDataFlow as DataFlow,
+  DropDown,
   FloatBox,
-  KeyvalActionInput,
-  KeyvalButton,
-  KeyvalCard,
-  KeyvalCheckbox,
-  KeyvalDataFlow,
-  KeyvalDropDown,
-  KeyvalImage,
-  KeyvalInput,
-  KeyvalLink,
-  KeyvalLoader,
-  KeyvalModal,
-  KeyvalNotification,
-  KeyvalRadioButton,
-  KeyvalSearchInput,
-  KeyvalSelectedCounter,
-  KeyvalSwitch,
-  KeyvalTag,
-  KeyvalTap,
-  KeyvalText,
-  KeyvalTooltip,
-  KeyvalVideo,
-  ThemeProviderWrapper
+  ImageComponent as Image,
+  Input,
+  Link,
+  Loader,
+  Modal,
+  Notification,
+  RadioButton,
+  SearchInput,
+  SelectedCounter,
+  Switch,
+  Tag,
+  Tap,
+  Text,
+  ThemeProviderWrapper,
+  Tooltip,
+  Video
 };
 //# sourceMappingURL=index.mjs.map
