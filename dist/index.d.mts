@@ -1,5 +1,4 @@
-import * as React from 'react';
-import React__default, { FC, ChangeEvent, ReactNode } from 'react';
+import React, { FC, ChangeEvent, ReactNode } from 'react';
 
 interface RadioButtonProps {
     label?: string;
@@ -21,7 +20,7 @@ type FloatBoxProps = {
     style?: object;
     children: any;
 };
-declare function FloatBox({ children, style }: FloatBoxProps): React__default.JSX.Element;
+declare function FloatBox({ children, style }: FloatBoxProps): React.JSX.Element;
 
 type TextProps = {
     type?: string | any;
@@ -32,29 +31,29 @@ type TextProps = {
     color?: string;
     size?: number;
 };
-declare function Text({ children, color, style, weight, size }: TextProps): React__default.JSX.Element;
+declare function Text({ children, color, style, weight, size }: TextProps): React.JSX.Element;
 
 interface CardProps {
-    children: React__default.ReactNode;
+    children: React.ReactNode;
     focus?: any;
 }
-declare function Card({ children, focus }: CardProps): React__default.JSX.Element;
+declare function Card({ children, focus }: CardProps): React.JSX.Element;
 
 interface TagProps {
     title: string;
     color?: string;
 }
-declare function Tag({ title, color }: TagProps): React__default.JSX.Element;
+declare function Tag({ title, color }: TagProps): React.JSX.Element;
 
 interface TapProps {
     icons: object;
     title?: string;
     tapped?: any;
     onClick?: any;
-    children?: React__default.ReactNode;
-    style?: React__default.CSSProperties;
+    children?: React.ReactNode;
+    style?: React.CSSProperties;
 }
-declare function Tap({ title, tapped, children, style, onClick, }: TapProps): React__default.JSX.Element;
+declare function Tap({ title, tapped, children, style, onClick, }: TapProps): React.JSX.Element;
 
 interface DropDownItem {
     id: number;
@@ -63,11 +62,10 @@ interface DropDownItem {
 interface DropDownProps {
     data: DropDownItem[];
     onChange: (item: DropDownItem) => void;
-    childComp?: React__default.ReactNode;
     width?: number;
     value?: DropDownItem | null;
 }
-declare function DropDown({ data, onChange, childComp, width, value, }: DropDownProps): React__default.JSX.Element;
+declare function DropDown({ data, onChange, width, value, }: DropDownProps): React.JSX.Element;
 
 interface SearchInputProps {
     placeholder?: string;
@@ -78,7 +76,7 @@ interface SearchInputProps {
     inputStyle?: any;
     showClear?: boolean;
 }
-declare function SearchInput({ placeholder, value, onChange, loading, containerStyle, inputStyle, showClear, }: SearchInputProps): React__default.JSX.Element;
+declare function SearchInput({ placeholder, value, onChange, loading, containerStyle, inputStyle, showClear, }: SearchInputProps): React.JSX.Element;
 
 interface SwitchProps {
     toggle: boolean;
@@ -86,7 +84,7 @@ interface SwitchProps {
     style?: object;
     label?: string;
 }
-declare function Switch({ toggle, handleToggleChange, style, label, }: SwitchProps): React__default.JSX.Element;
+declare function Switch({ toggle, handleToggleChange, style, label, }: SwitchProps): React.JSX.Element;
 
 interface CheckboxProps {
     value: boolean;
@@ -94,30 +92,30 @@ interface CheckboxProps {
     label?: string;
     disabled?: boolean;
 }
-declare function Checkbox({ onChange, value, label, disabled, }: CheckboxProps): React__default.JSX.Element;
+declare function Checkbox({ onChange, value, label, disabled, }: CheckboxProps): React.JSX.Element;
 
 interface SelectedCounterProps {
     total: number;
     selected: number;
 }
-declare function SelectedCounter({ total, selected }: SelectedCounterProps): React__default.JSX.Element;
+declare function SelectedCounter({ total, selected }: SelectedCounterProps): React.JSX.Element;
 
 interface LinkProps {
     value: string;
     onClick?: () => void;
 }
-declare function Link({ value, onClick }: LinkProps): React__default.JSX.Element;
+declare function Link({ value, onClick }: LinkProps): React.JSX.Element;
 
-declare function Tooltip(props: any): React__default.JSX.Element;
+declare function Tooltip(props: any): React.JSX.Element;
 
 interface ImageProps {
     src: string;
     alt?: string;
     width?: number;
     height?: number;
-    style?: React__default.CSSProperties;
+    style?: React.CSSProperties;
 }
-declare function ImageComponent({ src, alt, width, height, style, }: ImageProps): React__default.JSX.Element;
+declare function ImageComponent({ src, alt, width, height, style, }: ImageProps): React.JSX.Element;
 
 interface InputProps$1 {
     label?: string;
@@ -125,7 +123,7 @@ interface InputProps$1 {
     onChange: (value: string) => void;
     type?: string;
     error?: string;
-    style?: React__default.CSSProperties;
+    style?: React.CSSProperties;
 }
 declare function Input({ label, value, onChange, type, error, style, }: InputProps$1): JSX.Element;
 
@@ -134,7 +132,7 @@ interface InputProps {
     onAction: () => void;
     onChange: (value: string) => void;
     type?: string;
-    style?: React__default.CSSProperties;
+    style?: React.CSSProperties;
 }
 declare function ActionInput({ value, onChange, style, onAction, }: InputProps): JSX.Element;
 
@@ -143,16 +141,16 @@ type VideoComponentProps = {
     title?: string;
     thumbnail?: string | undefined;
 };
-declare function Video({ videoSrc, title, thumbnail }: VideoComponentProps): React__default.JSX.Element;
+declare function Video({ videoSrc, title, thumbnail }: VideoComponentProps): React.JSX.Element;
 
-declare function Loader(): React__default.JSX.Element;
+declare function Loader(): React.JSX.Element;
 
 interface NotificationProps {
     type: "success" | "error" | "warning" | "info";
     message: string;
     onClose?: () => void;
 }
-declare function Notification({ type, message, onClose }: NotificationProps): React__default.JSX.Element;
+declare function Notification({ type, message, onClose }: NotificationProps): React.JSX.Element;
 
 interface DataFlowNode {
     id: string;
@@ -178,7 +176,7 @@ interface IDataFlow {
     edges: DataFlowEdge[];
 }
 
-declare function KeyvalDataFlow(props: IDataFlow): React__default.JSX.Element;
+declare function KeyvalDataFlow(props: IDataFlow): React.JSX.Element;
 
 interface DangerZoneProps {
     title: string;
@@ -186,7 +184,7 @@ interface DangerZoneProps {
     btnText: string;
     onClick: () => void;
 }
-declare function DangerZone({ title, subTitle, btnText, onClick, }: DangerZoneProps): React__default.JSX.Element;
+declare function DangerZone({ title, subTitle, btnText, onClick, }: DangerZoneProps): React.JSX.Element;
 
 declare enum ModalPositionX {
     center = "center",
@@ -224,6 +222,11 @@ declare function Modal({ children, closeModal, config }: Props): React.JSX.Eleme
 interface ThemeProviderWrapperProps {
     children: ReactNode;
 }
-declare const ThemeProviderWrapper: React__default.FC<ThemeProviderWrapperProps>;
+declare const ThemeProviderWrapper: React.FC<ThemeProviderWrapperProps>;
 
-export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+type StepListProps<T> = {
+    data?: Array<T> | null;
+};
+declare function Steps<T>({ data }: StepListProps<T>): React.JSX.Element;
+
+export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };

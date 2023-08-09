@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import PortalModal from "./portal.modal";
 import * as S from "./modal.styled";
 import { Props } from "./types";

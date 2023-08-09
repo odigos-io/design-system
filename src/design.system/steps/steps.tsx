@@ -6,7 +6,7 @@ type StepListProps<T> = {
   data?: Array<T> | null;
 };
 
-export default function Steps<T>({ data }: StepListProps<T>) {
+export function Steps<T>({ data }: StepListProps<T>) {
   function renderSteps() {
     return data?.map(({ title, status }: any, index) => (
       <StepItem

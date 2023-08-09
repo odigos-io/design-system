@@ -15,7 +15,7 @@ const IMAGE_STYLE: React.CSSProperties = {
 
 export function ImageComponent({
   src,
-  alt,
+  alt = "",
   width = 56,
   height = 56,
   style = {},

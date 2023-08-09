@@ -18,7 +18,6 @@ interface DropDownItem {
 interface DropDownProps {
   data: DropDownItem[];
   onChange: (item: DropDownItem) => void;
-  childComp?: React.ReactNode;
   width?: number;
   value?: DropDownItem | null;
 }
@@ -34,7 +33,6 @@ const SEARCH_INPUT_STYLE = { background: "transparent" };
 export function DropDown({
   data = [],
   onChange,
-  childComp,
   width = 260,
   value,
 }: DropDownProps) {
@@ -98,7 +96,6 @@ export function DropDown({
                 onClick={(e: any) => handleItemClick(item)}
               >
                 <Text>{item.label}</Text>
-                <div>{childComp}</div>
               </DropdownItem>
             ))}
           </DropdownListWrapper>

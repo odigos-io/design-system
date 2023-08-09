@@ -7,7 +7,7 @@ import {
   StepItemWrapper,
   FloatingBoxTextWrapper,
 } from "./steps.styled";
-import Done from "assets/icons/checked.svg";
+import Done from "@/assets/icons/checked.svg";
 
 type StepItemProps = {
   title: string;

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Handle, Position } from "reactflow";
 import { styled } from "styled-components";
-import { Image, Text } from "@/design.system";
+import { Text } from "@/design.system";
 import { MONITORING_OPTIONS } from "./monitors";
 
 interface IconWrapperProps {
@@ -34,6 +34,7 @@ const TextWrapper = styled.div`
 const IMAGE_STYLE: React.CSSProperties = {
   backgroundColor: "#fff",
   padding: 4,
+  borderRadius: 10,
 };
 
 const IconWrapper = styled.div<IconWrapperProps>`
@@ -70,11 +71,12 @@ export default function DestinationNode({ data, isConnectable }: any) {
   return (
     <DestinationNodeContainer>
       <NodeDataWrapper>
-        <Image
+        <img
           src={data?.destination_type?.image_url}
           width={40}
           height={40}
           style={IMAGE_STYLE}
+          alt=""
         />
         <TextWrapper>
           <Text size={14} weight={600}>
