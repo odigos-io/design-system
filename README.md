@@ -13,7 +13,7 @@ git clone https://github.com/keyval-dev/design-system.git
 ```
 
 ```bash
-cd nextjs-keyval-design-system
+cd keyval-design-system
 ```
 
 ```bash
@@ -21,6 +21,12 @@ yarn install && yarn dev
 ```
 
 ## Publish version
+
+build version using tsup
+
+```bash
+yarn build
+```
 
 tag new version
 
