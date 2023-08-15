@@ -1,6 +1,6 @@
 {
   "name": "@keyval-dev/design-system",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -19,7 +19,7 @@
     "react-dom": "18.2.0",
     "react-lottie": "^1.2.3",
     "reactflow": "11.7.4",
-    "rollup-plugin-svgr": "^2.0.0",
+    "rollup-plugin-svgr": "1.0.0",
     "styled-components": "6.0.7",
     "typescript": "5.1.6"
   },
