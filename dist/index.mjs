@@ -169,8 +169,7 @@ import styled5 from "styled-components";
 var CardContainer = styled5.div`
   display: inline-flex;
   position: relative;
-  width: 272px;
-  height: 204px;
+  height: fit-content;
   flex-direction: column;
   border-radius: 24px;
   border: ${({ selected, theme: theme2 }) => `1px solid ${selected ? theme2.colors.secondary : theme2.colors.dark_blue}`};

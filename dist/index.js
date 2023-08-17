@@ -179,7 +179,7 @@ function _templateObject6() {
 }
 function _templateObject7() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  position: relative;\n  width: 272px;\n  height: 204px;\n  flex-direction: column;\n  border-radius: 24px;\n  border: ",
+        "\n  display: inline-flex;\n  position: relative;\n  height: fit-content;\n  flex-direction: column;\n  border-radius: 24px;\n  border: ",
         ";\n  background: ",
         ";\n"
     ]);

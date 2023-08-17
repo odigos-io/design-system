@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 interface ActiveProps {
   active?: any;
@@ -61,6 +61,7 @@ export const StyledActionInput = styled(StyledInput)`
 
 export const LabelWrapper = styled.div`
   margin-bottom: 8px;
+  text-align: start;
 `;
 
 export const ErrorWrapper = styled.div`

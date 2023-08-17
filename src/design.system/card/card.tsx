@@ -1,11 +1,36 @@
-import React from "react";
-import { CardContainer } from "./card.styled";
+import React from 'react';
+import { CardContainer, CardHeader } from './card.styled';
+import { Text } from '../text/text';
+
 interface CardProps {
-  children: React.ReactNode;
+  children?: JSX.Element | JSX.Element[];
   focus?: any;
+  type?: 'primary' | 'secondary';
+  header?: {
+    title: string;
+    subtitle: string;
+  };
 }
-export function Card({ children, focus = false }: CardProps) {
+
+export function Card({
+  children,
+  focus = false,
+  type = 'primary',
+  header,
+}: CardProps) {
   return (
-    <CardContainer selected={focus || undefined}>{children}</CardContainer>
+    <CardContainer selected={focus || undefined} type={type}>
+      {header && (
+        <CardHeader>
+          <Text size={20} weight={600}>
+            {header?.title}
+          </Text>
+          <Text size={14} color={'#CCD0D2'}>
+            {header?.subtitle}
+          </Text>
+        </CardHeader>
+      )}
+      {children}
+    </CardContainer>
   );
 }

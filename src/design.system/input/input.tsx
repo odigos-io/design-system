@@ -1,14 +1,14 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useState } from 'react';
 import {
   StyledInputContainer,
   StyledInput,
   ErrorWrapper,
   LabelWrapper,
   DisplayIconsWrapper,
-} from "./input.styled";
-import { Text } from "../text/text";
-import EyeOpenIcon from "@/assets/icons/eye-open.svg";
-import EyeCloseIcon from "@/assets/icons/eye-close.svg";
+} from './input.styled';
+import { Text } from '../text/text';
+import EyeOpenIcon from '@/assets/icons/eye-open.svg';
+import EyeCloseIcon from '@/assets/icons/eye-close.svg';
 interface InputProps {
   label?: string;
   value: string;
@@ -16,15 +16,17 @@ interface InputProps {
   type?: string;
   error?: string;
   style?: React.CSSProperties;
+  placeholder?: string;
 }
 
 export function Input({
   label,
   value,
   onChange,
-  type = "text",
+  type = 'text',
   error,
   style = {},
+  placeholder,
 }: InputProps): JSX.Element {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -47,12 +49,13 @@ export function Input({
         style={{ ...style }}
       >
         <StyledInput
-          type={showPassword ? "text" : type}
+          type={showPassword ? 'text' : type}
           value={value}
           onChange={handleChange}
           autoComplete="off"
+          placeholder={placeholder}
         />
-        {type === "password" && (
+        {type === 'password' && (
           <DisplayIconsWrapper onClick={() => setShowPassword(!showPassword)}>
             {!showPassword ? (
               <EyeOpenIcon width={16} height={16} />
@@ -64,7 +67,7 @@ export function Input({
       </StyledInputContainer>
       {error && (
         <ErrorWrapper>
-          <Text size={14} color={"#FD3F3F"}>
+          <Text size={14} color={'#FD3F3F'}>
             {error}
           </Text>
         </ErrorWrapper>
