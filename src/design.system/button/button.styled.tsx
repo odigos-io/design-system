@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface ButtonProps {
   variant?: string;
@@ -7,12 +7,16 @@ interface ButtonProps {
 
 export const ButtonContainer = styled.div<ButtonProps>`
   :hover {
-    background: ${({ theme, disabled }) =>
-      disabled ? theme.colors.blue_grey : theme.colors.torquiz_light};
+    background: ${({ theme, disabled, variant }) =>
+      disabled
+        ? theme.colors.blue_grey
+        : variant === 'primary'
+        ? theme.colors.torquiz_light
+        : 'transparent'};
   }
   p {
     cursor: ${({ disabled }) =>
-      disabled ? "not-allowed !important" : "pointer !important"};
+      disabled ? 'not-allowed !important' : 'pointer !important'};
   }
 `;
 
@@ -24,10 +28,17 @@ export const StyledButton = styled.button<ButtonProps>`
   border: none;
   width: 100%;
   height: 100%;
+  border: 1px solid
+    ${({ theme, variant }) =>
+      variant === 'primary' ? 'transparent' : theme.colors.secondary};
   cursor: ${({ disabled }) =>
-    disabled ? "not-allowed !important" : "pointer !important"};
-  background: ${({ theme, disabled }) =>
-    disabled ? theme.colors.blue_grey : theme.colors.secondary};
+    disabled ? 'not-allowed !important' : 'pointer !important'};
+  background: ${({ theme, disabled, variant }) =>
+    disabled
+      ? theme.colors.blue_grey
+      : variant === 'primary'
+      ? theme.colors.secondary
+      : 'transparent'};
   justify-content: center;
   align-items: center;
 `;
