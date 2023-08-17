@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 export const Button: FC<ButtonProps> = ({
-  variant = 'secondary',
+  variant = 'primary',
   children,
   style,
   onClick,
