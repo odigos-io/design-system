@@ -35,10 +35,14 @@ export const StyledButton = styled.button<ButtonProps>`
     disabled ? 'not-allowed !important' : 'pointer !important'};
   background: ${({ theme, disabled, variant }) =>
     disabled
-      ? theme.colors.blue_grey
+      ? variant === 'primary'
+        ? theme.colors.blue_grey
+        : 'transparent'
       : variant === 'primary'
       ? theme.colors.secondary
       : 'transparent'};
   justify-content: center;
   align-items: center;
+  opacity: ${({ disabled, variant }) =>
+    variant !== 'primary' && disabled ? 0.5 : 1};
 `;
