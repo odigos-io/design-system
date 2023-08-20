@@ -5,7 +5,7 @@ import { Text } from '../text/text';
 interface CardProps {
   children?: JSX.Element | JSX.Element[];
   focus?: any;
-  type?: 'primary' | 'secondary';
+  type?: string;
   header?: {
     title: string;
     subtitle: string;

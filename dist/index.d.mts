@@ -8,8 +8,8 @@ interface RadioButtonProps {
 declare const RadioButton: FC<RadioButtonProps>;
 
 interface ButtonProps {
-    variant?: "primary" | "secondary";
-    children: any;
+    variant?: string;
+    children: JSX.Element | JSX.Element[];
     onClick?: () => void;
     style?: object;
     disabled?: boolean;
@@ -34,10 +34,15 @@ type TextProps = {
 declare function Text({ children, color, style, weight, size }: TextProps): React.JSX.Element;
 
 interface CardProps {
-    children: React.ReactNode;
+    children?: JSX.Element | JSX.Element[];
     focus?: any;
+    type?: string;
+    header?: {
+        title: string;
+        subtitle: string;
+    };
 }
-declare function Card({ children, focus }: CardProps): React.JSX.Element;
+declare function Card({ children, focus, type, header, }: CardProps): React.JSX.Element;
 
 interface TagProps {
     title: string;
@@ -124,8 +129,9 @@ interface InputProps$1 {
     type?: string;
     error?: string;
     style?: React.CSSProperties;
+    placeholder?: string;
 }
-declare function Input({ label, value, onChange, type, error, style, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, placeholder, }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;
@@ -229,4 +235,9 @@ type StepListProps<T> = {
 };
 declare function Steps<T>({ data }: StepListProps<T>): React.JSX.Element;
 
-export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+declare function Divider({ margin, label, }: {
+    margin?: string;
+    label?: string;
+}): React.JSX.Element;
+
+export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };

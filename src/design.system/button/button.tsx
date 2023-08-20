@@ -3,7 +3,7 @@ import { StyledButton, ButtonContainer } from './button.styled';
 
 interface ButtonProps {
   // Additional custom props if needed
-  variant?: 'primary' | 'secondary';
+  variant?: string;
   children: JSX.Element | JSX.Element[];
   onClick?: () => void;
   style?: object;

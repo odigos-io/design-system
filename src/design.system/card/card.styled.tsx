@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 interface CardContainerProps {
   selected?: any;
-  type?: 'primary' | 'secondary';
+  type?: string;
 }
 
 export const CardContainer = styled.div<CardContainerProps>`

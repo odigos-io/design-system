@@ -79,7 +79,7 @@ import React4 from "react";
 import styled3 from "styled-components";
 var ButtonContainer = styled3.div`
   :hover {
-    background: ${({ theme: theme2, disabled }) => disabled ? theme2.colors.blue_grey : theme2.colors.torquiz_light};
+    background: ${({ theme: theme2, disabled, variant }) => disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.torquiz_light : "transparent"};
   }
   p {
     cursor: ${({ disabled }) => disabled ? "not-allowed !important" : "pointer !important"};
@@ -93,8 +93,10 @@ var StyledButton = styled3.button`
   border: none;
   width: 100%;
   height: 100%;
+  border: 1px solid
+    ${({ theme: theme2, variant }) => variant === "primary" ? "transparent" : theme2.colors.secondary};
   cursor: ${({ disabled }) => disabled ? "not-allowed !important" : "pointer !important"};
-  background: ${({ theme: theme2, disabled }) => disabled ? theme2.colors.blue_grey : theme2.colors.secondary};
+  background: ${({ theme: theme2, disabled, variant }) => disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.secondary : "transparent"};
   justify-content: center;
   align-items: center;
 `;
@@ -107,7 +109,16 @@ var Button = ({
   onClick,
   disabled
 }) => {
-  return /* @__PURE__ */ React4.createElement(ButtonContainer, { disabled }, /* @__PURE__ */ React4.createElement(StyledButton, { disabled, onClick, style: { ...style } }, children));
+  return /* @__PURE__ */ React4.createElement(ButtonContainer, { variant, disabled }, /* @__PURE__ */ React4.createElement(
+    StyledButton,
+    {
+      variant,
+      disabled,
+      onClick,
+      style: { ...style }
+    },
+    children
+  ));
 };
 
 // src/design.system/float.box/float.box.tsx
@@ -172,13 +183,28 @@ var CardContainer = styled5.div`
   height: fit-content;
   flex-direction: column;
   border-radius: 24px;
-  border: ${({ selected, theme: theme2 }) => `1px solid ${selected ? theme2.colors.secondary : theme2.colors.dark_blue}`};
-  background: ${({ theme: theme2 }) => theme2.colors.dark};
+  border: ${({ selected, theme: theme2, type }) => `1px solid ${selected ? theme2.colors.secondary : type === "primary" ? theme2.colors.dark_blue : "#374a5b"}`};
+  background: ${({ theme: theme2, type }) => type === "primary" ? theme2.colors.dark : "#0E1C28"};
+  box-shadow: ${({ type }) => type === "primary" ? "none" : "0px -6px 16px 0px rgba(0, 0, 0, 0.25),4px 4px 16px 0px rgba(71, 231, 241, 0.05),-4px 4px 16px 0px rgba(71, 231, 241, 0.05)"};
+`;
+var CardHeader = styled5(CardContainer)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0px;
+  box-shadow: none;
 `;
 
 // src/design.system/card/card.tsx
-function Card({ children, focus = false }) {
-  return /* @__PURE__ */ React6.createElement(CardContainer, { selected: focus || void 0 }, children);
+function Card({
+  children,
+  focus = false,
+  type = "primary",
+  header
+}) {
+  return /* @__PURE__ */ React6.createElement(CardContainer, { selected: focus || void 0, type }, header && /* @__PURE__ */ React6.createElement(CardHeader, null, /* @__PURE__ */ React6.createElement(Text, { size: 20, weight: 600 }, header?.title), /* @__PURE__ */ React6.createElement(Text, { size: 14, color: "#CCD0D2" }, header?.subtitle)), children);
 }
 
 // src/design.system/tag/tag.tsx
@@ -722,6 +748,7 @@ var StyledActionInput = styled15(StyledInput)`
 `;
 var LabelWrapper = styled15.div`
   margin-bottom: 8px;
+  text-align: start;
 `;
 var ErrorWrapper = styled15.div`
   margin-top: 4px;
@@ -749,7 +776,8 @@ function Input({
   onChange,
   type = "text",
   error,
-  style = {}
+  style = {},
+  placeholder
 }) {
   const [showPassword, setShowPassword] = useState4(false);
   function handleChange(event) {
@@ -768,7 +796,8 @@ function Input({
         type: showPassword ? "text" : type,
         value,
         onChange: handleChange,
-        autoComplete: "off"
+        autoComplete: "off",
+        placeholder
       }
     ),
     type === "password" && /* @__PURE__ */ React25.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React25.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React25.createElement(eye_close_default, { width: 16, height: 16 }))
@@ -1617,6 +1646,27 @@ function Steps({ data }) {
   }
   return /* @__PURE__ */ React53.createElement(StepsContainer, null, renderSteps());
 }
+
+// src/design.system/divider/divider.tsx
+import React54 from "react";
+import styled25 from "styled-components";
+var DividerContainer = styled25.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin: ${({ margin }) => margin};
+`;
+var DividerLine = styled25.div`
+  width: 100%;
+  border-top: 1px solid #8b92a5;
+`;
+function Divider({
+  margin = "32px 0",
+  label = "or"
+}) {
+  return /* @__PURE__ */ React54.createElement(DividerContainer, { margin }, /* @__PURE__ */ React54.createElement(DividerLine, null), /* @__PURE__ */ React54.createElement(Text, { size: 14 }, label), /* @__PURE__ */ React54.createElement(DividerLine, null));
+}
 export {
   ActionInput,
   Button,
@@ -1624,6 +1674,7 @@ export {
   Checkbox,
   DangerZone,
   KeyvalDataFlow as DataFlow,
+  Divider,
   DropDown,
   FloatBox,
   ImageComponent as Image,

@@ -150,7 +150,8 @@ function _templateObject3() {
 }
 function _templateObject4() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 8px 16px;\n  align-items: center;\n  border-radius: 8px;\n  border: none;\n  width: 100%;\n  height: 100%;\n  cursor: ",
+        "\n  display: flex;\n  padding: 8px 16px;\n  align-items: center;\n  border-radius: 8px;\n  border: none;\n  width: 100%;\n  height: 100%;\n  border: 1px solid\n    ",
+        ";\n  cursor: ",
         ";\n  background: ",
         ";\n  justify-content: center;\n  align-items: center;\n"
     ]);
@@ -181,6 +182,7 @@ function _templateObject7() {
     var data = _tagged_template_literal([
         "\n  display: inline-flex;\n  position: relative;\n  height: fit-content;\n  flex-direction: column;\n  border-radius: 24px;\n  border: ",
         ";\n  background: ",
+        ";\n  box-shadow: ",
         ";\n"
     ]);
     _templateObject7 = function _templateObject() {
@@ -190,7 +192,7 @@ function _templateObject7() {
 }
 function _templateObject8() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 4px 8px;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 10px;\n"
+        "\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 16px;\n  padding: 24px 0px;\n  box-shadow: none;\n"
     ]);
     _templateObject8 = function _templateObject() {
         return data;
@@ -199,9 +201,7 @@ function _templateObject8() {
 }
 function _templateObject9() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 8px 14px;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 16px;\n  border: ",
-        ";\n  background: ",
-        ";\n"
+        "\n  display: flex;\n  padding: 4px 8px;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 10px;\n"
     ]);
     _templateObject9 = function _templateObject() {
         return data;
@@ -210,9 +210,9 @@ function _templateObject9() {
 }
 function _templateObject10() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 9999;\n  width: 100%;\n  padding: 11px 4px;\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
+        "\n  display: flex;\n  padding: 8px 14px;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 16px;\n  border: ",
         ";\n  background: ",
-        ";\n\n  .dropdown-arrow {\n    transform: rotate(0deg);\n    transition: all 0.2s ease-in-out;\n  }\n\n  .dropdown-arrow.open {\n    transform: rotate(180deg);\n  }\n"
+        ";\n"
     ]);
     _templateObject10 = function _templateObject() {
         return data;
@@ -221,9 +221,9 @@ function _templateObject10() {
 }
 function _templateObject11() {
     var data = _tagged_template_literal([
-        "\n  padding: 0 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  color: ",
-        ";\n  font-size: 14px;\n  font-family: ",
-        ", sans-serif;\n  font-weight: 400;\n"
+        "\n  position: relative;\n  z-index: 9999;\n  width: 100%;\n  padding: 11px 4px;\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
+        ";\n  background: ",
+        ";\n\n  .dropdown-arrow {\n    transform: rotate(0deg);\n    transition: all 0.2s ease-in-out;\n  }\n\n  .dropdown-arrow.open {\n    transform: rotate(180deg);\n  }\n"
     ]);
     _templateObject11 = function _templateObject() {
         return data;
@@ -232,9 +232,9 @@ function _templateObject11() {
 }
 function _templateObject12() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 9999;\n  display: flex;\n  width: 100%;\n  padding: 11px 4px;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  margin-top: 5px;\n"
+        "\n  padding: 0 12px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  color: ",
+        ";\n  font-size: 14px;\n  font-family: ",
+        ", sans-serif;\n  font-weight: 400;\n"
     ]);
     _templateObject12 = function _templateObject() {
         return data;
@@ -243,8 +243,9 @@ function _templateObject12() {
 }
 function _templateObject13() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 100;\n  width: 100%;\n  max-height: 270px;\n  overflow-y: scroll;\n  scrollbar-width: none;\n  :hover {\n    background: ",
-        ";\n  }\n"
+        "\n  position: relative;\n  z-index: 9999;\n  display: flex;\n  width: 100%;\n  padding: 11px 4px;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n  margin-top: 5px;\n"
     ]);
     _templateObject13 = function _templateObject() {
         return data;
@@ -253,7 +254,8 @@ function _templateObject13() {
 }
 function _templateObject14() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 7px 12px;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 8px;\n  cursor: pointer;\n  p {\n    cursor: pointer !important;\n  }\n"
+        "\n  position: relative;\n  z-index: 100;\n  width: 100%;\n  max-height: 270px;\n  overflow-y: scroll;\n  scrollbar-width: none;\n  :hover {\n    background: ",
+        ";\n  }\n"
     ]);
     _templateObject14 = function _templateObject() {
         return data;
@@ -262,10 +264,7 @@ function _templateObject14() {
 }
 function _templateObject15() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 340px;\n  padding: 9px 13px;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  display: flex;\n  padding: 7px 12px;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 8px;\n  cursor: pointer;\n  p {\n    cursor: pointer !important;\n  }\n"
     ]);
     _templateObject15 = function _templateObject() {
         return data;
@@ -274,10 +273,9 @@ function _templateObject15() {
 }
 function _templateObject16() {
     var data = _tagged_template_literal([
-        "\n  width: 85%;\n  background: ",
-        ";\n  border: none;\n  outline: none;\n  color: ",
-        ";\n  font-size: 14px;\n  font-family: ",
-        ", sans-serif;\n  font-weight: 400;\n  &:focus {\n    color: ",
+        "\n  position: relative;\n  display: flex;\n  width: 340px;\n  padding: 9px 13px;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n  &:hover {\n    border: ",
         ";\n  }\n"
     ]);
     _templateObject16 = function _templateObject() {
@@ -287,7 +285,11 @@ function _templateObject16() {
 }
 function _templateObject17() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
+        "\n  width: 85%;\n  background: ",
+        ";\n  border: none;\n  outline: none;\n  color: ",
+        ";\n  font-size: 14px;\n  font-family: ",
+        ", sans-serif;\n  font-weight: 400;\n  &:focus {\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject17 = function _templateObject() {
         return data;
@@ -296,8 +298,7 @@ function _templateObject17() {
 }
 function _templateObject18() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  width: 30px;\n  height: 16px;\n  background-color: ",
-        ";\n  cursor: pointer;\n  user-select: none;\n  border-radius: 20px;\n  padding: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"
+        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
     ]);
     _templateObject18 = function _templateObject() {
         return data;
@@ -306,9 +307,8 @@ function _templateObject18() {
 }
 function _templateObject19() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  box-sizing: border-box;\n  width: 14px;\n  height: 14px;\n  cursor: pointer;\n  color: #fff;\n  background-color: ",
-        ";\n  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);\n  border-radius: 100%;\n  position: absolute;\n  transition: all 0.2s ease;\n  left: ",
-        "px;\n"
+        "\n  position: relative;\n  width: 30px;\n  height: 16px;\n  background-color: ",
+        ";\n  cursor: pointer;\n  user-select: none;\n  border-radius: 20px;\n  padding: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"
     ]);
     _templateObject19 = function _templateObject() {
         return data;
@@ -317,10 +317,9 @@ function _templateObject19() {
 }
 function _templateObject20() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  cursor: ",
-        ";\n  pointer-events: ",
-        ";\n  opacity: ",
-        ";\n"
+        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  box-sizing: border-box;\n  width: 14px;\n  height: 14px;\n  cursor: pointer;\n  color: #fff;\n  background-color: ",
+        ";\n  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);\n  border-radius: 100%;\n  position: absolute;\n  transition: all 0.2s ease;\n  left: ",
+        "px;\n"
     ]);
     _templateObject20 = function _templateObject() {
         return data;
@@ -329,8 +328,10 @@ function _templateObject20() {
 }
 function _templateObject21() {
     var data = _tagged_template_literal([
-        "\n  width: 16px;\n  height: 16px;\n  border: ",
-        ";\n  border-radius: 4px;\n"
+        "\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  cursor: ",
+        ";\n  pointer-events: ",
+        ";\n  opacity: ",
+        ";\n"
     ]);
     _templateObject21 = function _templateObject() {
         return data;
@@ -339,8 +340,8 @@ function _templateObject21() {
 }
 function _templateObject22() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 4px;\n  align-items: center;\n  gap: 4px;\n  border-radius: 14px;\n  background: ",
-        ";\n"
+        "\n  width: 16px;\n  height: 16px;\n  border: ",
+        ";\n  border-radius: 4px;\n"
     ]);
     _templateObject22 = function _templateObject() {
         return data;
@@ -349,7 +350,8 @@ function _templateObject22() {
 }
 function _templateObject23() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  .p {\n    cursor: pointer !important;\n  }\n"
+        "\n  display: flex;\n  padding: 4px;\n  align-items: center;\n  gap: 4px;\n  border-radius: 14px;\n  background: ",
+        ";\n"
     ]);
     _templateObject23 = function _templateObject() {
         return data;
@@ -358,7 +360,7 @@ function _templateObject23() {
 }
 function _templateObject24() {
     var data = _tagged_template_literal([
-        "\n  display: inline-block;\n  position: relative;\n  display: flex;\n"
+        "\n  cursor: pointer;\n  .p {\n    cursor: pointer !important;\n  }\n"
     ]);
     _templateObject24 = function _templateObject() {
         return data;
@@ -367,8 +369,7 @@ function _templateObject24() {
 }
 function _templateObject25() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  max-width: 150px;\n  width: min(100px, 250px);\n  bottom: 24px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  background: ",
-        ";\n  box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.3);\n"
+        "\n  display: inline-block;\n  position: relative;\n  display: flex;\n"
     ]);
     _templateObject25 = function _templateObject() {
         return data;
@@ -377,10 +378,8 @@ function _templateObject25() {
 }
 function _templateObject26() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  position: absolute;\n  max-width: 150px;\n  width: min(100px, 250px);\n  bottom: 24px;\n  left: 50%;\n  transform: translateX(-50%);\n  padding: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  background: ",
+        ";\n  box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.3);\n"
     ]);
     _templateObject26 = function _templateObject() {
         return data;
@@ -389,8 +388,10 @@ function _templateObject26() {
 }
 function _templateObject27() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding: 0px 12px;\n  height: 100%;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 4px;\n  border: ",
-        ";\n"
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n\n  &:hover {\n    border: ",
+        ";\n  }\n"
     ]);
     _templateObject27 = function _templateObject() {
         return data;
@@ -399,7 +400,7 @@ function _templateObject27() {
 }
 function _templateObject28() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  outline: none;\n  width: 100%;\n  color: ",
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding: 0px 12px;\n  height: 100%;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 4px;\n  border: ",
         ";\n"
     ]);
     _templateObject28 = function _templateObject() {
@@ -409,7 +410,8 @@ function _templateObject28() {
 }
 function _templateObject29() {
     var data = _tagged_template_literal([
-        "\n  color: var(--dark-mode-white, #fff);\n  font-family: Inter, sans-serif;\n  font-size: 24px;\n"
+        "\n  background: transparent;\n  border: none;\n  outline: none;\n  width: 100%;\n  color: ",
+        ";\n"
     ]);
     _templateObject29 = function _templateObject() {
         return data;
@@ -418,7 +420,7 @@ function _templateObject29() {
 }
 function _templateObject30() {
     var data = _tagged_template_literal([
-        "\n  margin-bottom: 8px;\n"
+        "\n  color: var(--dark-mode-white, #fff);\n  font-family: Inter, sans-serif;\n  font-size: 24px;\n"
     ]);
     _templateObject30 = function _templateObject() {
         return data;
@@ -427,7 +429,7 @@ function _templateObject30() {
 }
 function _templateObject31() {
     var data = _tagged_template_literal([
-        "\n  margin-top: 4px;\n"
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
     ]);
     _templateObject31 = function _templateObject() {
         return data;
@@ -436,7 +438,7 @@ function _templateObject31() {
 }
 function _templateObject32() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  right: 10px;\n  cursor: pointer;\n"
+        "\n  margin-top: 4px;\n"
     ]);
     _templateObject32 = function _templateObject() {
         return data;
@@ -445,8 +447,7 @@ function _templateObject32() {
 }
 function _templateObject33() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  margin-top: 8px;\n  border-radius: 8px;\n  width: 240px;\n  height: 140px;\n  cursor: pointer;\n  background: ",
-        ";\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n"
+        "\n  position: absolute;\n  right: 10px;\n  cursor: pointer;\n"
     ]);
     _templateObject33 = function _templateObject() {
         return data;
@@ -455,7 +456,8 @@ function _templateObject33() {
 }
 function _templateObject34() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  top: 30px;\n  text-align: center;\n"
+        "\n  position: relative;\n  margin-top: 8px;\n  border-radius: 8px;\n  width: 240px;\n  height: 140px;\n  cursor: pointer;\n  background: ",
+        ";\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n"
     ]);
     _templateObject34 = function _templateObject() {
         return data;
@@ -464,7 +466,7 @@ function _templateObject34() {
 }
 function _templateObject35() {
     var data = _tagged_template_literal([
-        "\n  top: 40%;\n"
+        "\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  top: 30px;\n  text-align: center;\n"
     ]);
     _templateObject35 = function _templateObject() {
         return data;
@@ -473,7 +475,7 @@ function _templateObject35() {
 }
 function _templateObject36() {
     var data = _tagged_template_literal([
-        "\n  width: 980px;\n  border-radius: 8px;\n"
+        "\n  top: 40%;\n"
     ]);
     _templateObject36 = function _templateObject() {
         return data;
@@ -482,7 +484,7 @@ function _templateObject36() {
 }
 function _templateObject37() {
     var data = _tagged_template_literal([
-        "\n  width: 980px;\n\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 21px;\n"
+        "\n  width: 980px;\n  border-radius: 8px;\n"
     ]);
     _templateObject37 = function _templateObject() {
         return data;
@@ -491,7 +493,7 @@ function _templateObject37() {
 }
 function _templateObject38() {
     var data = _tagged_template_literal([
-        "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.65);\n  z-index: 9999;\n"
+        "\n  width: 980px;\n\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 21px;\n"
     ]);
     _templateObject38 = function _templateObject() {
         return data;
@@ -500,7 +502,7 @@ function _templateObject38() {
 }
 function _templateObject39() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n"
+        "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.65);\n  z-index: 9999;\n"
     ]);
     _templateObject39 = function _templateObject() {
         return data;
@@ -509,8 +511,7 @@ function _templateObject39() {
 }
 function _templateObject40() {
     var data = _tagged_template_literal([
-        "\n  width: 48px;\n  height: 48px;\n  border: 4px solid;\n  border-color: ",
-        ";\n  border-radius: 50%;\n  animation: spin-anim 1.2s linear infinite;\n\n  @keyframes spin-anim {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n"
+        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n"
     ]);
     _templateObject40 = function _templateObject() {
         return data;
@@ -519,7 +520,8 @@ function _templateObject40() {
 }
 function _templateObject41() {
     var data = _tagged_template_literal([
-        "\n  position: fixed;\n  top: 3%;\n  right: 3%;\n"
+        "\n  width: 48px;\n  height: 48px;\n  border: 4px solid;\n  border-color: ",
+        ";\n  border-radius: 50%;\n  animation: spin-anim 1.2s linear infinite;\n\n  @keyframes spin-anim {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n"
     ]);
     _templateObject41 = function _templateObject() {
         return data;
@@ -528,9 +530,7 @@ function _templateObject41() {
 }
 function _templateObject42() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  height: 24px;\n  padding: 6px 16px 6px 8px;\n  /* width: 100%; */\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  svg {\n    cursor: pointer;\n  }\n"
+        "\n  position: fixed;\n  top: 3%;\n  right: 3%;\n"
     ]);
     _templateObject42 = function _templateObject() {
         return data;
@@ -539,9 +539,9 @@ function _templateObject42() {
 }
 function _templateObject43() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 16px;\n  border-radius: 12px;\n  border: ",
+        "\n  display: flex;\n  height: 24px;\n  padding: 6px 16px 6px 8px;\n  /* width: 100%; */\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
-        ";\n  align-items: center;\n  width: 272px;\n  gap: 8px;\n"
+        ";\n  svg {\n    cursor: pointer;\n  }\n"
     ]);
     _templateObject43 = function _templateObject() {
         return data;
@@ -550,7 +550,9 @@ function _templateObject43() {
 }
 function _templateObject44() {
     var data = _tagged_template_literal([
-        "\n  gap: 10px;\n"
+        "\n  display: flex;\n  padding: 16px;\n  border-radius: 12px;\n  border: ",
+        ";\n  background: ",
+        ";\n  align-items: center;\n  width: 272px;\n  gap: 8px;\n"
     ]);
     _templateObject44 = function _templateObject() {
         return data;
@@ -559,9 +561,7 @@ function _templateObject44() {
 }
 function _templateObject45() {
     var data = _tagged_template_literal([
-        "\n  padding: 16px 24px;\n  display: flex;\n  border-radius: 12px;\n  border: ",
-        ";\n  background: ",
-        ";\n  align-items: center;\n  justify-content: space-between;\n  width: 368px;\n"
+        "\n  gap: 10px;\n"
     ]);
     _templateObject45 = function _templateObject() {
         return data;
@@ -570,7 +570,9 @@ function _templateObject45() {
 }
 function _templateObject46() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
+        "\n  padding: 16px 24px;\n  display: flex;\n  border-radius: 12px;\n  border: ",
+        ";\n  background: ",
+        ";\n  align-items: center;\n  justify-content: space-between;\n  width: 368px;\n"
     ]);
     _templateObject46 = function _templateObject() {
         return data;
@@ -579,7 +581,7 @@ function _templateObject46() {
 }
 function _templateObject47() {
     var data = _tagged_template_literal([
-        "\n  gap: 8px;\n  display: flex;\n  flex-direction: column;\n"
+        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
     ]);
     _templateObject47 = function _templateObject() {
         return data;
@@ -588,8 +590,7 @@ function _templateObject47() {
 }
 function _templateObject48() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 16px;\n  background: ",
-        ";\n"
+        "\n  gap: 8px;\n  display: flex;\n  flex-direction: column;\n"
     ]);
     _templateObject48 = function _templateObject() {
         return data;
@@ -598,7 +599,8 @@ function _templateObject48() {
 }
 function _templateObject49() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 8px;\n"
+        "\n  padding: 4px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 16px;\n  background: ",
+        ";\n"
     ]);
     _templateObject49 = function _templateObject() {
         return data;
@@ -607,7 +609,7 @@ function _templateObject49() {
 }
 function _templateObject50() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  height: 100%;\n"
+        "\n  display: flex;\n  gap: 8px;\n"
     ]);
     _templateObject50 = function _templateObject() {
         return data;
@@ -616,8 +618,7 @@ function _templateObject50() {
 }
 function _templateObject51() {
     var data = _tagged_template_literal([
-        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
-        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
+        "\n  width: 100%;\n  height: 100%;\n"
     ]);
     _templateObject51 = function _templateObject() {
         return data;
@@ -626,8 +627,8 @@ function _templateObject51() {
 }
 function _templateObject52() {
     var data = _tagged_template_literal([
-        "\n  padding: 10px;\n  border: ",
-        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
+        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
+        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
     ]);
     _templateObject52 = function _templateObject() {
         return data;
@@ -636,8 +637,8 @@ function _templateObject52() {
 }
 function _templateObject53() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
-        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
+        "\n  padding: 10px;\n  border: ",
+        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
     ]);
     _templateObject53 = function _templateObject() {
         return data;
@@ -646,8 +647,8 @@ function _templateObject53() {
 }
 function _templateObject54() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
-        ";\n  cursor: pointer !important;\n"
+        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
+        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
     ]);
     _templateObject54 = function _templateObject() {
         return data;
@@ -656,7 +657,8 @@ function _templateObject54() {
 }
 function _templateObject55() {
     var data = _tagged_template_literal([
-        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
+        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
+        ";\n  cursor: pointer !important;\n"
     ]);
     _templateObject55 = function _templateObject() {
         return data;
@@ -665,7 +667,7 @@ function _templateObject55() {
 }
 function _templateObject56() {
     var data = _tagged_template_literal([
-        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
+        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
     ]);
     _templateObject56 = function _templateObject() {
         return data;
@@ -674,11 +676,7 @@ function _templateObject56() {
 }
 function _templateObject57() {
     var data = _tagged_template_literal([
-        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
-        ";\n  border: 1px solid ",
-        ";\n  background-color: ",
-        ';\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
-        ";\n  }\n"
+        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
     ]);
     _templateObject57 = function _templateObject() {
         return data;
@@ -689,8 +687,8 @@ function _templateObject58() {
     var data = _tagged_template_literal([
         "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
         ";\n  border: 1px solid ",
-        ';\n  background-color: transparent;\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
-        ";\n    color: ",
+        ";\n  background-color: ",
+        ';\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
         ";\n  }\n"
     ]);
     _templateObject58 = function _templateObject() {
@@ -700,11 +698,11 @@ function _templateObject58() {
 }
 function _templateObject59() {
     var data = _tagged_template_literal([
-        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
-        ";\n  align-items: ",
-        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
-        ";\n    animation-fill-mode: backwards;\n  }\n"
+        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
+        ";\n  border: 1px solid ",
+        ';\n  background-color: transparent;\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
+        ";\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject59 = function _templateObject() {
         return data;
@@ -713,8 +711,11 @@ function _templateObject59() {
 }
 function _templateObject60() {
     var data = _tagged_template_literal([
-        "\n  width: 500px;\n  min-height: 50px;\n  background-color: #ffffff;\n  position: relative;\n  border-radius: 8px;\n  padding: ",
-        ";\n"
+        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
+        ";\n  align-items: ",
+        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
+        ";\n    animation-fill-mode: backwards;\n  }\n"
     ]);
     _templateObject60 = function _templateObject() {
         return data;
@@ -723,7 +724,8 @@ function _templateObject60() {
 }
 function _templateObject61() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n  border-bottom: 1px solid #ededed;\n"
+        "\n  width: 500px;\n  min-height: 50px;\n  background-color: #ffffff;\n  position: relative;\n  border-radius: 8px;\n  padding: ",
+        ";\n"
     ]);
     _templateObject61 = function _templateObject() {
         return data;
@@ -732,7 +734,7 @@ function _templateObject61() {
 }
 function _templateObject62() {
     var data = _tagged_template_literal([
-        '\n  position: absolute;\n  top: 10px;\n  right: 20px;\n  width: 40px;\n  height: 40px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: "#d1345b";\n  cursor: pointer;\n\n  svg {\n    width: 100%;\n    height: 100%;\n  }\n'
+        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n  border-bottom: 1px solid #ededed;\n"
     ]);
     _templateObject62 = function _templateObject() {
         return data;
@@ -741,7 +743,7 @@ function _templateObject62() {
 }
 function _templateObject63() {
     var data = _tagged_template_literal([
-        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
+        '\n  position: absolute;\n  top: 10px;\n  right: 20px;\n  width: 40px;\n  height: 40px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: "#d1345b";\n  cursor: pointer;\n\n  svg {\n    width: 100%;\n    height: 100%;\n  }\n'
     ]);
     _templateObject63 = function _templateObject() {
         return data;
@@ -750,8 +752,7 @@ function _templateObject63() {
 }
 function _templateObject64() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: ",
-        ";\n"
+        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
     ]);
     _templateObject64 = function _templateObject() {
         return data;
@@ -760,7 +761,8 @@ function _templateObject64() {
 }
 function _templateObject65() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 2rem;\n  align-items: center;\n  justify-content: center;\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 1px solid #ededed;\n"
+        "\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: ",
+        ";\n"
     ]);
     _templateObject65 = function _templateObject() {
         return data;
@@ -769,7 +771,7 @@ function _templateObject65() {
 }
 function _templateObject66() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 2rem;\n  align-items: center;\n  justify-content: center;\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 1px solid #ededed;\n"
     ]);
     _templateObject66 = function _templateObject() {
         return data;
@@ -778,7 +780,7 @@ function _templateObject66() {
 }
 function _templateObject67() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n"
+        "\n  display: flex;\n"
     ]);
     _templateObject67 = function _templateObject() {
         return data;
@@ -787,8 +789,7 @@ function _templateObject67() {
 }
 function _templateObject68() {
     var data = _tagged_template_literal([
-        "\n  opacity: ",
-        ";\n"
+        "\n  display: flex;\n  align-items: center;\n"
     ]);
     _templateObject68 = function _templateObject() {
         return data;
@@ -797,7 +798,8 @@ function _templateObject68() {
 }
 function _templateObject69() {
     var data = _tagged_template_literal([
-        "\n  margin: 0 8px;\n"
+        "\n  opacity: ",
+        ";\n"
     ]);
     _templateObject69 = function _templateObject() {
         return data;
@@ -806,9 +808,37 @@ function _templateObject69() {
 }
 function _templateObject70() {
     var data = _tagged_template_literal([
-        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
+        "\n  margin: 0 8px;\n"
     ]);
     _templateObject70 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject71() {
+    var data = _tagged_template_literal([
+        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
+    ]);
+    _templateObject71 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject72() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
+        ";\n"
+    ]);
+    _templateObject72 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject73() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
+    ]);
+    _templateObject73 = function _templateObject() {
         return data;
     };
     return data;
@@ -891,6 +921,9 @@ __export(src_exports, {
     },
     DataFlow: function() {
         return KeyvalDataFlow;
+    },
+    Divider: function() {
+        return Divider;
     },
     DropDown: function() {
         return DropDown;
@@ -1026,25 +1059,30 @@ var import_react3 = __toESM(require("react"));
 // src/design.system/button/button.styled.tsx
 var import_styled_components3 = __toESM(require("styled-components"));
 var ButtonContainer = import_styled_components3.default.div(_templateObject3(), function(param) {
-    var theme2 = param.theme, disabled = param.disabled;
-    return disabled ? theme2.colors.blue_grey : theme2.colors.torquiz_light;
+    var theme2 = param.theme, disabled = param.disabled, variant = param.variant;
+    return disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.torquiz_light : "transparent";
 }, function(param) {
     var disabled = param.disabled;
     return disabled ? "not-allowed !important" : "pointer !important";
 });
 var StyledButton = import_styled_components3.default.button(_templateObject4(), function(param) {
+    var theme2 = param.theme, variant = param.variant;
+    return variant === "primary" ? "transparent" : theme2.colors.secondary;
+}, function(param) {
     var disabled = param.disabled;
     return disabled ? "not-allowed !important" : "pointer !important";
 }, function(param) {
-    var theme2 = param.theme, disabled = param.disabled;
-    return disabled ? theme2.colors.blue_grey : theme2.colors.secondary;
+    var theme2 = param.theme, disabled = param.disabled, variant = param.variant;
+    return disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.secondary : "transparent";
 });
 // src/design.system/button/button.tsx
 var Button = function(param) {
     var _param_variant = param.variant, variant = _param_variant === void 0 ? "primary" : _param_variant, children = param.children, style = param.style, onClick = param.onClick, disabled = param.disabled;
     return /* @__PURE__ */ import_react3.default.createElement(ButtonContainer, {
+        variant: variant,
         disabled: disabled
     }, /* @__PURE__ */ import_react3.default.createElement(StyledButton, {
+        variant: variant,
         disabled: disabled,
         onClick: onClick,
         style: _object_spread({}, style)
@@ -1066,23 +1104,35 @@ var import_react5 = __toESM(require("react"));
 // src/design.system/card/card.styled.tsx
 var import_styled_components5 = __toESM(require("styled-components"));
 var CardContainer = import_styled_components5.default.div(_templateObject7(), function(param) {
-    var selected = param.selected, theme2 = param.theme;
-    return "1px solid ".concat(selected ? theme2.colors.secondary : theme2.colors.dark_blue);
+    var selected = param.selected, theme2 = param.theme, type = param.type;
+    return "1px solid ".concat(selected ? theme2.colors.secondary : type === "primary" ? theme2.colors.dark_blue : "#374a5b");
 }, function(param) {
-    var theme2 = param.theme;
-    return theme2.colors.dark;
+    var theme2 = param.theme, type = param.type;
+    return type === "primary" ? theme2.colors.dark : "#0E1C28";
+}, function(param) {
+    var type = param.type;
+    return type === "primary" ? "none" : "0px -6px 16px 0px rgba(0, 0, 0, 0.25),4px 4px 16px 0px rgba(71, 231, 241, 0.05),-4px 4px 16px 0px rgba(71, 231, 241, 0.05)";
 });
+var CardHeader = (0, import_styled_components5.default)(CardContainer)(_templateObject8());
 // src/design.system/card/card.tsx
 function Card(param) {
-    var children = param.children, _param_focus = param.focus, focus = _param_focus === void 0 ? false : _param_focus;
+    var children = param.children, _param_focus = param.focus, focus = _param_focus === void 0 ? false : _param_focus, _param_type = param.type, type = _param_type === void 0 ? "primary" : _param_type, header = param.header;
+    var _header, _header1;
     return /* @__PURE__ */ import_react5.default.createElement(CardContainer, {
-        selected: focus || void 0
-    }, children);
+        selected: focus || void 0,
+        type: type
+    }, header && /* @__PURE__ */ import_react5.default.createElement(CardHeader, null, /* @__PURE__ */ import_react5.default.createElement(Text, {
+        size: 20,
+        weight: 600
+    }, (_header = header) === null || _header === void 0 ? void 0 : _header.title), /* @__PURE__ */ import_react5.default.createElement(Text, {
+        size: 14,
+        color: "#CCD0D2"
+    }, (_header1 = header) === null || _header1 === void 0 ? void 0 : _header1.subtitle)), children);
 }
 // src/design.system/tag/tag.tsx
 var import_react6 = __toESM(require("react"));
 var import_styled_components6 = __toESM(require("styled-components"));
-var TagWrapper = import_styled_components6.default.div(_templateObject8());
+var TagWrapper = import_styled_components6.default.div(_templateObject9());
 function Tag(param) {
     var _param_title = param.title, title = _param_title === void 0 ? "" : _param_title, _param_color = param.color, color = _param_color === void 0 ? "#033869" : _param_color;
     return /* @__PURE__ */ import_react6.default.createElement(TagWrapper, {
@@ -1098,7 +1148,7 @@ function Tag(param) {
 // src/design.system/tap/tap.tsx
 var import_react7 = __toESM(require("react"));
 var import_styled_components7 = __toESM(require("styled-components"));
-var TapWrapper = import_styled_components7.default.div(_templateObject9(), function(param) {
+var TapWrapper = import_styled_components7.default.div(_templateObject10(), function(param) {
     var theme2 = param.theme, selected = param.selected;
     return "1px solid ".concat(selected ? "transparent" : theme2.colors.dark_blue);
 }, function(param) {
@@ -1141,37 +1191,37 @@ var SvgExpandArrow = function(props) {
 var expand_arrow_default = SvgExpandArrow;
 // src/design.system/drop.down/drop.down.styled.tsx
 var import_styled_components8 = __toESM(require("styled-components"));
-var DropdownWrapper = import_styled_components8.default.div(_templateObject10(), function(param) {
+var DropdownWrapper = import_styled_components8.default.div(_templateObject11(), function(param) {
     var selected = param.selected, theme2 = param.theme;
     return "1px solid  ".concat(selected ? theme2.colors.white : theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark;
 });
-var DropdownHeader = import_styled_components8.default.div(_templateObject11(), function(param) {
+var DropdownHeader = import_styled_components8.default.div(_templateObject12(), function(param) {
     var theme2 = param.theme;
     return theme2.text.white;
 }, function(param) {
     var theme2 = param.theme;
     return theme2.font_family.primary;
 });
-var DropdownBody = import_styled_components8.default.div(_templateObject12(), function(param) {
+var DropdownBody = import_styled_components8.default.div(_templateObject13(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark;
 });
-var DropdownListWrapper = import_styled_components8.default.div(_templateObject13(), function(param) {
+var DropdownListWrapper = import_styled_components8.default.div(_templateObject14(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
-var DropdownItem = import_styled_components8.default.div(_templateObject14());
+var DropdownItem = import_styled_components8.default.div(_templateObject15());
 // src/design.system/search.input/search.input.tsx
 var import_react8 = __toESM(require("react"));
 // src/design.system/search.input/search.input.styled.tsx
 var import_styled_components9 = __toESM(require("styled-components"));
-var SearchInputWrapper = import_styled_components9.default.div(_templateObject15(), function(param) {
+var SearchInputWrapper = import_styled_components9.default.div(_templateObject16(), function(param) {
     var active = param.active, theme2 = param.theme;
     return "1px solid ".concat(active ? theme2.colors.white : theme2.colors.blue_grey);
 }, function(param) {
@@ -1181,7 +1231,7 @@ var SearchInputWrapper = import_styled_components9.default.div(_templateObject15
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.white);
 });
-var StyledSearchInput = import_styled_components9.default.input(_templateObject16(), function(param) {
+var StyledSearchInput = import_styled_components9.default.input(_templateObject17(), function(param) {
     var active = param.active, theme2 = param.theme;
     return "".concat(active ? theme2.colors.dark : "transparent");
 }, function(param) {
@@ -1351,12 +1401,12 @@ function DropDown(param) {
 var import_react11 = __toESM(require("react"));
 // src/design.system/switch/switch.styled.tsx
 var import_styled_components10 = __toESM(require("styled-components"));
-var SwitchInputWrapper = import_styled_components10.default.div(_templateObject17());
-var SwitchToggleWrapper = import_styled_components10.default.div(_templateObject18(), function(param) {
+var SwitchInputWrapper = import_styled_components10.default.div(_templateObject18());
+var SwitchToggleWrapper = import_styled_components10.default.div(_templateObject19(), function(param) {
     var active = param.active, theme2 = param.theme;
     return active ? theme2.colors.secondary : theme2.text.grey;
 });
-var SwitchButtonWrapper = import_styled_components10.default.span(_templateObject19(), function(param) {
+var SwitchButtonWrapper = import_styled_components10.default.span(_templateObject20(), function(param) {
     var disabled = param.disabled, theme2 = param.theme;
     return !disabled ? theme2.text.light_grey : theme2.text.white;
 }, function(param) {
@@ -1379,7 +1429,7 @@ function Switch(param) {
 var import_react12 = __toESM(require("react"));
 // src/design.system/checkbox/checkbox.styled.tsx
 var import_styled_components11 = require("styled-components");
-var CheckboxWrapper = import_styled_components11.styled.div(_templateObject20(), function(param) {
+var CheckboxWrapper = import_styled_components11.styled.div(_templateObject21(), function(param) {
     var disabled = param.disabled;
     return disabled ? "not-allowed" : "pointer";
 }, function(param) {
@@ -1389,7 +1439,7 @@ var CheckboxWrapper = import_styled_components11.styled.div(_templateObject20(),
     var disabled = param.disabled;
     return disabled ? "0.5" : "1";
 });
-var CheckboxItem = import_styled_components11.styled.span(_templateObject21(), function(param) {
+var CheckboxItem = import_styled_components11.styled.span(_templateObject22(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.light_grey);
 });
@@ -1433,7 +1483,7 @@ function Checkbox(param) {
 var import_react13 = __toESM(require("react"));
 // src/design.system/selected.counter/selected.counter.styled.tsx
 var import_styled_components12 = __toESM(require("styled-components"));
-var SelectedCounterWrapper = import_styled_components12.default.div(_templateObject22(), function(param) {
+var SelectedCounterWrapper = import_styled_components12.default.div(_templateObject23(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
@@ -1474,7 +1524,7 @@ function SelectedCounter(param) {
 // src/design.system/link/link.tsx
 var import_react14 = __toESM(require("react"));
 var import_styled_components13 = require("styled-components");
-var LinkContainer = import_styled_components13.styled.div(_templateObject23());
+var LinkContainer = import_styled_components13.styled.div(_templateObject24());
 function Link(param) {
     var value = param.value, onClick = param.onClick;
     return /* @__PURE__ */ import_react14.default.createElement(LinkContainer, {
@@ -1502,8 +1552,8 @@ var SvgQuestion = function(props) {
 var question_default = SvgQuestion;
 // src/design.system/tooltip/tooltip.styled.tsx
 var import_styled_components14 = __toESM(require("styled-components"));
-var TooltipWrapper = import_styled_components14.default.div(_templateObject24());
-var TooltipContentWrapper = import_styled_components14.default.div(_templateObject25(), function(param) {
+var TooltipWrapper = import_styled_components14.default.div(_templateObject25());
+var TooltipContentWrapper = import_styled_components14.default.div(_templateObject26(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark;
 });
@@ -1548,7 +1598,7 @@ function ImageComponent(param) {
 var import_react17 = __toESM(require("react"));
 // src/design.system/input/input.styled.tsx
 var import_styled_components15 = require("styled-components");
-var StyledInputContainer = import_styled_components15.styled.div(_templateObject26(), function(param) {
+var StyledInputContainer = import_styled_components15.styled.div(_templateObject27(), function(param) {
     var theme2 = param.theme, hasError = param.hasError, active = param.active;
     return "1px solid ".concat(hasError ? theme2.colors.error : active ? theme2.text.grey : theme2.colors.blue_grey);
 }, function(param) {
@@ -1558,18 +1608,18 @@ var StyledInputContainer = import_styled_components15.styled.div(_templateObject
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.text.grey);
 });
-var StyledActionInputContainer = import_styled_components15.styled.div(_templateObject27(), function(param) {
+var StyledActionInputContainer = import_styled_components15.styled.div(_templateObject28(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.secondary);
 });
-var StyledInput = import_styled_components15.styled.input(_templateObject28(), function(param) {
+var StyledInput = import_styled_components15.styled.input(_templateObject29(), function(param) {
     var theme2 = param.theme;
     return theme2.text.white;
 });
-var StyledActionInput = (0, import_styled_components15.styled)(StyledInput)(_templateObject29());
-var LabelWrapper = import_styled_components15.styled.div(_templateObject30());
-var ErrorWrapper = import_styled_components15.styled.div(_templateObject31());
-var DisplayIconsWrapper = import_styled_components15.styled.div(_templateObject32());
+var StyledActionInput = (0, import_styled_components15.styled)(StyledInput)(_templateObject30());
+var LabelWrapper = import_styled_components15.styled.div(_templateObject31());
+var ErrorWrapper = import_styled_components15.styled.div(_templateObject32());
+var DisplayIconsWrapper = import_styled_components15.styled.div(_templateObject33());
 // src/assets/icons/eye-open.svg
 var React23 = __toESM(require("react"));
 var SvgEyeOpen = function(props) {
@@ -1626,7 +1676,7 @@ var SvgEyeClose = function(props) {
 var eye_close_default = SvgEyeClose;
 // src/design.system/input/input.tsx
 function Input(param) {
-    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, error = param.error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style;
+    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, error = param.error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style, placeholder = param.placeholder;
     var handleChange = function handleChange(event) {
         onChange(event.target.value);
     };
@@ -1642,7 +1692,8 @@ function Input(param) {
         type: showPassword ? "text" : type,
         value: value,
         onChange: handleChange,
-        autoComplete: "off"
+        autoComplete: "off",
+        placeholder: placeholder
     }), type === "password" && /* @__PURE__ */ import_react17.default.createElement(DisplayIconsWrapper, {
         onClick: function() {
             return setShowPassword(!showPassword);
@@ -1750,15 +1801,15 @@ var SvgPlayer = function(props) {
 var player_default = SvgPlayer;
 // src/design.system/video/video.styled.tsx
 var import_styled_components16 = require("styled-components");
-var ImagePreviewWrapper = import_styled_components16.styled.div(_templateObject33(), function(param) {
+var ImagePreviewWrapper = import_styled_components16.styled.div(_templateObject34(), function(param) {
     var url = param.url;
     return "linear-gradient(\n      0deg,\n      rgba(2, 20, 30, 0.2) 0%,\n      rgba(2, 20, 30, 0.2) 100%\n    ),\n    url(".concat(url, "),\n    lightgray 50%");
 });
-var PlayerIconWrapper = import_styled_components16.styled.div(_templateObject34());
-var LargePlayerIconWrapper = (0, import_styled_components16.styled)(PlayerIconWrapper)(_templateObject35());
-var StyledLargeVideo = import_styled_components16.styled.video(_templateObject36());
-var LargeVideoHeader = import_styled_components16.styled.div(_templateObject37());
-var LargeVideoContainer = import_styled_components16.styled.div(_templateObject38());
+var PlayerIconWrapper = import_styled_components16.styled.div(_templateObject35());
+var LargePlayerIconWrapper = (0, import_styled_components16.styled)(PlayerIconWrapper)(_templateObject36());
+var StyledLargeVideo = import_styled_components16.styled.video(_templateObject37());
+var LargeVideoHeader = import_styled_components16.styled.div(_templateObject38());
+var LargeVideoContainer = import_styled_components16.styled.div(_templateObject39());
 // src/design.system/video/video.tsx
 function Video(param) {
     var videoSrc = param.videoSrc, title = param.title, thumbnail = param.thumbnail;
@@ -1814,8 +1865,8 @@ function Video(param) {
 var import_react20 = __toESM(require("react"));
 // src/design.system/loader/loader.styled.tsx
 var import_styled_components17 = __toESM(require("styled-components"));
-var LoaderWrapper = import_styled_components17.default.div(_templateObject39());
-var StyledLoader = import_styled_components17.default.div(_templateObject40(), function(param) {
+var LoaderWrapper = import_styled_components17.default.div(_templateObject40());
+var StyledLoader = import_styled_components17.default.div(_templateObject41(), function(param) {
     var theme2 = param.theme;
     return "".concat(theme2.colors.secondary, " ").concat(theme2.colors.secondary, " ").concat(theme2.colors.secondary, "  transparent");
 });
@@ -1827,8 +1878,8 @@ function Loader() {
 var import_react21 = __toESM(require("react"));
 // src/design.system/notification/notification.styled.tsx
 var import_styled_components18 = __toESM(require("styled-components"));
-var NotificationContainer = import_styled_components18.default.div(_templateObject41());
-var StyledNotification = import_styled_components18.default.div(_templateObject42(), function(param) {
+var NotificationContainer = import_styled_components18.default.div(_templateObject42());
+var StyledNotification = import_styled_components18.default.div(_templateObject43(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.secondary);
 }, function(param) {
@@ -2152,14 +2203,14 @@ function NamespaceNode(param) {
 var import_react23 = __toESM(require("react"));
 var import_reactflow2 = require("reactflow");
 var import_styled_components19 = require("styled-components");
-var NamespaceContainer = import_styled_components19.styled.div(_templateObject43(), function(param) {
+var NamespaceContainer = import_styled_components19.styled.div(_templateObject44(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.light_dark;
 });
-var TextWrapper2 = import_styled_components19.styled.div(_templateObject44());
+var TextWrapper2 = import_styled_components19.styled.div(_templateObject45());
 var namespace_node_default = (0, import_react23.memo)(function(param) {
     var data = param.data, isConnectable = param.isConnectable;
     var _data, _data1;
@@ -2325,25 +2376,25 @@ var MONITORING_OPTIONS = [
     }
 ];
 // src/design.system/data.flow/destination.node.tsx
-var DestinationNodeContainer = import_styled_components20.styled.div(_templateObject45(), function(param) {
+var DestinationNodeContainer = import_styled_components20.styled.div(_templateObject46(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.light_dark;
 });
-var NodeDataWrapper = import_styled_components20.styled.div(_templateObject46());
-var TextWrapper3 = import_styled_components20.styled.div(_templateObject47());
+var NodeDataWrapper = import_styled_components20.styled.div(_templateObject47());
+var TextWrapper3 = import_styled_components20.styled.div(_templateObject48());
 var IMAGE_STYLE2 = {
     backgroundColor: "#fff",
     padding: 4,
     borderRadius: 10
 };
-var IconWrapper = import_styled_components20.styled.div(_templateObject48(), function(param) {
+var IconWrapper = import_styled_components20.styled.div(_templateObject49(), function(param) {
     var theme2 = param.theme, tapped = param.tapped;
     return tapped ? theme2.colors.dark_blue : "#0e1c28";
 });
-var MonitorsListWrapper = import_styled_components20.styled.div(_templateObject49());
+var MonitorsListWrapper = import_styled_components20.styled.div(_templateObject50());
 function DestinationNode(param) {
     var data = param.data, isConnectable = param.isConnectable;
     var renderMonitors = function renderMonitors() {
@@ -2381,8 +2432,8 @@ function DestinationNode(param) {
 var import_style = require("reactflow/dist/style.css");
 // src/design.system/data.flow/data.flow.styled.tsx
 var import_styled_components21 = __toESM(require("styled-components"));
-var DataFlowContainer = import_styled_components21.default.div(_templateObject50());
-var ControllerWrapper = import_styled_components21.default.div(_templateObject51(), function(param) {
+var DataFlowContainer = import_styled_components21.default.div(_templateObject51());
+var ControllerWrapper = import_styled_components21.default.div(_templateObject52(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
@@ -2431,15 +2482,15 @@ function KeyvalDataFlow(props) {
 // src/design.system/danger.zone/danger.zone.tsx
 var import_react26 = __toESM(require("react"));
 var import_styled_components22 = require("styled-components");
-var DangerZoneWrapper = import_styled_components22.styled.div(_templateObject52(), function(param) {
+var DangerZoneWrapper = import_styled_components22.styled.div(_templateObject53(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
-var DangerButtonWrapper = import_styled_components22.styled.div(_templateObject53(), function(param) {
+var DangerButtonWrapper = import_styled_components22.styled.div(_templateObject54(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.error;
 });
-var DangerButton = import_styled_components22.styled.button(_templateObject54(), function(param) {
+var DangerButton = import_styled_components22.styled.button(_templateObject55(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
@@ -2494,9 +2545,9 @@ var PortalModal = function(param) {
 var portal_modal_default = PortalModal;
 // src/design.system/modal/modal.styled.tsx
 var import_styled_components23 = __toESM(require("styled-components"));
-var fadeIn = import_styled_components23.keyframes(_templateObject55());
-var ModalButtonsContainer = import_styled_components23.default.div(_templateObject56());
-var ModalButtonPrimary = import_styled_components23.default.button(_templateObject57(), function(param) {
+var fadeIn = import_styled_components23.keyframes(_templateObject56());
+var ModalButtonsContainer = import_styled_components23.default.div(_templateObject57());
+var ModalButtonPrimary = import_styled_components23.default.button(_templateObject58(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.btnText;
 }, function(param) {
@@ -2509,7 +2560,7 @@ var ModalButtonPrimary = import_styled_components23.default.button(_templateObje
     var theme2 = param.theme;
     return theme2.colors.shadowMain;
 });
-var ModalButtonSecondary = import_styled_components23.default.button(_templateObject58(), function(param) {
+var ModalButtonSecondary = import_styled_components23.default.button(_templateObject59(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.main;
 }, function(param) {
@@ -2522,24 +2573,24 @@ var ModalButtonSecondary = import_styled_components23.default.button(_templateOb
     var theme2 = param.theme;
     return theme2.colors.btnText;
 });
-var Overlay = import_styled_components23.default.div(_templateObject59(), function(props) {
+var Overlay = import_styled_components23.default.div(_templateObject60(), function(props) {
     return props.showOverlay ? "rgba(23, 23, 23, 0.8)" : "rgba(0, 0, 0, 0)";
 }, function(props) {
     return props.positionX ? props.positionX : "center";
 }, function(props) {
     return props.positionY ? props.positionY : "center";
 }, fadeIn);
-var ModalContainer = import_styled_components23.default.div(_templateObject60(), function(props) {
+var ModalContainer = import_styled_components23.default.div(_templateObject61(), function(props) {
     return props.padding ? props.padding : "20px";
 });
-var ModalHeader = import_styled_components23.default.header(_templateObject61());
-var Close = import_styled_components23.default.button(_templateObject62());
-var PrimaryButton = import_styled_components23.default.button(_templateObject63());
-var Content = import_styled_components23.default.div(_templateObject64(), function(param) {
+var ModalHeader = import_styled_components23.default.header(_templateObject62());
+var Close = import_styled_components23.default.button(_templateObject63());
+var PrimaryButton = import_styled_components23.default.button(_templateObject64());
+var Content = import_styled_components23.default.div(_templateObject65(), function(param) {
     var theme2 = param.theme;
     return theme2.text;
 });
-var ModalFooter = import_styled_components23.default.footer(_templateObject65());
+var ModalFooter = import_styled_components23.default.footer(_templateObject66());
 // src/assets/icons/close-modal.svg
 var React48 = __toESM(require("react"));
 var SvgCloseModal = function(props) {
@@ -2616,14 +2667,14 @@ var import_react31 = __toESM(require("react"));
 var import_react30 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
 var import_styled_components25 = __toESM(require("styled-components"));
-var StepsContainer = import_styled_components25.default.div(_templateObject66());
-var StepItemWrapper = import_styled_components25.default.div(_templateObject67());
-var FloatingBoxTextWrapper = import_styled_components25.default.div(_templateObject68(), function(param) {
+var StepsContainer = import_styled_components25.default.div(_templateObject67());
+var StepItemWrapper = import_styled_components25.default.div(_templateObject68());
+var FloatingBoxTextWrapper = import_styled_components25.default.div(_templateObject69(), function(param) {
     var disabled = param.disabled;
     return disabled ? "0.4" : "1";
 });
-var StepItemTextWrapper = (0, import_styled_components25.default)(FloatingBoxTextWrapper)(_templateObject69());
-var StepItemBorder = import_styled_components25.default.div(_templateObject70());
+var StepItemTextWrapper = (0, import_styled_components25.default)(FloatingBoxTextWrapper)(_templateObject70());
+var StepItemBorder = import_styled_components25.default.div(_templateObject71());
 // src/assets/icons/checked.svg
 var React51 = __toESM(require("react"));
 var SvgChecked = function(props) {
@@ -2670,6 +2721,22 @@ function Steps(param) {
     };
     return /* @__PURE__ */ import_react31.default.createElement(StepsContainer, null, renderSteps());
 }
+// src/design.system/divider/divider.tsx
+var import_react32 = __toESM(require("react"));
+var import_styled_components26 = __toESM(require("styled-components"));
+var DividerContainer = import_styled_components26.default.div(_templateObject72(), function(param) {
+    var margin = param.margin;
+    return margin;
+});
+var DividerLine = import_styled_components26.default.div(_templateObject73());
+function Divider(param) {
+    var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
+    return /* @__PURE__ */ import_react32.default.createElement(DividerContainer, {
+        margin: margin
+    }, /* @__PURE__ */ import_react32.default.createElement(DividerLine, null), /* @__PURE__ */ import_react32.default.createElement(Text, {
+        size: 14
+    }, label), /* @__PURE__ */ import_react32.default.createElement(DividerLine, null));
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     ActionInput: ActionInput,
@@ -2678,6 +2745,7 @@ function Steps(param) {
     Checkbox: Checkbox,
     DangerZone: DangerZone,
     DataFlow: DataFlow,
+    Divider: Divider,
     DropDown: DropDown,
     FloatBox: FloatBox,
     Image: Image,
