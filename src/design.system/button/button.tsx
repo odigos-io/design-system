@@ -8,6 +8,7 @@ interface ButtonProps {
   onClick?: () => void;
   style?: object;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -16,10 +17,12 @@ export const Button: FC<ButtonProps> = ({
   style,
   onClick,
   disabled,
+  type = 'button',
 }) => {
   return (
     <ButtonContainer variant={variant} disabled={disabled}>
       <StyledButton
+        type={type}
         variant={variant}
         disabled={disabled}
         onClick={onClick}

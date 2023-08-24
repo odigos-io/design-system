@@ -13,6 +13,7 @@ interface ButtonProps {
     onClick?: () => void;
     style?: object;
     disabled?: boolean;
+    type?: 'button' | 'submit' | 'reset' | undefined;
 }
 declare const Button: FC<ButtonProps>;
 
@@ -108,8 +109,9 @@ declare function SelectedCounter({ total, selected }: SelectedCounterProps): Rea
 interface LinkProps {
     value: string;
     onClick?: () => void;
+    fontSize?: number;
 }
-declare function Link({ value, onClick }: LinkProps): React.JSX.Element;
+declare function Link({ value, onClick, fontSize }: LinkProps): React.JSX.Element;
 
 declare function Tooltip(props: any): React.JSX.Element;
 

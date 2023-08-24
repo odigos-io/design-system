@@ -1,6 +1,7 @@
-import theme from "@/styles/palette";
-import React, { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
+import theme from '@/styles/palette';
+import React, { ReactNode } from 'react';
+import StyledComponentsRegistry from './registry';
+import { ThemeProvider } from 'styled-components';
 interface ThemeProviderWrapperProps {
   children: ReactNode; // Add children prop with ReactNode type
 }
@@ -8,5 +9,9 @@ interface ThemeProviderWrapperProps {
 export const ThemeProviderWrapper: React.FC<ThemeProviderWrapperProps> = ({
   children,
 }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+    </ThemeProvider>
+  );
 };

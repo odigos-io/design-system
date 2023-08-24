@@ -96,9 +96,10 @@ var StyledButton = styled3.button`
   border: 1px solid
     ${({ theme: theme2, variant }) => variant === "primary" ? "transparent" : theme2.colors.secondary};
   cursor: ${({ disabled }) => disabled ? "not-allowed !important" : "pointer !important"};
-  background: ${({ theme: theme2, disabled, variant }) => disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.secondary : "transparent"};
+  background: ${({ theme: theme2, disabled, variant }) => disabled ? variant === "primary" ? theme2.colors.blue_grey : "transparent" : variant === "primary" ? theme2.colors.secondary : "transparent"};
   justify-content: center;
   align-items: center;
+  opacity: ${({ disabled, variant }) => variant !== "primary" && disabled ? 0.5 : 1};
 `;
 
 // src/design.system/button/button.tsx
@@ -107,11 +108,13 @@ var Button = ({
   children,
   style,
   onClick,
-  disabled
+  disabled,
+  type = "button"
 }) => {
   return /* @__PURE__ */ React4.createElement(ButtonContainer, { variant, disabled }, /* @__PURE__ */ React4.createElement(
     StyledButton,
     {
+      type,
       variant,
       disabled,
       onClick,
@@ -622,8 +625,8 @@ var LinkContainer = styled13.div`
     cursor: pointer !important;
   }
 `;
-function Link({ value, onClick }) {
-  return /* @__PURE__ */ React19.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React19.createElement(Text, { color: "#0EE6F3" }, value));
+function Link({ value, onClick, fontSize = 16 }) {
+  return /* @__PURE__ */ React19.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React19.createElement(Text, { size: fontSize, color: "#0EE6F3" }, value));
 }
 
 // src/design.system/tooltip/tooltip.tsx
@@ -1578,19 +1581,39 @@ function Modal({ children, closeModal, config }) {
 }
 
 // src/design.system/theme.provider/theme.provider.tsx
-import React50 from "react";
+import React51 from "react";
+
+// src/design.system/theme.provider/registry.tsx
+import React50, { useState as useState7 } from "react";
+import { useServerInsertedHTML } from "next/navigation";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+function StyledComponentsRegistry({
+  children
+}) {
+  const [styledComponentsStyleSheet] = useState7(() => new ServerStyleSheet());
+  useServerInsertedHTML(() => {
+    const styles = styledComponentsStyleSheet.getStyleElement();
+    styledComponentsStyleSheet.instance.clearTag();
+    return /* @__PURE__ */ React50.createElement(React50.Fragment, null, styles);
+  });
+  if (typeof window !== "undefined")
+    return /* @__PURE__ */ React50.createElement(React50.Fragment, null, children);
+  return /* @__PURE__ */ React50.createElement(StyleSheetManager, { sheet: styledComponentsStyleSheet.instance }, children);
+}
+
+// src/design.system/theme.provider/theme.provider.tsx
 import { ThemeProvider } from "styled-components";
 var ThemeProviderWrapper = ({
   children
 }) => {
-  return /* @__PURE__ */ React50.createElement(ThemeProvider, { theme: palette_default }, children);
+  return /* @__PURE__ */ React51.createElement(ThemeProvider, { theme: palette_default }, /* @__PURE__ */ React51.createElement(StyledComponentsRegistry, null, children));
 };
 
 // src/design.system/steps/steps.tsx
-import React53 from "react";
+import React54 from "react";
 
 // src/design.system/steps/step.item.tsx
-import React52 from "react";
+import React53 from "react";
 
 // src/design.system/steps/steps.styled.tsx
 import styled24 from "styled-components";
@@ -1616,8 +1639,8 @@ var StepItemBorder = styled24.div`
 `;
 
 // src/assets/icons/checked.svg
-import * as React51 from "react";
-var SvgChecked = (props) => /* @__PURE__ */ React51.createElement("svg", { width: 20, height: 14, viewBox: "0 0 20 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React51.createElement("path", { d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z", fill: "white" }));
+import * as React52 from "react";
+var SvgChecked = (props) => /* @__PURE__ */ React52.createElement("svg", { width: 20, height: 14, viewBox: "0 0 20 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React52.createElement("path", { d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z", fill: "white" }));
 var checked_default = SvgChecked;
 
 // src/design.system/steps/step.item.tsx
@@ -1627,13 +1650,13 @@ function StepItem({
   status,
   isLast
 }) {
-  return /* @__PURE__ */ React52.createElement(StepItemWrapper, null, /* @__PURE__ */ React52.createElement(FloatBox, null, status === "done" /* Done */ ? /* @__PURE__ */ React52.createElement(checked_default, null) : /* @__PURE__ */ React52.createElement(FloatingBoxTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React52.createElement(Text, { weight: 700 }, index))), /* @__PURE__ */ React52.createElement(StepItemTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React52.createElement(Text, { weight: 600 }, title)), !isLast && /* @__PURE__ */ React52.createElement(StepItemBorder, null));
+  return /* @__PURE__ */ React53.createElement(StepItemWrapper, null, /* @__PURE__ */ React53.createElement(FloatBox, null, status === "done" /* Done */ ? /* @__PURE__ */ React53.createElement(checked_default, null) : /* @__PURE__ */ React53.createElement(FloatingBoxTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React53.createElement(Text, { weight: 700 }, index))), /* @__PURE__ */ React53.createElement(StepItemTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React53.createElement(Text, { weight: 600 }, title)), !isLast && /* @__PURE__ */ React53.createElement(StepItemBorder, null));
 }
 
 // src/design.system/steps/steps.tsx
 function Steps({ data }) {
   function renderSteps() {
-    return data?.map(({ title, status }, index) => /* @__PURE__ */ React53.createElement(
+    return data?.map(({ title, status }, index) => /* @__PURE__ */ React54.createElement(
       StepItem,
       {
         key: `${index}_${title}`,
@@ -1644,11 +1667,11 @@ function Steps({ data }) {
       }
     ));
   }
-  return /* @__PURE__ */ React53.createElement(StepsContainer, null, renderSteps());
+  return /* @__PURE__ */ React54.createElement(StepsContainer, null, renderSteps());
 }
 
 // src/design.system/divider/divider.tsx
-import React54 from "react";
+import React55 from "react";
 import styled25 from "styled-components";
 var DividerContainer = styled25.div`
   width: 100%;
@@ -1665,7 +1688,7 @@ function Divider({
   margin = "32px 0",
   label = "or"
 }) {
-  return /* @__PURE__ */ React54.createElement(DividerContainer, { margin }, /* @__PURE__ */ React54.createElement(DividerLine, null), /* @__PURE__ */ React54.createElement(Text, { size: 14 }, label), /* @__PURE__ */ React54.createElement(DividerLine, null));
+  return /* @__PURE__ */ React55.createElement(DividerContainer, { margin }, /* @__PURE__ */ React55.createElement(DividerLine, null), /* @__PURE__ */ React55.createElement(Text, { size: 14 }, label), /* @__PURE__ */ React55.createElement(DividerLine, null));
 }
 export {
   ActionInput,

@@ -1,6 +1,6 @@
 {
   "name": "@keyval-dev/design-system",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": false,
   "scripts": {
     "dev": "next dev",

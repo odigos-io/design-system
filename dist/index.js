@@ -153,7 +153,8 @@ function _templateObject4() {
         "\n  display: flex;\n  padding: 8px 16px;\n  align-items: center;\n  border-radius: 8px;\n  border: none;\n  width: 100%;\n  height: 100%;\n  border: 1px solid\n    ",
         ";\n  cursor: ",
         ";\n  background: ",
-        ";\n  justify-content: center;\n  align-items: center;\n"
+        ";\n  justify-content: center;\n  align-items: center;\n  opacity: ",
+        ";\n"
     ]);
     _templateObject4 = function _templateObject() {
         return data;
@@ -1073,15 +1074,19 @@ var StyledButton = import_styled_components3.default.button(_templateObject4(), 
     return disabled ? "not-allowed !important" : "pointer !important";
 }, function(param) {
     var theme2 = param.theme, disabled = param.disabled, variant = param.variant;
-    return disabled ? theme2.colors.blue_grey : variant === "primary" ? theme2.colors.secondary : "transparent";
+    return disabled ? variant === "primary" ? theme2.colors.blue_grey : "transparent" : variant === "primary" ? theme2.colors.secondary : "transparent";
+}, function(param) {
+    var disabled = param.disabled, variant = param.variant;
+    return variant !== "primary" && disabled ? 0.5 : 1;
 });
 // src/design.system/button/button.tsx
 var Button = function(param) {
-    var _param_variant = param.variant, variant = _param_variant === void 0 ? "primary" : _param_variant, children = param.children, style = param.style, onClick = param.onClick, disabled = param.disabled;
+    var _param_variant = param.variant, variant = _param_variant === void 0 ? "primary" : _param_variant, children = param.children, style = param.style, onClick = param.onClick, disabled = param.disabled, _param_type = param.type, type = _param_type === void 0 ? "button" : _param_type;
     return /* @__PURE__ */ import_react3.default.createElement(ButtonContainer, {
         variant: variant,
         disabled: disabled
     }, /* @__PURE__ */ import_react3.default.createElement(StyledButton, {
+        type: type,
         variant: variant,
         disabled: disabled,
         onClick: onClick,
@@ -1526,10 +1531,11 @@ var import_react14 = __toESM(require("react"));
 var import_styled_components13 = require("styled-components");
 var LinkContainer = import_styled_components13.styled.div(_templateObject24());
 function Link(param) {
-    var value = param.value, onClick = param.onClick;
+    var value = param.value, onClick = param.onClick, _param_fontSize = param.fontSize, fontSize = _param_fontSize === void 0 ? 16 : _param_fontSize;
     return /* @__PURE__ */ import_react14.default.createElement(LinkContainer, {
         onClick: onClick
     }, /* @__PURE__ */ import_react14.default.createElement(Text, {
+        size: fontSize,
         color: "#0EE6F3"
     }, value));
 }
@@ -2653,38 +2659,58 @@ function Modal(param) {
     }, config.footer.primaryBtnText)))))));
 }
 // src/design.system/theme.provider/theme.provider.tsx
+var import_react30 = __toESM(require("react"));
+// src/design.system/theme.provider/registry.tsx
 var import_react29 = __toESM(require("react"));
+var import_navigation = require("next/navigation");
 var import_styled_components24 = require("styled-components");
+function StyledComponentsRegistry(param) {
+    var children = param.children;
+    var _ref = _sliced_to_array((0, import_react29.useState)(function() {
+        return new import_styled_components24.ServerStyleSheet();
+    }), 1), styledComponentsStyleSheet = _ref[0];
+    (0, import_navigation.useServerInsertedHTML)(function() {
+        var styles = styledComponentsStyleSheet.getStyleElement();
+        styledComponentsStyleSheet.instance.clearTag();
+        return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, styles);
+    });
+    if (typeof window !== "undefined") return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, children);
+    return /* @__PURE__ */ import_react29.default.createElement(import_styled_components24.StyleSheetManager, {
+        sheet: styledComponentsStyleSheet.instance
+    }, children);
+}
+// src/design.system/theme.provider/theme.provider.tsx
+var import_styled_components25 = require("styled-components");
 var ThemeProviderWrapper = function(param) {
     var children = param.children;
-    return /* @__PURE__ */ import_react29.default.createElement(import_styled_components24.ThemeProvider, {
+    return /* @__PURE__ */ import_react30.default.createElement(import_styled_components25.ThemeProvider, {
         theme: palette_default
-    }, children);
+    }, /* @__PURE__ */ import_react30.default.createElement(StyledComponentsRegistry, null, children));
 };
 // src/design.system/steps/steps.tsx
-var import_react31 = __toESM(require("react"));
+var import_react32 = __toESM(require("react"));
 // src/design.system/steps/step.item.tsx
-var import_react30 = __toESM(require("react"));
+var import_react31 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
-var import_styled_components25 = __toESM(require("styled-components"));
-var StepsContainer = import_styled_components25.default.div(_templateObject67());
-var StepItemWrapper = import_styled_components25.default.div(_templateObject68());
-var FloatingBoxTextWrapper = import_styled_components25.default.div(_templateObject69(), function(param) {
+var import_styled_components26 = __toESM(require("styled-components"));
+var StepsContainer = import_styled_components26.default.div(_templateObject67());
+var StepItemWrapper = import_styled_components26.default.div(_templateObject68());
+var FloatingBoxTextWrapper = import_styled_components26.default.div(_templateObject69(), function(param) {
     var disabled = param.disabled;
     return disabled ? "0.4" : "1";
 });
-var StepItemTextWrapper = (0, import_styled_components25.default)(FloatingBoxTextWrapper)(_templateObject70());
-var StepItemBorder = import_styled_components25.default.div(_templateObject71());
+var StepItemTextWrapper = (0, import_styled_components26.default)(FloatingBoxTextWrapper)(_templateObject70());
+var StepItemBorder = import_styled_components26.default.div(_templateObject71());
 // src/assets/icons/checked.svg
-var React51 = __toESM(require("react"));
+var React52 = __toESM(require("react"));
 var SvgChecked = function(props) {
-    return /* @__PURE__ */ React51.createElement("svg", _object_spread({
+    return /* @__PURE__ */ React52.createElement("svg", _object_spread({
         width: 20,
         height: 14,
         viewBox: "0 0 20 14",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg"
-    }, props), /* @__PURE__ */ React51.createElement("path", {
+    }, props), /* @__PURE__ */ React52.createElement("path", {
         d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z",
         fill: "white"
     }));
@@ -2693,15 +2719,15 @@ var checked_default = SvgChecked;
 // src/design.system/steps/step.item.tsx
 function StepItem(param) {
     var title = param.title, index = param.index, status = param.status, isLast = param.isLast;
-    return /* @__PURE__ */ import_react30.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react30.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react30.default.createElement(checked_default, null) : /* @__PURE__ */ import_react30.default.createElement(FloatingBoxTextWrapper, {
+    return /* @__PURE__ */ import_react31.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react31.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react31.default.createElement(checked_default, null) : /* @__PURE__ */ import_react31.default.createElement(FloatingBoxTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react30.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react31.default.createElement(Text, {
         weight: 700
-    }, index))), /* @__PURE__ */ import_react30.default.createElement(StepItemTextWrapper, {
+    }, index))), /* @__PURE__ */ import_react31.default.createElement(StepItemTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react30.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react31.default.createElement(Text, {
         weight: 600
-    }, title)), !isLast && /* @__PURE__ */ import_react30.default.createElement(StepItemBorder, null));
+    }, title)), !isLast && /* @__PURE__ */ import_react31.default.createElement(StepItemBorder, null));
 }
 // src/design.system/steps/steps.tsx
 function Steps(param) {
@@ -2710,7 +2736,7 @@ function Steps(param) {
         var _data;
         return (_data = data) === null || _data === void 0 ? void 0 : _data.map(function(param, index) {
             var title = param.title, status = param.status;
-            return /* @__PURE__ */ import_react31.default.createElement(StepItem, {
+            return /* @__PURE__ */ import_react32.default.createElement(StepItem, {
                 key: "".concat(index, "_").concat(title),
                 title: title,
                 status: status,
@@ -2719,23 +2745,23 @@ function Steps(param) {
             });
         });
     };
-    return /* @__PURE__ */ import_react31.default.createElement(StepsContainer, null, renderSteps());
+    return /* @__PURE__ */ import_react32.default.createElement(StepsContainer, null, renderSteps());
 }
 // src/design.system/divider/divider.tsx
-var import_react32 = __toESM(require("react"));
-var import_styled_components26 = __toESM(require("styled-components"));
-var DividerContainer = import_styled_components26.default.div(_templateObject72(), function(param) {
+var import_react33 = __toESM(require("react"));
+var import_styled_components27 = __toESM(require("styled-components"));
+var DividerContainer = import_styled_components27.default.div(_templateObject72(), function(param) {
     var margin = param.margin;
     return margin;
 });
-var DividerLine = import_styled_components26.default.div(_templateObject73());
+var DividerLine = import_styled_components27.default.div(_templateObject73());
 function Divider(param) {
     var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
-    return /* @__PURE__ */ import_react32.default.createElement(DividerContainer, {
+    return /* @__PURE__ */ import_react33.default.createElement(DividerContainer, {
         margin: margin
-    }, /* @__PURE__ */ import_react32.default.createElement(DividerLine, null), /* @__PURE__ */ import_react32.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react33.default.createElement(DividerLine, null), /* @__PURE__ */ import_react33.default.createElement(Text, {
         size: 14
-    }, label), /* @__PURE__ */ import_react32.default.createElement(DividerLine, null));
+    }, label), /* @__PURE__ */ import_react33.default.createElement(DividerLine, null));
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

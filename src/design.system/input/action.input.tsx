@@ -1,8 +1,8 @@
-import React, { ChangeEvent } from "react";
-import { StyledActionInputContainer, StyledActionInput } from "./input.styled";
-import { Button } from "../button/button";
-import { Text } from "../text/text";
-import theme from "@/styles/palette";
+import React, { ChangeEvent } from 'react';
+import { StyledActionInputContainer, StyledActionInput } from './input.styled';
+import { Button } from '../button/button';
+import { Text } from '../text/text';
+import theme from '@/styles/palette';
 
 interface InputProps {
   value: string;
@@ -33,7 +33,7 @@ export function ActionInput({
 
         <Button onClick={onAction}>
           <Text size={14} weight={500} color={theme.text.dark_button}>
-            {"Save"}
+            {'Save'}
           </Text>
         </Button>
       </StyledActionInputContainer>
