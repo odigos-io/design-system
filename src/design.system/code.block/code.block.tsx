@@ -1,12 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { Copied, Copy } from '@/assets/icons';
-import { IBM_Plex_Mono } from 'next/font/google';
-import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 import { Text } from '..';
-
 import { useCopyToClipboard } from '@/hooks';
 import theme from '@/styles/palette';
-const ibmPlexMono = IBM_Plex_Mono({ weight: '700', subsets: ['cyrillic'] });
+
 interface CodeProps {
   text: string;
   title?: string;
@@ -51,6 +49,7 @@ const ComponentWrapper = styled.div`
   flex-direction: column;
   text-align: start;
   gap: 6px;
+  width: 100%;
 `;
 
 export function Code({ text, highlightedWord, title, onCopy }: CodeProps) {
@@ -106,7 +105,7 @@ export function Code({ text, highlightedWord, title, onCopy }: CodeProps) {
   return (
     <ComponentWrapper>
       {title && <Text size={14}>{title}</Text>}
-      <CodeBlockContainer className={ibmPlexMono.className}>
+      <CodeBlockContainer>
         <CopyIconWrapper onClick={handleCopy}>
           {!clipboardState ? (
             <Copy width={24} height={24} />

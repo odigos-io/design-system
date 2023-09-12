@@ -2,6 +2,7 @@ export { RadioButton } from './radio/radio';
 export { Button } from './button/button';
 export { FloatBox } from './float.box/float.box';
 export { Text } from './text/text';
+export { Code } from './code.block/code.block';
 export { Card } from './card/card';
 export { Tag } from './tag/tag';
 export { Tap } from './tap/tap';
