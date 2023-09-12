@@ -19,4 +19,4 @@ jobs:
         run: yarn install
 
       - name: Build the Next.js app
-        run: yarn build
+        run: yarn dev-build

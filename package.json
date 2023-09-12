@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "tsup",
+    "dev-build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
