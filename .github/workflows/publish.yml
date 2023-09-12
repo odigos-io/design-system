@@ -19,7 +19,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
 
       - name: Bump Package Version
         run: npm version minor
