@@ -1,9 +1,7 @@
 name: Code Linting and Formatting
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
   lint-and-format:
