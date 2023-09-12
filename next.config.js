@@ -5,17 +5,16 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  output: "export",
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: {
-        loader: "@svgr/webpack",
+        loader: '@svgr/webpack',
         options: {
           svgoConfig: {
             plugins: [
               {
-                name: "removeViewBox",
+                name: 'removeViewBox',
                 active: false,
               },
             ],

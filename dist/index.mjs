@@ -712,6 +712,7 @@ var StyledInputContainer = styled15.div`
   width: 100%;
   padding-left: 13px;
   height: 100%;
+  min-height: 42px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -786,7 +787,7 @@ function Input({
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React25.createElement(React25.Fragment, null, label && /* @__PURE__ */ React25.createElement(LabelWrapper, null, /* @__PURE__ */ React25.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React25.createElement(
+  return /* @__PURE__ */ React25.createElement("div", null, label && /* @__PURE__ */ React25.createElement(LabelWrapper, null, /* @__PURE__ */ React25.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React25.createElement(
     StyledInputContainer,
     {
       active: !!value || void 0,
@@ -1121,12 +1122,12 @@ var TextWrapper2 = styled19.div`
   gap: 10px;
 `;
 var namespace_node_default = memo2(({ data, isConnectable }) => {
-  return /* @__PURE__ */ React38.createElement(NamespaceContainer, null, /* @__PURE__ */ React38.createElement(folder_default, { width: 32 }), /* @__PURE__ */ React38.createElement(TextWrapper2, null, /* @__PURE__ */ React38.createElement(Text, { size: 14, weight: 600 }, data?.name), /* @__PURE__ */ React38.createElement(
+  return /* @__PURE__ */ React38.createElement(NamespaceContainer, null, /* @__PURE__ */ React38.createElement(folder_default, { width: 32 }), /* @__PURE__ */ React38.createElement(TextWrapper2, null, /* @__PURE__ */ React38.createElement(Text, { size: 14, weight: 600 }, data?.name), data?.totalAppsInstrumented && /* @__PURE__ */ React38.createElement(
     Text,
     {
       color: "#8b92a5"
     },
-    `${data?.totalAppsInstrumented} Apps Instrumented`
+    `${data.totalAppsInstrumented} Apps Instrumented`
   )), /* @__PURE__ */ React38.createElement(
     Handle2,
     {

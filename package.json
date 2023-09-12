@@ -1,10 +1,11 @@
 {
   "name": "@keyval-dev/design-system",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "tsup",
+    "dev-build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
