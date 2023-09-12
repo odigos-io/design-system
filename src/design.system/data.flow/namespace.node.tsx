@@ -1,8 +1,8 @@
-import React, { memo } from "react";
-import { Handle, Position } from "reactflow";
-import { styled } from "styled-components";
-import { Text } from "@/design.system";
-import { Folder } from "@/assets/icons/overview";
+import React, { memo } from 'react';
+import { Handle, Position } from 'reactflow';
+import { styled } from 'styled-components';
+import { Text } from '@/design.system';
+import { Folder } from '@/assets/icons/overview';
 
 const NamespaceContainer = styled.div`
   display: flex;
@@ -27,16 +27,18 @@ export default memo(({ data, isConnectable }: any) => {
         <Text size={14} weight={600}>
           {data?.name}
         </Text>
-        <Text
-          color={"#8b92a5"}
-        >{`${data?.totalAppsInstrumented} Apps Instrumented`}</Text>
+        {data?.totalAppsInstrumented && (
+          <Text
+            color={'#8b92a5'}
+          >{`${data.totalAppsInstrumented} Apps Instrumented`}</Text>
+        )}
       </TextWrapper>
       <Handle
         type="source"
         position={Position.Right}
         id="a"
         isConnectable={isConnectable}
-        style={{ visibility: "hidden" }}
+        style={{ visibility: 'hidden' }}
       />
     </NamespaceContainer>
   );

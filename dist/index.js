@@ -389,7 +389,7 @@ function _templateObject26() {
 }
 function _templateObject27() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  min-height: 42px;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
         ";\n\n  &:hover {\n    border: ",
         ";\n  }\n"
@@ -1687,7 +1687,7 @@ function Input(param) {
         onChange(event.target.value);
     };
     var _ref = _sliced_to_array((0, import_react17.useState)(false), 2), showPassword = _ref[0], setShowPassword = _ref[1];
-    return /* @__PURE__ */ import_react17.default.createElement(import_react17.default.Fragment, null, label && /* @__PURE__ */ import_react17.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react17.default.createElement(Text, {
+    return /* @__PURE__ */ import_react17.default.createElement("div", null, label && /* @__PURE__ */ import_react17.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react17.default.createElement(Text, {
         size: 14,
         weight: 600
     }, label)), /* @__PURE__ */ import_react17.default.createElement(StyledInputContainer, {
@@ -2225,9 +2225,9 @@ var namespace_node_default = (0, import_react23.memo)(function(param) {
     }), /* @__PURE__ */ import_react23.default.createElement(TextWrapper2, null, /* @__PURE__ */ import_react23.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, (_data = data) === null || _data === void 0 ? void 0 : _data.name), /* @__PURE__ */ import_react23.default.createElement(Text, {
+    }, (_data = data) === null || _data === void 0 ? void 0 : _data.name), ((_data1 = data) === null || _data1 === void 0 ? void 0 : _data1.totalAppsInstrumented) && /* @__PURE__ */ import_react23.default.createElement(Text, {
         color: "#8b92a5"
-    }, "".concat((_data1 = data) === null || _data1 === void 0 ? void 0 : _data1.totalAppsInstrumented, " Apps Instrumented"))), /* @__PURE__ */ import_react23.default.createElement(import_reactflow2.Handle, {
+    }, "".concat(data.totalAppsInstrumented, " Apps Instrumented"))), /* @__PURE__ */ import_react23.default.createElement(import_reactflow2.Handle, {
         type: "source",
         position: import_reactflow2.Position.Right,
         id: "a",

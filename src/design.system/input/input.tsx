@@ -35,7 +35,7 @@ export function Input({
   }
 
   return (
-    <>
+    <div>
       {label && (
         <LabelWrapper>
           <Text size={14} weight={600}>
@@ -72,6 +72,6 @@ export function Input({
           </Text>
         </ErrorWrapper>
       )}
-    </>
+    </div>
   );
 }
