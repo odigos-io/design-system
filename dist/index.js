@@ -1178,7 +1178,7 @@ function Tap(param) {
     }, title));
 }
 // src/design.system/drop.down/drop.down.tsx
-var import_react10 = __toESM(require("react"));
+var import_react11 = __toESM(require("react"));
 // src/assets/icons/expand-arrow.svg
 var React9 = __toESM(require("react"));
 var SvgExpandArrow = function(props) {
@@ -1326,6 +1326,8 @@ function useOnClickOutside(ref, handler) {
         handler
     ]);
 }
+// src/hooks/useCopyToClipboard.tsx
+var import_react10 = require("react");
 // src/design.system/drop.down/drop.down.tsx
 var SELECTED_ITEM = "Select item";
 var CONTAINER_STYLE = {
@@ -1345,12 +1347,12 @@ function DropDown(param) {
             return (_item = item) === null || _item === void 0 ? void 0 : _item.label.toLowerCase().includes(searchFilter.toLowerCase());
         }) : data;
     };
-    var _ref = _sliced_to_array((0, import_react10.useState)(false), 2), isOpen = _ref[0], setOpen = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react10.useState)(value || null), 2), selectedItem = _ref1[0], setSelectedItem = _ref1[1];
-    var _ref2 = _sliced_to_array((0, import_react10.useState)(false), 2), isHover = _ref2[0], setHover = _ref2[1];
-    var _ref3 = _sliced_to_array((0, import_react10.useState)(""), 2), searchFilter = _ref3[0], setSearchFilter = _ref3[1];
-    var containerRef = (0, import_react10.useRef)(null);
-    (0, import_react10.useEffect)(function() {
+    var _ref = _sliced_to_array((0, import_react11.useState)(false), 2), isOpen = _ref[0], setOpen = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react11.useState)(value || null), 2), selectedItem = _ref1[0], setSelectedItem = _ref1[1];
+    var _ref2 = _sliced_to_array((0, import_react11.useState)(false), 2), isHover = _ref2[0], setHover = _ref2[1];
+    var _ref3 = _sliced_to_array((0, import_react11.useState)(""), 2), searchFilter = _ref3[0], setSearchFilter = _ref3[1];
+    var containerRef = (0, import_react11.useRef)(null);
+    (0, import_react11.useEffect)(function() {
         value && setSelectedItem(value);
     }, [
         value
@@ -1367,13 +1369,13 @@ function DropDown(param) {
         setSearchFilter("");
         setOpen(false);
     };
-    return /* @__PURE__ */ import_react10.default.createElement("div", {
+    return /* @__PURE__ */ import_react11.default.createElement("div", {
         style: {
             height: 37,
             width: width
         },
         ref: containerRef
-    }, /* @__PURE__ */ import_react10.default.createElement(DropdownWrapper, {
+    }, /* @__PURE__ */ import_react11.default.createElement(DropdownWrapper, {
         selected: isHover,
         onMouseEnter: function() {
             return setHover(true);
@@ -1382,9 +1384,9 @@ function DropDown(param) {
             return setHover(false);
         },
         onClick: toggleDropdown
-    }, /* @__PURE__ */ import_react10.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react10.default.createElement(expand_arrow_default, {
+    }, /* @__PURE__ */ import_react11.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react11.default.createElement(expand_arrow_default, {
         className: "dropdown-arrow ".concat(isOpen && "open")
-    }))), isOpen && /* @__PURE__ */ import_react10.default.createElement(DropdownBody, null, /* @__PURE__ */ import_react10.default.createElement(SearchInput, {
+    }))), isOpen && /* @__PURE__ */ import_react11.default.createElement(DropdownBody, null, /* @__PURE__ */ import_react11.default.createElement(SearchInput, {
         value: searchFilter,
         onChange: function(e) {
             return setSearchFilter(e.target.value);
@@ -1393,17 +1395,17 @@ function DropDown(param) {
         containerStyle: CONTAINER_STYLE,
         inputStyle: SEARCH_INPUT_STYLE,
         showClear: false
-    }), /* @__PURE__ */ import_react10.default.createElement(DropdownListWrapper, null, getDropdownList().map(function(item) {
-        return /* @__PURE__ */ import_react10.default.createElement(DropdownItem, {
+    }), /* @__PURE__ */ import_react11.default.createElement(DropdownListWrapper, null, getDropdownList().map(function(item) {
+        return /* @__PURE__ */ import_react11.default.createElement(DropdownItem, {
             key: item.id,
             onClick: function(e) {
                 return handleItemClick(item);
             }
-        }, /* @__PURE__ */ import_react10.default.createElement(Text, null, item.label));
+        }, /* @__PURE__ */ import_react11.default.createElement(Text, null, item.label));
     }))));
 }
 // src/design.system/switch/switch.tsx
-var import_react11 = __toESM(require("react"));
+var import_react12 = __toESM(require("react"));
 // src/design.system/switch/switch.styled.tsx
 var import_styled_components10 = __toESM(require("styled-components"));
 var SwitchInputWrapper = import_styled_components10.default.div(_templateObject18());
@@ -1421,17 +1423,17 @@ var SwitchButtonWrapper = import_styled_components10.default.span(_templateObjec
 // src/design.system/switch/switch.tsx
 function Switch(param) {
     var toggle = param.toggle, handleToggleChange = param.handleToggleChange, style = param.style, _param_label = param.label, label = _param_label === void 0 ? "Select All" : _param_label;
-    return /* @__PURE__ */ import_react11.default.createElement(SwitchInputWrapper, null, /* @__PURE__ */ import_react11.default.createElement(SwitchToggleWrapper, {
+    return /* @__PURE__ */ import_react12.default.createElement(SwitchInputWrapper, null, /* @__PURE__ */ import_react12.default.createElement(SwitchToggleWrapper, {
         active: toggle || void 0,
         onClick: handleToggleChange
-    }, /* @__PURE__ */ import_react11.default.createElement(SwitchButtonWrapper, {
+    }, /* @__PURE__ */ import_react12.default.createElement(SwitchButtonWrapper, {
         disabled: toggle || void 0
-    })), label && /* @__PURE__ */ import_react11.default.createElement(Text, {
+    })), label && /* @__PURE__ */ import_react12.default.createElement(Text, {
         size: 14
     }, label));
 }
 // src/design.system/checkbox/checkbox.tsx
-var import_react12 = __toESM(require("react"));
+var import_react13 = __toESM(require("react"));
 // src/design.system/checkbox/checkbox.styled.tsx
 var import_styled_components11 = require("styled-components");
 var CheckboxWrapper = import_styled_components11.styled.div(_templateObject21(), function(param) {
@@ -1477,15 +1479,15 @@ var checkbox_rect_default = SvgCheckboxRect;
 // src/design.system/checkbox/checkbox.tsx
 function Checkbox(param) {
     var onChange = param.onChange, value = param.value, _param_label = param.label, label = _param_label === void 0 ? "" : _param_label, _param_disabled = param.disabled, disabled = _param_disabled === void 0 ? false : _param_disabled;
-    return /* @__PURE__ */ import_react12.default.createElement(CheckboxWrapper, {
+    return /* @__PURE__ */ import_react13.default.createElement(CheckboxWrapper, {
         disabled: disabled || void 0,
         onClick: onChange
-    }, value ? /* @__PURE__ */ import_react12.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react12.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react12.default.createElement(Text, {
+    }, value ? /* @__PURE__ */ import_react13.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react13.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react13.default.createElement(Text, {
         size: 14
     }, label));
 }
 // src/design.system/selected.counter/selected.counter.tsx
-var import_react13 = __toESM(require("react"));
+var import_react14 = __toESM(require("react"));
 // src/design.system/selected.counter/selected.counter.styled.tsx
 var import_styled_components12 = __toESM(require("styled-components"));
 var SelectedCounterWrapper = import_styled_components12.default.div(_templateObject23(), function(param) {
@@ -1521,26 +1523,26 @@ var check_default = SvgCheck;
 // src/design.system/selected.counter/selected.counter.tsx
 function SelectedCounter(param) {
     var total = param.total, selected = param.selected;
-    return /* @__PURE__ */ import_react13.default.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ import_react13.default.createElement(check_default, null), /* @__PURE__ */ import_react13.default.createElement(Text, {
+    return /* @__PURE__ */ import_react14.default.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ import_react14.default.createElement(check_default, null), /* @__PURE__ */ import_react14.default.createElement(Text, {
         size: 13,
         weight: 500
     }, "".concat(selected, " / ").concat(total)));
 }
 // src/design.system/link/link.tsx
-var import_react14 = __toESM(require("react"));
+var import_react15 = __toESM(require("react"));
 var import_styled_components13 = require("styled-components");
 var LinkContainer = import_styled_components13.styled.div(_templateObject24());
 function Link(param) {
     var value = param.value, onClick = param.onClick, _param_fontSize = param.fontSize, fontSize = _param_fontSize === void 0 ? 16 : _param_fontSize;
-    return /* @__PURE__ */ import_react14.default.createElement(LinkContainer, {
+    return /* @__PURE__ */ import_react15.default.createElement(LinkContainer, {
         onClick: onClick
-    }, /* @__PURE__ */ import_react14.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react15.default.createElement(Text, {
         size: fontSize,
         color: "#0EE6F3"
     }, value));
 }
 // src/design.system/tooltip/tooltip.tsx
-var import_react15 = __toESM(require("react"));
+var import_react16 = __toESM(require("react"));
 // src/assets/icons/question.svg
 var React20 = __toESM(require("react"));
 var SvgQuestion = function(props) {
@@ -1566,7 +1568,7 @@ var TooltipContentWrapper = import_styled_components14.default.div(_templateObje
 // src/design.system/tooltip/tooltip.tsx
 function Tooltip(props) {
     var timeout;
-    var _ref = _sliced_to_array((0, import_react15.useState)(false), 2), active = _ref[0], setActive = _ref[1];
+    var _ref = _sliced_to_array((0, import_react16.useState)(false), 2), active = _ref[0], setActive = _ref[1];
     var showTip = function() {
         timeout = setTimeout(function() {
             setActive(true);
@@ -1576,23 +1578,23 @@ function Tooltip(props) {
         clearInterval(timeout);
         setActive(false);
     };
-    return /* @__PURE__ */ import_react15.default.createElement(TooltipWrapper, {
+    return /* @__PURE__ */ import_react16.default.createElement(TooltipWrapper, {
         onMouseEnter: showTip,
         onMouseLeave: hideTip
-    }, active && /* @__PURE__ */ import_react15.default.createElement(TooltipContentWrapper, null, /* @__PURE__ */ import_react15.default.createElement(Text, {
+    }, active && /* @__PURE__ */ import_react16.default.createElement(TooltipContentWrapper, null, /* @__PURE__ */ import_react16.default.createElement(Text, {
         size: 12,
         weight: 500
-    }, props.content)), /* @__PURE__ */ import_react15.default.createElement(question_default, null));
+    }, props.content)), /* @__PURE__ */ import_react16.default.createElement(question_default, null));
 }
 // src/design.system/image/image.tsx
 var import_image = __toESM(require("next/image"));
-var import_react16 = __toESM(require("react"));
+var import_react17 = __toESM(require("react"));
 var IMAGE_STYLE = {
     borderRadius: 10
 };
 function ImageComponent(param) {
     var src = param.src, _param_alt = param.alt, alt = _param_alt === void 0 ? "" : _param_alt, _param_width = param.width, width = _param_width === void 0 ? 56 : _param_width, _param_height = param.height, height = _param_height === void 0 ? 56 : _param_height, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style;
-    return /* @__PURE__ */ import_react16.default.createElement(import_image.default, {
+    return /* @__PURE__ */ import_react17.default.createElement(import_image.default, {
         src: src,
         alt: alt || "",
         width: width,
@@ -1601,7 +1603,7 @@ function ImageComponent(param) {
     });
 }
 // src/design.system/input/input.tsx
-var import_react17 = __toESM(require("react"));
+var import_react18 = __toESM(require("react"));
 // src/design.system/input/input.styled.tsx
 var import_styled_components15 = require("styled-components");
 var StyledInputContainer = import_styled_components15.styled.div(_templateObject27(), function(param) {
@@ -1686,37 +1688,37 @@ function Input(param) {
     var handleChange = function handleChange(event) {
         onChange(event.target.value);
     };
-    var _ref = _sliced_to_array((0, import_react17.useState)(false), 2), showPassword = _ref[0], setShowPassword = _ref[1];
-    return /* @__PURE__ */ import_react17.default.createElement("div", null, label && /* @__PURE__ */ import_react17.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react17.default.createElement(Text, {
+    var _ref = _sliced_to_array((0, import_react18.useState)(false), 2), showPassword = _ref[0], setShowPassword = _ref[1];
+    return /* @__PURE__ */ import_react18.default.createElement("div", null, label && /* @__PURE__ */ import_react18.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react18.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, label)), /* @__PURE__ */ import_react17.default.createElement(StyledInputContainer, {
+    }, label)), /* @__PURE__ */ import_react18.default.createElement(StyledInputContainer, {
         active: !!value || void 0,
         hasError: !!error,
         style: _object_spread({}, style)
-    }, /* @__PURE__ */ import_react17.default.createElement(StyledInput, {
+    }, /* @__PURE__ */ import_react18.default.createElement(StyledInput, {
         type: showPassword ? "text" : type,
         value: value,
         onChange: handleChange,
         autoComplete: "off",
         placeholder: placeholder
-    }), type === "password" && /* @__PURE__ */ import_react17.default.createElement(DisplayIconsWrapper, {
+    }), type === "password" && /* @__PURE__ */ import_react18.default.createElement(DisplayIconsWrapper, {
         onClick: function() {
             return setShowPassword(!showPassword);
         }
-    }, !showPassword ? /* @__PURE__ */ import_react17.default.createElement(eye_open_default, {
+    }, !showPassword ? /* @__PURE__ */ import_react18.default.createElement(eye_open_default, {
         width: 16,
         height: 16
-    }) : /* @__PURE__ */ import_react17.default.createElement(eye_close_default, {
+    }) : /* @__PURE__ */ import_react18.default.createElement(eye_close_default, {
         width: 16,
         height: 16
-    }))), error && /* @__PURE__ */ import_react17.default.createElement(ErrorWrapper, null, /* @__PURE__ */ import_react17.default.createElement(Text, {
+    }))), error && /* @__PURE__ */ import_react18.default.createElement(ErrorWrapper, null, /* @__PURE__ */ import_react18.default.createElement(Text, {
         size: 14,
         color: "#FD3F3F"
     }, error)));
 }
 // src/design.system/input/action.input.tsx
-var import_react18 = __toESM(require("react"));
+var import_react19 = __toESM(require("react"));
 // src/styles/palette.tsx
 var colors = {
     primary: "#FF0000",
@@ -1753,22 +1755,22 @@ function ActionInput(param) {
     var handleChange = function handleChange(event) {
         onChange(event.target.value);
     };
-    return /* @__PURE__ */ import_react18.default.createElement(import_react18.default.Fragment, null, /* @__PURE__ */ import_react18.default.createElement(StyledActionInputContainer, {
+    return /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement(StyledActionInputContainer, {
         style: _object_spread({}, style)
-    }, /* @__PURE__ */ import_react18.default.createElement(StyledActionInput, {
+    }, /* @__PURE__ */ import_react19.default.createElement(StyledActionInput, {
         value: value,
         onChange: handleChange,
         autoComplete: "off"
-    }), /* @__PURE__ */ import_react18.default.createElement(Button, {
+    }), /* @__PURE__ */ import_react19.default.createElement(Button, {
         onClick: onAction
-    }, /* @__PURE__ */ import_react18.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react19.default.createElement(Text, {
         size: 14,
         weight: 500,
         color: palette_default.text.dark_button
     }, "Save"))));
 }
 // src/design.system/video/video.tsx
-var import_react19 = __toESM(require("react"));
+var import_react20 = __toESM(require("react"));
 // src/assets/icons/close.svg
 var React27 = __toESM(require("react"));
 var SvgClose = function(props) {
@@ -1819,8 +1821,8 @@ var LargeVideoContainer = import_styled_components16.styled.div(_templateObject3
 // src/design.system/video/video.tsx
 function Video(param) {
     var videoSrc = param.videoSrc, title = param.title, thumbnail = param.thumbnail;
-    var _ref = _sliced_to_array((0, import_react19.useState)(false), 2), isLarge = _ref[0], setIsLarge = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react19.useState)(true), 2), pause = _ref1[0], setPause = _ref1[1];
+    var _ref = _sliced_to_array((0, import_react20.useState)(false), 2), isLarge = _ref[0], setIsLarge = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react20.useState)(true), 2), pause = _ref1[0], setPause = _ref1[1];
     var handleClick = function() {
         setIsLarge(true);
     };
@@ -1829,30 +1831,30 @@ function Video(param) {
         setPause(true);
     };
     var renderSmallView = function() {
-        return /* @__PURE__ */ import_react19.default.createElement(import_react19.default.Fragment, null, /* @__PURE__ */ import_react19.default.createElement(Text, {
+        return /* @__PURE__ */ import_react20.default.createElement(import_react20.default.Fragment, null, /* @__PURE__ */ import_react20.default.createElement(Text, {
             size: 16,
             weight: 600
-        }, title), /* @__PURE__ */ import_react19.default.createElement(ImagePreviewWrapper, {
+        }, title), /* @__PURE__ */ import_react20.default.createElement(ImagePreviewWrapper, {
             onClick: handleClick,
             url: thumbnail
-        }, /* @__PURE__ */ import_react19.default.createElement(PlayerIconWrapper, null, /* @__PURE__ */ import_react19.default.createElement(player_default, {
+        }, /* @__PURE__ */ import_react20.default.createElement(PlayerIconWrapper, null, /* @__PURE__ */ import_react20.default.createElement(player_default, {
             width: 30
         }))));
     };
     var renderLargeView = function() {
-        return /* @__PURE__ */ import_react19.default.createElement(LargeVideoContainer, null, /* @__PURE__ */ import_react19.default.createElement(LargeVideoHeader, null, /* @__PURE__ */ import_react19.default.createElement(Text, {
+        return /* @__PURE__ */ import_react20.default.createElement(LargeVideoContainer, null, /* @__PURE__ */ import_react20.default.createElement(LargeVideoHeader, null, /* @__PURE__ */ import_react20.default.createElement(Text, {
             size: 20,
             weight: 600
-        }, title), /* @__PURE__ */ import_react19.default.createElement(close_default, {
+        }, title), /* @__PURE__ */ import_react20.default.createElement(close_default, {
             onClick: handleClose,
             style: {
                 cursor: "pointer"
             }
-        })), !pause ? /* @__PURE__ */ import_react19.default.createElement(StyledLargeVideo, {
+        })), !pause ? /* @__PURE__ */ import_react20.default.createElement(StyledLargeVideo, {
             src: videoSrc,
             autoPlay: true,
             controls: true
-        }) : /* @__PURE__ */ import_react19.default.createElement(ImagePreviewWrapper, {
+        }) : /* @__PURE__ */ import_react20.default.createElement(ImagePreviewWrapper, {
             url: thumbnail,
             style: {
                 width: 980,
@@ -1861,14 +1863,14 @@ function Video(param) {
             onClick: function() {
                 return setPause(false);
             }
-        }, /* @__PURE__ */ import_react19.default.createElement(LargePlayerIconWrapper, null, /* @__PURE__ */ import_react19.default.createElement(player_default, {
+        }, /* @__PURE__ */ import_react20.default.createElement(LargePlayerIconWrapper, null, /* @__PURE__ */ import_react20.default.createElement(player_default, {
             width: 80
         }))));
     };
-    return /* @__PURE__ */ import_react19.default.createElement("div", null, isLarge ? renderLargeView() : renderSmallView());
+    return /* @__PURE__ */ import_react20.default.createElement("div", null, isLarge ? renderLargeView() : renderSmallView());
 }
 // src/design.system/loader/loader.tsx
-var import_react20 = __toESM(require("react"));
+var import_react21 = __toESM(require("react"));
 // src/design.system/loader/loader.styled.tsx
 var import_styled_components17 = __toESM(require("styled-components"));
 var LoaderWrapper = import_styled_components17.default.div(_templateObject40());
@@ -1878,10 +1880,10 @@ var StyledLoader = import_styled_components17.default.div(_templateObject41(), f
 });
 // src/design.system/loader/loader.tsx
 function Loader() {
-    return /* @__PURE__ */ import_react20.default.createElement(LoaderWrapper, null, /* @__PURE__ */ import_react20.default.createElement(StyledLoader, null));
+    return /* @__PURE__ */ import_react21.default.createElement(LoaderWrapper, null, /* @__PURE__ */ import_react21.default.createElement(StyledLoader, null));
 }
 // src/design.system/notification/notification.tsx
-var import_react21 = __toESM(require("react"));
+var import_react22 = __toESM(require("react"));
 // src/design.system/notification/notification.styled.tsx
 var import_styled_components18 = __toESM(require("styled-components"));
 var NotificationContainer = import_styled_components18.default.div(_templateObject42());
@@ -1996,9 +1998,9 @@ function Notification(param) {
     var getIcon = function getIcon() {
         switch(type){
             case "success":
-                return /* @__PURE__ */ import_react21.default.createElement(success_notification_default, null);
+                return /* @__PURE__ */ import_react22.default.createElement(success_notification_default, null);
             case "error":
-                return /* @__PURE__ */ import_react21.default.createElement(error_notification_default, null);
+                return /* @__PURE__ */ import_react22.default.createElement(error_notification_default, null);
         }
     };
     var getNotificationStyle = function getNotificationStyle() {
@@ -2011,7 +2013,7 @@ function Notification(param) {
                 return {};
         }
     };
-    (0, import_react21.useEffect)(function() {
+    (0, import_react22.useEffect)(function() {
         var id = setTimeout(function() {
             onClose && onClose();
         }, 5e3);
@@ -2019,20 +2021,20 @@ function Notification(param) {
             clearTimeout(id);
         };
     }, []);
-    return /* @__PURE__ */ import_react21.default.createElement(NotificationContainer, null, /* @__PURE__ */ import_react21.default.createElement(StyledNotification, {
+    return /* @__PURE__ */ import_react22.default.createElement(NotificationContainer, null, /* @__PURE__ */ import_react22.default.createElement(StyledNotification, {
         style: getNotificationStyle()
-    }, getIcon(), /* @__PURE__ */ import_react21.default.createElement(Text, {
+    }, getIcon(), /* @__PURE__ */ import_react22.default.createElement(Text, {
         weight: 500,
         size: 14
-    }, message), /* @__PURE__ */ import_react21.default.createElement(X_blue_default, {
+    }, message), /* @__PURE__ */ import_react22.default.createElement(X_blue_default, {
         onClick: onClose
     })));
 }
 // src/design.system/data.flow/index.tsx
-var import_react25 = __toESM(require("react"));
+var import_react26 = __toESM(require("react"));
 var import_reactflow4 = __toESM(require("reactflow"));
 // src/design.system/data.flow/keyval.middleware.tsx
-var import_react22 = __toESM(require("react"));
+var import_react23 = __toESM(require("react"));
 var import_reactflow = require("reactflow");
 // src/assets/icons/overview/middleware.svg
 var React35 = __toESM(require("react"));
@@ -2189,13 +2191,13 @@ var folder_default = SvgFolder;
 // src/design.system/data.flow/keyval.middleware.tsx
 function NamespaceNode(param) {
     var isConnectable = param.isConnectable;
-    return /* @__PURE__ */ import_react22.default.createElement("div", null, /* @__PURE__ */ import_react22.default.createElement(import_reactflow.Handle, {
+    return /* @__PURE__ */ import_react23.default.createElement("div", null, /* @__PURE__ */ import_react23.default.createElement(import_reactflow.Handle, {
         type: "target",
         position: import_reactflow.Position.Left,
         style: {
             visibility: "hidden"
         }
-    }), /* @__PURE__ */ import_react22.default.createElement(middleware_default, null), /* @__PURE__ */ import_react22.default.createElement(import_reactflow.Handle, {
+    }), /* @__PURE__ */ import_react23.default.createElement(middleware_default, null), /* @__PURE__ */ import_react23.default.createElement(import_reactflow.Handle, {
         type: "source",
         position: import_reactflow.Position.Right,
         id: "a",
@@ -2206,7 +2208,7 @@ function NamespaceNode(param) {
     }));
 }
 // src/design.system/data.flow/namespace.node.tsx
-var import_react23 = __toESM(require("react"));
+var import_react24 = __toESM(require("react"));
 var import_reactflow2 = require("reactflow");
 var import_styled_components19 = require("styled-components");
 var NamespaceContainer = import_styled_components19.styled.div(_templateObject44(), function(param) {
@@ -2217,17 +2219,17 @@ var NamespaceContainer = import_styled_components19.styled.div(_templateObject44
     return theme2.colors.light_dark;
 });
 var TextWrapper2 = import_styled_components19.styled.div(_templateObject45());
-var namespace_node_default = (0, import_react23.memo)(function(param) {
+var namespace_node_default = (0, import_react24.memo)(function(param) {
     var data = param.data, isConnectable = param.isConnectable;
     var _data, _data1;
-    return /* @__PURE__ */ import_react23.default.createElement(NamespaceContainer, null, /* @__PURE__ */ import_react23.default.createElement(folder_default, {
+    return /* @__PURE__ */ import_react24.default.createElement(NamespaceContainer, null, /* @__PURE__ */ import_react24.default.createElement(folder_default, {
         width: 32
-    }), /* @__PURE__ */ import_react23.default.createElement(TextWrapper2, null, /* @__PURE__ */ import_react23.default.createElement(Text, {
+    }), /* @__PURE__ */ import_react24.default.createElement(TextWrapper2, null, /* @__PURE__ */ import_react24.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, (_data = data) === null || _data === void 0 ? void 0 : _data.name), ((_data1 = data) === null || _data1 === void 0 ? void 0 : _data1.totalAppsInstrumented) && /* @__PURE__ */ import_react23.default.createElement(Text, {
+    }, (_data = data) === null || _data === void 0 ? void 0 : _data.name), ((_data1 = data) === null || _data1 === void 0 ? void 0 : _data1.totalAppsInstrumented) && /* @__PURE__ */ import_react24.default.createElement(Text, {
         color: "#8b92a5"
-    }, "".concat(data.totalAppsInstrumented, " Apps Instrumented"))), /* @__PURE__ */ import_react23.default.createElement(import_reactflow2.Handle, {
+    }, "".concat(data.totalAppsInstrumented, " Apps Instrumented"))), /* @__PURE__ */ import_react24.default.createElement(import_reactflow2.Handle, {
         type: "source",
         position: import_reactflow2.Position.Right,
         id: "a",
@@ -2238,7 +2240,7 @@ var namespace_node_default = (0, import_react23.memo)(function(param) {
     }));
 });
 // src/design.system/data.flow/destination.node.tsx
-var import_react24 = __toESM(require("react"));
+var import_react25 = __toESM(require("react"));
 var import_reactflow3 = require("reactflow");
 var import_styled_components20 = require("styled-components");
 // src/assets/icons/logs-grey.svg
@@ -2406,25 +2408,25 @@ function DestinationNode(param) {
     var renderMonitors = function renderMonitors() {
         return MONITORING_OPTIONS.map(function(monitor) {
             var _monitor, _monitor1, _data, _monitor2, _data1;
-            return /* @__PURE__ */ import_react24.default.createElement(IconWrapper, {
+            return /* @__PURE__ */ import_react25.default.createElement(IconWrapper, {
                 key: (_monitor = monitor) === null || _monitor === void 0 ? void 0 : _monitor.id,
                 tapped: ((_data = data) === null || _data === void 0 ? void 0 : _data.signals[(_monitor1 = monitor) === null || _monitor1 === void 0 ? void 0 : _monitor1.type]) || false
             }, ((_data1 = data) === null || _data1 === void 0 ? void 0 : _data1.signals[(_monitor2 = monitor) === null || _monitor2 === void 0 ? void 0 : _monitor2.type]) ? monitor.icons.focus() : monitor.icons.notFocus());
         });
     };
     var _data_destination_type, _data, _data_destination_type1, _data1, _data2;
-    return /* @__PURE__ */ import_react24.default.createElement(DestinationNodeContainer, null, /* @__PURE__ */ import_react24.default.createElement(NodeDataWrapper, null, /* @__PURE__ */ import_react24.default.createElement("img", {
+    return /* @__PURE__ */ import_react25.default.createElement(DestinationNodeContainer, null, /* @__PURE__ */ import_react25.default.createElement(NodeDataWrapper, null, /* @__PURE__ */ import_react25.default.createElement("img", {
         src: (_data = data) === null || _data === void 0 ? void 0 : (_data_destination_type = _data.destination_type) === null || _data_destination_type === void 0 ? void 0 : _data_destination_type.image_url,
         width: 40,
         height: 40,
         style: IMAGE_STYLE2,
         alt: ""
-    }), /* @__PURE__ */ import_react24.default.createElement(TextWrapper3, null, /* @__PURE__ */ import_react24.default.createElement(Text, {
+    }), /* @__PURE__ */ import_react25.default.createElement(TextWrapper3, null, /* @__PURE__ */ import_react25.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, (_data1 = data) === null || _data1 === void 0 ? void 0 : (_data_destination_type1 = _data1.destination_type) === null || _data_destination_type1 === void 0 ? void 0 : _data_destination_type1.display_name), /* @__PURE__ */ import_react24.default.createElement(Text, {
+    }, (_data1 = data) === null || _data1 === void 0 ? void 0 : (_data_destination_type1 = _data1.destination_type) === null || _data_destination_type1 === void 0 ? void 0 : _data_destination_type1.display_name), /* @__PURE__ */ import_react25.default.createElement(Text, {
         color: "#8b92a5"
-    }, (_data2 = data) === null || _data2 === void 0 ? void 0 : _data2.name))), /* @__PURE__ */ import_react24.default.createElement(MonitorsListWrapper, null, renderMonitors()), /* @__PURE__ */ import_react24.default.createElement(import_reactflow3.Handle, {
+    }, (_data2 = data) === null || _data2 === void 0 ? void 0 : _data2.name))), /* @__PURE__ */ import_react25.default.createElement(MonitorsListWrapper, null, renderMonitors()), /* @__PURE__ */ import_react25.default.createElement(import_reactflow3.Handle, {
         type: "target",
         position: import_reactflow3.Position.Left,
         id: "a",
@@ -2453,7 +2455,7 @@ var nodeTypes = {
 function DataFlow(param) {
     var nodes = param.nodes, edges = param.edges;
     var fitView = (0, import_reactflow4.useReactFlow)().fitView;
-    (0, import_react25.useEffect)(function() {
+    (0, import_react26.useEffect)(function() {
         setTimeout(function() {
             fitView();
         }, 100);
@@ -2462,7 +2464,7 @@ function DataFlow(param) {
         nodes,
         edges
     ]);
-    return /* @__PURE__ */ import_react25.default.createElement(DataFlowContainer, null, /* @__PURE__ */ import_react25.default.createElement(import_reactflow4.default, {
+    return /* @__PURE__ */ import_react26.default.createElement(DataFlowContainer, null, /* @__PURE__ */ import_react26.default.createElement(import_reactflow4.default, {
         nodes: nodes,
         edges: edges,
         nodeTypes: nodeTypes,
@@ -2471,10 +2473,10 @@ function DataFlow(param) {
             0.4,
             0.4
         ]
-    }, /* @__PURE__ */ import_react25.default.createElement(ControllerWrapper, null, /* @__PURE__ */ import_react25.default.createElement(import_reactflow4.Controls, {
+    }, /* @__PURE__ */ import_react26.default.createElement(ControllerWrapper, null, /* @__PURE__ */ import_react26.default.createElement(import_reactflow4.Controls, {
         position: "top-left",
         showInteractive: false
-    })), /* @__PURE__ */ import_react25.default.createElement(import_reactflow4.Background, {
+    })), /* @__PURE__ */ import_react26.default.createElement(import_reactflow4.Background, {
         gap: 12,
         size: 1,
         style: {
@@ -2483,10 +2485,10 @@ function DataFlow(param) {
     })));
 }
 function KeyvalDataFlow(props) {
-    return /* @__PURE__ */ import_react25.default.createElement(import_reactflow4.ReactFlowProvider, null, /* @__PURE__ */ import_react25.default.createElement(DataFlow, _object_spread({}, props)));
+    return /* @__PURE__ */ import_react26.default.createElement(import_reactflow4.ReactFlowProvider, null, /* @__PURE__ */ import_react26.default.createElement(DataFlow, _object_spread({}, props)));
 }
 // src/design.system/danger.zone/danger.zone.tsx
-var import_react26 = __toESM(require("react"));
+var import_react27 = __toESM(require("react"));
 var import_styled_components22 = require("styled-components");
 var DangerZoneWrapper = import_styled_components22.styled.div(_templateObject53(), function(param) {
     var theme2 = param.theme;
@@ -2502,28 +2504,28 @@ var DangerButton = import_styled_components22.styled.button(_templateObject55(),
 });
 function DangerZone(param) {
     var title = param.title, subTitle = param.subTitle, btnText = param.btnText, onClick = param.onClick;
-    return /* @__PURE__ */ import_react26.default.createElement(import_react26.default.Fragment, null, /* @__PURE__ */ import_react26.default.createElement(DangerZoneWrapper, null, /* @__PURE__ */ import_react26.default.createElement(Text, {
+    return /* @__PURE__ */ import_react27.default.createElement(import_react27.default.Fragment, null, /* @__PURE__ */ import_react27.default.createElement(DangerZoneWrapper, null, /* @__PURE__ */ import_react27.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title), /* @__PURE__ */ import_react26.default.createElement(Text, {
+    }, title), /* @__PURE__ */ import_react27.default.createElement(Text, {
         size: 12
-    }, subTitle), /* @__PURE__ */ import_react26.default.createElement(DangerButtonWrapper, null, /* @__PURE__ */ import_react26.default.createElement(DangerButton, {
+    }, subTitle), /* @__PURE__ */ import_react27.default.createElement(DangerButtonWrapper, null, /* @__PURE__ */ import_react27.default.createElement(DangerButton, {
         onClick: onClick
-    }, /* @__PURE__ */ import_react26.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react27.default.createElement(Text, {
         weight: 500,
         size: 14,
         color: palette_default.colors.error
     }, btnText)))));
 }
 // src/design.system/modal/modal.tsx
-var import_react28 = __toESM(require("react"));
+var import_react29 = __toESM(require("react"));
 // src/design.system/modal/portal.modal.tsx
-var import_react27 = require("react");
+var import_react28 = require("react");
 var import_react_dom = require("react-dom");
 var PortalModal = function(param) {
     var children = param.children, wrapperId = param.wrapperId;
-    var _ref = _sliced_to_array((0, import_react27.useState)(null), 2), portalElement = _ref[0], setPortalElement = _ref[1];
-    (0, import_react27.useLayoutEffect)(function() {
+    var _ref = _sliced_to_array((0, import_react28.useState)(null), 2), portalElement = _ref[0], setPortalElement = _ref[1];
+    (0, import_react28.useLayoutEffect)(function() {
         var element = document.getElementById(wrapperId);
         var portalCreated = false;
         if (!element) {
@@ -2616,15 +2618,15 @@ var close_modal_default = SvgCloseModal;
 function Modal(param) {
     var children = param.children, closeModal = param.closeModal, config = param.config;
     var _config;
-    var modalRef = (0, import_react28.useRef)(null);
+    var modalRef = (0, import_react29.useRef)(null);
     var handleClickOutside = function() {
         return closeModal();
     };
-    var handleKeyPress = (0, import_react28.useCallback)(function(event) {
+    var handleKeyPress = (0, import_react29.useCallback)(function(event) {
         if (event.key === "Escape") closeModal();
     }, []);
     useOnClickOutside(modalRef, handleClickOutside);
-    (0, import_react28.useEffect)(function() {
+    (0, import_react29.useEffect)(function() {
         document.addEventListener("keydown", handleKeyPress);
         return function() {
             document.removeEventListener("keydown", handleKeyPress);
@@ -2632,9 +2634,9 @@ function Modal(param) {
     }, [
         handleKeyPress
     ]);
-    return /* @__PURE__ */ import_react28.default.createElement(import_react28.default.Fragment, null, /* @__PURE__ */ import_react28.default.createElement(portal_modal_default, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement(portal_modal_default, {
         wrapperId: "modal-portal"
-    }, /* @__PURE__ */ import_react28.default.createElement(Overlay, {
+    }, /* @__PURE__ */ import_react29.default.createElement(Overlay, {
         showOverlay: config.showOverlay,
         positionX: config.positionX,
         positionY: config.positionY,
@@ -2642,40 +2644,40 @@ function Modal(param) {
             animationDuration: "400ms",
             animationDelay: "0"
         }
-    }, /* @__PURE__ */ import_react28.default.createElement(ModalContainer, {
+    }, /* @__PURE__ */ import_react29.default.createElement(ModalContainer, {
         padding: config.padding,
         ref: modalRef
-    }, config.showHeader && /* @__PURE__ */ import_react28.default.createElement(ModalHeader, null, /* @__PURE__ */ import_react28.default.createElement(Text, {
+    }, config.showHeader && /* @__PURE__ */ import_react29.default.createElement(ModalHeader, null, /* @__PURE__ */ import_react29.default.createElement(Text, {
         weight: 500,
         color: palette_default.text.dark_button
-    }, config.title)), /* @__PURE__ */ import_react28.default.createElement(Close, {
+    }, config.title)), /* @__PURE__ */ import_react29.default.createElement(Close, {
         onClick: closeModal
-    }, /* @__PURE__ */ import_react28.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react28.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react28.default.createElement(ModalFooter, null, /* @__PURE__ */ import_react28.default.createElement(PrimaryButton, {
+    }, /* @__PURE__ */ import_react29.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react29.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react29.default.createElement(ModalFooter, null, /* @__PURE__ */ import_react29.default.createElement(PrimaryButton, {
         onClick: config.footer.primaryBtnAction
-    }, /* @__PURE__ */ import_react28.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react29.default.createElement(Text, {
         size: 14,
         weight: 500,
         color: "#5c5c5c"
     }, config.footer.primaryBtnText)))))));
 }
 // src/design.system/theme.provider/theme.provider.tsx
-var import_react30 = __toESM(require("react"));
+var import_react31 = __toESM(require("react"));
 // src/design.system/theme.provider/registry.tsx
-var import_react29 = __toESM(require("react"));
+var import_react30 = __toESM(require("react"));
 var import_navigation = require("next/navigation");
 var import_styled_components24 = require("styled-components");
 function StyledComponentsRegistry(param) {
     var children = param.children;
-    var _ref = _sliced_to_array((0, import_react29.useState)(function() {
+    var _ref = _sliced_to_array((0, import_react30.useState)(function() {
         return new import_styled_components24.ServerStyleSheet();
     }), 1), styledComponentsStyleSheet = _ref[0];
     (0, import_navigation.useServerInsertedHTML)(function() {
         var styles = styledComponentsStyleSheet.getStyleElement();
         styledComponentsStyleSheet.instance.clearTag();
-        return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, styles);
+        return /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, styles);
     });
-    if (typeof window !== "undefined") return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, children);
-    return /* @__PURE__ */ import_react29.default.createElement(import_styled_components24.StyleSheetManager, {
+    if (typeof window !== "undefined") return /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, children);
+    return /* @__PURE__ */ import_react30.default.createElement(import_styled_components24.StyleSheetManager, {
         sheet: styledComponentsStyleSheet.instance
     }, children);
 }
@@ -2683,14 +2685,14 @@ function StyledComponentsRegistry(param) {
 var import_styled_components25 = require("styled-components");
 var ThemeProviderWrapper = function(param) {
     var children = param.children;
-    return /* @__PURE__ */ import_react30.default.createElement(import_styled_components25.ThemeProvider, {
+    return /* @__PURE__ */ import_react31.default.createElement(import_styled_components25.ThemeProvider, {
         theme: palette_default
-    }, /* @__PURE__ */ import_react30.default.createElement(StyledComponentsRegistry, null, children));
+    }, /* @__PURE__ */ import_react31.default.createElement(StyledComponentsRegistry, null, children));
 };
 // src/design.system/steps/steps.tsx
-var import_react32 = __toESM(require("react"));
+var import_react33 = __toESM(require("react"));
 // src/design.system/steps/step.item.tsx
-var import_react31 = __toESM(require("react"));
+var import_react32 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
 var import_styled_components26 = __toESM(require("styled-components"));
 var StepsContainer = import_styled_components26.default.div(_templateObject67());
@@ -2719,15 +2721,15 @@ var checked_default = SvgChecked;
 // src/design.system/steps/step.item.tsx
 function StepItem(param) {
     var title = param.title, index = param.index, status = param.status, isLast = param.isLast;
-    return /* @__PURE__ */ import_react31.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react31.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react31.default.createElement(checked_default, null) : /* @__PURE__ */ import_react31.default.createElement(FloatingBoxTextWrapper, {
+    return /* @__PURE__ */ import_react32.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react32.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react32.default.createElement(checked_default, null) : /* @__PURE__ */ import_react32.default.createElement(FloatingBoxTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react31.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react32.default.createElement(Text, {
         weight: 700
-    }, index))), /* @__PURE__ */ import_react31.default.createElement(StepItemTextWrapper, {
+    }, index))), /* @__PURE__ */ import_react32.default.createElement(StepItemTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react31.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react32.default.createElement(Text, {
         weight: 600
-    }, title)), !isLast && /* @__PURE__ */ import_react31.default.createElement(StepItemBorder, null));
+    }, title)), !isLast && /* @__PURE__ */ import_react32.default.createElement(StepItemBorder, null));
 }
 // src/design.system/steps/steps.tsx
 function Steps(param) {
@@ -2736,7 +2738,7 @@ function Steps(param) {
         var _data;
         return (_data = data) === null || _data === void 0 ? void 0 : _data.map(function(param, index) {
             var title = param.title, status = param.status;
-            return /* @__PURE__ */ import_react32.default.createElement(StepItem, {
+            return /* @__PURE__ */ import_react33.default.createElement(StepItem, {
                 key: "".concat(index, "_").concat(title),
                 title: title,
                 status: status,
@@ -2745,10 +2747,10 @@ function Steps(param) {
             });
         });
     };
-    return /* @__PURE__ */ import_react32.default.createElement(StepsContainer, null, renderSteps());
+    return /* @__PURE__ */ import_react33.default.createElement(StepsContainer, null, renderSteps());
 }
 // src/design.system/divider/divider.tsx
-var import_react33 = __toESM(require("react"));
+var import_react34 = __toESM(require("react"));
 var import_styled_components27 = __toESM(require("styled-components"));
 var DividerContainer = import_styled_components27.default.div(_templateObject72(), function(param) {
     var margin = param.margin;
@@ -2757,11 +2759,11 @@ var DividerContainer = import_styled_components27.default.div(_templateObject72(
 var DividerLine = import_styled_components27.default.div(_templateObject73());
 function Divider(param) {
     var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
-    return /* @__PURE__ */ import_react33.default.createElement(DividerContainer, {
+    return /* @__PURE__ */ import_react34.default.createElement(DividerContainer, {
         margin: margin
-    }, /* @__PURE__ */ import_react33.default.createElement(DividerLine, null), /* @__PURE__ */ import_react33.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react34.default.createElement(DividerLine, null), /* @__PURE__ */ import_react34.default.createElement(Text, {
         size: 14
-    }, label), /* @__PURE__ */ import_react33.default.createElement(DividerLine, null));
+    }, label), /* @__PURE__ */ import_react34.default.createElement(DividerLine, null));
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

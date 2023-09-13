@@ -265,7 +265,7 @@ function Tap({
 }
 
 // src/design.system/drop.down/drop.down.tsx
-import React13, { useEffect as useEffect2, useRef, useState as useState2 } from "react";
+import React13, { useEffect as useEffect3, useRef, useState as useState3 } from "react";
 
 // src/assets/icons/expand-arrow.svg
 import * as React9 from "react";
@@ -436,6 +436,9 @@ function useOnClickOutside(ref, handler) {
   }, [ref, handler]);
 }
 
+// src/hooks/useCopyToClipboard.tsx
+import { useState as useState2 } from "react";
+
 // src/design.system/drop.down/drop.down.tsx
 var SELECTED_ITEM = "Select item";
 var CONTAINER_STYLE = {
@@ -450,12 +453,12 @@ function DropDown({
   width = 260,
   value
 }) {
-  const [isOpen, setOpen] = useState2(false);
-  const [selectedItem, setSelectedItem] = useState2(value || null);
-  const [isHover, setHover] = useState2(false);
-  const [searchFilter, setSearchFilter] = useState2("");
+  const [isOpen, setOpen] = useState3(false);
+  const [selectedItem, setSelectedItem] = useState3(value || null);
+  const [isHover, setHover] = useState3(false);
+  const [searchFilter, setSearchFilter] = useState3("");
   const containerRef = useRef(null);
-  useEffect2(() => {
+  useEffect3(() => {
     value && setSelectedItem(value);
   }, [value]);
   useOnClickOutside(containerRef, () => setOpen(false));
@@ -630,7 +633,7 @@ function Link({ value, onClick, fontSize = 16 }) {
 }
 
 // src/design.system/tooltip/tooltip.tsx
-import React21, { useState as useState3 } from "react";
+import React21, { useState as useState4 } from "react";
 
 // src/assets/icons/question.svg
 import * as React20 from "react";
@@ -663,7 +666,7 @@ var TooltipContentWrapper = styled14.div`
 // src/design.system/tooltip/tooltip.tsx
 function Tooltip(props) {
   let timeout;
-  const [active, setActive] = useState3(false);
+  const [active, setActive] = useState4(false);
   const showTip = () => {
     timeout = setTimeout(() => {
       setActive(true);
@@ -702,7 +705,7 @@ function ImageComponent({
 }
 
 // src/design.system/input/input.tsx
-import React25, { useState as useState4 } from "react";
+import React25, { useState as useState5 } from "react";
 
 // src/design.system/input/input.styled.tsx
 import { styled as styled15 } from "styled-components";
@@ -783,7 +786,7 @@ function Input({
   style = {},
   placeholder
 }) {
-  const [showPassword, setShowPassword] = useState4(false);
+  const [showPassword, setShowPassword] = useState5(false);
   function handleChange(event) {
     onChange(event.target.value);
   }
@@ -863,7 +866,7 @@ function ActionInput({
 }
 
 // src/design.system/video/video.tsx
-import React29, { useState as useState5 } from "react";
+import React29, { useState as useState6 } from "react";
 
 // src/assets/icons/close.svg
 import * as React27 from "react";
@@ -934,8 +937,8 @@ var LargeVideoContainer = styled16.div`
 
 // src/design.system/video/video.tsx
 function Video({ videoSrc, title, thumbnail }) {
-  const [isLarge, setIsLarge] = useState5(false);
-  const [pause, setPause] = useState5(true);
+  const [isLarge, setIsLarge] = useState6(false);
+  const [pause, setPause] = useState6(true);
   const handleClick = () => {
     setIsLarge(true);
   };
@@ -991,7 +994,7 @@ function Loader() {
 }
 
 // src/design.system/notification/notification.tsx
-import React34, { useEffect as useEffect3 } from "react";
+import React34, { useEffect as useEffect4 } from "react";
 
 // src/design.system/notification/notification.styled.tsx
 import styled18 from "styled-components";
@@ -1033,7 +1036,7 @@ var error_notification_default = SvgErrorNotification;
 
 // src/design.system/notification/notification.tsx
 function Notification({ type, message, onClose }) {
-  useEffect3(() => {
+  useEffect4(() => {
     const id = setTimeout(() => {
       onClose && onClose();
     }, 5e3);
@@ -1061,7 +1064,7 @@ function Notification({ type, message, onClose }) {
 }
 
 // src/design.system/data.flow/index.tsx
-import React46, { useEffect as useEffect4 } from "react";
+import React46, { useEffect as useEffect5 } from "react";
 import ReactFlow, {
   Background,
   Controls,
@@ -1321,7 +1324,7 @@ var nodeTypes = {
 };
 function DataFlow({ nodes, edges }) {
   const { fitView } = useReactFlow();
-  useEffect4(() => {
+  useEffect5(() => {
     setTimeout(() => {
       fitView();
     }, 100);
@@ -1384,13 +1387,13 @@ function DangerZone({
 }
 
 // src/design.system/modal/modal.tsx
-import React49, { useCallback, useEffect as useEffect5, useRef as useRef2 } from "react";
+import React49, { useCallback, useEffect as useEffect6, useRef as useRef2 } from "react";
 
 // src/design.system/modal/portal.modal.tsx
-import { useState as useState6, useLayoutEffect } from "react";
+import { useState as useState7, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 var PortalModal = ({ children, wrapperId }) => {
-  const [portalElement, setPortalElement] = useState6(null);
+  const [portalElement, setPortalElement] = useState7(null);
   useLayoutEffect(() => {
     let element = document.getElementById(wrapperId);
     let portalCreated = false;
@@ -1560,7 +1563,7 @@ function Modal({ children, closeModal, config }) {
       closeModal();
   }, []);
   useOnClickOutside(modalRef, handleClickOutside);
-  useEffect5(() => {
+  useEffect6(() => {
     document.addEventListener("keydown", handleKeyPress);
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
@@ -1585,13 +1588,13 @@ function Modal({ children, closeModal, config }) {
 import React51 from "react";
 
 // src/design.system/theme.provider/registry.tsx
-import React50, { useState as useState7 } from "react";
+import React50, { useState as useState8 } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 function StyledComponentsRegistry({
   children
 }) {
-  const [styledComponentsStyleSheet] = useState7(() => new ServerStyleSheet());
+  const [styledComponentsStyleSheet] = useState8(() => new ServerStyleSheet());
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
     styledComponentsStyleSheet.instance.clearTag();
