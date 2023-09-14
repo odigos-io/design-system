@@ -34,13 +34,31 @@ type TextProps = {
 };
 declare function Text({ children, color, style, weight, size }: TextProps): React.JSX.Element;
 
+interface CodeProps {
+    text: string;
+    title?: string;
+    highlightedWord?: {
+        primary: {
+            words: string[];
+            color: string;
+        };
+        secondary?: {
+            words: string[];
+            color: string;
+        };
+    };
+    onCopy?: () => void;
+}
+declare function Code({ text, highlightedWord, title, onCopy }: CodeProps): React.JSX.Element;
+
 interface CardProps {
     children?: JSX.Element | JSX.Element[];
     focus?: any;
     type?: string;
     header?: {
-        title: string;
-        subtitle: string;
+        title?: string;
+        subtitle?: string;
+        body?: () => JSX.Element | JSX.Element[];
     };
 }
 declare function Card({ children, focus, type, header, }: CardProps): React.JSX.Element;
@@ -242,4 +260,4 @@ declare function Divider({ margin, label, }: {
     label?: string;
 }): React.JSX.Element;
 
-export { ActionInput, Button, Card, Checkbox, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
