@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card } from '../design.system/card/card';
 import { Text } from '../design.system/text/text';
+import { Tag } from '..';
 export default function Home() {
   return (
     <div style={{ background: '#0E1C28' }}>
@@ -19,6 +20,7 @@ export default function Home() {
           ),
         }}
       >
+        <Tag title={'#tag'} />
         <div style={{ width: 600, height: 600 }}></div>
       </Card>
     </div>

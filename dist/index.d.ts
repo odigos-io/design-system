@@ -260,4 +260,19 @@ declare function Divider({ margin, label, }: {
     label?: string;
 }): React.JSX.Element;
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Notification, RadioButton, SearchInput, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+declare function Note({ text, code }: {
+    text: string;
+    code?: string[];
+}): React.JSX.Element;
+
+declare function SegmentedControls({ options, selected, onChange, title, }: {
+    options: {
+        label: string;
+        id: string;
+    }[];
+    selected: string;
+    onChange: (selected: string) => void;
+    title?: string;
+}): React.JSX.Element;
+
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
