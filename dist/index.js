@@ -683,7 +683,9 @@ function _templateObject44() {
 }
 function _templateObject45() {
     var data = _tagged_template_literal([
-        "\n  width: 48px;\n  height: 48px;\n  border: 4px solid;\n  border-color: ",
+        "\n  width: ",
+        "px;\n  height: ",
+        "px;\n  border: 4px solid;\n  border-color: ",
         ";\n  border-radius: 50%;\n  animation: spin-anim 1.2s linear infinite;\n\n  @keyframes spin-anim {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n"
     ]);
     _templateObject45 = function _templateObject() {
@@ -702,7 +704,7 @@ function _templateObject46() {
 }
 function _templateObject47() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  height: 24px;\n  padding: 6px 16px 6px 8px;\n  /* width: 100%; */\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        "\n  display: flex;\n  padding: 6px 16px 6px 8px;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
         ";\n  svg {\n    cursor: pointer;\n  }\n"
     ]);
@@ -1040,7 +1042,8 @@ function _templateObject81() {
         "\n  color: ",
         ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
         ";\n  background-color: ",
-        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n"
+        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
+        ";\n  }\n"
     ]);
     _templateObject81 = function _templateObject() {
         return data;
@@ -2336,12 +2339,22 @@ var import_react22 = __toESM(require("react"));
 var import_styled_components18 = __toESM(require("styled-components"));
 var LoaderWrapper = import_styled_components18.default.div(_templateObject44());
 var StyledLoader = import_styled_components18.default.div(_templateObject45(), function(param) {
+    var width = param.width;
+    return width || 48;
+}, function(param) {
+    var height = param.height;
+    return height || 48;
+}, function(param) {
     var theme2 = param.theme;
     return "".concat(theme2.colors.secondary, " ").concat(theme2.colors.secondary, " ").concat(theme2.colors.secondary, "  transparent");
 });
 // src/design.system/loader/loader.tsx
-function Loader() {
-    return /* @__PURE__ */ import_react22.default.createElement(LoaderWrapper, null, /* @__PURE__ */ import_react22.default.createElement(StyledLoader, null));
+function Loader(param) {
+    var width = param.width, height = param.height;
+    return /* @__PURE__ */ import_react22.default.createElement(LoaderWrapper, null, /* @__PURE__ */ import_react22.default.createElement(StyledLoader, {
+        width: width,
+        height: height
+    }));
 }
 // src/design.system/notification/notification.tsx
 var import_react23 = __toESM(require("react"));
@@ -3272,6 +3285,9 @@ var SegmentedControlsOption = import_styled_components30.default.div(_templateOb
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark;
+}, function(param) {
+    var theme2 = param.theme;
+    return theme2.font_family.primary;
 });
 var SegmentedControlsInput = import_styled_components30.default.input(_templateObject82());
 function SegmentedControls(param) {

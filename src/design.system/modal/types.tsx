@@ -1,13 +1,13 @@
 export enum ModalPositionX {
-  center = "center",
-  right = "right",
-  left = "left",
+  center = 'center',
+  right = 'right',
+  left = 'left',
 }
 
 export enum ModalPositionY {
-  center = "center",
-  start = "start",
-  end = "end",
+  center = 'center',
+  start = 'start',
+  end = 'end',
 }
 
 export interface ModalConfig {
@@ -22,6 +22,7 @@ export interface ModalConfig {
     secondaryBtnText?: string;
     primaryBtnAction: () => void;
     secondaryBtnAction?: () => void;
+    isDisabled?: boolean;
   };
 }
 

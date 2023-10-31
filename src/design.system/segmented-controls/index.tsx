@@ -39,6 +39,9 @@ const SegmentedControlsOption = styled.div`
     border-bottom-right-radius: 10px;
     padding-right: 16px;
   }
+  label {
+    font-family: ${({ theme }) => theme.font_family.primary};
+  }
 `;
 
 const SegmentedControlsInput = styled.input`

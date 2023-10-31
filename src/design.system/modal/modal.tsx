@@ -1,11 +1,12 @@
-import React, { useCallback, useEffect, useRef } from "react";
-import PortalModal from "./portal.modal";
-import * as S from "./modal.styled";
-import { Props } from "./types";
-import { Text } from "../text/text";
-import theme from "@/styles/palette";
-import { useOnClickOutside } from "@/hooks";
-import CloseIcon from "@/assets/icons/close-modal.svg";
+import React, { useCallback, useEffect, useRef } from 'react';
+import PortalModal from './portal.modal';
+import * as S from './modal.styled';
+import { Props } from './types';
+import { Text } from '../text/text';
+import theme from '@/styles/palette';
+import { useOnClickOutside } from '@/hooks';
+import CloseIcon from '@/assets/icons/close-modal.svg';
+import { Button } from '../button/button';
 export function Modal({ children, closeModal, config }: Props) {
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -14,17 +15,17 @@ export function Modal({ children, closeModal, config }: Props) {
 
   // handle what happens on key press
   const handleKeyPress = useCallback((event: KeyboardEvent) => {
-    if (event.key === "Escape") closeModal();
+    if (event.key === 'Escape') closeModal();
   }, []);
 
   useOnClickOutside(modalRef, handleClickOutside);
 
   useEffect(() => {
     // attach the event listener if the modal is shown
-    document.addEventListener("keydown", handleKeyPress);
+    document.addEventListener('keydown', handleKeyPress);
     // remove the event listener
     return () => {
-      document.removeEventListener("keydown", handleKeyPress);
+      document.removeEventListener('keydown', handleKeyPress);
     };
   }, [handleKeyPress]);
 
@@ -36,14 +37,14 @@ export function Modal({ children, closeModal, config }: Props) {
           positionX={config.positionX}
           positionY={config.positionY}
           style={{
-            animationDuration: "400ms",
-            animationDelay: "0",
+            animationDuration: '400ms',
+            animationDelay: '0',
           }}
         >
           <S.ModalContainer padding={config.padding} ref={modalRef}>
             {config.showHeader && (
               <S.ModalHeader>
-                <Text weight={500} color={theme.text.dark_button}>
+                <Text size={24} weight={700}>
                   {config.title}
                 </Text>
               </S.ModalHeader>
@@ -56,11 +57,15 @@ export function Modal({ children, closeModal, config }: Props) {
             <S.Content>{children}</S.Content>
             {config?.footer && (
               <S.ModalFooter>
-                <S.PrimaryButton onClick={config.footer.primaryBtnAction}>
-                  <Text size={14} weight={500} color={"#5c5c5c"}>
+                <Button
+                  disabled={config.footer.isDisabled}
+                  style={{ width: 200 }}
+                  onClick={config.footer.primaryBtnAction}
+                >
+                  <Text size={16} weight={700} color={theme.text.dark_button}>
                     {config.footer.primaryBtnText}
                   </Text>
-                </S.PrimaryButton>
+                </Button>
               </S.ModalFooter>
             )}
           </S.ModalContainer>

@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { ModalPositionX, ModalPositionY } from "./types";
+import styled, { keyframes } from 'styled-components';
+import { ModalPositionX, ModalPositionY } from './types';
 
 interface PropsOverlay {
   showOverlay: boolean;
@@ -33,7 +33,7 @@ export const ModalButtonPrimary = styled.button`
   color: ${({ theme }) => theme.colors.btnText};
   border: 1px solid ${({ theme }) => theme.colors.main};
   background-color: ${({ theme }) => theme.colors.main};
-  font-family: "Robot", sans-serif;
+  font-family: 'Robot', sans-serif;
   font-weight: 500;
   transition: 0.3s ease all;
 
@@ -48,7 +48,7 @@ export const ModalButtonSecondary = styled.button`
   color: ${({ theme }) => theme.colors.main};
   border: 1px solid ${({ theme }) => theme.colors.main};
   background-color: transparent;
-  font-family: "Robot", sans-serif;
+  font-family: 'Robot', sans-serif;
   font-weight: 500;
   transition: 0.3s ease all;
 
@@ -66,11 +66,11 @@ export const Overlay = styled.div<PropsOverlay>`
   top: 0;
   left: 0;
   background-color: ${(props) =>
-    props.showOverlay ? "rgba(23, 23, 23, 0.8)" : "rgba(0, 0, 0, 0)"};
+    props.showOverlay ? 'rgba(23, 23, 23, 0.8)' : 'rgba(0, 0, 0, 0)'};
   display: flex;
   align-items: center;
-  justify-content: ${(props) => (props.positionX ? props.positionX : "center")};
-  align-items: ${(props) => (props.positionY ? props.positionY : "center")};
+  justify-content: ${(props) => (props.positionX ? props.positionX : 'center')};
+  align-items: ${(props) => (props.positionY ? props.positionY : 'center')};
   padding: 40px;
 
   @media (prefers-reduced-motion: no-preference) {
@@ -81,35 +81,37 @@ export const Overlay = styled.div<PropsOverlay>`
 export const ModalContainer = styled.div<PropsModalContainer>`
   width: 500px;
   min-height: 50px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   position: relative;
-  border-radius: 8px;
-  padding: ${(props) => (props.padding ? props.padding : "20px")};
+  /* border-radius: 8px; */
+  border-radius: 12px;
+  border: 0.95px solid var(--dark-mode-dark-3, #203548);
+  background: var(--dark-mode-dark-2, #0e1c28);
+
+  padding: ${(props) => (props.padding ? props.padding : '20px')};
 `;
 export const ModalHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ededed;
 `;
 
 export const Close = styled.button`
   position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  top: 20px;
+  right: 5px;
   border: none;
   background-color: transparent;
   transition: 0.3s ease all;
   border-radius: 3px;
-  color: "#d1345b";
+  color: '#d1345b';
   cursor: pointer;
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
   }
 `;
 
@@ -128,6 +130,7 @@ export const PrimaryButton = styled.button`
 
 export const Content = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   color: ${({ theme }) => theme.text};
@@ -137,8 +140,7 @@ export const ModalFooter = styled.footer`
   display: flex;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ededed;
 `;

@@ -169,7 +169,11 @@ type VideoComponentProps = {
 };
 declare function Video({ videoSrc, title, thumbnail }: VideoComponentProps): React.JSX.Element;
 
-declare function Loader(): React.JSX.Element;
+interface LoaderProps {
+    width?: number;
+    height?: number;
+}
+declare function Loader({ width, height }: LoaderProps): React.JSX.Element;
 
 interface NotificationProps {
     type: "success" | "error" | "warning" | "info";

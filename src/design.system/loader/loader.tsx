@@ -1,10 +1,15 @@
-import React from "react";
-import { StyledLoader, LoaderWrapper } from "./loader.styled";
+import React from 'react';
+import { StyledLoader, LoaderWrapper } from './loader.styled';
 
-export function Loader() {
+interface LoaderProps {
+  width?: number;
+  height?: number;
+}
+
+export function Loader({ width, height }: LoaderProps) {
   return (
     <LoaderWrapper>
-      <StyledLoader />
+      <StyledLoader width={width} height={height} />
     </LoaderWrapper>
   );
 }

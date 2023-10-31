@@ -1086,8 +1086,8 @@ var LoaderWrapper = styled18.div`
   height: 100%;
 `;
 var StyledLoader = styled18.div`
-  width: 48px;
-  height: 48px;
+  width: ${({ width }) => width || 48}px;
+  height: ${({ height }) => height || 48}px;
   border: 4px solid;
   border-color: ${({ theme: theme2 }) => `${theme2.colors.secondary} ${theme2.colors.secondary} ${theme2.colors.secondary}  transparent`};
   border-radius: 50%;
@@ -1104,8 +1104,8 @@ var StyledLoader = styled18.div`
 `;
 
 // src/design.system/loader/loader.tsx
-function Loader() {
-  return /* @__PURE__ */ React34.createElement(LoaderWrapper, null, /* @__PURE__ */ React34.createElement(StyledLoader, null));
+function Loader({ width, height }) {
+  return /* @__PURE__ */ React34.createElement(LoaderWrapper, null, /* @__PURE__ */ React34.createElement(StyledLoader, { width, height }));
 }
 
 // src/design.system/notification/notification.tsx
@@ -1120,9 +1120,7 @@ var NotificationContainer = styled19.div`
 `;
 var StyledNotification = styled19.div`
   display: flex;
-  height: 24px;
   padding: 6px 16px 6px 8px;
-  /* width: 100%; */
   align-items: center;
   justify-content: space-between;
   gap: 10px;
@@ -1887,6 +1885,9 @@ var SegmentedControlsOption = styled28.div`
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-right: 16px;
+  }
+  label {
+    font-family: ${({ theme: theme2 }) => theme2.font_family.primary};
   }
 `;
 var SegmentedControlsInput = styled28.input`

@@ -35,7 +35,7 @@ export function Input({
   }
 
   return (
-    <div>
+    <div style={{ ...style }}>
       {label && (
         <LabelWrapper>
           <Text size={14} weight={600}>
@@ -46,7 +46,7 @@ export function Input({
       <StyledInputContainer
         active={!!value || undefined}
         hasError={!!error}
-        style={{ ...style }}
+        // style={{ ...style }}
       >
         <StyledInput
           type={showPassword ? 'text' : type}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const NotificationContainer = styled.div`
   position: fixed;
@@ -8,9 +8,7 @@ export const NotificationContainer = styled.div`
 
 export const StyledNotification = styled.div`
   display: flex;
-  height: 24px;
   padding: 6px 16px 6px 8px;
-  /* width: 100%; */
   align-items: center;
   justify-content: space-between;
   gap: 10px;

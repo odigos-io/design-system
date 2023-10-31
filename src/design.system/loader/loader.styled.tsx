@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LoaderWrapper = styled.div`
   display: flex;
@@ -7,9 +7,12 @@ export const LoaderWrapper = styled.div`
   height: 100%;
 `;
 
-export const StyledLoader = styled.div`
-  width: 48px;
-  height: 48px;
+export const StyledLoader = styled.div<{
+  width?: number | undefined;
+  height?: number | undefined;
+}>`
+  width: ${({ width }) => width || 48}px;
+  height: ${({ height }) => height || 48}px;
   border: 4px solid;
   border-color: ${({ theme }) =>
     `${theme.colors.secondary} ${theme.colors.secondary} ${theme.colors.secondary}  transparent`};
