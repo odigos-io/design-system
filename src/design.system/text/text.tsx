@@ -1,5 +1,5 @@
-import React from "react";
-import { TextWrapper } from "./text.styled";
+import React from 'react';
+import { TextWrapper } from './text.styled';
 
 type TextProps = {
   type?: string | any;

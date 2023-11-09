@@ -1,21 +1,22 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../design.system/card/card';
 import { Text } from '../design.system/text/text';
 import { Input, Loader, Modal, SegmentedControls, Tag } from '..';
 import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
 export default function Home() {
+  const [selected, setSelected] = useState('sources');
+
   const options = [
-    {
-      label: 'Namespaces',
-      id: 'namespaces',
-    },
     {
       label: 'Sources',
       id: 'sources',
     },
+    {
+      label: 'Namespaces',
+      id: 'namespaces',
+    },
   ];
-
   const modalConfig = {
     title: 'Create new token',
     showHeader: true,
@@ -31,7 +32,7 @@ export default function Home() {
 
   return (
     <div style={{ background: '#0E1C28' }}>
-      <Modal show={true} config={modalConfig} closeModal={() => {}}>
+      {/* <Modal show={true} config={modalConfig} closeModal={() => {}}>
         <Input
           style={{ width: '98%' }}
           label="Token name"
@@ -39,7 +40,7 @@ export default function Home() {
           placeholder="Name of the token"
           onChange={(value) => {}}
         />
-      </Modal>
+      </Modal> */}
 
       <Card
         type={'secondary'}
@@ -57,9 +58,9 @@ export default function Home() {
       >
         <SegmentedControls
           options={options}
-          selected={'sources'}
+          selected={selected}
           onChange={function (selected: string): void {
-            throw new Error('Function not implemented.');
+            setSelected(selected);
           }}
         />
         <Loader width={100} height={100} />

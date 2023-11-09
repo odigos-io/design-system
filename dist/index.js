@@ -853,7 +853,7 @@ function _templateObject62() {
         "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
         ";\n  border: 1px solid ",
         ";\n  background-color: ",
-        ';\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
+        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
         ";\n  }\n"
     ]);
     _templateObject62 = function _templateObject() {
@@ -865,7 +865,7 @@ function _templateObject63() {
     var data = _tagged_template_literal([
         "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
         ";\n  border: 1px solid ",
-        ';\n  background-color: transparent;\n  font-family: "Robot", sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ',
+        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
         ";\n    color: ",
         ";\n  }\n"
     ]);
@@ -889,7 +889,7 @@ function _templateObject64() {
 }
 function _templateObject65() {
     var data = _tagged_template_literal([
-        "\n  width: 500px;\n  min-height: 50px;\n  background-color: #ffffff;\n  position: relative;\n  border-radius: 8px;\n  padding: ",
+        "\n  width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
         ";\n"
     ]);
     _templateObject65 = function _templateObject() {
@@ -899,7 +899,7 @@ function _templateObject65() {
 }
 function _templateObject66() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n  border-bottom: 1px solid #ededed;\n"
+        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
     ]);
     _templateObject66 = function _templateObject() {
         return data;
@@ -908,7 +908,7 @@ function _templateObject66() {
 }
 function _templateObject67() {
     var data = _tagged_template_literal([
-        '\n  position: absolute;\n  top: 10px;\n  right: 20px;\n  width: 40px;\n  height: 40px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: "#d1345b";\n  cursor: pointer;\n\n  svg {\n    width: 100%;\n    height: 100%;\n  }\n'
+        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
     ]);
     _templateObject67 = function _templateObject() {
         return data;
@@ -926,7 +926,7 @@ function _templateObject68() {
 }
 function _templateObject69() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  color: ",
+        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
         ";\n"
     ]);
     _templateObject69 = function _templateObject() {
@@ -936,7 +936,7 @@ function _templateObject69() {
 }
 function _templateObject70() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 2rem;\n  align-items: center;\n  justify-content: center;\n  margin-top: 20px;\n  padding-top: 20px;\n  border-top: 1px solid #ededed;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 2rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
     ]);
     _templateObject70 = function _templateObject() {
         return data;
@@ -2184,13 +2184,14 @@ function Input(param) {
         onChange(event.target.value);
     };
     var _ref = _sliced_to_array((0, import_react19.useState)(false), 2), showPassword = _ref[0], setShowPassword = _ref[1];
-    return /* @__PURE__ */ import_react19.default.createElement("div", null, label && /* @__PURE__ */ import_react19.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react19.default.createElement(Text, {
+    return /* @__PURE__ */ import_react19.default.createElement("div", {
+        style: _object_spread({}, style)
+    }, label && /* @__PURE__ */ import_react19.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react19.default.createElement(Text, {
         size: 14,
         weight: 600
     }, label)), /* @__PURE__ */ import_react19.default.createElement(StyledInputContainer, {
         active: !!value || void 0,
-        hasError: !!error,
-        style: _object_spread({}, style)
+        hasError: !!error
     }, /* @__PURE__ */ import_react19.default.createElement(StyledInput, {
         type: showPassword ? "text" : type,
         value: value,
@@ -3056,7 +3057,7 @@ var ModalButtonSecondary = import_styled_components24.default.button(_templateOb
     return theme2.colors.btnText;
 });
 var Overlay = import_styled_components24.default.div(_templateObject64(), function(props) {
-    return props.showOverlay ? "rgba(23, 23, 23, 0.8)" : "rgba(0, 0, 0, 0)";
+    return props.showOverlay ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0)";
 }, function(props) {
     return props.positionX ? props.positionX : "center";
 }, function(props) {
@@ -3066,7 +3067,7 @@ var ModalContainer = import_styled_components24.default.div(_templateObject65(),
     return props.padding ? props.padding : "20px";
 });
 var ModalHeader = import_styled_components24.default.header(_templateObject66());
-var Close = import_styled_components24.default.button(_templateObject67());
+var Close = import_styled_components24.default.div(_templateObject67());
 var PrimaryButton = import_styled_components24.default.button(_templateObject68());
 var Content = import_styled_components24.default.div(_templateObject69(), function(param) {
     var theme2 = param.theme;
@@ -3080,11 +3081,16 @@ var SvgCloseModal = function(props) {
         xmlns: "http://www.w3.org/2000/svg",
         width: 16,
         height: 16,
-        fill: "currentColor",
-        className: "bi bi-x",
-        viewBox: "0 0 16 16"
-    }, props), /* @__PURE__ */ React52.createElement("path", {
-        d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+        viewBox: "0 0 16 16",
+        fill: "none"
+    }, props), /* @__PURE__ */ React52.createElement("rect", {
+        width: 16,
+        height: 16,
+        rx: 2,
+        fill: "#0E1C28"
+    }), /* @__PURE__ */ React52.createElement("path", {
+        d: "M12.8538 12.146C12.9002 12.1925 12.9371 12.2476 12.9622 12.3083C12.9874 12.369 13.0003 12.4341 13.0003 12.4998C13.0003 12.5655 12.9874 12.6305 12.9622 12.6912C12.9371 12.7519 12.9002 12.8071 12.8538 12.8535C12.8073 12.9 12.7522 12.9368 12.6915 12.962C12.6308 12.9871 12.5657 13.0001 12.5 13.0001C12.4343 13.0001 12.3693 12.9871 12.3086 12.962C12.2479 12.9368 12.1927 12.9 12.1463 12.8535L8.00003 8.70666L3.85378 12.8535C3.75996 12.9474 3.63272 13.0001 3.50003 13.0001C3.36735 13.0001 3.2401 12.9474 3.14628 12.8535C3.05246 12.7597 2.99976 12.6325 2.99976 12.4998C2.99976 12.3671 3.05246 12.2399 3.14628 12.146L7.29316 7.99979L3.14628 3.85354C3.05246 3.75972 2.99976 3.63247 2.99976 3.49979C2.99976 3.36711 3.05246 3.23986 3.14628 3.14604C3.2401 3.05222 3.36735 2.99951 3.50003 2.99951C3.63272 2.99951 3.75996 3.05222 3.85378 3.14604L8.00003 7.29291L12.1463 3.14604C12.2401 3.05222 12.3674 2.99951 12.5 2.99951C12.6327 2.99951 12.76 3.05222 12.8538 3.14604C12.9476 3.23986 13.0003 3.36711 13.0003 3.49979C13.0003 3.63247 12.9476 3.75972 12.8538 3.85354L8.70691 7.99979L12.8538 12.146Z",
+        fill: "white"
     }));
 };
 var close_modal_default = SvgCloseModal;
@@ -3122,16 +3128,20 @@ function Modal(param) {
         padding: config.padding,
         ref: modalRef
     }, config.showHeader && /* @__PURE__ */ import_react30.default.createElement(ModalHeader, null, /* @__PURE__ */ import_react30.default.createElement(Text, {
-        weight: 500,
-        color: palette_default.text.dark_button
+        size: 24,
+        weight: 700
     }, config.title)), /* @__PURE__ */ import_react30.default.createElement(Close, {
         onClick: closeModal
-    }, /* @__PURE__ */ import_react30.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react30.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react30.default.createElement(ModalFooter, null, /* @__PURE__ */ import_react30.default.createElement(PrimaryButton, {
+    }, /* @__PURE__ */ import_react30.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react30.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react30.default.createElement(ModalFooter, null, /* @__PURE__ */ import_react30.default.createElement(Button, {
+        disabled: config.footer.isDisabled,
+        style: {
+            width: "fir-content"
+        },
         onClick: config.footer.primaryBtnAction
     }, /* @__PURE__ */ import_react30.default.createElement(Text, {
-        size: 14,
-        weight: 500,
-        color: "#5c5c5c"
+        size: 16,
+        weight: 700,
+        color: palette_default.text.dark_button
     }, config.footer.primaryBtnText)))))));
 }
 // src/design.system/theme.provider/theme.provider.tsx

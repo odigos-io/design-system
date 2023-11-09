@@ -238,6 +238,7 @@ interface ModalConfig {
         secondaryBtnText?: string;
         primaryBtnAction: () => void;
         secondaryBtnAction?: () => void;
+        isDisabled?: boolean;
     };
 }
 interface Props {

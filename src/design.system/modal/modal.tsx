@@ -59,7 +59,7 @@ export function Modal({ children, closeModal, config }: Props) {
               <S.ModalFooter>
                 <Button
                   disabled={config.footer.isDisabled}
-                  style={{ width: 200 }}
+                  style={{ width: 'fir-content' }}
                   onClick={config.footer.primaryBtnAction}
                 >
                   <Text size={16} weight={700} color={theme.text.dark_button}>

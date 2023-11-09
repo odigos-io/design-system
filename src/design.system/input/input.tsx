@@ -43,11 +43,7 @@ export function Input({
           </Text>
         </LabelWrapper>
       )}
-      <StyledInputContainer
-        active={!!value || undefined}
-        hasError={!!error}
-        // style={{ ...style }}
-      >
+      <StyledInputContainer active={!!value || undefined} hasError={!!error}>
         <StyledInput
           type={showPassword ? 'text' : type}
           value={value}

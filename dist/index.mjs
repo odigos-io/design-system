@@ -938,25 +938,16 @@ function Input({
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React29.createElement("div", null, label && /* @__PURE__ */ React29.createElement(LabelWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React29.createElement(
-    StyledInputContainer,
+  return /* @__PURE__ */ React29.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React29.createElement(LabelWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React29.createElement(StyledInputContainer, { active: !!value || void 0, hasError: !!error }, /* @__PURE__ */ React29.createElement(
+    StyledInput,
     {
-      active: !!value || void 0,
-      hasError: !!error,
-      style: { ...style }
-    },
-    /* @__PURE__ */ React29.createElement(
-      StyledInput,
-      {
-        type: showPassword ? "text" : type,
-        value,
-        onChange: handleChange,
-        autoComplete: "off",
-        placeholder
-      }
-    ),
-    type === "password" && /* @__PURE__ */ React29.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React29.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React29.createElement(eye_close_default, { width: 16, height: 16 }))
-  ), error && /* @__PURE__ */ React29.createElement(ErrorWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, color: "#FD3F3F" }, error)));
+      type: showPassword ? "text" : type,
+      value,
+      onChange: handleChange,
+      autoComplete: "off",
+      placeholder
+    }
+  ), type === "password" && /* @__PURE__ */ React29.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React29.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React29.createElement(eye_close_default, { width: 16, height: 16 }))), error && /* @__PURE__ */ React29.createElement(ErrorWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, color: "#FD3F3F" }, error)));
 }
 
 // src/design.system/input/action.input.tsx
@@ -1557,7 +1548,7 @@ var ModalButtonPrimary = styled24.button`
   color: ${({ theme: theme2 }) => theme2.colors.btnText};
   border: 1px solid ${({ theme: theme2 }) => theme2.colors.main};
   background-color: ${({ theme: theme2 }) => theme2.colors.main};
-  font-family: "Robot", sans-serif;
+  font-family: 'Robot', sans-serif;
   font-weight: 500;
   transition: 0.3s ease all;
 
@@ -1572,7 +1563,7 @@ var ModalButtonSecondary = styled24.button`
   color: ${({ theme: theme2 }) => theme2.colors.main};
   border: 1px solid ${({ theme: theme2 }) => theme2.colors.main};
   background-color: transparent;
-  font-family: "Robot", sans-serif;
+  font-family: 'Robot', sans-serif;
   font-weight: 500;
   transition: 0.3s ease all;
 
@@ -1588,7 +1579,7 @@ var Overlay = styled24.div`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${(props) => props.showOverlay ? "rgba(23, 23, 23, 0.8)" : "rgba(0, 0, 0, 0)"};
+  background-color: ${(props) => props.showOverlay ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0)"};
   display: flex;
   align-items: center;
   justify-content: ${(props) => props.positionX ? props.positionX : "center"};
@@ -1603,9 +1594,13 @@ var Overlay = styled24.div`
 var ModalContainer = styled24.div`
   width: 500px;
   min-height: 50px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   position: relative;
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  border-radius: 12px;
+  border: 0.95px solid var(--dark-mode-dark-3, #203548);
+  background: var(--dark-mode-dark-2, #0e1c28);
+
   padding: ${(props) => props.padding ? props.padding : "20px"};
 `;
 var ModalHeader = styled24.header`
@@ -1613,24 +1608,22 @@ var ModalHeader = styled24.header`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ededed;
 `;
-var Close = styled24.button`
+var Close = styled24.div`
   position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  top: 20px;
+  right: 15px;
   border: none;
   background-color: transparent;
   transition: 0.3s ease all;
   border-radius: 3px;
-  color: "#d1345b";
+  color: '#d1345b';
   cursor: pointer;
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
   }
 `;
 var PrimaryButton = styled24.button`
@@ -1647,6 +1640,7 @@ var PrimaryButton = styled24.button`
 `;
 var Content = styled24.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   color: ${({ theme: theme2 }) => theme2.text};
@@ -1656,15 +1650,14 @@ var ModalFooter = styled24.footer`
   display: flex;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #ededed;
 `;
 
 // src/assets/icons/close-modal.svg
 import * as React52 from "react";
-var SvgCloseModal = (props) => /* @__PURE__ */ React52.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, fill: "currentColor", className: "bi bi-x", viewBox: "0 0 16 16", ...props }, /* @__PURE__ */ React52.createElement("path", { d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" }));
+var SvgCloseModal = (props) => /* @__PURE__ */ React52.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", ...props }, /* @__PURE__ */ React52.createElement("rect", { width: 16, height: 16, rx: 2, fill: "#0E1C28" }), /* @__PURE__ */ React52.createElement("path", { d: "M12.8538 12.146C12.9002 12.1925 12.9371 12.2476 12.9622 12.3083C12.9874 12.369 13.0003 12.4341 13.0003 12.4998C13.0003 12.5655 12.9874 12.6305 12.9622 12.6912C12.9371 12.7519 12.9002 12.8071 12.8538 12.8535C12.8073 12.9 12.7522 12.9368 12.6915 12.962C12.6308 12.9871 12.5657 13.0001 12.5 13.0001C12.4343 13.0001 12.3693 12.9871 12.3086 12.962C12.2479 12.9368 12.1927 12.9 12.1463 12.8535L8.00003 8.70666L3.85378 12.8535C3.75996 12.9474 3.63272 13.0001 3.50003 13.0001C3.36735 13.0001 3.2401 12.9474 3.14628 12.8535C3.05246 12.7597 2.99976 12.6325 2.99976 12.4998C2.99976 12.3671 3.05246 12.2399 3.14628 12.146L7.29316 7.99979L3.14628 3.85354C3.05246 3.75972 2.99976 3.63247 2.99976 3.49979C2.99976 3.36711 3.05246 3.23986 3.14628 3.14604C3.2401 3.05222 3.36735 2.99951 3.50003 2.99951C3.63272 2.99951 3.75996 3.05222 3.85378 3.14604L8.00003 7.29291L12.1463 3.14604C12.2401 3.05222 12.3674 2.99951 12.5 2.99951C12.6327 2.99951 12.76 3.05222 12.8538 3.14604C12.9476 3.23986 13.0003 3.36711 13.0003 3.49979C13.0003 3.63247 12.9476 3.75972 12.8538 3.85354L8.70691 7.99979L12.8538 12.146Z", fill: "white" }));
 var close_modal_default = SvgCloseModal;
 
 // src/design.system/modal/modal.tsx
@@ -1693,7 +1686,15 @@ function Modal({ children, closeModal, config }) {
         animationDelay: "0"
       }
     },
-    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { weight: 500, color: palette_default.text.dark_button }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, null, /* @__PURE__ */ React53.createElement(PrimaryButton, { onClick: config.footer.primaryBtnAction }, /* @__PURE__ */ React53.createElement(Text, { size: 14, weight: 500, color: "#5c5c5c" }, config.footer.primaryBtnText))))
+    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, null, /* @__PURE__ */ React53.createElement(
+      Button,
+      {
+        disabled: config.footer.isDisabled,
+        style: { width: "fir-content" },
+        onClick: config.footer.primaryBtnAction
+      },
+      /* @__PURE__ */ React53.createElement(Text, { size: 16, weight: 700, color: palette_default.text.dark_button }, config.footer.primaryBtnText)
+    )))
   )));
 }
 

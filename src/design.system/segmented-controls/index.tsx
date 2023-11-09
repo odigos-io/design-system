@@ -89,7 +89,7 @@ export function SegmentedControls({
               onChange={() => onChange(option.id)}
               checked={option.id === selected}
             />
-            <label htmlFor={option.label}>{option.label}</label>
+            <Text>{option.label}</Text>
           </SegmentedControlsOption>
         ))}
       </SegmentedControlsWrapper>
