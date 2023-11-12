@@ -1,7 +1,7 @@
-import React from "react";
-import { SearchInputWrapper, StyledSearchInput } from "./search.input.styled";
-import Glass from "@/assets/icons/glass.svg";
-import X from "@/assets/icons/X.svg";
+import React from 'react';
+import { SearchInputWrapper, StyledSearchInput } from './search.input.styled';
+import Glass from '@/assets/icons/glass.svg';
+import X from '@/assets/icons/X.svg';
 
 interface SearchInputProps {
   placeholder?: string;
@@ -14,8 +14,8 @@ interface SearchInputProps {
 }
 
 export function SearchInput({
-  placeholder = "Search",
-  value = "",
+  placeholder = 'Search',
+  value = '',
   onChange = () => {},
   loading = false,
   containerStyle = {},
@@ -26,10 +26,10 @@ export function SearchInput({
     ? () =>
         onChange({
           target: {
-            value: "",
+            value: '',
           },
         })
-    : null;
+    : () => {};
 
   return (
     <SearchInputWrapper
@@ -45,7 +45,12 @@ export function SearchInput({
         onChange={onChange}
       />
 
-      {showClear && <X onClick={clear} style={{ cursor: "pointer" }} />}
+      {showClear && (
+        <div onClick={clear}>
+          {' '}
+          <X style={{ cursor: 'pointer' }} />
+        </div>
+      )}
     </SearchInputWrapper>
   );
 }

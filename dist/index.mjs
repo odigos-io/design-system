@@ -565,7 +565,8 @@ function SearchInput({
     target: {
       value: ""
     }
-  }) : null;
+  }) : () => {
+  };
   return /* @__PURE__ */ React16.createElement(
     SearchInputWrapper,
     {
@@ -583,7 +584,7 @@ function SearchInput({
         onChange
       }
     ),
-    showClear && /* @__PURE__ */ React16.createElement(X_default, { onClick: clear, style: { cursor: "pointer" } })
+    showClear && /* @__PURE__ */ React16.createElement("div", { onClick: clear }, " ", /* @__PURE__ */ React16.createElement(X_default, { style: { cursor: "pointer" } }))
   );
 }
 
@@ -1926,7 +1927,7 @@ function SegmentedControls({
         checked: option.id === selected
       }
     ),
-    /* @__PURE__ */ React61.createElement("label", { htmlFor: option.label }, option.label)
+    /* @__PURE__ */ React61.createElement(Text, null, option.label)
   ))));
 }
 export {

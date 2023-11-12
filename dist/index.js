@@ -1806,7 +1806,7 @@ function SearchInput(param) {
                 value: ""
             }
         });
-    } : null;
+    } : function() {};
     return /* @__PURE__ */ import_react11.default.createElement(SearchInputWrapper, {
         active: !!value || void 0,
         style: _object_spread({}, containerStyle)
@@ -1816,12 +1816,13 @@ function SearchInput(param) {
         active: !!value || void 0,
         placeholder: placeholder,
         onChange: onChange
-    }), showClear && /* @__PURE__ */ import_react11.default.createElement(X_default, {
-        onClick: clear,
+    }), showClear && /* @__PURE__ */ import_react11.default.createElement("div", {
+        onClick: clear
+    }, " ", /* @__PURE__ */ import_react11.default.createElement(X_default, {
         style: {
             cursor: "pointer"
         }
-    }));
+    })));
 }
 // src/design.system/drop.down/drop.down.tsx
 var SELECTED_ITEM = "Select item";
@@ -3320,9 +3321,7 @@ function SegmentedControls(param) {
                 return onChange(option.id);
             },
             checked: option.id === selected
-        }), /* @__PURE__ */ import_react37.default.createElement("label", {
-            htmlFor: option.label
-        }, option.label));
+        }), /* @__PURE__ */ import_react37.default.createElement(Text, null, option.label));
     })));
 }
 // Annotate the CommonJS export names for ESM import in node:
