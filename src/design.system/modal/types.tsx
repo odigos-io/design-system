@@ -23,6 +23,11 @@ export interface ModalConfig {
     primaryBtnAction: () => void;
     secondaryBtnAction?: () => void;
     isDisabled?: boolean;
+    link?: {
+      text: string;
+      onClick: () => void;
+    };
+    style?: {};
   };
 }
 

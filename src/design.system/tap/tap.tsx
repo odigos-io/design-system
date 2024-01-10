@@ -1,11 +1,11 @@
-import { Text } from "@/design.system/text/text";
-import React from "react";
-import styled from "styled-components";
+import { Text } from '@/design.system/text/text';
+import React from 'react';
+import styled from 'styled-components';
 
 interface TapProps {
   icons: object;
   title?: string;
-  tapped?: any;
+  tapped?: boolean;
   onClick?: any;
   children?: React.ReactNode;
   style?: React.CSSProperties;
@@ -22,13 +22,13 @@ const TapWrapper = styled.div<TapWrapperProps>`
   gap: 10px;
   border-radius: 16px;
   border: ${({ theme, selected }) =>
-    `1px solid ${selected ? "transparent" : theme.colors.dark_blue}`};
+    `1px solid ${selected ? 'transparent' : theme.colors.dark_blue}`};
   background: ${({ theme, selected }) =>
-    selected ? theme.colors.dark_blue : "transparent"};
+    selected ? theme.colors.dark_blue : 'transparent'};
 `;
 
 export function Tap({
-  title = "",
+  title = '',
   tapped,
   children,
   style,
@@ -38,14 +38,14 @@ export function Tap({
     <TapWrapper
       onClick={onClick}
       selected={tapped}
-      style={{ ...style, cursor: onClick ? "pointer" : "auto" }}
+      style={{ ...style, cursor: onClick ? 'pointer' : 'auto' }}
     >
       {children}
       <Text
         weight={400}
         size={14}
-        color={tapped ? "#CCD0D2" : "#8B92A5"}
-        style={{ cursor: onClick ? "pointer" : "auto" }}
+        color={tapped ? '#CCD0D2' : '#8B92A5'}
+        style={{ cursor: onClick ? 'pointer' : 'auto' }}
       >
         {title}
       </Text>

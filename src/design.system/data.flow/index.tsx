@@ -1,18 +1,18 @@
-"use client";
-import React, { useEffect } from "react";
+'use client';
+import React, { useEffect } from 'react';
 import ReactFlow, {
   Background,
   Controls,
   useReactFlow,
   ReactFlowProvider,
-} from "reactflow";
-import CenterNode from "./keyval.middleware";
-import NamespaceNode from "./namespace.node.tsx";
-import DestinationNode from "./destination.node.tsx";
-import "reactflow/dist/style.css";
-import { ControllerWrapper, DataFlowContainer } from "./data.flow.styled";
-import { IDataFlow } from "./types";
-import theme from "@/styles/palette";
+} from 'reactflow';
+import CenterNode from './keyval.middleware';
+import NamespaceNode from './namespace.node.tsx';
+import DestinationNode from './destination.node.tsx';
+import 'reactflow/dist/style.css';
+import { ControllerWrapper, DataFlowContainer } from './data.flow.styled';
+import { IDataFlow } from './types';
+import theme from '@/styles/palette';
 
 const backgroundColor = theme.colors.light_dark;
 
@@ -22,7 +22,7 @@ const nodeTypes = {
   destination: DestinationNode,
 };
 
-function DataFlow({ nodes, edges }: IDataFlow) {
+function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
   const { fitView } = useReactFlow();
 
   useEffect(() => {
@@ -39,6 +39,7 @@ function DataFlow({ nodes, edges }: IDataFlow) {
         nodeTypes={nodeTypes}
         nodesDraggable={false}
         nodeOrigin={[0.4, 0.4]}
+        {...rest}
       >
         <ControllerWrapper>
           <Controls position="top-left" showInteractive={false} />

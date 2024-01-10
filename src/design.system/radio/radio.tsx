@@ -1,17 +1,21 @@
-import React, { useState, FC, ChangeEvent } from "react";
-import { RadioButtonContainer, RadioButtonBorder } from "./radio.styled";
-import { Text } from "@/design.system/text/text";
-import Checked from "../../assets/icons/checked-radio.svg";
+import React, { useState, FC, ChangeEvent } from 'react';
+import { RadioButtonContainer, RadioButtonBorder } from './radio.styled';
+import { Text } from '@/design.system/text/text';
+import Checked from '../../assets/icons/checked-radio.svg';
 interface RadioButtonProps {
   label?: string;
-  value?: string;
+  value?: string | boolean;
+  size?: number;
+  textStyles?: React.CSSProperties;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const RadioButton: FC<RadioButtonProps> = ({
-  label = "",
+  label = '',
   onChange,
   value,
+  size = 25,
+  textStyles = {},
 }) => {
   function handleChange() {
     onChange && onChange({} as ChangeEvent<HTMLInputElement>);
@@ -19,10 +23,17 @@ export const RadioButton: FC<RadioButtonProps> = ({
 
   return (
     <RadioButtonContainer>
-      <div onClick={handleChange}>
-        {value ? <Checked width={25} height={25} /> : <RadioButtonBorder />}
+      <div
+        onClick={handleChange}
+        style={{ display: 'flex', alignItems: 'center' }}
+      >
+        {value ? (
+          <Checked width={size} height={size} />
+        ) : (
+          <RadioButtonBorder style={{ width: size, height: size }} />
+        )}
       </div>
-      <Text>{label}</Text>
+      <Text {...textStyles}>{label}</Text>
     </RadioButtonContainer>
   );
 };

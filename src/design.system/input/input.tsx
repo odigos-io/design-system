@@ -24,7 +24,7 @@ export function Input({
   value,
   onChange,
   type = 'text',
-  error,
+  error = '',
   style = {},
   placeholder,
 }: InputProps): JSX.Element {
@@ -43,7 +43,10 @@ export function Input({
           </Text>
         </LabelWrapper>
       )}
-      <StyledInputContainer active={!!value || undefined} hasError={!!error}>
+      <StyledInputContainer
+        active={!!value || undefined}
+        error={error ? true : undefined}
+      >
         <StyledInput
           type={showPassword ? 'text' : type}
           value={value}
