@@ -4,7 +4,6 @@ import React3 from "react";
 // src/design.system/radio/radio.styled.tsx
 import styled from "styled-components";
 var RadioButtonContainer = styled.label`
-  width: 24px;
   height: 24px;
   color: #303030;
   font-size: 14px;
@@ -13,6 +12,7 @@ var RadioButtonContainer = styled.label`
   -webkit-tap-highlight-color: transparent;
   display: flex;
   align-items: center;
+
   gap: 10px;
   cursor: pointer;
 `;
@@ -57,19 +57,28 @@ function Text({ children, color, style, weight, size }) {
 
 // src/assets/icons/checked-radio.svg
 import * as React2 from "react";
-var SvgCheckedRadio = (props) => /* @__PURE__ */ React2.createElement("svg", { width: 24, height: 24, viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React2.createElement("rect", { x: 0.5, y: 0.5, width: 23, height: 23, rx: 11.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React2.createElement("path", { d: "M18.3636 8L9.86364 16.5L6 12.6364", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
+var SvgCheckedRadio = (props) => /* @__PURE__ */ React2.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 15, height: 15, viewBox: "0 0 18 18", fill: "none", ...props }, /* @__PURE__ */ React2.createElement("rect", { x: 0.5, y: 0.5, width: 17, height: 17, rx: 8.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React2.createElement("path", { d: "M13.7727 6L7.39773 12.375L4.5 9.47727", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
 var checked_radio_default = SvgCheckedRadio;
 
 // src/design.system/radio/radio.tsx
 var RadioButton = ({
   label = "",
   onChange,
-  value
+  value,
+  size = 25,
+  textStyles = {}
 }) => {
   function handleChange() {
     onChange && onChange({});
   }
-  return /* @__PURE__ */ React3.createElement(RadioButtonContainer, null, /* @__PURE__ */ React3.createElement("div", { onClick: handleChange }, value ? /* @__PURE__ */ React3.createElement(checked_radio_default, { width: 25, height: 25 }) : /* @__PURE__ */ React3.createElement(RadioButtonBorder, null)), /* @__PURE__ */ React3.createElement(Text, null, label));
+  return /* @__PURE__ */ React3.createElement(RadioButtonContainer, null, /* @__PURE__ */ React3.createElement(
+    "div",
+    {
+      onClick: handleChange,
+      style: { display: "flex", alignItems: "center" }
+    },
+    value ? /* @__PURE__ */ React3.createElement(checked_radio_default, { width: size, height: size }) : /* @__PURE__ */ React3.createElement(RadioButtonBorder, { style: { width: size, height: size } })
+  ), /* @__PURE__ */ React3.createElement(Text, { ...textStyles }, label));
 };
 
 // src/design.system/button/button.tsx
@@ -777,8 +786,13 @@ var LinkContainer = styled14.div`
     cursor: pointer !important;
   }
 `;
-function Link({ value, onClick, fontSize = 16 }) {
-  return /* @__PURE__ */ React23.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React23.createElement(Text, { size: fontSize, color: "#0EE6F3" }, value));
+function Link({
+  value,
+  onClick,
+  fontSize = 16,
+  color = palette_default.colors.secondary
+}) {
+  return /* @__PURE__ */ React23.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React23.createElement(Text, { size: fontSize, color }, value));
 }
 
 // src/design.system/tooltip/tooltip.tsx
@@ -871,7 +885,7 @@ var StyledInputContainer = styled16.div`
   align-items: flex-start;
   gap: 10px;
   border-radius: 8px;
-  border: ${({ theme: theme2, hasError, active }) => `1px solid ${hasError ? theme2.colors.error : active ? theme2.text.grey : theme2.colors.blue_grey}`};
+  border: ${({ theme: theme2, error, active }) => `1px solid ${error ? theme2.colors.error : active ? theme2.text.grey : theme2.colors.blue_grey}`};
   background: ${({ theme: theme2 }) => theme2.colors.light_dark};
 
   &:hover {
@@ -931,7 +945,7 @@ function Input({
   value,
   onChange,
   type = "text",
-  error,
+  error = "",
   style = {},
   placeholder
 }) {
@@ -939,16 +953,24 @@ function Input({
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React29.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React29.createElement(LabelWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React29.createElement(StyledInputContainer, { active: !!value || void 0, hasError: !!error }, /* @__PURE__ */ React29.createElement(
-    StyledInput,
+  return /* @__PURE__ */ React29.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React29.createElement(LabelWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, weight: 600 }, label)), /* @__PURE__ */ React29.createElement(
+    StyledInputContainer,
     {
-      type: showPassword ? "text" : type,
-      value,
-      onChange: handleChange,
-      autoComplete: "off",
-      placeholder
-    }
-  ), type === "password" && /* @__PURE__ */ React29.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React29.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React29.createElement(eye_close_default, { width: 16, height: 16 }))), error && /* @__PURE__ */ React29.createElement(ErrorWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, color: "#FD3F3F" }, error)));
+      active: !!value || void 0,
+      error: error ? true : void 0
+    },
+    /* @__PURE__ */ React29.createElement(
+      StyledInput,
+      {
+        type: showPassword ? "text" : type,
+        value,
+        onChange: handleChange,
+        autoComplete: "off",
+        placeholder
+      }
+    ),
+    type === "password" && /* @__PURE__ */ React29.createElement(DisplayIconsWrapper, { onClick: () => setShowPassword(!showPassword) }, !showPassword ? /* @__PURE__ */ React29.createElement(eye_open_default, { width: 16, height: 16 }) : /* @__PURE__ */ React29.createElement(eye_close_default, { width: 16, height: 16 }))
+  ), error && /* @__PURE__ */ React29.createElement(ErrorWrapper, null, /* @__PURE__ */ React29.createElement(Text, { size: 14, color: "#FD3F3F" }, error)));
 }
 
 // src/design.system/input/action.input.tsx
@@ -1368,7 +1390,7 @@ function DestinationNode({ data, isConnectable }) {
       IconWrapper,
       {
         key: monitor?.id,
-        tapped: data?.signals[monitor?.type] || false
+        tapped: data?.signals[monitor?.type] ? "true" : void 0
       },
       data?.signals[monitor?.type] ? monitor.icons.focus() : monitor.icons.notFocus()
     ));
@@ -1427,7 +1449,7 @@ var nodeTypes = {
   namespace: namespace_node_default,
   destination: DestinationNode
 };
-function DataFlow({ nodes, edges }) {
+function DataFlow({ nodes, edges, ...rest }) {
   const { fitView } = useReactFlow();
   useEffect6(() => {
     setTimeout(() => {
@@ -1441,7 +1463,8 @@ function DataFlow({ nodes, edges }) {
       edges,
       nodeTypes,
       nodesDraggable: false,
-      nodeOrigin: [0.4, 0.4]
+      nodeOrigin: [0.4, 0.4],
+      ...rest
     },
     /* @__PURE__ */ React50.createElement(ControllerWrapper, null, /* @__PURE__ */ React50.createElement(Controls, { position: "top-left", showInteractive: false })),
     /* @__PURE__ */ React50.createElement(Background, { gap: 12, size: 1, style: { backgroundColor } })
@@ -1580,7 +1603,7 @@ var Overlay = styled24.div`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${(props) => props.showOverlay ? "rgba(0, 0, 0, 0.1)" : "rgba(0, 0, 0, 0)"};
+  background-color: ${(props) => props.showOverlay ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.1)"};
   display: flex;
   align-items: center;
   justify-content: ${(props) => props.positionX ? props.positionX : "center"};
@@ -1593,7 +1616,7 @@ var Overlay = styled24.div`
   }
 `;
 var ModalContainer = styled24.div`
-  width: 500px;
+  min-width: 500px;
   min-height: 50px;
   /* background-color: #ffffff; */
   position: relative;
@@ -1649,7 +1672,7 @@ var Content = styled24.div`
 var ModalFooter = styled24.footer`
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: flex-end;
   margin-top: 20px;
@@ -1687,11 +1710,23 @@ function Modal({ children, closeModal, config }) {
         animationDelay: "0"
       }
     },
-    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, null, /* @__PURE__ */ React53.createElement(
+    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, { style: { ...config.footer.style } }, config.footer.link && /* @__PURE__ */ React53.createElement(
+      Link,
+      {
+        onClick: config.footer.link.onClick,
+        value: config.footer.link.text
+      }
+    ), config.footer.secondaryBtnText && /* @__PURE__ */ React53.createElement(
+      Button,
+      {
+        variant: "secondary",
+        onClick: config.footer.secondaryBtnAction
+      },
+      /* @__PURE__ */ React53.createElement(Text, { size: 16, weight: 700 }, config.footer.secondaryBtnText)
+    ), /* @__PURE__ */ React53.createElement(
       Button,
       {
         disabled: config.footer.isDisabled,
-        style: { width: "fir-content" },
         onClick: config.footer.primaryBtnAction
       },
       /* @__PURE__ */ React53.createElement(Text, { size: 16, weight: 700, color: palette_default.text.dark_button }, config.footer.primaryBtnText)

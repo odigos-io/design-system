@@ -1,11 +1,11 @@
-import React, { memo } from "react";
-import { Handle, Position } from "reactflow";
-import { styled } from "styled-components";
-import { Text } from "@/design.system";
-import { MONITORING_OPTIONS } from "./monitors";
+import React, { memo } from 'react';
+import { Handle, Position } from 'reactflow';
+import { styled } from 'styled-components';
+import { Text } from '@/design.system';
+import { MONITORING_OPTIONS } from './monitors';
 
 interface IconWrapperProps {
-  tapped?: any;
+  tapped?: boolean | undefined | string;
 }
 
 const DestinationNodeContainer = styled.div`
@@ -32,7 +32,7 @@ const TextWrapper = styled.div`
 `;
 
 const IMAGE_STYLE: React.CSSProperties = {
-  backgroundColor: "#fff",
+  backgroundColor: '#fff',
   padding: 4,
   borderRadius: 10,
 };
@@ -46,7 +46,7 @@ const IconWrapper = styled.div<IconWrapperProps>`
   justify-content: center;
   border-radius: 16px;
   background: ${({ theme, tapped }) =>
-    tapped ? theme.colors.dark_blue : "#0e1c28"};
+    tapped ? theme.colors.dark_blue : '#0e1c28'};
 `;
 
 const MonitorsListWrapper = styled.div`
@@ -59,7 +59,7 @@ export default function DestinationNode({ data, isConnectable }: any) {
     return MONITORING_OPTIONS.map((monitor) => (
       <IconWrapper
         key={monitor?.id}
-        tapped={data?.signals[monitor?.type] || false}
+        tapped={data?.signals[monitor?.type] ? 'true' : undefined}
       >
         {data?.signals[monitor?.type]
           ? monitor.icons.focus()
@@ -82,7 +82,7 @@ export default function DestinationNode({ data, isConnectable }: any) {
           <Text size={14} weight={600}>
             {data?.destination_type?.display_name}
           </Text>
-          <Text color={"#8b92a5"}>{data?.name}</Text>
+          <Text color={'#8b92a5'}>{data?.name}</Text>
         </TextWrapper>
       </NodeDataWrapper>
       <MonitorsListWrapper>{renderMonitors()}</MonitorsListWrapper>
@@ -91,7 +91,7 @@ export default function DestinationNode({ data, isConnectable }: any) {
         position={Position.Left}
         id="a"
         isConnectable={isConnectable}
-        style={{ visibility: "hidden" }}
+        style={{ visibility: 'hidden' }}
       />
     </DestinationNodeContainer>
   );

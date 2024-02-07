@@ -7,6 +7,7 @@ import theme from '@/styles/palette';
 import { useOnClickOutside } from '@/hooks';
 import CloseIcon from '@/assets/icons/close-modal.svg';
 import { Button } from '../button/button';
+import { Link } from '../link/link';
 export function Modal({ children, closeModal, config }: Props) {
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -56,10 +57,25 @@ export function Modal({ children, closeModal, config }: Props) {
 
             <S.Content>{children}</S.Content>
             {config?.footer && (
-              <S.ModalFooter>
+              <S.ModalFooter style={{ ...config.footer.style }}>
+                {config.footer.link && (
+                  <Link
+                    onClick={config.footer.link.onClick}
+                    value={config.footer.link.text}
+                  />
+                )}
+                {config.footer.secondaryBtnText && (
+                  <Button
+                    variant="secondary"
+                    onClick={config.footer.secondaryBtnAction}
+                  >
+                    <Text size={16} weight={700}>
+                      {config.footer.secondaryBtnText}
+                    </Text>
+                  </Button>
+                )}
                 <Button
                   disabled={config.footer.isDisabled}
-                  style={{ width: 'fir-content' }}
                   onClick={config.footer.primaryBtnAction}
                 >
                   <Text size={16} weight={700} color={theme.text.dark_button}>

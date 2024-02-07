@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 interface ActiveProps {
   active?: any;
-  hasError: boolean;
+  error: boolean | undefined;
 }
 
 export const StyledInputContainer = styled.div<ActiveProps>`
@@ -18,9 +18,9 @@ export const StyledInputContainer = styled.div<ActiveProps>`
   align-items: flex-start;
   gap: 10px;
   border-radius: 8px;
-  border: ${({ theme, hasError, active }) =>
+  border: ${({ theme, error, active }) =>
     `1px solid ${
-      hasError
+      error
         ? theme.colors.error
         : active
         ? theme.text.grey

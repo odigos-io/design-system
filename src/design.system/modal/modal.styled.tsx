@@ -66,7 +66,9 @@ export const Overlay = styled.div<PropsOverlay>`
   top: 0;
   left: 0;
   background-color: ${(props) =>
-    props.showOverlay ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0)'};
+    props.showOverlay
+      ? 'rgba(255, 255, 255, 0.1)'
+      : 'rgba(255, 255, 255, 0.1)'};
   display: flex;
   align-items: center;
   justify-content: ${(props) => (props.positionX ? props.positionX : 'center')};
@@ -79,7 +81,7 @@ export const Overlay = styled.div<PropsOverlay>`
   }
 `;
 export const ModalContainer = styled.div<PropsModalContainer>`
-  width: 500px;
+  min-width: 500px;
   min-height: 50px;
   /* background-color: #ffffff; */
   position: relative;
@@ -138,7 +140,7 @@ export const Content = styled.div`
 export const ModalFooter = styled.footer`
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: flex-end;
   margin-top: 20px;
