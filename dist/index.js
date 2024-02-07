@@ -7,6 +7,9 @@ function _array_like_to_array(arr, len) {
 function _array_with_holes(arr) {
     if (Array.isArray(arr)) return arr;
 }
+function _array_without_holes(arr) {
+    if (Array.isArray(arr)) return _array_like_to_array(arr);
+}
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
         var info = gen[key](arg);
@@ -49,6 +52,9 @@ function _define_property(obj, key, value) {
     }
     return obj;
 }
+function _iterable_to_array(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
 function _iterable_to_array_limit(arr, i) {
     var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
     if (_i == null) return;
@@ -75,6 +81,9 @@ function _iterable_to_array_limit(arr, i) {
 }
 function _non_iterable_rest() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _non_iterable_spread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 function _object_spread(target) {
     for(var i = 1; i < arguments.length; i++){
@@ -154,6 +163,9 @@ function _tagged_template_literal(strings, raw) {
             value: Object.freeze(raw)
         }
     }));
+}
+function _to_consumable_array(arr) {
+    return _array_without_holes(arr) || _iterable_to_array(arr) || _unsupported_iterable_to_array(arr) || _non_iterable_spread();
 }
 function _unsupported_iterable_to_array(o, minLen) {
     if (!o) return;
@@ -1086,6 +1098,61 @@ function _templateObject82() {
     };
     return data;
 }
+function _templateObject83() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n"
+    ]);
+    _templateObject83 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject84() {
+    var data = _tagged_template_literal([
+        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
+    ]);
+    _templateObject84 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject85() {
+    var data = _tagged_template_literal([
+        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
+    ]);
+    _templateObject85 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject86() {
+    var data = _tagged_template_literal([
+        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 42px;\n"
+    ]);
+    _templateObject86 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject87() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n"
+    ]);
+    _templateObject87 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject88() {
+    var data = _tagged_template_literal([
+        "\n  margin-left: 10px;\n"
+    ]);
+    _templateObject88 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1191,6 +1258,9 @@ __export(src_exports, {
     },
     Modal: function() {
         return Modal;
+    },
+    MultiInput: function() {
+        return MultiInput;
     },
     Note: function() {
         return Note;
@@ -2216,7 +2286,7 @@ var SvgEyeClose = function(props) {
 var eye_close_default = SvgEyeClose;
 // src/design.system/input/input.tsx
 function Input(param) {
-    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, _param_error = param.error, error = _param_error === void 0 ? "" : _param_error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style, placeholder = param.placeholder;
+    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, _param_error = param.error, error = _param_error === void 0 ? "" : _param_error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style, placeholder = param.placeholder, onKeyDown = param.onKeyDown;
     var handleChange = function handleChange(event) {
         onChange(event.target.value);
     };
@@ -2234,7 +2304,8 @@ function Input(param) {
         value: value,
         onChange: handleChange,
         autoComplete: "off",
-        placeholder: placeholder
+        placeholder: placeholder,
+        onKeyDown: onKeyDown
     }), type === "password" && /* @__PURE__ */ import_react19.default.createElement(DisplayIconsWrapper, {
         onClick: function() {
             return setShowPassword(!showPassword);
@@ -3371,6 +3442,84 @@ function SegmentedControls(param) {
         }), /* @__PURE__ */ import_react37.default.createElement(Text, null, option.label));
     })));
 }
+// src/design.system/multi-input/index.tsx
+var import_react38 = __toESM(require("react"));
+var import_styled_components31 = __toESM(require("styled-components"));
+var MultiInput = function(param) {
+    var _param_initialList = param.initialList, initialList = _param_initialList === void 0 ? [] : _param_initialList, onListChange = param.onListChange, _param_placeholder = param.placeholder, placeholder = _param_placeholder === void 0 ? "Add item to list" : _param_placeholder;
+    var _ref = _sliced_to_array((0, import_react38.useState)(""), 2), inputValue = _ref[0], setInputValue = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react38.useState)(initialList), 2), list = _ref1[0], setList = _ref1[1];
+    var handleInputChange = function(e) {
+        setInputValue(e);
+    };
+    var handleAddToList = function() {
+        if (inputValue.trim() !== "") {
+            var newList = _to_consumable_array(list).concat([
+                inputValue
+            ]);
+            setList(newList);
+            setInputValue("");
+            onListChange && onListChange(newList);
+        }
+    };
+    var handleRemoveFromList = function(indexToRemove) {
+        var newList = list.filter(function(_, index) {
+            return index !== indexToRemove;
+        });
+        setList(newList);
+        onListChange && onListChange(newList);
+    };
+    var handleKeyPress = function(e) {
+        if (e.key === "Enter") {
+            handleAddToList();
+        }
+    };
+    return /* @__PURE__ */ import_react38.default.createElement(Container, null, /* @__PURE__ */ import_react38.default.createElement(ListContainer, null, list.map(function(item, index) {
+        return /* @__PURE__ */ import_react38.default.createElement(ListItem, {
+            key: index,
+            onClick: function() {
+                return handleRemoveFromList(index);
+            }
+        }, /* @__PURE__ */ import_react38.default.createElement(Text, {
+            size: 12,
+            color: palette_default.text.dark_button
+        }, item), /* @__PURE__ */ import_react38.default.createElement("svg", {
+            width: "12",
+            height: "12",
+            viewBox: "0 0 16 16",
+            fill: "#0e1c28",
+            xmlns: "http://www.w3.org/2000/svg"
+        }, /* @__PURE__ */ import_react38.default.createElement("path", {
+            d: "M12.8535 12.146C12.9 12.1925 12.9368 12.2476 12.962 12.3083C12.9871 12.369 13.0001 12.4341 13.0001 12.4998C13.0001 12.5655 12.9871 12.6305 12.962 12.6912C12.9368 12.7519 12.9 12.8071 12.8535 12.8535C12.8071 12.9 12.7519 12.9368 12.6912 12.962C12.6305 12.9871 12.5655 13.0001 12.4998 13.0001C12.4341 13.0001 12.369 12.9871 12.3083 12.962C12.2476 12.9368 12.1925 12.9 12.146 12.8535L7.99979 8.70666L3.85354 12.8535C3.75972 12.9474 3.63247 13.0001 3.49979 13.0001C3.36711 13.0001 3.23986 12.9474 3.14604 12.8535C3.05222 12.7597 2.99951 12.6325 2.99951 12.4998C2.99951 12.3671 3.05222 12.2399 3.14604 12.146L7.29291 7.99979L3.14604 3.85354C3.05222 3.75972 2.99951 3.63247 2.99951 3.49979C2.99951 3.36711 3.05222 3.23986 3.14604 3.14604C3.23986 3.05222 3.36711 2.99951 3.49979 2.99951C3.63247 2.99951 3.75972 3.05222 3.85354 3.14604L7.99979 7.29291L12.146 3.14604C12.2399 3.05222 12.3671 2.99951 12.4998 2.99951C12.6325 2.99951 12.7597 3.05222 12.8535 3.14604C12.9474 3.23986 13.0001 3.36711 13.0001 3.49979C13.0001 3.63247 12.9474 3.75972 12.8535 3.85354L8.70666 7.99979L12.8535 12.146Z",
+            fill: "#0e1c28"
+        })));
+    })), /* @__PURE__ */ import_react38.default.createElement(InputContainer, null, /* @__PURE__ */ import_react38.default.createElement(Input2, {
+        style: {
+            width: "100%"
+        },
+        value: inputValue,
+        placeholder: placeholder,
+        onChange: function(e) {
+            return handleInputChange(e);
+        },
+        onKeyDown: handleKeyPress
+    }), /* @__PURE__ */ import_react38.default.createElement(Button2, {
+        onClick: handleAddToList,
+        style: {
+            marginLeft: 10
+        }
+    }, /* @__PURE__ */ import_react38.default.createElement(Text, {
+        size: 14,
+        weight: 600,
+        color: palette_default.text.dark_button
+    }, "Add"))));
+};
+var Container = import_styled_components31.default.div(_templateObject83());
+var ListContainer = import_styled_components31.default.div(_templateObject84());
+var ListItem = import_styled_components31.default.div(_templateObject85(), palette_default.colors.light_grey);
+var InputContainer = import_styled_components31.default.div(_templateObject86());
+var Input2 = (0, import_styled_components31.default)(Input)(_templateObject87());
+var Button2 = (0, import_styled_components31.default)(Button)(_templateObject88());
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     ActionInput: ActionInput,
@@ -3388,6 +3537,7 @@ function SegmentedControls(param) {
     Link: Link,
     Loader: Loader,
     Modal: Modal,
+    MultiInput: MultiInput,
     Note: Note,
     Notification: Notification,
     RadioButton: RadioButton,

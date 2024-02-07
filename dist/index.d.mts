@@ -153,8 +153,9 @@ interface InputProps$1 {
     error?: string;
     style?: React.CSSProperties;
     placeholder?: string;
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
-declare function Input({ label, value, onChange, type, error, style, placeholder, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;
@@ -288,4 +289,12 @@ declare function SegmentedControls({ options, selected, onChange, title, }: {
     title?: string;
 }): React.JSX.Element;
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+interface MultiInputProps {
+    initialList?: string[];
+    onListChange?: (list: string[]) => void;
+    placeholder?: string;
+    limit?: number;
+}
+declare const MultiInput: React.FC<MultiInputProps>;
+
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, MultiInput, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };

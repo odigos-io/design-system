@@ -17,6 +17,7 @@ interface InputProps {
   error?: string;
   style?: React.CSSProperties;
   placeholder?: string;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
 export function Input({
@@ -27,6 +28,7 @@ export function Input({
   error = '',
   style = {},
   placeholder,
+  onKeyDown,
 }: InputProps): JSX.Element {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -53,6 +55,7 @@ export function Input({
           onChange={handleChange}
           autoComplete="off"
           placeholder={placeholder}
+          onKeyDown={onKeyDown}
         />
         {type === 'password' && (
           <DisplayIconsWrapper onClick={() => setShowPassword(!showPassword)}>
