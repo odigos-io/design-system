@@ -27,3 +27,4 @@ export { Steps } from './steps/steps';
 export { Divider } from './divider/divider';
 export { Note } from './note/note';
 export { SegmentedControls } from './segmented-controls';
+export { MultiInput } from './multi-input';

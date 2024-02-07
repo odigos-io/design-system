@@ -4,6 +4,7 @@ import { Card } from '../design.system/card/card';
 import { Text } from '../design.system/text/text';
 import { Input, Loader, Modal, RadioButton, SegmentedControls, Tag } from '..';
 import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
+import { MultiInput } from '@/design.system/multi-input';
 export default function Home() {
   const [selected, setSelected] = useState('sources');
 
@@ -38,15 +39,23 @@ export default function Home() {
     },
   };
 
+  const handleListChange = (newList: string[]) => {
+    console.log('List changed:', newList);
+  };
+
   return (
-    <div style={{ background: '#0E1C28' }}>
-      <Input
+    <div style={{ background: '#0E1C28', padding: 50 }}>
+      {/* <Input
         style={{ width: '98%' }}
         label="Token name"
         value={''}
         placeholder="Name of the token"
         onChange={(value) => {}}
-      />
+      /> */}
+      <div style={{ width: 800, height: 150 }}>
+        <MultiInput onListChange={handleListChange} initialList={[]} />
+      </div>
+      {/*
       <Modal show={true} config={modalConfig} closeModal={() => {}}>
         <div></div>
       </Modal>
@@ -82,7 +91,7 @@ export default function Home() {
         <Loader width={100} height={100} />
         <Tag title={'#tag'} />
         <div style={{ width: 600, height: 600 }}></div>
-      </Card>
+      </Card> */}
     </div>
   );
 }
