@@ -786,8 +786,13 @@ var LinkContainer = styled14.div`
     cursor: pointer !important;
   }
 `;
-function Link({ value, onClick, fontSize = 16 }) {
-  return /* @__PURE__ */ React23.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React23.createElement(Text, { size: fontSize, color: "#0EE6F3" }, value));
+function Link({
+  value,
+  onClick,
+  fontSize = 16,
+  color = palette_default.colors.secondary
+}) {
+  return /* @__PURE__ */ React23.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React23.createElement(Text, { size: fontSize, color }, value));
 }
 
 // src/design.system/tooltip/tooltip.tsx
@@ -1667,7 +1672,7 @@ var Content = styled24.div`
 var ModalFooter = styled24.footer`
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: flex-end;
   margin-top: 20px;
@@ -1705,11 +1710,23 @@ function Modal({ children, closeModal, config }) {
         animationDelay: "0"
       }
     },
-    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, null, /* @__PURE__ */ React53.createElement(
+    /* @__PURE__ */ React53.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React53.createElement(ModalHeader, null, /* @__PURE__ */ React53.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React53.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React53.createElement(close_modal_default, null)), /* @__PURE__ */ React53.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React53.createElement(ModalFooter, { style: { ...config.footer.style } }, config.footer.link && /* @__PURE__ */ React53.createElement(
+      Link,
+      {
+        onClick: config.footer.link.onClick,
+        value: config.footer.link.text
+      }
+    ), config.footer.secondaryBtnText && /* @__PURE__ */ React53.createElement(
+      Button,
+      {
+        variant: "secondary",
+        onClick: config.footer.secondaryBtnAction
+      },
+      /* @__PURE__ */ React53.createElement(Text, { size: 16, weight: 700 }, config.footer.secondaryBtnText)
+    ), /* @__PURE__ */ React53.createElement(
       Button,
       {
         disabled: config.footer.isDisabled,
-        style: { width: "fir-content" },
         onClick: config.footer.primaryBtnAction
       },
       /* @__PURE__ */ React53.createElement(Text, { size: 16, weight: 700, color: palette_default.text.dark_button }, config.footer.primaryBtnText)

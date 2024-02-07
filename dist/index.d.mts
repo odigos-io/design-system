@@ -130,8 +130,9 @@ interface LinkProps {
     value: string;
     onClick?: () => void;
     fontSize?: number;
+    color?: string;
 }
-declare function Link({ value, onClick, fontSize }: LinkProps): React.JSX.Element;
+declare function Link({ value, onClick, fontSize, color, }: LinkProps): React.JSX.Element;
 
 declare function Tooltip(props: any): React.JSX.Element;
 
@@ -241,6 +242,11 @@ interface ModalConfig {
         primaryBtnAction: () => void;
         secondaryBtnAction?: () => void;
         isDisabled?: boolean;
+        link?: {
+            text: string;
+            onClick: () => void;
+        };
+        style?: {};
     };
 }
 interface Props {

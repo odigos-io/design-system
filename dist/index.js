@@ -963,7 +963,7 @@ function _templateObject69() {
 }
 function _templateObject70() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 2rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
     ]);
     _templateObject70 = function _templateObject() {
         return data;
@@ -2065,12 +2065,12 @@ var import_react16 = __toESM(require("react"));
 var import_styled_components14 = require("styled-components");
 var LinkContainer = import_styled_components14.styled.div(_templateObject28());
 function Link(param) {
-    var value = param.value, onClick = param.onClick, _param_fontSize = param.fontSize, fontSize = _param_fontSize === void 0 ? 16 : _param_fontSize;
+    var value = param.value, onClick = param.onClick, _param_fontSize = param.fontSize, fontSize = _param_fontSize === void 0 ? 16 : _param_fontSize, _param_color = param.color, color = _param_color === void 0 ? palette_default.colors.secondary : _param_color;
     return /* @__PURE__ */ import_react16.default.createElement(LinkContainer, {
         onClick: onClick
     }, /* @__PURE__ */ import_react16.default.createElement(Text, {
         size: fontSize,
-        color: "#0EE6F3"
+        color: color
     }, value));
 }
 // src/design.system/tooltip/tooltip.tsx
@@ -3172,11 +3172,19 @@ function Modal(param) {
         weight: 700
     }, config.title)), /* @__PURE__ */ import_react30.default.createElement(Close, {
         onClick: closeModal
-    }, /* @__PURE__ */ import_react30.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react30.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react30.default.createElement(ModalFooter, null, /* @__PURE__ */ import_react30.default.createElement(Button, {
+    }, /* @__PURE__ */ import_react30.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react30.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react30.default.createElement(ModalFooter, {
+        style: _object_spread({}, config.footer.style)
+    }, config.footer.link && /* @__PURE__ */ import_react30.default.createElement(Link, {
+        onClick: config.footer.link.onClick,
+        value: config.footer.link.text
+    }), config.footer.secondaryBtnText && /* @__PURE__ */ import_react30.default.createElement(Button, {
+        variant: "secondary",
+        onClick: config.footer.secondaryBtnAction
+    }, /* @__PURE__ */ import_react30.default.createElement(Text, {
+        size: 16,
+        weight: 700
+    }, config.footer.secondaryBtnText)), /* @__PURE__ */ import_react30.default.createElement(Button, {
         disabled: config.footer.isDisabled,
-        style: {
-            width: "fir-content"
-        },
         onClick: config.footer.primaryBtnAction
     }, /* @__PURE__ */ import_react30.default.createElement(Text, {
         size: 16,
