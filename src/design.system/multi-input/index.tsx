@@ -39,12 +39,6 @@ export const MultiInput: React.FC<MultiInputProps> = ({
     onListChange && onListChange(newList);
   };
 
-  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      handleAddToList();
-    }
-  };
-
   return (
     <Container>
       <ListContainer>
@@ -74,7 +68,6 @@ export const MultiInput: React.FC<MultiInputProps> = ({
           value={inputValue}
           placeholder={placeholder}
           onChange={(e) => handleInputChange(e)}
-          onKeyDown={handleKeyPress}
         />
         <Button onClick={handleAddToList} style={{ marginLeft: 10 }}>
           <Text size={14} weight={600} color={theme.text.dark_button}>

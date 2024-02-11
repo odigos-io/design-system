@@ -1994,11 +1994,6 @@ var MultiInput = ({
     setList(newList);
     onListChange && onListChange(newList);
   };
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleAddToList();
-    }
-  };
   return /* @__PURE__ */ React62.createElement(Container, null, /* @__PURE__ */ React62.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React62.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React62.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React62.createElement(
     "svg",
     {
@@ -2021,8 +2016,7 @@ var MultiInput = ({
       style: { width: "100%" },
       value: inputValue,
       placeholder,
-      onChange: (e) => handleInputChange(e),
-      onKeyDown: handleKeyPress
+      onChange: (e) => handleInputChange(e)
     }
   ), /* @__PURE__ */ React62.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React62.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add"))));
 };

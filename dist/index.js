@@ -3469,11 +3469,6 @@ var MultiInput = function(param) {
         setList(newList);
         onListChange && onListChange(newList);
     };
-    var handleKeyPress = function(e) {
-        if (e.key === "Enter") {
-            handleAddToList();
-        }
-    };
     return /* @__PURE__ */ import_react38.default.createElement(Container, null, /* @__PURE__ */ import_react38.default.createElement(ListContainer, null, list.map(function(item, index) {
         return /* @__PURE__ */ import_react38.default.createElement(ListItem, {
             key: index,
@@ -3501,8 +3496,7 @@ var MultiInput = function(param) {
         placeholder: placeholder,
         onChange: function(e) {
             return handleInputChange(e);
-        },
-        onKeyDown: handleKeyPress
+        }
     }), /* @__PURE__ */ import_react38.default.createElement(Button2, {
         onClick: handleAddToList,
         style: {
