@@ -455,7 +455,7 @@ var expand_arrow_default = SvgExpandArrow;
 import styled9 from "styled-components";
 var DropdownWrapper = styled9.div`
   position: relative;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   padding: 11px 4px;
   border-radius: 8px;
@@ -484,7 +484,7 @@ var DropdownHeader = styled9.div`
 `;
 var DropdownBody = styled9.div`
   position: relative;
-  z-index: 9999;
+  z-index: 1000;
   display: flex;
   width: 100%;
   padding: 11px 4px;
@@ -496,7 +496,8 @@ var DropdownBody = styled9.div`
 `;
 var DropdownListWrapper = styled9.div`
   position: relative;
-  z-index: 100;
+
+  z-index: 1000;
   width: 100%;
   max-height: 270px;
   overflow-y: scroll;

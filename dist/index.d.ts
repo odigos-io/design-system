@@ -82,7 +82,7 @@ interface TapProps {
 declare function Tap({ title, tapped, children, style, onClick, }: TapProps): React.JSX.Element;
 
 interface DropDownItem {
-    id: number;
+    id: number | string;
     label: string;
 }
 interface DropDownProps {

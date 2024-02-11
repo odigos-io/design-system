@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   images: {
     unoptimized: true,
+  },
+  compiler: {
+    styledComponents: {
+      ssr: true,
+      displayName: true,
+    },
   },
   webpack(config) {
     config.module.rules.push({

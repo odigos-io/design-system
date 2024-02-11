@@ -2,6 +2,8 @@
 import { Inter } from 'next/font/google';
 import theme from '@/styles/palette';
 import { ThemeProvider } from 'styled-components';
+import { ThemeProviderWrapper } from '@/design.system';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
@@ -11,9 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider theme={theme}>
+      <ThemeProviderWrapper>
         <body className={inter.className}>{children}</body>
-      </ThemeProvider>
+      </ThemeProviderWrapper>
     </html>
   );
 }
