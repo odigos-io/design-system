@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface DropdownWrapperProps {
   selected?: any;
@@ -6,7 +6,7 @@ interface DropdownWrapperProps {
 
 export const DropdownWrapper = styled.div<DropdownWrapperProps>`
   position: relative;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   padding: 11px 4px;
   border-radius: 8px;
@@ -38,7 +38,7 @@ export const DropdownHeader = styled.div`
 
 export const DropdownBody = styled.div`
   position: relative;
-  z-index: 9999;
+  z-index: 1000;
   display: flex;
   width: 100%;
   padding: 11px 4px;
@@ -51,7 +51,8 @@ export const DropdownBody = styled.div`
 
 export const DropdownListWrapper = styled.div`
   position: relative;
-  z-index: 100;
+
+  z-index: 1000;
   width: 100%;
   max-height: 270px;
   overflow-y: scroll;

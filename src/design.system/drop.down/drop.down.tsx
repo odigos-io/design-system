@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
-import Open from "@/assets/icons/expand-arrow.svg";
+import React, { useEffect, useRef, useState } from 'react';
+import Open from '@/assets/icons/expand-arrow.svg';
 import {
   DropdownHeader,
   DropdownWrapper,
   DropdownBody,
   DropdownItem,
   DropdownListWrapper,
-} from "./drop.down.styled";
-import { Text } from "../text/text";
-import { SearchInput } from "../search.input/search.input";
-import { useOnClickOutside } from "@/hooks";
+} from './drop.down.styled';
+import { Text } from '../text/text';
+import { SearchInput } from '../search.input/search.input';
+import { useOnClickOutside } from '@/hooks';
 
 interface DropDownItem {
-  id: number;
+  id: number | string;
   label: string;
 }
 interface DropDownProps {
@@ -22,13 +22,13 @@ interface DropDownProps {
   value?: DropDownItem | null;
 }
 
-const SELECTED_ITEM = "Select item";
+const SELECTED_ITEM = 'Select item';
 const CONTAINER_STYLE = {
-  width: "90%",
-  border: "none",
-  background: "transparent",
+  width: '90%',
+  border: 'none',
+  background: 'transparent',
 };
-const SEARCH_INPUT_STYLE = { background: "transparent" };
+const SEARCH_INPUT_STYLE = { background: 'transparent' };
 
 export function DropDown({
   data = [],
@@ -39,7 +39,7 @@ export function DropDown({
   const [isOpen, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>(value || null);
   const [isHover, setHover] = useState<any>(false);
-  const [searchFilter, setSearchFilter] = useState("");
+  const [searchFilter, setSearchFilter] = useState('');
 
   const containerRef = useRef<any>(null);
 
@@ -54,7 +54,7 @@ export function DropDown({
   const handleItemClick = (item: DropDownItem) => {
     onChange(item);
     setSelectedItem(item);
-    setSearchFilter("");
+    setSearchFilter('');
     setOpen(false);
   };
 
@@ -76,7 +76,7 @@ export function DropDown({
       >
         <DropdownHeader>
           {selectedItem ? selectedItem.label : SELECTED_ITEM}
-          <Open className={`dropdown-arrow ${isOpen && "open"}`} />
+          <Open className={`dropdown-arrow ${isOpen && 'open'}`} />
         </DropdownHeader>
       </DropdownWrapper>
       {isOpen && (

@@ -455,7 +455,7 @@ var expand_arrow_default = SvgExpandArrow;
 import styled9 from "styled-components";
 var DropdownWrapper = styled9.div`
   position: relative;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   padding: 11px 4px;
   border-radius: 8px;
@@ -484,7 +484,7 @@ var DropdownHeader = styled9.div`
 `;
 var DropdownBody = styled9.div`
   position: relative;
-  z-index: 9999;
+  z-index: 1000;
   display: flex;
   width: 100%;
   padding: 11px 4px;
@@ -496,7 +496,8 @@ var DropdownBody = styled9.div`
 `;
 var DropdownListWrapper = styled9.div`
   position: relative;
-  z-index: 100;
+
+  z-index: 1000;
   width: 100%;
   max-height: 270px;
   overflow-y: scroll;
@@ -1994,11 +1995,6 @@ var MultiInput = ({
     setList(newList);
     onListChange && onListChange(newList);
   };
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleAddToList();
-    }
-  };
   return /* @__PURE__ */ React62.createElement(Container, null, /* @__PURE__ */ React62.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React62.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React62.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React62.createElement(
     "svg",
     {
@@ -2021,8 +2017,7 @@ var MultiInput = ({
       style: { width: "100%" },
       value: inputValue,
       placeholder,
-      onChange: (e) => handleInputChange(e),
-      onKeyDown: handleKeyPress
+      onChange: (e) => handleInputChange(e)
     }
   ), /* @__PURE__ */ React62.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React62.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add"))));
 };

@@ -2,7 +2,15 @@
 import React, { useState } from 'react';
 import { Card } from '../design.system/card/card';
 import { Text } from '../design.system/text/text';
-import { Input, Loader, Modal, RadioButton, SegmentedControls, Tag } from '..';
+import {
+  DropDown,
+  Input,
+  Loader,
+  Modal,
+  RadioButton,
+  SegmentedControls,
+  Tag,
+} from '..';
 import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
 import { MultiInput } from '@/design.system/multi-input';
 export default function Home() {
@@ -54,6 +62,26 @@ export default function Home() {
       /> */}
       <div style={{ width: 800, height: 150 }}>
         <MultiInput onListChange={handleListChange} initialList={[]} />
+      </div>
+      <div>
+        <DropDown
+          data={[
+            { label: 'Option 1', id: 'option1' },
+            { label: 'Option 2', id: 'option2' },
+            { label: 'Option 3', id: 'option3' },
+          ]}
+          value={{ label: 'Option 1', id: 'option1' }}
+          onChange={(value) => {}}
+        />
+        <DropDown
+          data={[
+            { label: 'Option 1', id: 'option1' },
+            { label: 'Option 2', id: 'option2' },
+            { label: 'Option 3', id: 'option3' },
+          ]}
+          value={{ label: 'Option 1', id: 'option1' }}
+          onChange={(value) => {}}
+        />
       </div>
       {/*
       <Modal show={true} config={modalConfig} closeModal={() => {}}>

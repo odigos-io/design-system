@@ -423,7 +423,7 @@ function _templateObject14() {
 }
 function _templateObject15() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 9999;\n  width: 100%;\n  padding: 11px 4px;\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
+        "\n  position: relative;\n  z-index: 999;\n  width: 100%;\n  padding: 11px 4px;\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
         ";\n  background: ",
         ";\n\n  .dropdown-arrow {\n    transform: rotate(0deg);\n    transition: all 0.2s ease-in-out;\n  }\n\n  .dropdown-arrow.open {\n    transform: rotate(180deg);\n  }\n"
     ]);
@@ -445,7 +445,7 @@ function _templateObject16() {
 }
 function _templateObject17() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 9999;\n  display: flex;\n  width: 100%;\n  padding: 11px 4px;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
+        "\n  position: relative;\n  z-index: 1000;\n  display: flex;\n  width: 100%;\n  padding: 11px 4px;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
         ";\n  margin-top: 5px;\n"
     ]);
@@ -456,7 +456,7 @@ function _templateObject17() {
 }
 function _templateObject18() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  z-index: 100;\n  width: 100%;\n  max-height: 270px;\n  overflow-y: scroll;\n  scrollbar-width: none;\n  :hover {\n    background: ",
+        "\n  position: relative;\n\n  z-index: 1000;\n  width: 100%;\n  max-height: 270px;\n  overflow-y: scroll;\n  scrollbar-width: none;\n  :hover {\n    background: ",
         ";\n  }\n"
     ]);
     _templateObject18 = function _templateObject() {
@@ -3469,11 +3469,6 @@ var MultiInput = function(param) {
         setList(newList);
         onListChange && onListChange(newList);
     };
-    var handleKeyPress = function(e) {
-        if (e.key === "Enter") {
-            handleAddToList();
-        }
-    };
     return /* @__PURE__ */ import_react38.default.createElement(Container, null, /* @__PURE__ */ import_react38.default.createElement(ListContainer, null, list.map(function(item, index) {
         return /* @__PURE__ */ import_react38.default.createElement(ListItem, {
             key: index,
@@ -3501,8 +3496,7 @@ var MultiInput = function(param) {
         placeholder: placeholder,
         onChange: function(e) {
             return handleInputChange(e);
-        },
-        onKeyDown: handleKeyPress
+        }
     }), /* @__PURE__ */ import_react38.default.createElement(Button2, {
         onClick: handleAddToList,
         style: {
