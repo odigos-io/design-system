@@ -77,6 +77,9 @@ export default function Home() {
       </div>
       <div>
         <DropDown
+          label="test"
+          tooltip="test"
+          required
           data={[
             { label: 'Option 1', id: 'option1' },
             { label: 'Option 2', id: 'option2' },

@@ -475,10 +475,7 @@ function _templateObject19() {
 }
 function _templateObject20() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 340px;\n  padding: 9px 13px;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
     ]);
     _templateObject20 = function _templateObject() {
         return data;
@@ -487,10 +484,9 @@ function _templateObject20() {
 }
 function _templateObject21() {
     var data = _tagged_template_literal([
-        "\n  width: 85%;\n  background: ",
-        ";\n  border: none;\n  outline: none;\n  color: ",
-        ";\n  font-size: 14px;\n  font-family: ",
-        ", sans-serif;\n  font-weight: 400;\n  &:focus {\n    color: ",
+        "\n  position: relative;\n  display: flex;\n  width: 340px;\n  padding: 9px 13px;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n  &:hover {\n    border: ",
         ";\n  }\n"
     ]);
     _templateObject21 = function _templateObject() {
@@ -500,7 +496,11 @@ function _templateObject21() {
 }
 function _templateObject22() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
+        "\n  width: 85%;\n  background: ",
+        ";\n  border: none;\n  outline: none;\n  color: ",
+        ";\n  font-size: 14px;\n  font-family: ",
+        ", sans-serif;\n  font-weight: 400;\n  &:focus {\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject22 = function _templateObject() {
         return data;
@@ -509,8 +509,7 @@ function _templateObject22() {
 }
 function _templateObject23() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  width: 30px;\n  height: 16px;\n  background-color: ",
-        ";\n  cursor: pointer;\n  user-select: none;\n  border-radius: 20px;\n  padding: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"
+        "\n  display: inline-flex;\n  align-items: center; // Align children and icon vertically\n  position: relative;\n"
     ]);
     _templateObject23 = function _templateObject() {
         return data;
@@ -519,9 +518,7 @@ function _templateObject23() {
 }
 function _templateObject24() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  box-sizing: border-box;\n  width: 14px;\n  height: 14px;\n  cursor: pointer;\n  color: #fff;\n  background-color: ",
-        ";\n  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);\n  border-radius: 100%;\n  position: absolute;\n  transition: all 0.2s ease;\n  left: ",
-        "px;\n"
+        "\n  margin-left: 8px;\n  display: flex;\n  align-items: center;\n"
     ]);
     _templateObject24 = function _templateObject() {
         return data;
@@ -530,10 +527,9 @@ function _templateObject24() {
 }
 function _templateObject25() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  cursor: ",
-        ";\n  pointer-events: ",
-        ";\n  opacity: ",
-        ";\n"
+        "\n  visibility: ",
+        ";\n  background-color: black;\n  color: white;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 10px;\n  max-width: 300px;\n  width: 100%;\n  text-align: left;\n  /* Position the tooltip above the icon */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  transform: translateX(-0%);\n  margin-bottom: 5px; // Space between the tooltip and the icon\n\n  /* Fade in animation */\n  opacity: ",
+        ";\n  transition: opacity 0.3s;\n"
     ]);
     _templateObject25 = function _templateObject() {
         return data;
@@ -542,8 +538,7 @@ function _templateObject25() {
 }
 function _templateObject26() {
     var data = _tagged_template_literal([
-        "\n  width: 16px;\n  height: 16px;\n  border: ",
-        ";\n  border-radius: 4px;\n"
+        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
     ]);
     _templateObject26 = function _templateObject() {
         return data;
@@ -552,8 +547,8 @@ function _templateObject26() {
 }
 function _templateObject27() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 4px;\n  align-items: center;\n  gap: 4px;\n  border-radius: 14px;\n  background: ",
-        ";\n"
+        "\n  position: relative;\n  width: 30px;\n  height: 16px;\n  background-color: ",
+        ";\n  cursor: pointer;\n  user-select: none;\n  border-radius: 20px;\n  padding: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"
     ]);
     _templateObject27 = function _templateObject() {
         return data;
@@ -562,7 +557,9 @@ function _templateObject27() {
 }
 function _templateObject28() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  .p {\n    cursor: pointer !important;\n  }\n"
+        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  box-sizing: border-box;\n  width: 14px;\n  height: 14px;\n  cursor: pointer;\n  color: #fff;\n  background-color: ",
+        ";\n  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);\n  border-radius: 100%;\n  position: absolute;\n  transition: all 0.2s ease;\n  left: ",
+        "px;\n"
     ]);
     _templateObject28 = function _templateObject() {
         return data;
@@ -571,7 +568,10 @@ function _templateObject28() {
 }
 function _templateObject29() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  align-items: center; // Align children and icon vertically\n  position: relative;\n"
+        "\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  cursor: ",
+        ";\n  pointer-events: ",
+        ";\n  opacity: ",
+        ";\n"
     ]);
     _templateObject29 = function _templateObject() {
         return data;
@@ -580,7 +580,8 @@ function _templateObject29() {
 }
 function _templateObject30() {
     var data = _tagged_template_literal([
-        "\n  margin-left: 8px;\n  display: flex;\n  align-items: center;\n"
+        "\n  width: 16px;\n  height: 16px;\n  border: ",
+        ";\n  border-radius: 4px;\n"
     ]);
     _templateObject30 = function _templateObject() {
         return data;
@@ -589,9 +590,8 @@ function _templateObject30() {
 }
 function _templateObject31() {
     var data = _tagged_template_literal([
-        "\n  visibility: ",
-        ";\n  background-color: black;\n  color: white;\n  text-align: center;\n  border-radius: 6px;\n  padding: 5px 10px;\n  max-width: 300px;\n  width: 100%;\n  text-align: left;\n  /* Position the tooltip above the icon */\n  position: absolute;\n  z-index: 1;\n  bottom: 100%;\n  left: 50%;\n  transform: translateX(-0%);\n  margin-bottom: 5px; // Space between the tooltip and the icon\n\n  /* Fade in animation */\n  opacity: ",
-        ";\n  transition: opacity 0.3s;\n"
+        "\n  display: flex;\n  padding: 4px;\n  align-items: center;\n  gap: 4px;\n  border-radius: 14px;\n  background: ",
+        ";\n"
     ]);
     _templateObject31 = function _templateObject() {
         return data;
@@ -600,10 +600,7 @@ function _templateObject31() {
 }
 function _templateObject32() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  min-height: 42px;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  cursor: pointer;\n  .p {\n    cursor: pointer !important;\n  }\n"
     ]);
     _templateObject32 = function _templateObject() {
         return data;
@@ -612,8 +609,10 @@ function _templateObject32() {
 }
 function _templateObject33() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding: 0px 12px;\n  height: 100%;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 4px;\n  border: ",
-        ";\n"
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  min-height: 42px;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n\n  &:hover {\n    border: ",
+        ";\n  }\n"
     ]);
     _templateObject33 = function _templateObject() {
         return data;
@@ -622,7 +621,7 @@ function _templateObject33() {
 }
 function _templateObject34() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  outline: none;\n  width: 96%;\n  color: ",
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding: 0px 12px;\n  height: 100%;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 4px;\n  border: ",
         ";\n"
     ]);
     _templateObject34 = function _templateObject() {
@@ -632,7 +631,8 @@ function _templateObject34() {
 }
 function _templateObject35() {
     var data = _tagged_template_literal([
-        "\n  color: var(--dark-mode-white, #fff);\n  font-family: Inter, sans-serif;\n  font-size: 24px;\n"
+        "\n  background: transparent;\n  border: none;\n  outline: none;\n  width: 96%;\n  color: ",
+        ";\n"
     ]);
     _templateObject35 = function _templateObject() {
         return data;
@@ -641,7 +641,7 @@ function _templateObject35() {
 }
 function _templateObject36() {
     var data = _tagged_template_literal([
-        "\n  margin-bottom: 8px;\n  text-align: start;\n"
+        "\n  color: var(--dark-mode-white, #fff);\n  font-family: Inter, sans-serif;\n  font-size: 24px;\n"
     ]);
     _templateObject36 = function _templateObject() {
         return data;
@@ -650,7 +650,7 @@ function _templateObject36() {
 }
 function _templateObject37() {
     var data = _tagged_template_literal([
-        "\n  margin-top: 4px;\n"
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
     ]);
     _templateObject37 = function _templateObject() {
         return data;
@@ -659,7 +659,7 @@ function _templateObject37() {
 }
 function _templateObject38() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  right: 10px;\n  cursor: pointer;\n"
+        "\n  margin-top: 4px;\n"
     ]);
     _templateObject38 = function _templateObject() {
         return data;
@@ -668,8 +668,7 @@ function _templateObject38() {
 }
 function _templateObject39() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  margin-top: 8px;\n  border-radius: 8px;\n  width: 240px;\n  height: 140px;\n  cursor: pointer;\n  background: ",
-        ";\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n"
+        "\n  position: absolute;\n  right: 10px;\n  cursor: pointer;\n"
     ]);
     _templateObject39 = function _templateObject() {
         return data;
@@ -678,7 +677,8 @@ function _templateObject39() {
 }
 function _templateObject40() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  top: 30px;\n  text-align: center;\n"
+        "\n  position: relative;\n  margin-top: 8px;\n  border-radius: 8px;\n  width: 240px;\n  height: 140px;\n  cursor: pointer;\n  background: ",
+        ";\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n"
     ]);
     _templateObject40 = function _templateObject() {
         return data;
@@ -687,7 +687,7 @@ function _templateObject40() {
 }
 function _templateObject41() {
     var data = _tagged_template_literal([
-        "\n  top: 40%;\n"
+        "\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n  top: 30px;\n  text-align: center;\n"
     ]);
     _templateObject41 = function _templateObject() {
         return data;
@@ -696,7 +696,7 @@ function _templateObject41() {
 }
 function _templateObject42() {
     var data = _tagged_template_literal([
-        "\n  width: 980px;\n  border-radius: 8px;\n"
+        "\n  top: 40%;\n"
     ]);
     _templateObject42 = function _templateObject() {
         return data;
@@ -705,7 +705,7 @@ function _templateObject42() {
 }
 function _templateObject43() {
     var data = _tagged_template_literal([
-        "\n  width: 980px;\n\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 21px;\n"
+        "\n  width: 980px;\n  border-radius: 8px;\n"
     ]);
     _templateObject43 = function _templateObject() {
         return data;
@@ -714,7 +714,7 @@ function _templateObject43() {
 }
 function _templateObject44() {
     var data = _tagged_template_literal([
-        "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.65);\n  z-index: 9999;\n"
+        "\n  width: 980px;\n\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 21px;\n"
     ]);
     _templateObject44 = function _templateObject() {
         return data;
@@ -723,7 +723,7 @@ function _templateObject44() {
 }
 function _templateObject45() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n"
+        "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.65);\n  z-index: 9999;\n"
     ]);
     _templateObject45 = function _templateObject() {
         return data;
@@ -732,10 +732,7 @@ function _templateObject45() {
 }
 function _templateObject46() {
     var data = _tagged_template_literal([
-        "\n  width: ",
-        "px;\n  height: ",
-        "px;\n  border: 4px solid;\n  border-color: ",
-        ";\n  border-radius: 50%;\n  animation: spin-anim 1.2s linear infinite;\n\n  @keyframes spin-anim {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n"
+        "\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n"
     ]);
     _templateObject46 = function _templateObject() {
         return data;
@@ -744,7 +741,10 @@ function _templateObject46() {
 }
 function _templateObject47() {
     var data = _tagged_template_literal([
-        "\n  position: fixed;\n  top: 3%;\n  right: 3%;\n"
+        "\n  width: ",
+        "px;\n  height: ",
+        "px;\n  border: 4px solid;\n  border-color: ",
+        ";\n  border-radius: 50%;\n  animation: spin-anim 1.2s linear infinite;\n\n  @keyframes spin-anim {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n"
     ]);
     _templateObject47 = function _templateObject() {
         return data;
@@ -753,9 +753,7 @@ function _templateObject47() {
 }
 function _templateObject48() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 6px 16px 6px 8px;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  svg {\n    cursor: pointer;\n  }\n"
+        "\n  position: fixed;\n  top: 3%;\n  right: 3%;\n"
     ]);
     _templateObject48 = function _templateObject() {
         return data;
@@ -764,9 +762,9 @@ function _templateObject48() {
 }
 function _templateObject49() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 16px;\n  border-radius: 12px;\n  border: ",
+        "\n  display: flex;\n  padding: 6px 16px 6px 8px;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
-        ";\n  align-items: center;\n  width: 272px;\n  gap: 8px;\n"
+        ";\n  svg {\n    cursor: pointer;\n  }\n"
     ]);
     _templateObject49 = function _templateObject() {
         return data;
@@ -775,7 +773,9 @@ function _templateObject49() {
 }
 function _templateObject50() {
     var data = _tagged_template_literal([
-        "\n  gap: 10px;\n"
+        "\n  display: flex;\n  padding: 16px;\n  border-radius: 12px;\n  border: ",
+        ";\n  background: ",
+        ";\n  align-items: center;\n  width: 272px;\n  gap: 8px;\n"
     ]);
     _templateObject50 = function _templateObject() {
         return data;
@@ -784,9 +784,7 @@ function _templateObject50() {
 }
 function _templateObject51() {
     var data = _tagged_template_literal([
-        "\n  padding: 16px 24px;\n  display: flex;\n  border-radius: 12px;\n  border: ",
-        ";\n  background: ",
-        ";\n  align-items: center;\n  justify-content: space-between;\n  width: 368px;\n"
+        "\n  gap: 10px;\n"
     ]);
     _templateObject51 = function _templateObject() {
         return data;
@@ -795,7 +793,9 @@ function _templateObject51() {
 }
 function _templateObject52() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
+        "\n  padding: 16px 24px;\n  display: flex;\n  border-radius: 12px;\n  border: ",
+        ";\n  background: ",
+        ";\n  align-items: center;\n  justify-content: space-between;\n  width: 368px;\n"
     ]);
     _templateObject52 = function _templateObject() {
         return data;
@@ -804,7 +804,7 @@ function _templateObject52() {
 }
 function _templateObject53() {
     var data = _tagged_template_literal([
-        "\n  gap: 8px;\n  display: flex;\n  flex-direction: column;\n"
+        "\n  display: flex;\n  align-items: center;\n  gap: 8px;\n"
     ]);
     _templateObject53 = function _templateObject() {
         return data;
@@ -813,8 +813,7 @@ function _templateObject53() {
 }
 function _templateObject54() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 16px;\n  background: ",
-        ";\n"
+        "\n  gap: 8px;\n  display: flex;\n  flex-direction: column;\n"
     ]);
     _templateObject54 = function _templateObject() {
         return data;
@@ -823,7 +822,8 @@ function _templateObject54() {
 }
 function _templateObject55() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 8px;\n"
+        "\n  padding: 4px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 16px;\n  background: ",
+        ";\n"
     ]);
     _templateObject55 = function _templateObject() {
         return data;
@@ -832,7 +832,7 @@ function _templateObject55() {
 }
 function _templateObject56() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  height: 100%;\n"
+        "\n  display: flex;\n  gap: 8px;\n"
     ]);
     _templateObject56 = function _templateObject() {
         return data;
@@ -841,8 +841,7 @@ function _templateObject56() {
 }
 function _templateObject57() {
     var data = _tagged_template_literal([
-        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
-        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
+        "\n  width: 100%;\n  height: 100%;\n"
     ]);
     _templateObject57 = function _templateObject() {
         return data;
@@ -851,8 +850,8 @@ function _templateObject57() {
 }
 function _templateObject58() {
     var data = _tagged_template_literal([
-        "\n  padding: 10px;\n  border: ",
-        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
+        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
+        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
     ]);
     _templateObject58 = function _templateObject() {
         return data;
@@ -861,8 +860,8 @@ function _templateObject58() {
 }
 function _templateObject59() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
-        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
+        "\n  padding: 10px;\n  border: ",
+        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
     ]);
     _templateObject59 = function _templateObject() {
         return data;
@@ -871,8 +870,8 @@ function _templateObject59() {
 }
 function _templateObject60() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
-        ";\n  cursor: pointer !important;\n"
+        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
+        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
     ]);
     _templateObject60 = function _templateObject() {
         return data;
@@ -881,7 +880,8 @@ function _templateObject60() {
 }
 function _templateObject61() {
     var data = _tagged_template_literal([
-        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
+        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
+        ";\n  cursor: pointer !important;\n"
     ]);
     _templateObject61 = function _templateObject() {
         return data;
@@ -890,7 +890,7 @@ function _templateObject61() {
 }
 function _templateObject62() {
     var data = _tagged_template_literal([
-        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
+        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
     ]);
     _templateObject62 = function _templateObject() {
         return data;
@@ -899,11 +899,7 @@ function _templateObject62() {
 }
 function _templateObject63() {
     var data = _tagged_template_literal([
-        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
-        ";\n  border: 1px solid ",
-        ";\n  background-color: ",
-        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n  }\n"
+        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
     ]);
     _templateObject63 = function _templateObject() {
         return data;
@@ -914,8 +910,8 @@ function _templateObject64() {
     var data = _tagged_template_literal([
         "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
         ";\n  border: 1px solid ",
-        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n    color: ",
+        ";\n  background-color: ",
+        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
         ";\n  }\n"
     ]);
     _templateObject64 = function _templateObject() {
@@ -925,11 +921,11 @@ function _templateObject64() {
 }
 function _templateObject65() {
     var data = _tagged_template_literal([
-        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
-        ";\n  align-items: ",
-        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
-        ";\n    animation-fill-mode: backwards;\n  }\n"
+        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
+        ";\n  border: 1px solid ",
+        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
+        ";\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject65 = function _templateObject() {
         return data;
@@ -938,8 +934,11 @@ function _templateObject65() {
 }
 function _templateObject66() {
     var data = _tagged_template_literal([
-        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
-        ";\n"
+        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
+        ";\n  align-items: ",
+        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
+        ";\n    animation-fill-mode: backwards;\n  }\n"
     ]);
     _templateObject66 = function _templateObject() {
         return data;
@@ -948,7 +947,8 @@ function _templateObject66() {
 }
 function _templateObject67() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
+        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
+        ";\n"
     ]);
     _templateObject67 = function _templateObject() {
         return data;
@@ -957,7 +957,7 @@ function _templateObject67() {
 }
 function _templateObject68() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
+        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
     ]);
     _templateObject68 = function _templateObject() {
         return data;
@@ -966,7 +966,7 @@ function _templateObject68() {
 }
 function _templateObject69() {
     var data = _tagged_template_literal([
-        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
+        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
     ]);
     _templateObject69 = function _templateObject() {
         return data;
@@ -975,8 +975,7 @@ function _templateObject69() {
 }
 function _templateObject70() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
-        ";\n"
+        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
     ]);
     _templateObject70 = function _templateObject() {
         return data;
@@ -985,7 +984,8 @@ function _templateObject70() {
 }
 function _templateObject71() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
+        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
+        ";\n"
     ]);
     _templateObject71 = function _templateObject() {
         return data;
@@ -994,7 +994,7 @@ function _templateObject71() {
 }
 function _templateObject72() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
     ]);
     _templateObject72 = function _templateObject() {
         return data;
@@ -1003,7 +1003,7 @@ function _templateObject72() {
 }
 function _templateObject73() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n"
+        "\n  display: flex;\n"
     ]);
     _templateObject73 = function _templateObject() {
         return data;
@@ -1012,8 +1012,7 @@ function _templateObject73() {
 }
 function _templateObject74() {
     var data = _tagged_template_literal([
-        "\n  opacity: ",
-        ";\n"
+        "\n  display: flex;\n  align-items: center;\n"
     ]);
     _templateObject74 = function _templateObject() {
         return data;
@@ -1022,7 +1021,8 @@ function _templateObject74() {
 }
 function _templateObject75() {
     var data = _tagged_template_literal([
-        "\n  margin: 0 8px;\n"
+        "\n  opacity: ",
+        ";\n"
     ]);
     _templateObject75 = function _templateObject() {
         return data;
@@ -1031,7 +1031,7 @@ function _templateObject75() {
 }
 function _templateObject76() {
     var data = _tagged_template_literal([
-        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
+        "\n  margin: 0 8px;\n"
     ]);
     _templateObject76 = function _templateObject() {
         return data;
@@ -1040,8 +1040,7 @@ function _templateObject76() {
 }
 function _templateObject77() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
-        ";\n"
+        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
     ]);
     _templateObject77 = function _templateObject() {
         return data;
@@ -1050,7 +1049,8 @@ function _templateObject77() {
 }
 function _templateObject78() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
+        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
+        ";\n"
     ]);
     _templateObject78 = function _templateObject() {
         return data;
@@ -1059,8 +1059,7 @@ function _templateObject78() {
 }
 function _templateObject79() {
     var data = _tagged_template_literal([
-        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
-        ";\n  border-radius: 12px;\n"
+        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
     ]);
     _templateObject79 = function _templateObject() {
         return data;
@@ -1069,8 +1068,8 @@ function _templateObject79() {
 }
 function _templateObject80() {
     var data = _tagged_template_literal([
-        "\n  line-height: 1.6;\n  code {\n    background-color: ",
-        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
+        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
+        ";\n  border-radius: 12px;\n"
     ]);
     _templateObject80 = function _templateObject() {
         return data;
@@ -1079,7 +1078,8 @@ function _templateObject80() {
 }
 function _templateObject81() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
+        "\n  line-height: 1.6;\n  code {\n    background-color: ",
+        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
     ]);
     _templateObject81 = function _templateObject() {
         return data;
@@ -1088,11 +1088,7 @@ function _templateObject81() {
 }
 function _templateObject82() {
     var data = _tagged_template_literal([
-        "\n  color: ",
-        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
-        ";\n  background-color: ",
-        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
-        ";\n  }\n"
+        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
     ]);
     _templateObject82 = function _templateObject() {
         return data;
@@ -1101,7 +1097,11 @@ function _templateObject82() {
 }
 function _templateObject83() {
     var data = _tagged_template_literal([
-        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
+        "\n  color: ",
+        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
+        ";\n  background-color: ",
+        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
+        ";\n  }\n"
     ]);
     _templateObject83 = function _templateObject() {
         return data;
@@ -1110,7 +1110,7 @@ function _templateObject83() {
 }
 function _templateObject84() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
     ]);
     _templateObject84 = function _templateObject() {
         return data;
@@ -1119,7 +1119,7 @@ function _templateObject84() {
 }
 function _templateObject85() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject85 = function _templateObject() {
         return data;
@@ -1128,8 +1128,7 @@ function _templateObject85() {
 }
 function _templateObject86() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
+        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
     ]);
     _templateObject86 = function _templateObject() {
         return data;
@@ -1138,7 +1137,8 @@ function _templateObject86() {
 }
 function _templateObject87() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 42px;\n"
+        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
     ]);
     _templateObject87 = function _templateObject() {
         return data;
@@ -1147,7 +1147,7 @@ function _templateObject87() {
 }
 function _templateObject88() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 42px;\n"
     ]);
     _templateObject88 = function _templateObject() {
         return data;
@@ -1156,7 +1156,7 @@ function _templateObject88() {
 }
 function _templateObject89() {
     var data = _tagged_template_literal([
-        "\n  margin-left: 10px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject89 = function _templateObject() {
         return data;
@@ -1165,7 +1165,7 @@ function _templateObject89() {
 }
 function _templateObject90() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  margin-left: 10px;\n"
     ]);
     _templateObject90 = function _templateObject() {
         return data;
@@ -1174,7 +1174,7 @@ function _templateObject90() {
 }
 function _templateObject91() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject91 = function _templateObject() {
         return data;
@@ -1183,8 +1183,7 @@ function _templateObject91() {
 }
 function _templateObject92() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject92 = function _templateObject() {
         return data;
@@ -1193,7 +1192,8 @@ function _templateObject92() {
 }
 function _templateObject93() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject93 = function _templateObject() {
         return data;
@@ -1202,10 +1202,7 @@ function _templateObject93() {
 }
 function _templateObject94() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject94 = function _templateObject() {
         return data;
@@ -1214,7 +1211,9 @@ function _templateObject94() {
 }
 function _templateObject95() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
         ";\n"
     ]);
     _templateObject95 = function _templateObject() {
@@ -1224,10 +1223,20 @@ function _templateObject95() {
 }
 function _templateObject96() {
     var data = _tagged_template_literal([
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
+    ]);
+    _templateObject96 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject97() {
+    var data = _tagged_template_literal([
         "\n  text-align: center;\n  border-top: solid 1px ",
         ";\n  padding: 4px;\n  cursor: pointer;\n"
     ]);
-    _templateObject96 = function _templateObject() {
+    _templateObject97 = function _templateObject() {
         return data;
     };
     return data;
@@ -1929,7 +1938,7 @@ function Tap(param) {
     }, title));
 }
 // src/design.system/drop.down/drop.down.tsx
-var import_react12 = __toESM(require("react"));
+var import_react13 = __toESM(require("react"));
 // src/assets/icons/expand-arrow.svg
 var React14 = __toESM(require("react"));
 var SvgExpandArrow = function(props) {
@@ -1973,11 +1982,12 @@ var DropdownListWrapper = import_styled_components9.default.div(_templateObject1
     return theme2.colors.dark_blue;
 });
 var DropdownItem = import_styled_components9.default.div(_templateObject19());
+var LabelWrapper = import_styled_components9.default.div(_templateObject20());
 // src/design.system/search.input/search.input.tsx
 var import_react11 = __toESM(require("react"));
 // src/design.system/search.input/search.input.styled.tsx
 var import_styled_components10 = __toESM(require("styled-components"));
-var SearchInputWrapper = import_styled_components10.default.div(_templateObject20(), function(param) {
+var SearchInputWrapper = import_styled_components10.default.div(_templateObject21(), function(param) {
     var active = param.active, theme2 = param.theme;
     return "1px solid ".concat(active ? theme2.colors.white : theme2.colors.blue_grey);
 }, function(param) {
@@ -1987,7 +1997,7 @@ var SearchInputWrapper = import_styled_components10.default.div(_templateObject2
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.white);
 });
-var StyledSearchInput = import_styled_components10.default.input(_templateObject21(), function(param) {
+var StyledSearchInput = import_styled_components10.default.input(_templateObject22(), function(param) {
     var active = param.active, theme2 = param.theme;
     return "".concat(active ? theme2.colors.dark : "transparent");
 }, function(param) {
@@ -2057,6 +2067,53 @@ function SearchInput(param) {
         }
     })));
 }
+// src/assets/icons/question.svg
+var React18 = __toESM(require("react"));
+var SvgQuestion = function(props) {
+    return /* @__PURE__ */ React18.createElement("svg", _object_spread({
+        width: 14,
+        height: 14,
+        viewBox: "0 0 14 14",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg"
+    }, props), /* @__PURE__ */ React18.createElement("path", {
+        d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z",
+        fill: "#96F2FF"
+    }));
+};
+var question_default = SvgQuestion;
+// src/design.system/tooltip/index.tsx
+var import_react12 = __toESM(require("react"));
+var import_styled_components11 = __toESM(require("styled-components"));
+var TooltipContainer = import_styled_components11.default.div(_templateObject23());
+var Icon = import_styled_components11.default.div(_templateObject24());
+var TooltipText = import_styled_components11.default.div(_templateObject25(), function(param) {
+    var isVisible = param.isVisible;
+    return isVisible ? "visible" : "hidden";
+}, function(param) {
+    var isVisible = param.isVisible;
+    return isVisible ? 1 : 0;
+});
+var Tooltip = function(param) {
+    var children = param.children, text2 = param.text, _param_icon = param.icon, icon = _param_icon === void 0 ? "?" : _param_icon;
+    var _ref = _sliced_to_array((0, import_react12.useState)(false), 2), isVisible = _ref[0], setIsVisible = _ref[1];
+    var showTooltip = function() {
+        return setIsVisible(true);
+    };
+    var hideTooltip = function() {
+        return setIsVisible(false);
+    };
+    if (!text2) return /* @__PURE__ */ import_react12.default.createElement(import_react12.default.Fragment, null, children);
+    return /* @__PURE__ */ import_react12.default.createElement(TooltipContainer, {
+        onMouseEnter: showTooltip,
+        onMouseLeave: hideTooltip
+    }, children, /* @__PURE__ */ import_react12.default.createElement(TooltipText, {
+        isVisible: isVisible
+    }, /* @__PURE__ */ import_react12.default.createElement(Text, {
+        size: 12,
+        weight: 600
+    }, text2)), /* @__PURE__ */ import_react12.default.createElement(Icon, null, /* @__PURE__ */ import_react12.default.createElement(question_default, null)));
+};
 // src/design.system/drop.down/drop.down.tsx
 var SELECTED_ITEM = "Select item";
 var CONTAINER_STYLE = {
@@ -2068,7 +2125,7 @@ var SEARCH_INPUT_STYLE = {
     background: "transparent"
 };
 function DropDown(param) {
-    var _param_data = param.data, data = _param_data === void 0 ? [] : _param_data, onChange = param.onChange, _param_width = param.width, width = _param_width === void 0 ? 260 : _param_width, value = param.value;
+    var _param_data = param.data, data = _param_data === void 0 ? [] : _param_data, onChange = param.onChange, _param_width = param.width, width = _param_width === void 0 ? 260 : _param_width, value = param.value, label = param.label, tooltip = param.tooltip, required = param.required;
     var getDropdownList = function getDropdownList() {
         var _data;
         return searchFilter ? (_data = data) === null || _data === void 0 ? void 0 : _data.filter(function(item) {
@@ -2076,12 +2133,12 @@ function DropDown(param) {
             return (_item = item) === null || _item === void 0 ? void 0 : _item.label.toLowerCase().includes(searchFilter.toLowerCase());
         }) : data;
     };
-    var _ref = _sliced_to_array((0, import_react12.useState)(false), 2), isOpen = _ref[0], setOpen = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react12.useState)(value || null), 2), selectedItem = _ref1[0], setSelectedItem = _ref1[1];
-    var _ref2 = _sliced_to_array((0, import_react12.useState)(false), 2), isHover = _ref2[0], setHover = _ref2[1];
-    var _ref3 = _sliced_to_array((0, import_react12.useState)(""), 2), searchFilter = _ref3[0], setSearchFilter = _ref3[1];
-    var containerRef = (0, import_react12.useRef)(null);
-    (0, import_react12.useEffect)(function() {
+    var _ref = _sliced_to_array((0, import_react13.useState)(false), 2), isOpen = _ref[0], setOpen = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react13.useState)(value || null), 2), selectedItem = _ref1[0], setSelectedItem = _ref1[1];
+    var _ref2 = _sliced_to_array((0, import_react13.useState)(false), 2), isHover = _ref2[0], setHover = _ref2[1];
+    var _ref3 = _sliced_to_array((0, import_react13.useState)(""), 2), searchFilter = _ref3[0], setSearchFilter = _ref3[1];
+    var containerRef = (0, import_react13.useRef)(null);
+    (0, import_react13.useEffect)(function() {
         value && setSelectedItem(value);
     }, [
         value
@@ -2098,13 +2155,27 @@ function DropDown(param) {
         setSearchFilter("");
         setOpen(false);
     };
-    return /* @__PURE__ */ import_react12.default.createElement("div", {
+    return /* @__PURE__ */ import_react13.default.createElement(import_react13.default.Fragment, null, label && /* @__PURE__ */ import_react13.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react13.default.createElement(Tooltip, {
+        text: tooltip || ""
+    }, /* @__PURE__ */ import_react13.default.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 4
+        }
+    }, required && /* @__PURE__ */ import_react13.default.createElement(Text, {
+        color: palette_default.colors.error,
+        size: 14,
+        weight: 600
+    }, "*"), /* @__PURE__ */ import_react13.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, label)))), /* @__PURE__ */ import_react13.default.createElement("div", {
         style: {
             height: 37,
             width: width
         },
         ref: containerRef
-    }, /* @__PURE__ */ import_react12.default.createElement(DropdownWrapper, {
+    }, /* @__PURE__ */ import_react13.default.createElement(DropdownWrapper, {
         selected: isHover,
         onMouseEnter: function() {
             return setHover(true);
@@ -2113,9 +2184,9 @@ function DropDown(param) {
             return setHover(false);
         },
         onClick: toggleDropdown
-    }, /* @__PURE__ */ import_react12.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react12.default.createElement(expand_arrow_default, {
+    }, /* @__PURE__ */ import_react13.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react13.default.createElement(expand_arrow_default, {
         className: "dropdown-arrow ".concat(isOpen && "open")
-    }))), isOpen && /* @__PURE__ */ import_react12.default.createElement(DropdownBody, null, /* @__PURE__ */ import_react12.default.createElement(SearchInput, {
+    }))), isOpen && /* @__PURE__ */ import_react13.default.createElement(DropdownBody, null, /* @__PURE__ */ import_react13.default.createElement(SearchInput, {
         value: searchFilter,
         onChange: function(e) {
             return setSearchFilter(e.target.value);
@@ -2124,25 +2195,25 @@ function DropDown(param) {
         containerStyle: CONTAINER_STYLE,
         inputStyle: SEARCH_INPUT_STYLE,
         showClear: false
-    }), /* @__PURE__ */ import_react12.default.createElement(DropdownListWrapper, null, getDropdownList().map(function(item) {
-        return /* @__PURE__ */ import_react12.default.createElement(DropdownItem, {
+    }), /* @__PURE__ */ import_react13.default.createElement(DropdownListWrapper, null, getDropdownList().map(function(item) {
+        return /* @__PURE__ */ import_react13.default.createElement(DropdownItem, {
             key: item.id,
             onClick: function(e) {
                 return handleItemClick(item);
             }
-        }, /* @__PURE__ */ import_react12.default.createElement(Text, null, item.label));
-    }))));
+        }, /* @__PURE__ */ import_react13.default.createElement(Text, null, item.label));
+    })))));
 }
 // src/design.system/switch/switch.tsx
-var import_react13 = __toESM(require("react"));
+var import_react14 = __toESM(require("react"));
 // src/design.system/switch/switch.styled.tsx
-var import_styled_components11 = __toESM(require("styled-components"));
-var SwitchInputWrapper = import_styled_components11.default.div(_templateObject22());
-var SwitchToggleWrapper = import_styled_components11.default.div(_templateObject23(), function(param) {
+var import_styled_components12 = __toESM(require("styled-components"));
+var SwitchInputWrapper = import_styled_components12.default.div(_templateObject26());
+var SwitchToggleWrapper = import_styled_components12.default.div(_templateObject27(), function(param) {
     var active = param.active, theme2 = param.theme;
     return active ? theme2.colors.secondary : theme2.text.grey;
 });
-var SwitchButtonWrapper = import_styled_components11.default.span(_templateObject24(), function(param) {
+var SwitchButtonWrapper = import_styled_components12.default.span(_templateObject28(), function(param) {
     var disabled = param.disabled, theme2 = param.theme;
     return !disabled ? theme2.text.light_grey : theme2.text.white;
 }, function(param) {
@@ -2152,20 +2223,20 @@ var SwitchButtonWrapper = import_styled_components11.default.span(_templateObjec
 // src/design.system/switch/switch.tsx
 function Switch(param) {
     var toggle = param.toggle, handleToggleChange = param.handleToggleChange, style = param.style, _param_label = param.label, label = _param_label === void 0 ? "Select All" : _param_label;
-    return /* @__PURE__ */ import_react13.default.createElement(SwitchInputWrapper, null, /* @__PURE__ */ import_react13.default.createElement(SwitchToggleWrapper, {
+    return /* @__PURE__ */ import_react14.default.createElement(SwitchInputWrapper, null, /* @__PURE__ */ import_react14.default.createElement(SwitchToggleWrapper, {
         active: toggle || void 0,
         onClick: handleToggleChange
-    }, /* @__PURE__ */ import_react13.default.createElement(SwitchButtonWrapper, {
+    }, /* @__PURE__ */ import_react14.default.createElement(SwitchButtonWrapper, {
         disabled: toggle || void 0
-    })), label && /* @__PURE__ */ import_react13.default.createElement(Text, {
+    })), label && /* @__PURE__ */ import_react14.default.createElement(Text, {
         size: 14
     }, label));
 }
 // src/design.system/checkbox/checkbox.tsx
-var import_react14 = __toESM(require("react"));
+var import_react15 = __toESM(require("react"));
 // src/design.system/checkbox/checkbox.styled.tsx
-var import_styled_components12 = require("styled-components");
-var CheckboxWrapper = import_styled_components12.styled.div(_templateObject25(), function(param) {
+var import_styled_components13 = require("styled-components");
+var CheckboxWrapper = import_styled_components13.styled.div(_templateObject29(), function(param) {
     var disabled = param.disabled;
     return disabled ? "not-allowed" : "pointer";
 }, function(param) {
@@ -2175,20 +2246,20 @@ var CheckboxWrapper = import_styled_components12.styled.div(_templateObject25(),
     var disabled = param.disabled;
     return disabled ? "0.5" : "1";
 });
-var CheckboxItem = import_styled_components12.styled.span(_templateObject26(), function(param) {
+var CheckboxItem = import_styled_components13.styled.span(_templateObject30(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.light_grey);
 });
 // src/assets/icons/checkbox-rect.svg
-var React20 = __toESM(require("react"));
+var React22 = __toESM(require("react"));
 var SvgCheckboxRect = function(props) {
-    return /* @__PURE__ */ React20.createElement("svg", _object_spread({
+    return /* @__PURE__ */ React22.createElement("svg", _object_spread({
         width: 18,
         height: 18,
         viewBox: "0 0 18 18",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg"
-    }, props), /* @__PURE__ */ React20.createElement("rect", {
+    }, props), /* @__PURE__ */ React22.createElement("rect", {
         x: 0.5,
         y: 0.5,
         width: 17,
@@ -2196,7 +2267,7 @@ var SvgCheckboxRect = function(props) {
         rx: 3.5,
         fill: "#96F2FF",
         stroke: "#96F2FF"
-    }), /* @__PURE__ */ React20.createElement("path", {
+    }), /* @__PURE__ */ React22.createElement("path", {
         d: "M13.7727 6L7.39773 12.375L4.5 9.47727",
         stroke: "#132330",
         strokeWidth: 2,
@@ -2208,41 +2279,41 @@ var checkbox_rect_default = SvgCheckboxRect;
 // src/design.system/checkbox/checkbox.tsx
 function Checkbox(param) {
     var onChange = param.onChange, value = param.value, _param_label = param.label, label = _param_label === void 0 ? "" : _param_label, _param_disabled = param.disabled, disabled = _param_disabled === void 0 ? false : _param_disabled;
-    return /* @__PURE__ */ import_react14.default.createElement(CheckboxWrapper, {
+    return /* @__PURE__ */ import_react15.default.createElement(CheckboxWrapper, {
         disabled: disabled || void 0,
         onClick: onChange
-    }, value ? /* @__PURE__ */ import_react14.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react14.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react14.default.createElement(Text, {
+    }, value ? /* @__PURE__ */ import_react15.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react15.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react15.default.createElement(Text, {
         size: 14
     }, label));
 }
 // src/design.system/selected.counter/selected.counter.tsx
-var import_react15 = __toESM(require("react"));
+var import_react16 = __toESM(require("react"));
 // src/design.system/selected.counter/selected.counter.styled.tsx
-var import_styled_components13 = __toESM(require("styled-components"));
-var SelectedCounterWrapper = import_styled_components13.default.div(_templateObject27(), function(param) {
+var import_styled_components14 = __toESM(require("styled-components"));
+var SelectedCounterWrapper = import_styled_components14.default.div(_templateObject31(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
 // src/assets/icons/check.svg
-var React22 = __toESM(require("react"));
+var React24 = __toESM(require("react"));
 var SvgCheck = function(props) {
-    return /* @__PURE__ */ React22.createElement("svg", _object_spread({
+    return /* @__PURE__ */ React24.createElement("svg", _object_spread({
         width: 10,
         height: 10,
         viewBox: "0 0 10 10",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg"
-    }, props), /* @__PURE__ */ React22.createElement("g", {
+    }, props), /* @__PURE__ */ React24.createElement("g", {
         clipPath: "url(#clip0_48_7283)"
-    }, /* @__PURE__ */ React22.createElement("path", {
+    }, /* @__PURE__ */ React24.createElement("path", {
         d: "M1.5625 5.625L3.75 7.8125L8.75 2.8125",
         stroke: "#96F2FF",
         strokeWidth: 2,
         strokeLinecap: "round",
         strokeLinejoin: "round"
-    })), /* @__PURE__ */ React22.createElement("defs", null, /* @__PURE__ */ React22.createElement("clipPath", {
+    })), /* @__PURE__ */ React24.createElement("defs", null, /* @__PURE__ */ React24.createElement("clipPath", {
         id: "clip0_48_7283"
-    }, /* @__PURE__ */ React22.createElement("rect", {
+    }, /* @__PURE__ */ React24.createElement("rect", {
         width: 10,
         height: 10,
         fill: "white"
@@ -2252,71 +2323,24 @@ var check_default = SvgCheck;
 // src/design.system/selected.counter/selected.counter.tsx
 function SelectedCounter(param) {
     var total = param.total, selected = param.selected;
-    return /* @__PURE__ */ import_react15.default.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ import_react15.default.createElement(check_default, null), /* @__PURE__ */ import_react15.default.createElement(Text, {
+    return /* @__PURE__ */ import_react16.default.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ import_react16.default.createElement(check_default, null), /* @__PURE__ */ import_react16.default.createElement(Text, {
         size: 13,
         weight: 500
     }, "".concat(selected, " / ").concat(total)));
 }
 // src/design.system/link/link.tsx
-var import_react16 = __toESM(require("react"));
-var import_styled_components14 = require("styled-components");
-var LinkContainer = import_styled_components14.styled.div(_templateObject28());
+var import_react17 = __toESM(require("react"));
+var import_styled_components15 = require("styled-components");
+var LinkContainer = import_styled_components15.styled.div(_templateObject32());
 function Link(param) {
     var value = param.value, onClick = param.onClick, _param_fontSize = param.fontSize, fontSize = _param_fontSize === void 0 ? 16 : _param_fontSize, _param_color = param.color, color = _param_color === void 0 ? palette_default.colors.secondary : _param_color;
-    return /* @__PURE__ */ import_react16.default.createElement(LinkContainer, {
+    return /* @__PURE__ */ import_react17.default.createElement(LinkContainer, {
         onClick: onClick
-    }, /* @__PURE__ */ import_react16.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react17.default.createElement(Text, {
         size: fontSize,
         color: color
     }, value));
 }
-// src/assets/icons/question.svg
-var React25 = __toESM(require("react"));
-var SvgQuestion = function(props) {
-    return /* @__PURE__ */ React25.createElement("svg", _object_spread({
-        width: 14,
-        height: 14,
-        viewBox: "0 0 14 14",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
-    }, props), /* @__PURE__ */ React25.createElement("path", {
-        d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z",
-        fill: "#96F2FF"
-    }));
-};
-var question_default = SvgQuestion;
-// src/design.system/tooltip/index.tsx
-var import_react17 = __toESM(require("react"));
-var import_styled_components15 = __toESM(require("styled-components"));
-var TooltipContainer = import_styled_components15.default.div(_templateObject29());
-var Icon = import_styled_components15.default.div(_templateObject30());
-var TooltipText = import_styled_components15.default.div(_templateObject31(), function(param) {
-    var isVisible = param.isVisible;
-    return isVisible ? "visible" : "hidden";
-}, function(param) {
-    var isVisible = param.isVisible;
-    return isVisible ? 1 : 0;
-});
-var Tooltip = function(param) {
-    var children = param.children, text2 = param.text, _param_icon = param.icon, icon = _param_icon === void 0 ? "?" : _param_icon;
-    var _ref = _sliced_to_array((0, import_react17.useState)(false), 2), isVisible = _ref[0], setIsVisible = _ref[1];
-    var showTooltip = function() {
-        return setIsVisible(true);
-    };
-    var hideTooltip = function() {
-        return setIsVisible(false);
-    };
-    if (!text2) return /* @__PURE__ */ import_react17.default.createElement(import_react17.default.Fragment, null, children);
-    return /* @__PURE__ */ import_react17.default.createElement(TooltipContainer, {
-        onMouseEnter: showTooltip,
-        onMouseLeave: hideTooltip
-    }, children, /* @__PURE__ */ import_react17.default.createElement(TooltipText, {
-        isVisible: isVisible
-    }, /* @__PURE__ */ import_react17.default.createElement(Text, {
-        size: 12,
-        weight: 600
-    }, text2)), /* @__PURE__ */ import_react17.default.createElement(Icon, null, /* @__PURE__ */ import_react17.default.createElement(question_default, null)));
-};
 // src/design.system/image/image.tsx
 var import_image = __toESM(require("next/image"));
 var import_react18 = __toESM(require("react"));
@@ -2337,7 +2361,7 @@ function ImageComponent(param) {
 var import_react19 = __toESM(require("react"));
 // src/design.system/input/input.styled.tsx
 var import_styled_components16 = require("styled-components");
-var StyledInputContainer = import_styled_components16.styled.div(_templateObject32(), function(param) {
+var StyledInputContainer = import_styled_components16.styled.div(_templateObject33(), function(param) {
     var theme2 = param.theme, error = param.error, active = param.active;
     return "1px solid ".concat(error ? theme2.colors.error : active ? theme2.text.grey : theme2.colors.blue_grey);
 }, function(param) {
@@ -2347,18 +2371,18 @@ var StyledInputContainer = import_styled_components16.styled.div(_templateObject
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.text.grey);
 });
-var StyledActionInputContainer = import_styled_components16.styled.div(_templateObject33(), function(param) {
+var StyledActionInputContainer = import_styled_components16.styled.div(_templateObject34(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.secondary);
 });
-var StyledInput = import_styled_components16.styled.input(_templateObject34(), function(param) {
+var StyledInput = import_styled_components16.styled.input(_templateObject35(), function(param) {
     var theme2 = param.theme;
     return theme2.text.white;
 });
-var StyledActionInput = (0, import_styled_components16.styled)(StyledInput)(_templateObject35());
-var LabelWrapper = import_styled_components16.styled.div(_templateObject36());
-var ErrorWrapper = import_styled_components16.styled.div(_templateObject37());
-var DisplayIconsWrapper = import_styled_components16.styled.div(_templateObject38());
+var StyledActionInput = (0, import_styled_components16.styled)(StyledInput)(_templateObject36());
+var LabelWrapper2 = import_styled_components16.styled.div(_templateObject37());
+var ErrorWrapper = import_styled_components16.styled.div(_templateObject38());
+var DisplayIconsWrapper = import_styled_components16.styled.div(_templateObject39());
 // src/assets/icons/eye-open.svg
 var React28 = __toESM(require("react"));
 var SvgEyeOpen = function(props) {
@@ -2415,19 +2439,28 @@ var SvgEyeClose = function(props) {
 var eye_close_default = SvgEyeClose;
 // src/design.system/input/input.tsx
 function Input(param) {
-    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, _param_error = param.error, error = _param_error === void 0 ? "" : _param_error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style, placeholder = param.placeholder, onKeyDown = param.onKeyDown, tooltip = param.tooltip;
+    var label = param.label, value = param.value, onChange = param.onChange, _param_type = param.type, type = _param_type === void 0 ? "text" : _param_type, _param_error = param.error, error = _param_error === void 0 ? "" : _param_error, _param_style = param.style, style = _param_style === void 0 ? {} : _param_style, placeholder = param.placeholder, onKeyDown = param.onKeyDown, tooltip = param.tooltip, required = param.required;
     var handleChange = function handleChange(event) {
         onChange(event.target.value);
     };
     var _ref = _sliced_to_array((0, import_react19.useState)(false), 2), showPassword = _ref[0], setShowPassword = _ref[1];
     return /* @__PURE__ */ import_react19.default.createElement("div", {
         style: _object_spread({}, style)
-    }, label && /* @__PURE__ */ import_react19.default.createElement(LabelWrapper, null, /* @__PURE__ */ import_react19.default.createElement(Tooltip, {
+    }, label && /* @__PURE__ */ import_react19.default.createElement(LabelWrapper2, null, /* @__PURE__ */ import_react19.default.createElement(Tooltip, {
         text: tooltip || ""
-    }, /* @__PURE__ */ import_react19.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react19.default.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 4
+        }
+    }, required && /* @__PURE__ */ import_react19.default.createElement(Text, {
+        color: palette_default.colors.error,
         size: 14,
         weight: 600
-    }, label))), /* @__PURE__ */ import_react19.default.createElement(StyledInputContainer, {
+    }, "*"), /* @__PURE__ */ import_react19.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, label)))), /* @__PURE__ */ import_react19.default.createElement(StyledInputContainer, {
         active: !!value || void 0,
         error: error ? true : void 0
     }, /* @__PURE__ */ import_react19.default.createElement(StyledInput, {
@@ -2513,15 +2546,15 @@ var SvgPlayer = function(props) {
 var player_default = SvgPlayer;
 // src/design.system/video/video.styled.tsx
 var import_styled_components17 = require("styled-components");
-var ImagePreviewWrapper = import_styled_components17.styled.div(_templateObject39(), function(param) {
+var ImagePreviewWrapper = import_styled_components17.styled.div(_templateObject40(), function(param) {
     var url = param.url;
     return "linear-gradient(\n      0deg,\n      rgba(2, 20, 30, 0.2) 0%,\n      rgba(2, 20, 30, 0.2) 100%\n    ),\n    url(".concat(url, "),\n    lightgray 50%");
 });
-var PlayerIconWrapper = import_styled_components17.styled.div(_templateObject40());
-var LargePlayerIconWrapper = (0, import_styled_components17.styled)(PlayerIconWrapper)(_templateObject41());
-var StyledLargeVideo = import_styled_components17.styled.video(_templateObject42());
-var LargeVideoHeader = import_styled_components17.styled.div(_templateObject43());
-var LargeVideoContainer = import_styled_components17.styled.div(_templateObject44());
+var PlayerIconWrapper = import_styled_components17.styled.div(_templateObject41());
+var LargePlayerIconWrapper = (0, import_styled_components17.styled)(PlayerIconWrapper)(_templateObject42());
+var StyledLargeVideo = import_styled_components17.styled.video(_templateObject43());
+var LargeVideoHeader = import_styled_components17.styled.div(_templateObject44());
+var LargeVideoContainer = import_styled_components17.styled.div(_templateObject45());
 // src/design.system/video/video.tsx
 function Video(param) {
     var videoSrc = param.videoSrc, title = param.title, thumbnail = param.thumbnail;
@@ -2577,8 +2610,8 @@ function Video(param) {
 var import_react22 = __toESM(require("react"));
 // src/design.system/loader/loader.styled.tsx
 var import_styled_components18 = __toESM(require("styled-components"));
-var LoaderWrapper = import_styled_components18.default.div(_templateObject45());
-var StyledLoader = import_styled_components18.default.div(_templateObject46(), function(param) {
+var LoaderWrapper = import_styled_components18.default.div(_templateObject46());
+var StyledLoader = import_styled_components18.default.div(_templateObject47(), function(param) {
     var width = param.width;
     return width || 48;
 }, function(param) {
@@ -2600,8 +2633,8 @@ function Loader(param) {
 var import_react23 = __toESM(require("react"));
 // src/design.system/notification/notification.styled.tsx
 var import_styled_components19 = __toESM(require("styled-components"));
-var NotificationContainer = import_styled_components19.default.div(_templateObject47());
-var StyledNotification = import_styled_components19.default.div(_templateObject48(), function(param) {
+var NotificationContainer = import_styled_components19.default.div(_templateObject48());
+var StyledNotification = import_styled_components19.default.div(_templateObject49(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.secondary);
 }, function(param) {
@@ -2925,14 +2958,14 @@ function NamespaceNode(param) {
 var import_react25 = __toESM(require("react"));
 var import_reactflow2 = require("reactflow");
 var import_styled_components20 = require("styled-components");
-var NamespaceContainer = import_styled_components20.styled.div(_templateObject49(), function(param) {
+var NamespaceContainer = import_styled_components20.styled.div(_templateObject50(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.light_dark;
 });
-var TextWrapper3 = import_styled_components20.styled.div(_templateObject50());
+var TextWrapper3 = import_styled_components20.styled.div(_templateObject51());
 var namespace_node_default = (0, import_react25.memo)(function(param) {
     var data = param.data, isConnectable = param.isConnectable;
     var _data, _data1;
@@ -3098,25 +3131,25 @@ var MONITORING_OPTIONS = [
     }
 ];
 // src/design.system/data.flow/destination.node.tsx
-var DestinationNodeContainer = import_styled_components21.styled.div(_templateObject51(), function(param) {
+var DestinationNodeContainer = import_styled_components21.styled.div(_templateObject52(), function(param) {
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.colors.blue_grey);
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.light_dark;
 });
-var NodeDataWrapper = import_styled_components21.styled.div(_templateObject52());
-var TextWrapper4 = import_styled_components21.styled.div(_templateObject53());
+var NodeDataWrapper = import_styled_components21.styled.div(_templateObject53());
+var TextWrapper4 = import_styled_components21.styled.div(_templateObject54());
 var IMAGE_STYLE2 = {
     backgroundColor: "#fff",
     padding: 4,
     borderRadius: 10
 };
-var IconWrapper = import_styled_components21.styled.div(_templateObject54(), function(param) {
+var IconWrapper = import_styled_components21.styled.div(_templateObject55(), function(param) {
     var theme2 = param.theme, tapped = param.tapped;
     return tapped ? theme2.colors.dark_blue : "#0e1c28";
 });
-var MonitorsListWrapper = import_styled_components21.styled.div(_templateObject55());
+var MonitorsListWrapper = import_styled_components21.styled.div(_templateObject56());
 function DestinationNode(param) {
     var data = param.data, isConnectable = param.isConnectable;
     var renderMonitors = function renderMonitors() {
@@ -3154,8 +3187,8 @@ function DestinationNode(param) {
 var import_style = require("reactflow/dist/style.css");
 // src/design.system/data.flow/data.flow.styled.tsx
 var import_styled_components22 = __toESM(require("styled-components"));
-var DataFlowContainer = import_styled_components22.default.div(_templateObject56());
-var ControllerWrapper = import_styled_components22.default.div(_templateObject57(), function(param) {
+var DataFlowContainer = import_styled_components22.default.div(_templateObject57());
+var ControllerWrapper = import_styled_components22.default.div(_templateObject58(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
@@ -3207,15 +3240,15 @@ function KeyvalDataFlow(props) {
 // src/design.system/danger.zone/danger.zone.tsx
 var import_react28 = __toESM(require("react"));
 var import_styled_components23 = require("styled-components");
-var DangerZoneWrapper = import_styled_components23.styled.div(_templateObject58(), function(param) {
+var DangerZoneWrapper = import_styled_components23.styled.div(_templateObject59(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
-var DangerButtonWrapper = import_styled_components23.styled.div(_templateObject59(), function(param) {
+var DangerButtonWrapper = import_styled_components23.styled.div(_templateObject60(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.error;
 });
-var DangerButton = import_styled_components23.styled.button(_templateObject60(), function(param) {
+var DangerButton = import_styled_components23.styled.button(_templateObject61(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
@@ -3270,9 +3303,9 @@ var PortalModal = function(param) {
 var portal_modal_default = PortalModal;
 // src/design.system/modal/modal.styled.tsx
 var import_styled_components24 = __toESM(require("styled-components"));
-var fadeIn = import_styled_components24.keyframes(_templateObject61());
-var ModalButtonsContainer = import_styled_components24.default.div(_templateObject62());
-var ModalButtonPrimary = import_styled_components24.default.button(_templateObject63(), function(param) {
+var fadeIn = import_styled_components24.keyframes(_templateObject62());
+var ModalButtonsContainer = import_styled_components24.default.div(_templateObject63());
+var ModalButtonPrimary = import_styled_components24.default.button(_templateObject64(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.btnText;
 }, function(param) {
@@ -3285,7 +3318,7 @@ var ModalButtonPrimary = import_styled_components24.default.button(_templateObje
     var theme2 = param.theme;
     return theme2.colors.shadowMain;
 });
-var ModalButtonSecondary = import_styled_components24.default.button(_templateObject64(), function(param) {
+var ModalButtonSecondary = import_styled_components24.default.button(_templateObject65(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.main;
 }, function(param) {
@@ -3298,24 +3331,24 @@ var ModalButtonSecondary = import_styled_components24.default.button(_templateOb
     var theme2 = param.theme;
     return theme2.colors.btnText;
 });
-var Overlay = import_styled_components24.default.div(_templateObject65(), function(props) {
+var Overlay = import_styled_components24.default.div(_templateObject66(), function(props) {
     return props.showOverlay ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.1)";
 }, function(props) {
     return props.positionX ? props.positionX : "center";
 }, function(props) {
     return props.positionY ? props.positionY : "center";
 }, fadeIn);
-var ModalContainer = import_styled_components24.default.div(_templateObject66(), function(props) {
+var ModalContainer = import_styled_components24.default.div(_templateObject67(), function(props) {
     return props.padding ? props.padding : "20px";
 });
-var ModalHeader = import_styled_components24.default.header(_templateObject67());
-var Close = import_styled_components24.default.div(_templateObject68());
-var PrimaryButton = import_styled_components24.default.button(_templateObject69());
-var Content = import_styled_components24.default.div(_templateObject70(), function(param) {
+var ModalHeader = import_styled_components24.default.header(_templateObject68());
+var Close = import_styled_components24.default.div(_templateObject69());
+var PrimaryButton = import_styled_components24.default.button(_templateObject70());
+var Content = import_styled_components24.default.div(_templateObject71(), function(param) {
     var theme2 = param.theme;
     return theme2.text;
 });
-var ModalFooter = import_styled_components24.default.footer(_templateObject71());
+var ModalFooter = import_styled_components24.default.footer(_templateObject72());
 // src/assets/icons/close-modal.svg
 var React53 = __toESM(require("react"));
 var SvgCloseModal = function(props) {
@@ -3429,14 +3462,14 @@ var import_react34 = __toESM(require("react"));
 var import_react33 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
 var import_styled_components27 = __toESM(require("styled-components"));
-var StepsContainer = import_styled_components27.default.div(_templateObject72());
-var StepItemWrapper = import_styled_components27.default.div(_templateObject73());
-var FloatingBoxTextWrapper = import_styled_components27.default.div(_templateObject74(), function(param) {
+var StepsContainer = import_styled_components27.default.div(_templateObject73());
+var StepItemWrapper = import_styled_components27.default.div(_templateObject74());
+var FloatingBoxTextWrapper = import_styled_components27.default.div(_templateObject75(), function(param) {
     var disabled = param.disabled;
     return disabled ? "0.4" : "1";
 });
-var StepItemTextWrapper = (0, import_styled_components27.default)(FloatingBoxTextWrapper)(_templateObject75());
-var StepItemBorder = import_styled_components27.default.div(_templateObject76());
+var StepItemTextWrapper = (0, import_styled_components27.default)(FloatingBoxTextWrapper)(_templateObject76());
+var StepItemBorder = import_styled_components27.default.div(_templateObject77());
 // src/assets/icons/checked.svg
 var React57 = __toESM(require("react"));
 var SvgChecked = function(props) {
@@ -3486,11 +3519,11 @@ function Steps(param) {
 // src/design.system/divider/divider.tsx
 var import_react35 = __toESM(require("react"));
 var import_styled_components28 = __toESM(require("styled-components"));
-var DividerContainer = import_styled_components28.default.div(_templateObject77(), function(param) {
+var DividerContainer = import_styled_components28.default.div(_templateObject78(), function(param) {
     var margin = param.margin;
     return margin;
 });
-var DividerLine = import_styled_components28.default.div(_templateObject78());
+var DividerLine = import_styled_components28.default.div(_templateObject79());
 function Divider(param) {
     var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
     return /* @__PURE__ */ import_react35.default.createElement(DividerContainer, {
@@ -3502,11 +3535,11 @@ function Divider(param) {
 // src/design.system/note/note.tsx
 var import_react36 = __toESM(require("react"));
 var import_styled_components29 = __toESM(require("styled-components"));
-var NoteContainer = import_styled_components29.default.div(_templateObject79(), function(param) {
+var NoteContainer = import_styled_components29.default.div(_templateObject80(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
-var TextContainer = import_styled_components29.default.div(_templateObject80(), function(param) {
+var TextContainer = import_styled_components29.default.div(_templateObject81(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
@@ -3535,8 +3568,8 @@ function Note(param) {
 // src/design.system/segmented-controls/index.tsx
 var import_react37 = __toESM(require("react"));
 var import_styled_components30 = __toESM(require("styled-components"));
-var SegmentedControlsWrapper = import_styled_components30.default.div(_templateObject81());
-var SegmentedControlsOption = import_styled_components30.default.div(_templateObject82(), function(param) {
+var SegmentedControlsWrapper = import_styled_components30.default.div(_templateObject82());
+var SegmentedControlsOption = import_styled_components30.default.div(_templateObject83(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.white;
 }, function(param) {
@@ -3549,7 +3582,7 @@ var SegmentedControlsOption = import_styled_components30.default.div(_templateOb
     var theme2 = param.theme;
     return theme2.font_family.primary;
 });
-var SegmentedControlsInput = import_styled_components30.default.input(_templateObject83());
+var SegmentedControlsInput = import_styled_components30.default.input(_templateObject84());
 function SegmentedControls(param) {
     var options = param.options, selected = param.selected, onChange = param.onChange, title = param.title;
     var _options;
@@ -3639,28 +3672,28 @@ var MultiInput = function(param) {
         color: palette_default.text.dark_button
     }, "Add"))));
 };
-var Container = import_styled_components31.default.div(_templateObject84());
-var ListContainer = import_styled_components31.default.div(_templateObject85());
-var ListItem = import_styled_components31.default.div(_templateObject86(), palette_default.colors.light_grey);
-var InputContainer = import_styled_components31.default.div(_templateObject87());
-var Input2 = (0, import_styled_components31.default)(Input)(_templateObject88());
-var Button2 = (0, import_styled_components31.default)(Button)(_templateObject89());
+var Container = import_styled_components31.default.div(_templateObject85());
+var ListContainer = import_styled_components31.default.div(_templateObject86());
+var ListItem = import_styled_components31.default.div(_templateObject87(), palette_default.colors.light_grey);
+var InputContainer = import_styled_components31.default.div(_templateObject88());
+var Input2 = (0, import_styled_components31.default)(Input)(_templateObject89());
+var Button2 = (0, import_styled_components31.default)(Button)(_templateObject90());
 // src/design.system/key-value-input/index.tsx
 var import_react39 = __toESM(require("react"));
 var import_styled_components32 = __toESM(require("styled-components"));
-var Container2 = import_styled_components32.default.div(_templateObject90());
-var TitleWrapper = import_styled_components32.default.div(_templateObject91());
-var Table = import_styled_components32.default.table(_templateObject92(), palette_default.text.grey);
-var Th = import_styled_components32.default.th(_templateObject93());
-var Td = import_styled_components32.default.td(_templateObject94(), palette_default.text.grey, function(param) {
+var Container2 = import_styled_components32.default.div(_templateObject91());
+var TitleWrapper = import_styled_components32.default.div(_templateObject92());
+var Table = import_styled_components32.default.table(_templateObject93(), palette_default.text.grey);
+var Th = import_styled_components32.default.th(_templateObject94());
+var Td = import_styled_components32.default.td(_templateObject95(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input3 = import_styled_components32.default.input(_templateObject95(), palette_default.text.white);
-var AddRowButton = import_styled_components32.default.td(_templateObject96(), palette_default.text.grey);
+var Input3 = import_styled_components32.default.input(_templateObject96(), palette_default.text.white);
+var AddRowButton = import_styled_components32.default.td(_templateObject97(), palette_default.text.grey);
 var KeyValueTable = function(param) {
     var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip;
     var _ref = _sliced_to_array((0, import_react39.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];

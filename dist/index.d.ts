@@ -90,8 +90,11 @@ interface DropDownProps {
     onChange: (item: DropDownItem) => void;
     width?: number;
     value?: DropDownItem | null;
+    label?: string;
+    tooltip?: string;
+    required?: boolean;
 }
-declare function DropDown({ data, onChange, width, value, }: DropDownProps): React.JSX.Element;
+declare function DropDown({ data, onChange, width, value, label, tooltip, required, }: DropDownProps): React.JSX.Element;
 
 interface SearchInputProps {
     placeholder?: string;
@@ -160,8 +163,9 @@ interface InputProps$1 {
     placeholder?: string;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     tooltip?: string;
+    required?: boolean;
 }
-declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, tooltip, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, tooltip, required, }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;

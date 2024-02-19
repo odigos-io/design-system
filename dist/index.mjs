@@ -449,7 +449,7 @@ function Tap({
 }
 
 // src/design.system/drop.down/drop.down.tsx
-import React18, { useEffect as useEffect4, useRef, useState as useState4 } from "react";
+import React20, { useEffect as useEffect4, useRef, useState as useState5 } from "react";
 
 // src/assets/icons/expand-arrow.svg
 import * as React14 from "react";
@@ -521,6 +521,10 @@ var DropdownItem = styled9.div`
   p {
     cursor: pointer !important;
   }
+`;
+var LabelWrapper = styled9.div`
+  margin-bottom: 8px;
+  text-align: start;
 `;
 
 // src/design.system/search.input/search.input.tsx
@@ -603,223 +607,25 @@ function SearchInput({
   );
 }
 
-// src/design.system/drop.down/drop.down.tsx
-var SELECTED_ITEM = "Select item";
-var CONTAINER_STYLE = {
-  width: "90%",
-  border: "none",
-  background: "transparent"
-};
-var SEARCH_INPUT_STYLE = { background: "transparent" };
-function DropDown({
-  data = [],
-  onChange,
-  width = 260,
-  value
-}) {
-  const [isOpen, setOpen] = useState4(false);
-  const [selectedItem, setSelectedItem] = useState4(value || null);
-  const [isHover, setHover] = useState4(false);
-  const [searchFilter, setSearchFilter] = useState4("");
-  const containerRef = useRef(null);
-  useEffect4(() => {
-    value && setSelectedItem(value);
-  }, [value]);
-  useOnClickOutside(containerRef, () => setOpen(false));
-  const toggleDropdown = () => setOpen(!isOpen);
-  const handleItemClick = (item) => {
-    onChange(item);
-    setSelectedItem(item);
-    setSearchFilter("");
-    setOpen(false);
-  };
-  function getDropdownList() {
-    return searchFilter ? data?.filter(
-      (item) => item?.label.toLowerCase().includes(searchFilter.toLowerCase())
-    ) : data;
-  }
-  return /* @__PURE__ */ React18.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React18.createElement(
-    DropdownWrapper,
-    {
-      selected: isHover,
-      onMouseEnter: () => setHover(true),
-      onMouseLeave: () => setHover(false),
-      onClick: toggleDropdown
-    },
-    /* @__PURE__ */ React18.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React18.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
-  ), isOpen && /* @__PURE__ */ React18.createElement(DropdownBody, null, /* @__PURE__ */ React18.createElement(
-    SearchInput,
-    {
-      value: searchFilter,
-      onChange: (e) => setSearchFilter(e.target.value),
-      placeholder: "Search",
-      containerStyle: CONTAINER_STYLE,
-      inputStyle: SEARCH_INPUT_STYLE,
-      showClear: false
-    }
-  ), /* @__PURE__ */ React18.createElement(DropdownListWrapper, null, getDropdownList().map((item) => /* @__PURE__ */ React18.createElement(
-    DropdownItem,
-    {
-      key: item.id,
-      onClick: (e) => handleItemClick(item)
-    },
-    /* @__PURE__ */ React18.createElement(Text, null, item.label)
-  )))));
-}
-
-// src/design.system/switch/switch.tsx
-import React19 from "react";
-
-// src/design.system/switch/switch.styled.tsx
-import styled11 from "styled-components";
-var SwitchInputWrapper = styled11.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-`;
-var SwitchToggleWrapper = styled11.div`
-  position: relative;
-  width: 30px;
-  height: 16px;
-  background-color: ${({ active, theme: theme2 }) => active ? theme2.colors.secondary : theme2.text.grey};
-  cursor: pointer;
-  user-select: none;
-  border-radius: 20px;
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-var SwitchButtonWrapper = styled11.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 14px;
-  height: 14px;
-  cursor: pointer;
-  color: #fff;
-  background-color: ${({ disabled, theme: theme2 }) => !disabled ? theme2.text.light_grey : theme2.text.white};
-  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);
-  border-radius: 100%;
-  position: absolute;
-  transition: all 0.2s ease;
-  left: ${({ disabled }) => !disabled ? 2 : 18}px;
-`;
-
-// src/design.system/switch/switch.tsx
-function Switch({
-  toggle,
-  handleToggleChange,
-  style,
-  label = "Select All"
-}) {
-  return /* @__PURE__ */ React19.createElement(SwitchInputWrapper, null, /* @__PURE__ */ React19.createElement(
-    SwitchToggleWrapper,
-    {
-      active: toggle || void 0,
-      onClick: handleToggleChange
-    },
-    /* @__PURE__ */ React19.createElement(SwitchButtonWrapper, { disabled: toggle || void 0 })
-  ), label && /* @__PURE__ */ React19.createElement(Text, { size: 14 }, label));
-}
-
-// src/design.system/checkbox/checkbox.tsx
-import React21 from "react";
-
-// src/design.system/checkbox/checkbox.styled.tsx
-import { styled as styled12 } from "styled-components";
-var CheckboxWrapper = styled12.div`
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  cursor: ${({ disabled }) => disabled ? "not-allowed" : "pointer"};
-  pointer-events: ${({ disabled }) => disabled ? "none" : "auto"};
-  opacity: ${({ disabled }) => disabled ? "0.5" : "1"};
-`;
-var CheckboxItem = styled12.span`
-  width: 16px;
-  height: 16px;
-  border: ${({ theme: theme2 }) => `solid 1px ${theme2.colors.light_grey}`};
-  border-radius: 4px;
-`;
-
-// src/assets/icons/checkbox-rect.svg
-import * as React20 from "react";
-var SvgCheckboxRect = (props) => /* @__PURE__ */ React20.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React20.createElement("rect", { x: 0.5, y: 0.5, width: 17, height: 17, rx: 3.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React20.createElement("path", { d: "M13.7727 6L7.39773 12.375L4.5 9.47727", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
-var checkbox_rect_default = SvgCheckboxRect;
-
-// src/design.system/checkbox/checkbox.tsx
-function Checkbox({
-  onChange,
-  value,
-  label = "",
-  disabled = false
-}) {
-  return /* @__PURE__ */ React21.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React21.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React21.createElement(CheckboxItem, null), /* @__PURE__ */ React21.createElement(Text, { size: 14 }, label));
-}
-
-// src/design.system/selected.counter/selected.counter.tsx
-import React23 from "react";
-
-// src/design.system/selected.counter/selected.counter.styled.tsx
-import styled13 from "styled-components";
-var SelectedCounterWrapper = styled13.div`
-  display: flex;
-  padding: 4px;
-  align-items: center;
-  gap: 4px;
-  border-radius: 14px;
-  background: ${({ theme: theme2 }) => theme2.colors.dark_blue};
-`;
-
-// src/assets/icons/check.svg
-import * as React22 from "react";
-var SvgCheck = (props) => /* @__PURE__ */ React22.createElement("svg", { width: 10, height: 10, viewBox: "0 0 10 10", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React22.createElement("g", { clipPath: "url(#clip0_48_7283)" }, /* @__PURE__ */ React22.createElement("path", { d: "M1.5625 5.625L3.75 7.8125L8.75 2.8125", stroke: "#96F2FF", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" })), /* @__PURE__ */ React22.createElement("defs", null, /* @__PURE__ */ React22.createElement("clipPath", { id: "clip0_48_7283" }, /* @__PURE__ */ React22.createElement("rect", { width: 10, height: 10, fill: "white" }))));
-var check_default = SvgCheck;
-
-// src/design.system/selected.counter/selected.counter.tsx
-function SelectedCounter({ total, selected }) {
-  return /* @__PURE__ */ React23.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ React23.createElement(check_default, null), /* @__PURE__ */ React23.createElement(Text, { size: 13, weight: 500 }, `${selected} / ${total}`));
-}
-
-// src/design.system/link/link.tsx
-import React24 from "react";
-import { styled as styled14 } from "styled-components";
-var LinkContainer = styled14.div`
-  cursor: pointer;
-  .p {
-    cursor: pointer !important;
-  }
-`;
-function Link({
-  value,
-  onClick,
-  fontSize = 16,
-  color = palette_default.colors.secondary
-}) {
-  return /* @__PURE__ */ React24.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React24.createElement(Text, { size: fontSize, color }, value));
-}
-
 // src/assets/icons/question.svg
-import * as React25 from "react";
-var SvgQuestion = (props) => /* @__PURE__ */ React25.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React25.createElement("path", { d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z", fill: "#96F2FF" }));
+import * as React18 from "react";
+var SvgQuestion = (props) => /* @__PURE__ */ React18.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React18.createElement("path", { d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z", fill: "#96F2FF" }));
 var question_default = SvgQuestion;
 
 // src/design.system/tooltip/index.tsx
-import React26, { useState as useState5 } from "react";
-import styled15 from "styled-components";
-var TooltipContainer = styled15.div`
+import React19, { useState as useState4 } from "react";
+import styled11 from "styled-components";
+var TooltipContainer = styled11.div`
   display: inline-flex;
   align-items: center; // Align children and icon vertically
   position: relative;
 `;
-var Icon = styled15.div`
+var Icon = styled11.div`
   margin-left: 8px;
   display: flex;
   align-items: center;
 `;
-var TooltipText = styled15.div`
+var TooltipText = styled11.div`
   visibility: ${({ isVisible }) => isVisible ? "visible" : "hidden"};
   background-color: black;
   color: white;
@@ -846,13 +652,214 @@ var Tooltip = ({
   text: text2,
   icon = "?"
 }) => {
-  const [isVisible, setIsVisible] = useState5(false);
+  const [isVisible, setIsVisible] = useState4(false);
   const showTooltip = () => setIsVisible(true);
   const hideTooltip = () => setIsVisible(false);
   if (!text2)
-    return /* @__PURE__ */ React26.createElement(React26.Fragment, null, children);
-  return /* @__PURE__ */ React26.createElement(TooltipContainer, { onMouseEnter: showTooltip, onMouseLeave: hideTooltip }, children, /* @__PURE__ */ React26.createElement(TooltipText, { isVisible }, /* @__PURE__ */ React26.createElement(Text, { size: 12, weight: 600 }, text2)), /* @__PURE__ */ React26.createElement(Icon, null, /* @__PURE__ */ React26.createElement(question_default, null)));
+    return /* @__PURE__ */ React19.createElement(React19.Fragment, null, children);
+  return /* @__PURE__ */ React19.createElement(TooltipContainer, { onMouseEnter: showTooltip, onMouseLeave: hideTooltip }, children, /* @__PURE__ */ React19.createElement(TooltipText, { isVisible }, /* @__PURE__ */ React19.createElement(Text, { size: 12, weight: 600 }, text2)), /* @__PURE__ */ React19.createElement(Icon, null, /* @__PURE__ */ React19.createElement(question_default, null)));
 };
+
+// src/design.system/drop.down/drop.down.tsx
+var SELECTED_ITEM = "Select item";
+var CONTAINER_STYLE = {
+  width: "90%",
+  border: "none",
+  background: "transparent"
+};
+var SEARCH_INPUT_STYLE = { background: "transparent" };
+function DropDown({
+  data = [],
+  onChange,
+  width = 260,
+  value,
+  label,
+  tooltip,
+  required
+}) {
+  const [isOpen, setOpen] = useState5(false);
+  const [selectedItem, setSelectedItem] = useState5(value || null);
+  const [isHover, setHover] = useState5(false);
+  const [searchFilter, setSearchFilter] = useState5("");
+  const containerRef = useRef(null);
+  useEffect4(() => {
+    value && setSelectedItem(value);
+  }, [value]);
+  useOnClickOutside(containerRef, () => setOpen(false));
+  const toggleDropdown = () => setOpen(!isOpen);
+  const handleItemClick = (item) => {
+    onChange(item);
+    setSelectedItem(item);
+    setSearchFilter("");
+    setOpen(false);
+  };
+  function getDropdownList() {
+    return searchFilter ? data?.filter(
+      (item) => item?.label.toLowerCase().includes(searchFilter.toLowerCase())
+    ) : data;
+  }
+  return /* @__PURE__ */ React20.createElement(React20.Fragment, null, label && /* @__PURE__ */ React20.createElement(LabelWrapper, null, /* @__PURE__ */ React20.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React20.createElement("div", { style: { display: "flex", gap: 4 } }, required && /* @__PURE__ */ React20.createElement(Text, { color: palette_default.colors.error, size: 14, weight: 600 }, "*"), /* @__PURE__ */ React20.createElement(Text, { size: 14, weight: 600 }, label)))), /* @__PURE__ */ React20.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React20.createElement(
+    DropdownWrapper,
+    {
+      selected: isHover,
+      onMouseEnter: () => setHover(true),
+      onMouseLeave: () => setHover(false),
+      onClick: toggleDropdown
+    },
+    /* @__PURE__ */ React20.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React20.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
+  ), isOpen && /* @__PURE__ */ React20.createElement(DropdownBody, null, /* @__PURE__ */ React20.createElement(
+    SearchInput,
+    {
+      value: searchFilter,
+      onChange: (e) => setSearchFilter(e.target.value),
+      placeholder: "Search",
+      containerStyle: CONTAINER_STYLE,
+      inputStyle: SEARCH_INPUT_STYLE,
+      showClear: false
+    }
+  ), /* @__PURE__ */ React20.createElement(DropdownListWrapper, null, getDropdownList().map((item) => /* @__PURE__ */ React20.createElement(
+    DropdownItem,
+    {
+      key: item.id,
+      onClick: (e) => handleItemClick(item)
+    },
+    /* @__PURE__ */ React20.createElement(Text, null, item.label)
+  ))))));
+}
+
+// src/design.system/switch/switch.tsx
+import React21 from "react";
+
+// src/design.system/switch/switch.styled.tsx
+import styled12 from "styled-components";
+var SwitchInputWrapper = styled12.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+var SwitchToggleWrapper = styled12.div`
+  position: relative;
+  width: 30px;
+  height: 16px;
+  background-color: ${({ active, theme: theme2 }) => active ? theme2.colors.secondary : theme2.text.grey};
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+var SwitchButtonWrapper = styled12.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  color: #fff;
+  background-color: ${({ disabled, theme: theme2 }) => !disabled ? theme2.text.light_grey : theme2.text.white};
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.25);
+  border-radius: 100%;
+  position: absolute;
+  transition: all 0.2s ease;
+  left: ${({ disabled }) => !disabled ? 2 : 18}px;
+`;
+
+// src/design.system/switch/switch.tsx
+function Switch({
+  toggle,
+  handleToggleChange,
+  style,
+  label = "Select All"
+}) {
+  return /* @__PURE__ */ React21.createElement(SwitchInputWrapper, null, /* @__PURE__ */ React21.createElement(
+    SwitchToggleWrapper,
+    {
+      active: toggle || void 0,
+      onClick: handleToggleChange
+    },
+    /* @__PURE__ */ React21.createElement(SwitchButtonWrapper, { disabled: toggle || void 0 })
+  ), label && /* @__PURE__ */ React21.createElement(Text, { size: 14 }, label));
+}
+
+// src/design.system/checkbox/checkbox.tsx
+import React23 from "react";
+
+// src/design.system/checkbox/checkbox.styled.tsx
+import { styled as styled13 } from "styled-components";
+var CheckboxWrapper = styled13.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: ${({ disabled }) => disabled ? "not-allowed" : "pointer"};
+  pointer-events: ${({ disabled }) => disabled ? "none" : "auto"};
+  opacity: ${({ disabled }) => disabled ? "0.5" : "1"};
+`;
+var CheckboxItem = styled13.span`
+  width: 16px;
+  height: 16px;
+  border: ${({ theme: theme2 }) => `solid 1px ${theme2.colors.light_grey}`};
+  border-radius: 4px;
+`;
+
+// src/assets/icons/checkbox-rect.svg
+import * as React22 from "react";
+var SvgCheckboxRect = (props) => /* @__PURE__ */ React22.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React22.createElement("rect", { x: 0.5, y: 0.5, width: 17, height: 17, rx: 3.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React22.createElement("path", { d: "M13.7727 6L7.39773 12.375L4.5 9.47727", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
+var checkbox_rect_default = SvgCheckboxRect;
+
+// src/design.system/checkbox/checkbox.tsx
+function Checkbox({
+  onChange,
+  value,
+  label = "",
+  disabled = false
+}) {
+  return /* @__PURE__ */ React23.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React23.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React23.createElement(CheckboxItem, null), /* @__PURE__ */ React23.createElement(Text, { size: 14 }, label));
+}
+
+// src/design.system/selected.counter/selected.counter.tsx
+import React25 from "react";
+
+// src/design.system/selected.counter/selected.counter.styled.tsx
+import styled14 from "styled-components";
+var SelectedCounterWrapper = styled14.div`
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 14px;
+  background: ${({ theme: theme2 }) => theme2.colors.dark_blue};
+`;
+
+// src/assets/icons/check.svg
+import * as React24 from "react";
+var SvgCheck = (props) => /* @__PURE__ */ React24.createElement("svg", { width: 10, height: 10, viewBox: "0 0 10 10", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React24.createElement("g", { clipPath: "url(#clip0_48_7283)" }, /* @__PURE__ */ React24.createElement("path", { d: "M1.5625 5.625L3.75 7.8125L8.75 2.8125", stroke: "#96F2FF", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" })), /* @__PURE__ */ React24.createElement("defs", null, /* @__PURE__ */ React24.createElement("clipPath", { id: "clip0_48_7283" }, /* @__PURE__ */ React24.createElement("rect", { width: 10, height: 10, fill: "white" }))));
+var check_default = SvgCheck;
+
+// src/design.system/selected.counter/selected.counter.tsx
+function SelectedCounter({ total, selected }) {
+  return /* @__PURE__ */ React25.createElement(SelectedCounterWrapper, null, selected !== 0 && /* @__PURE__ */ React25.createElement(check_default, null), /* @__PURE__ */ React25.createElement(Text, { size: 13, weight: 500 }, `${selected} / ${total}`));
+}
+
+// src/design.system/link/link.tsx
+import React26 from "react";
+import { styled as styled15 } from "styled-components";
+var LinkContainer = styled15.div`
+  cursor: pointer;
+  .p {
+    cursor: pointer !important;
+  }
+`;
+function Link({
+  value,
+  onClick,
+  fontSize = 16,
+  color = palette_default.colors.secondary
+}) {
+  return /* @__PURE__ */ React26.createElement(LinkContainer, { onClick }, /* @__PURE__ */ React26.createElement(Text, { size: fontSize, color }, value));
+}
 
 // src/design.system/image/image.tsx
 import Image from "next/image";
@@ -928,7 +935,7 @@ var StyledActionInput = styled16(StyledInput)`
   font-family: Inter, sans-serif;
   font-size: 24px;
 `;
-var LabelWrapper = styled16.div`
+var LabelWrapper2 = styled16.div`
   margin-bottom: 8px;
   text-align: start;
 `;
@@ -961,13 +968,14 @@ function Input({
   style = {},
   placeholder,
   onKeyDown,
-  tooltip
+  tooltip,
+  required
 }) {
   const [showPassword, setShowPassword] = useState6(false);
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React30.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React30.createElement(LabelWrapper, null, /* @__PURE__ */ React30.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React30.createElement(Text, { size: 14, weight: 600 }, label))), /* @__PURE__ */ React30.createElement(
+  return /* @__PURE__ */ React30.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React30.createElement(LabelWrapper2, null, /* @__PURE__ */ React30.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React30.createElement("div", { style: { display: "flex", gap: 4 } }, required && /* @__PURE__ */ React30.createElement(Text, { color: palette_default.colors.error, size: 14, weight: 600 }, "*"), /* @__PURE__ */ React30.createElement(Text, { size: 14, weight: 600 }, label)))), /* @__PURE__ */ React30.createElement(
     StyledInputContainer,
     {
       active: !!value || void 0,

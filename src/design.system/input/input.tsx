@@ -10,6 +10,7 @@ import { Text } from '../text/text';
 import EyeOpenIcon from '@/assets/icons/eye-open.svg';
 import EyeCloseIcon from '@/assets/icons/eye-close.svg';
 import { Tooltip } from '../tooltip';
+import theme from '@/styles/palette';
 interface InputProps {
   label?: string;
   value: string;
@@ -20,6 +21,7 @@ interface InputProps {
   placeholder?: string;
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   tooltip?: string;
+  required?: boolean;
 }
 
 export function Input({
@@ -32,6 +34,7 @@ export function Input({
   placeholder,
   onKeyDown,
   tooltip,
+  required,
 }: InputProps): JSX.Element {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -44,9 +47,16 @@ export function Input({
       {label && (
         <LabelWrapper>
           <Tooltip text={tooltip || ''}>
-            <Text size={14} weight={600}>
-              {label}
-            </Text>
+            <div style={{ display: 'flex', gap: 4 }}>
+              {required && (
+                <Text color={theme.colors.error} size={14} weight={600}>
+                  {'*'}
+                </Text>
+              )}
+              <Text size={14} weight={600}>
+                {label}
+              </Text>
+            </div>
           </Tooltip>
         </LabelWrapper>
       )}

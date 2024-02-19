@@ -73,3 +73,7 @@ export const DropdownItem = styled.div`
     cursor: pointer !important;
   }
 `;
+export const LabelWrapper = styled.div`
+  margin-bottom: 8px;
+  text-align: start;
+`;
