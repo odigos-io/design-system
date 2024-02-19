@@ -13,9 +13,16 @@ import {
 } from '..';
 import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
 import { MultiInput } from '@/design.system/multi-input';
+import { KeyValueTable } from '@/design.system/key-value-input';
 export default function Home() {
   const [selected, setSelected] = useState('sources');
-
+  const [keyValues, setKeyValues] = useState([
+    {
+      id: 0,
+      key: '',
+      value: '',
+    },
+  ]);
   const options = [
     {
       label: 'Sources',
@@ -53,13 +60,18 @@ export default function Home() {
 
   return (
     <div style={{ background: '#0E1C28', padding: 50 }}>
-      {/* <Input
-        style={{ width: '98%' }}
+      <Input
         label="Token name"
         value={''}
-        placeholder="Name of the token"
+        placeholder="Name of the token Name of the token"
         onChange={(value) => {}}
-      /> */}
+      />
+      <KeyValueTable
+        title="dfsdf"
+        keyValues={keyValues}
+        setKeyValues={setKeyValues}
+        tooltip={''}
+      />
       <div style={{ width: 800, height: 150 }}>
         <MultiInput onListChange={handleListChange} initialList={[]} />
       </div>

@@ -134,7 +134,12 @@ interface LinkProps {
 }
 declare function Link({ value, onClick, fontSize, color, }: LinkProps): React.JSX.Element;
 
-declare function Tooltip(props: any): React.JSX.Element;
+interface TooltipProps {
+    children: ReactNode;
+    text: string;
+    icon?: ReactNode;
+}
+declare const Tooltip: React.FC<TooltipProps>;
 
 interface ImageProps {
     src: string;
@@ -154,8 +159,9 @@ interface InputProps$1 {
     style?: React.CSSProperties;
     placeholder?: string;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+    tooltip?: string;
 }
-declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, tooltip, }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;
@@ -297,4 +303,20 @@ interface MultiInputProps {
 }
 declare const MultiInput: React.FC<MultiInputProps>;
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, Link, Loader, Modal, MultiInput, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };
+interface KeyValue {
+    id: number;
+    key: string;
+    value: string;
+}
+interface KeyValueTableProps {
+    keyValues: KeyValue[];
+    setKeyValues: (keyValues: KeyValue[]) => void;
+    title?: string;
+    titleKey?: string;
+    titleValue?: string;
+    tooltip?: string;
+    titleButton?: string;
+}
+declare const KeyValueTable: React.FC<KeyValueTableProps>;
+
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, ThemeProviderWrapper, Tooltip, Video };

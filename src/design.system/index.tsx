@@ -12,7 +12,7 @@ export { Switch } from './switch/switch';
 export { Checkbox } from './checkbox/checkbox';
 export { SelectedCounter } from './selected.counter/selected.counter';
 export { Link } from './link/link';
-export { Tooltip } from './tooltip/tooltip';
+export { Tooltip } from './tooltip';
 export { ImageComponent as Image } from './image/image';
 export { Input } from './input/input';
 export { ActionInput } from './input/action.input';
@@ -28,3 +28,7 @@ export { Divider } from './divider/divider';
 export { Note } from './note/note';
 export { SegmentedControls } from './segmented-controls';
 export { MultiInput } from './multi-input';
+export { KeyValueTable } from './key-value-input';
+
+export type { KeyValueTableProps } from './key-value-input';
+export type { KeyValue } from './key-value-input';
