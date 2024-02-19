@@ -698,7 +698,7 @@ function DropDown({
       (item) => item?.label.toLowerCase().includes(searchFilter.toLowerCase())
     ) : data;
   }
-  return /* @__PURE__ */ React20.createElement(React20.Fragment, null, label && /* @__PURE__ */ React20.createElement(LabelWrapper, null, /* @__PURE__ */ React20.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React20.createElement("div", { style: { display: "flex", gap: 4 } }, required && /* @__PURE__ */ React20.createElement(Text, { color: palette_default.colors.error, size: 14, weight: 600 }, "*"), /* @__PURE__ */ React20.createElement(Text, { size: 14, weight: 600 }, label)))), /* @__PURE__ */ React20.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React20.createElement(
+  return /* @__PURE__ */ React20.createElement(React20.Fragment, null, label && /* @__PURE__ */ React20.createElement(LabelWrapper, null, /* @__PURE__ */ React20.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React20.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React20.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React20.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React20.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React20.createElement(
     DropdownWrapper,
     {
       selected: isHover,
@@ -975,7 +975,7 @@ function Input({
   function handleChange(event) {
     onChange(event.target.value);
   }
-  return /* @__PURE__ */ React30.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React30.createElement(LabelWrapper2, null, /* @__PURE__ */ React30.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React30.createElement("div", { style: { display: "flex", gap: 4 } }, required && /* @__PURE__ */ React30.createElement(Text, { color: palette_default.colors.error, size: 14, weight: 600 }, "*"), /* @__PURE__ */ React30.createElement(Text, { size: 14, weight: 600 }, label)))), /* @__PURE__ */ React30.createElement(
+  return /* @__PURE__ */ React30.createElement("div", { style: { ...style } }, label && /* @__PURE__ */ React30.createElement(LabelWrapper2, null, /* @__PURE__ */ React30.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React30.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React30.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React30.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React30.createElement(
     StyledInputContainer,
     {
       active: !!value || void 0,

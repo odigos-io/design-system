@@ -81,14 +81,14 @@ export function DropDown({
         <LabelWrapper>
           <Tooltip text={tooltip || ''}>
             <div style={{ display: 'flex', gap: 4 }}>
-              {required && (
-                <Text color={theme.colors.error} size={14} weight={600}>
-                  {'*'}
-                </Text>
-              )}
               <Text size={14} weight={600}>
                 {label}
               </Text>
+              {required && (
+                <Text size={14} weight={600}>
+                  {'*'}
+                </Text>
+              )}
             </div>
           </Tooltip>
         </LabelWrapper>

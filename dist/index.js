@@ -2162,14 +2162,13 @@ function DropDown(param) {
             display: "flex",
             gap: 4
         }
-    }, required && /* @__PURE__ */ import_react13.default.createElement(Text, {
-        color: palette_default.colors.error,
+    }, /* @__PURE__ */ import_react13.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*"), /* @__PURE__ */ import_react13.default.createElement(Text, {
+    }, label), required && /* @__PURE__ */ import_react13.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, label)))), /* @__PURE__ */ import_react13.default.createElement("div", {
+    }, "*")))), /* @__PURE__ */ import_react13.default.createElement("div", {
         style: {
             height: 37,
             width: width
@@ -2453,14 +2452,13 @@ function Input(param) {
             display: "flex",
             gap: 4
         }
-    }, required && /* @__PURE__ */ import_react19.default.createElement(Text, {
-        color: palette_default.colors.error,
+    }, /* @__PURE__ */ import_react19.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*"), /* @__PURE__ */ import_react19.default.createElement(Text, {
+    }, label), required && /* @__PURE__ */ import_react19.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, label)))), /* @__PURE__ */ import_react19.default.createElement(StyledInputContainer, {
+    }, "*")))), /* @__PURE__ */ import_react19.default.createElement(StyledInputContainer, {
         active: !!value || void 0,
         error: error ? true : void 0
     }, /* @__PURE__ */ import_react19.default.createElement(StyledInput, {
