@@ -50,7 +50,7 @@ export const StyledInput = styled.input`
   background: transparent;
   border: none;
   outline: none;
-  width: 100%;
+  width: 96%;
   color: ${({ theme }) => theme.text.white};
 `;
 
