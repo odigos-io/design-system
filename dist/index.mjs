@@ -363,6 +363,7 @@ var CardContainer = styled6.div`
   height: fit-content;
   flex-direction: column;
   border-radius: 24px;
+  height: 100%;
   border: ${({ selected, theme: theme2, type }) => `1px solid ${selected ? theme2.colors.secondary : type === "primary" ? theme2.colors.dark_blue : "#374a5b"}`};
   background: ${({ theme: theme2, type }) => type === "primary" ? theme2.colors.dark : "#0E1C28"};
   box-shadow: ${({ type }) => type === "primary" ? "none" : "0px -6px 16px 0px rgba(0, 0, 0, 0.25),4px 4px 16px 0px rgba(71, 231, 241, 0.05),-4px 4px 16px 0px rgba(71, 231, 241, 0.05)"};
@@ -372,6 +373,7 @@ var CardHeader = styled6(CardContainer)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: fit-content;
   gap: 16px;
   padding: 24px 0px;
   box-shadow: none;
@@ -897,7 +899,7 @@ var StyledInputContainer = styled16.div`
   width: 100%;
   padding-left: 13px;
   height: 100%;
-  min-height: 42px;
+  min-height: 37px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -1995,7 +1997,9 @@ import styled29 from "styled-components";
 var MultiInput = ({
   initialList = [],
   onListChange,
-  placeholder = "Add item to list"
+  placeholder = "Add item to list",
+  title,
+  tooltip
 }) => {
   const [inputValue, setInputValue] = useState10("");
   const [list, setList] = useState10(initialList);
@@ -2015,7 +2019,7 @@ var MultiInput = ({
     setList(newList);
     onListChange && onListChange(newList);
   };
-  return /* @__PURE__ */ React63.createElement(Container, null, /* @__PURE__ */ React63.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React63.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React63.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React63.createElement(
+  return /* @__PURE__ */ React63.createElement(React63.Fragment, null, title && /* @__PURE__ */ React63.createElement(TitleWrapper, null, /* @__PURE__ */ React63.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React63.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React63.createElement(Container, null, /* @__PURE__ */ React63.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React63.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React63.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React63.createElement(
     "svg",
     {
       width: "12",
@@ -2039,7 +2043,7 @@ var MultiInput = ({
       placeholder,
       onChange: (e) => handleInputChange(e)
     }
-  ), /* @__PURE__ */ React63.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React63.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add"))));
+  ), /* @__PURE__ */ React63.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React63.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add")))));
 };
 var Container = styled29.div`
   width: 100%;
@@ -2065,13 +2069,19 @@ var InputContainer = styled29.div`
   display: flex;
   gap: 10px;
   width: 100%;
-  height: 42px;
+  height: 37px;
 `;
 var Input2 = styled29(Input)`
   width: 100%;
 `;
 var Button2 = styled29(Button)`
   margin-left: 10px;
+`;
+var TitleWrapper = styled29.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 `;
 
 // src/design.system/key-value-input/index.tsx
@@ -2080,7 +2090,7 @@ import styled30 from "styled-components";
 var Container2 = styled30.div`
   width: 100%;
 `;
-var TitleWrapper = styled30.div`
+var TitleWrapper2 = styled30.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2152,7 +2162,7 @@ var KeyValueTable = ({
     );
     setKeyValues(updatedKeyValues);
   };
-  return /* @__PURE__ */ React64.createElement(Container2, null, title && /* @__PURE__ */ React64.createElement(TitleWrapper, null, /* @__PURE__ */ React64.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React64.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React64.createElement(Table, null, /* @__PURE__ */ React64.createElement("thead", null, /* @__PURE__ */ React64.createElement("tr", null, /* @__PURE__ */ React64.createElement(Th, null, /* @__PURE__ */ React64.createElement(
+  return /* @__PURE__ */ React64.createElement(Container2, null, title && /* @__PURE__ */ React64.createElement(TitleWrapper2, null, /* @__PURE__ */ React64.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React64.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React64.createElement(Table, null, /* @__PURE__ */ React64.createElement("thead", null, /* @__PURE__ */ React64.createElement("tr", null, /* @__PURE__ */ React64.createElement(Th, null, /* @__PURE__ */ React64.createElement(
     Text,
     {
       color: palette_default.text.grey,
@@ -2194,6 +2204,52 @@ var KeyValueTable = ({
     /* @__PURE__ */ React64.createElement(trash_default, null)
   )))), /* @__PURE__ */ React64.createElement("tfoot", null, /* @__PURE__ */ React64.createElement("tr", null, /* @__PURE__ */ React64.createElement(AddRowButton, { onClick: addRow, colSpan: 3 }, /* @__PURE__ */ React64.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, titleButton || "Add Row"))))));
 };
+
+// src/design.system/text.area/index.tsx
+import React65 from "react";
+import styled31 from "styled-components";
+var StyledTextArea = styled31.textarea`
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+
+  outline: none;
+  color: ${({ theme: theme2 }) => theme2.text.white};
+  font-family: ${palette_default.font_family.primary};
+  background-color: ${({ theme: theme2 }) => theme2.colors.light_dark};
+  border: ${({ theme: theme2, active }) => `1px solid ${active ? theme2.text.grey : theme2.colors.blue_grey}`};
+  &:hover {
+    border: ${({ theme: theme2 }) => `solid 1px ${theme2.text.grey}`};
+  }
+`;
+var LabelWrapper3 = styled31.div`
+  margin-bottom: 8px;
+  text-align: start;
+`;
+var TextArea = ({
+  placeholder,
+  value,
+  onChange,
+  rows = 4,
+  cols = 50,
+  tooltip,
+  label,
+  required
+}) => {
+  return /* @__PURE__ */ React65.createElement(React65.Fragment, null, label && /* @__PURE__ */ React65.createElement(LabelWrapper3, null, /* @__PURE__ */ React65.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React65.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React65.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React65.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React65.createElement(
+    StyledTextArea,
+    {
+      placeholder,
+      value,
+      onChange,
+      rows,
+      cols,
+      active: !!value
+    }
+  ));
+};
 export {
   ActionInput,
   Button,
@@ -2223,6 +2279,7 @@ export {
   Tag,
   Tap,
   Text,
+  TextArea,
   ThemeProviderWrapper,
   Tooltip,
   Video

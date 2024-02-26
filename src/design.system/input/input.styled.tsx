@@ -11,7 +11,7 @@ export const StyledInputContainer = styled.div<ActiveProps>`
   width: 100%;
   padding-left: 13px;
   height: 100%;
-  min-height: 42px;
+  min-height: 37px;
   align-items: center;
   flex-direction: column;
   justify-content: center;

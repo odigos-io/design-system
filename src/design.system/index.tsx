@@ -29,6 +29,8 @@ export { Note } from './note/note';
 export { SegmentedControls } from './segmented-controls';
 export { MultiInput } from './multi-input';
 export { KeyValueTable } from './key-value-input';
+export { TextArea } from './text.area';
 
 export type { KeyValueTableProps } from './key-value-input';
 export type { KeyValue } from './key-value-input';
+export type { TextAreaProps } from './text.area';

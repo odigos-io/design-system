@@ -382,7 +382,7 @@ function _templateObject10() {
 }
 function _templateObject11() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  position: relative;\n  height: fit-content;\n  flex-direction: column;\n  border-radius: 24px;\n  border: ",
+        "\n  display: inline-flex;\n  position: relative;\n  height: fit-content;\n  flex-direction: column;\n  border-radius: 24px;\n  height: 100%;\n  border: ",
         ";\n  background: ",
         ";\n  box-shadow: ",
         ";\n"
@@ -394,7 +394,7 @@ function _templateObject11() {
 }
 function _templateObject12() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 16px;\n  padding: 24px 0px;\n  box-shadow: none;\n"
+        "\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: fit-content;\n  gap: 16px;\n  padding: 24px 0px;\n  box-shadow: none;\n"
     ]);
     _templateObject12 = function _templateObject() {
         return data;
@@ -609,7 +609,7 @@ function _templateObject32() {
 }
 function _templateObject33() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  min-height: 42px;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
+        "\n  position: relative;\n  display: flex;\n  width: 100%;\n  padding-left: 13px;\n  height: 100%;\n  min-height: 37px;\n  align-items: center;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 8px;\n  border: ",
         ";\n  background: ",
         ";\n\n  &:hover {\n    border: ",
         ";\n  }\n"
@@ -1147,7 +1147,7 @@ function _templateObject87() {
 }
 function _templateObject88() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 42px;\n"
+        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 37px;\n"
     ]);
     _templateObject88 = function _templateObject() {
         return data;
@@ -1174,7 +1174,7 @@ function _templateObject90() {
 }
 function _templateObject91() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject91 = function _templateObject() {
         return data;
@@ -1183,7 +1183,7 @@ function _templateObject91() {
 }
 function _templateObject92() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject92 = function _templateObject() {
         return data;
@@ -1192,8 +1192,7 @@ function _templateObject92() {
 }
 function _templateObject93() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject93 = function _templateObject() {
         return data;
@@ -1202,7 +1201,8 @@ function _templateObject93() {
 }
 function _templateObject94() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject94 = function _templateObject() {
         return data;
@@ -1211,10 +1211,7 @@ function _templateObject94() {
 }
 function _templateObject95() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject95 = function _templateObject() {
         return data;
@@ -1223,7 +1220,9 @@ function _templateObject95() {
 }
 function _templateObject96() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
         ";\n"
     ]);
     _templateObject96 = function _templateObject() {
@@ -1233,10 +1232,43 @@ function _templateObject96() {
 }
 function _templateObject97() {
     var data = _tagged_template_literal([
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
+    ]);
+    _templateObject97 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject98() {
+    var data = _tagged_template_literal([
         "\n  text-align: center;\n  border-top: solid 1px ",
         ";\n  padding: 4px;\n  cursor: pointer;\n"
     ]);
-    _templateObject97 = function _templateObject() {
+    _templateObject98 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject99() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n  padding: 8px 12px;\n  border-radius: 8px;\n  box-sizing: border-box;\n  resize: vertical;\n\n  outline: none;\n  color: ",
+        ";\n  font-family: ",
+        ";\n  background-color: ",
+        ";\n  border: ",
+        ";\n  &:hover {\n    border: ",
+        ";\n  }\n"
+    ]);
+    _templateObject99 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject100() {
+    var data = _tagged_template_literal([
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
+    ]);
+    _templateObject100 = function _templateObject() {
         return data;
     };
     return data;
@@ -1385,6 +1417,9 @@ __export(src_exports, {
     },
     Text: function() {
         return Text;
+    },
+    TextArea: function() {
+        return TextArea;
     },
     ThemeProviderWrapper: function() {
         return ThemeProviderWrapper;
@@ -3608,7 +3643,7 @@ function SegmentedControls(param) {
 var import_react38 = __toESM(require("react"));
 var import_styled_components31 = __toESM(require("styled-components"));
 var MultiInput = function(param) {
-    var _param_initialList = param.initialList, initialList = _param_initialList === void 0 ? [] : _param_initialList, onListChange = param.onListChange, _param_placeholder = param.placeholder, placeholder = _param_placeholder === void 0 ? "Add item to list" : _param_placeholder;
+    var _param_initialList = param.initialList, initialList = _param_initialList === void 0 ? [] : _param_initialList, onListChange = param.onListChange, _param_placeholder = param.placeholder, placeholder = _param_placeholder === void 0 ? "Add item to list" : _param_placeholder, title = param.title, tooltip = param.tooltip;
     var _ref = _sliced_to_array((0, import_react38.useState)(""), 2), inputValue = _ref[0], setInputValue = _ref[1];
     var _ref1 = _sliced_to_array((0, import_react38.useState)(initialList), 2), list = _ref1[0], setList = _ref1[1];
     var handleInputChange = function(e) {
@@ -3631,7 +3666,12 @@ var MultiInput = function(param) {
         setList(newList);
         onListChange && onListChange(newList);
     };
-    return /* @__PURE__ */ import_react38.default.createElement(Container, null, /* @__PURE__ */ import_react38.default.createElement(ListContainer, null, list.map(function(item, index) {
+    return /* @__PURE__ */ import_react38.default.createElement(import_react38.default.Fragment, null, title && /* @__PURE__ */ import_react38.default.createElement(TitleWrapper, null, /* @__PURE__ */ import_react38.default.createElement(Tooltip, {
+        text: tooltip || ""
+    }, /* @__PURE__ */ import_react38.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, title))), /* @__PURE__ */ import_react38.default.createElement(Container, null, /* @__PURE__ */ import_react38.default.createElement(ListContainer, null, list.map(function(item, index) {
         return /* @__PURE__ */ import_react38.default.createElement(ListItem, {
             key: index,
             onClick: function() {
@@ -3668,7 +3708,7 @@ var MultiInput = function(param) {
         size: 14,
         weight: 600,
         color: palette_default.text.dark_button
-    }, "Add"))));
+    }, "Add")))));
 };
 var Container = import_styled_components31.default.div(_templateObject85());
 var ListContainer = import_styled_components31.default.div(_templateObject86());
@@ -3676,22 +3716,23 @@ var ListItem = import_styled_components31.default.div(_templateObject87(), palet
 var InputContainer = import_styled_components31.default.div(_templateObject88());
 var Input2 = (0, import_styled_components31.default)(Input)(_templateObject89());
 var Button2 = (0, import_styled_components31.default)(Button)(_templateObject90());
+var TitleWrapper = import_styled_components31.default.div(_templateObject91());
 // src/design.system/key-value-input/index.tsx
 var import_react39 = __toESM(require("react"));
 var import_styled_components32 = __toESM(require("styled-components"));
-var Container2 = import_styled_components32.default.div(_templateObject91());
-var TitleWrapper = import_styled_components32.default.div(_templateObject92());
-var Table = import_styled_components32.default.table(_templateObject93(), palette_default.text.grey);
-var Th = import_styled_components32.default.th(_templateObject94());
-var Td = import_styled_components32.default.td(_templateObject95(), palette_default.text.grey, function(param) {
+var Container2 = import_styled_components32.default.div(_templateObject92());
+var TitleWrapper2 = import_styled_components32.default.div(_templateObject93());
+var Table = import_styled_components32.default.table(_templateObject94(), palette_default.text.grey);
+var Th = import_styled_components32.default.th(_templateObject95());
+var Td = import_styled_components32.default.td(_templateObject96(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input3 = import_styled_components32.default.input(_templateObject96(), palette_default.text.white);
-var AddRowButton = import_styled_components32.default.td(_templateObject97(), palette_default.text.grey);
+var Input3 = import_styled_components32.default.input(_templateObject97(), palette_default.text.white);
+var AddRowButton = import_styled_components32.default.td(_templateObject98(), palette_default.text.grey);
 var KeyValueTable = function(param) {
     var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip;
     var _ref = _sliced_to_array((0, import_react39.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];
@@ -3728,7 +3769,7 @@ var KeyValueTable = function(param) {
         });
         setKeyValues(updatedKeyValues);
     };
-    return /* @__PURE__ */ import_react39.default.createElement(Container2, null, title && /* @__PURE__ */ import_react39.default.createElement(TitleWrapper, null, /* @__PURE__ */ import_react39.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react39.default.createElement(Container2, null, title && /* @__PURE__ */ import_react39.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react39.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react39.default.createElement(Text, {
         size: 14,
@@ -3782,6 +3823,47 @@ var KeyValueTable = function(param) {
         color: palette_default.colors.torquiz_light
     }, titleButton || "Add Row"))))));
 };
+// src/design.system/text.area/index.tsx
+var import_react40 = __toESM(require("react"));
+var import_styled_components33 = __toESM(require("styled-components"));
+var StyledTextArea = import_styled_components33.default.textarea(_templateObject99(), function(param) {
+    var theme2 = param.theme;
+    return theme2.text.white;
+}, palette_default.font_family.primary, function(param) {
+    var theme2 = param.theme;
+    return theme2.colors.light_dark;
+}, function(param) {
+    var theme2 = param.theme, active = param.active;
+    return "1px solid ".concat(active ? theme2.text.grey : theme2.colors.blue_grey);
+}, function(param) {
+    var theme2 = param.theme;
+    return "solid 1px ".concat(theme2.text.grey);
+});
+var LabelWrapper3 = import_styled_components33.default.div(_templateObject100());
+var TextArea = function(param) {
+    var placeholder = param.placeholder, value = param.value, onChange = param.onChange, _param_rows = param.rows, rows = _param_rows === void 0 ? 4 : _param_rows, _param_cols = param.cols, cols = _param_cols === void 0 ? 50 : _param_cols, tooltip = param.tooltip, label = param.label, required = param.required;
+    return /* @__PURE__ */ import_react40.default.createElement(import_react40.default.Fragment, null, label && /* @__PURE__ */ import_react40.default.createElement(LabelWrapper3, null, /* @__PURE__ */ import_react40.default.createElement(Tooltip, {
+        text: tooltip || ""
+    }, /* @__PURE__ */ import_react40.default.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 4
+        }
+    }, /* @__PURE__ */ import_react40.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, label), required && /* @__PURE__ */ import_react40.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, "*")))), /* @__PURE__ */ import_react40.default.createElement(StyledTextArea, {
+        placeholder: placeholder,
+        value: value,
+        onChange: onChange,
+        rows: rows,
+        cols: cols,
+        active: !!value
+    }));
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     ActionInput: ActionInput,
@@ -3812,6 +3894,7 @@ var KeyValueTable = function(param) {
     Tag: Tag,
     Tap: Tap,
     Text: Text,
+    TextArea: TextArea,
     ThemeProviderWrapper: ThemeProviderWrapper,
     Tooltip: Tooltip,
     Video: Video

@@ -14,7 +14,9 @@ import {
 import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
 import { MultiInput } from '@/design.system/multi-input';
 import { KeyValueTable } from '@/design.system/key-value-input';
+import { TextArea } from '@/design.system/text.area';
 export default function Home() {
+  const [text, setText] = useState('');
   const [selected, setSelected] = useState('sources');
   const [keyValues, setKeyValues] = useState([
     {
@@ -60,20 +62,35 @@ export default function Home() {
 
   return (
     <div style={{ background: '#0E1C28', padding: 50 }}>
+      <TextArea
+        label="Token name"
+        value={text}
+        placeholder="Name of the token Name of the token"
+        onChange={(value) => setText(value.target.value)}
+        tooltip="Name of the token Name of the token"
+      />
+
       <Input
         label="Token name"
-        value={''}
+        value={'sdfdsf'}
         placeholder="Name of the token Name of the token"
         onChange={(value) => {}}
+        tooltip="Name of the token Name of the token"
       />
       <KeyValueTable
-        title="dfsdf"
+        title="title"
         keyValues={keyValues}
         setKeyValues={setKeyValues}
-        tooltip={''}
+        tooltip={'ss'}
       />
       <div style={{ width: 800, height: 150 }}>
-        <MultiInput onListChange={handleListChange} initialList={[]} />
+        <MultiInput
+          title="title1"
+          placeholder="placeholder"
+          tooltip="tooltip"
+          onListChange={handleListChange}
+          initialList={[]}
+        />
       </div>
       <div>
         <DropDown

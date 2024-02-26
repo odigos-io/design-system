@@ -11,6 +11,7 @@ export const CardContainer = styled.div<CardContainerProps>`
   height: fit-content;
   flex-direction: column;
   border-radius: 24px;
+  height: 100%;
   border: ${({ selected, theme, type }) =>
     `1px solid ${
       selected
@@ -32,6 +33,7 @@ export const CardHeader = styled(CardContainer)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: fit-content;
   gap: 16px;
   padding: 24px 0px;
   box-shadow: none;
