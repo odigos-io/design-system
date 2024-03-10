@@ -15,6 +15,7 @@ import { ModalPositionX, ModalPositionY } from '@/design.system/modal/types';
 import { MultiInput } from '@/design.system/multi-input';
 import { KeyValueTable } from '@/design.system/key-value-input';
 import { TextArea } from '@/design.system/text.area';
+import { MultiInputTable } from '@/design.system/multi-input/multi.input.table';
 export default function Home() {
   const [text, setText] = useState('');
   const [selected, setSelected] = useState('sources');
@@ -25,6 +26,9 @@ export default function Home() {
       value: '',
     },
   ]);
+
+  const [values, setValues] = useState(['test', 'dsfds']);
+
   const options = [
     {
       label: 'Sources',
@@ -68,6 +72,7 @@ export default function Home() {
         placeholder="Name of the token Name of the token"
         onChange={(value) => setText(value.target.value)}
         tooltip="Name of the token Name of the token"
+        required
       />
 
       <Input
@@ -76,14 +81,16 @@ export default function Home() {
         placeholder="Name of the token Name of the token"
         onChange={(value) => {}}
         tooltip="Name of the token Name of the token"
+        required
       />
       <KeyValueTable
         title="title"
         keyValues={keyValues}
         setKeyValues={setKeyValues}
         tooltip={'ss'}
+        required
       />
-      <div style={{ width: 800, height: 150 }}>
+      <div style={{}}>
         <MultiInput
           title="title1"
           placeholder="placeholder"
@@ -91,8 +98,28 @@ export default function Home() {
           onListChange={handleListChange}
           initialList={[]}
         />
+        <MultiInputTable
+          title="title1"
+          tooltip="tooltip"
+          values={values}
+          onValuesChange={setValues}
+          required
+          placeholder="placeholder"
+        />
       </div>
-      <div>
+      <DropDown
+        label="test"
+        tooltip="test"
+        required
+        data={[
+          { label: 'Option 1', id: 'option1' },
+          { label: 'Option 2', id: 'option2' },
+          { label: 'Option 3', id: 'option3' },
+        ]}
+        value={{ label: 'Option 1', id: 'option1' }}
+        onChange={(value) => {}}
+      />
+      {/* <div>
         <DropDown
           label="test"
           tooltip="test"
@@ -114,7 +141,7 @@ export default function Home() {
           value={{ label: 'Option 1', id: 'option1' }}
           onChange={(value) => {}}
         />
-      </div>
+      </div> */}
       {/*
       <Modal show={true} config={modalConfig} closeModal={() => {}}>
         <div></div>

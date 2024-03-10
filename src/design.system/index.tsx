@@ -30,7 +30,9 @@ export { SegmentedControls } from './segmented-controls';
 export { MultiInput } from './multi-input';
 export { KeyValueTable } from './key-value-input';
 export { TextArea } from './text.area';
+export { MultiInputTable } from './multi-input/multi.input.table';
 
+export type { MultiInputTableProps } from './multi-input/multi.input.table';
 export type { KeyValueTableProps } from './key-value-input';
 export type { KeyValue } from './key-value-input';
 export type { TextAreaProps } from './text.area';

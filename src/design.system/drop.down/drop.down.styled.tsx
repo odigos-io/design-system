@@ -13,7 +13,7 @@ export const DropdownWrapper = styled.div<DropdownWrapperProps>`
   cursor: pointer;
   border: ${({ selected, theme }) =>
     `1px solid  ${selected ? theme.colors.white : theme.colors.blue_grey}`};
-  background: ${({ theme }) => theme.colors.dark};
+  /* background: ${({ theme }) => theme.colors.dark}; */
 
   .dropdown-arrow {
     transform: rotate(0deg);

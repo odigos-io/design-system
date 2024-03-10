@@ -322,6 +322,7 @@ interface KeyValueTableProps {
     titleValue?: string;
     tooltip?: string;
     titleButton?: string;
+    required?: boolean;
 }
 declare const KeyValueTable: React.FC<KeyValueTableProps>;
 
@@ -337,4 +338,14 @@ interface TextAreaProps {
 }
 declare const TextArea: React.FC<TextAreaProps>;
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video };
+interface MultiInputTableProps {
+    values: string[];
+    title?: string;
+    tooltip?: string;
+    onValuesChange: (newValues: string[]) => void;
+    required?: boolean;
+    placeholder?: string;
+}
+declare const MultiInputTable: React.FC<MultiInputTableProps>;
+
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video };

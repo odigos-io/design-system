@@ -68,6 +68,7 @@ export interface KeyValueTableProps {
   titleValue?: string;
   tooltip?: string;
   titleButton?: string;
+  required?: boolean;
 }
 
 export const KeyValueTable: React.FC<KeyValueTableProps> = ({
@@ -78,6 +79,7 @@ export const KeyValueTable: React.FC<KeyValueTableProps> = ({
   titleValue,
   titleButton,
   tooltip,
+  required,
 }: KeyValueTableProps) => {
   const [nextId, setNextId] = useState(1);
 
@@ -115,9 +117,16 @@ export const KeyValueTable: React.FC<KeyValueTableProps> = ({
       {title && (
         <TitleWrapper>
           <Tooltip text={tooltip || ''}>
-            <Text size={14} weight={600}>
-              {title}
-            </Text>
+            <div style={{ display: 'flex', gap: 4 }}>
+              <Text size={14} weight={600}>
+                {title}
+              </Text>
+              {required && (
+                <Text size={14} weight={600}>
+                  {'*'}
+                </Text>
+              )}
+            </div>
           </Tooltip>
         </TitleWrapper>
       )}

@@ -1273,6 +1273,74 @@ function _templateObject100() {
     };
     return data;
 }
+function _templateObject101() {
+    var data = _tagged_template_literal([
+        "\n  width: 100%;\n"
+    ]);
+    _templateObject101 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject102() {
+    var data = _tagged_template_literal([
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+    ]);
+    _templateObject102 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject103() {
+    var data = _tagged_template_literal([
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+    ]);
+    _templateObject103 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject104() {
+    var data = _tagged_template_literal([
+        "\n  padding: 4px;\n"
+    ]);
+    _templateObject104 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject105() {
+    var data = _tagged_template_literal([
+        "\n  padding: 8px 0;\n\n  border-bottom: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
+        ";\n"
+    ]);
+    _templateObject105 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject106() {
+    var data = _tagged_template_literal([
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
+    ]);
+    _templateObject106 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject107() {
+    var data = _tagged_template_literal([
+        "\n  text-align: center;\n  padding: 4px;\n  cursor: pointer;\n"
+    ]);
+    _templateObject107 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1384,6 +1452,9 @@ __export(src_exports, {
     },
     MultiInput: function() {
         return MultiInput;
+    },
+    MultiInputTable: function() {
+        return MultiInputTable;
     },
     Note: function() {
         return Note;
@@ -3734,7 +3805,7 @@ var Td = import_styled_components32.default.td(_templateObject96(), palette_defa
 var Input3 = import_styled_components32.default.input(_templateObject97(), palette_default.text.white);
 var AddRowButton = import_styled_components32.default.td(_templateObject98(), palette_default.text.grey);
 var KeyValueTable = function(param) {
-    var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip;
+    var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip, required = param.required;
     var _ref = _sliced_to_array((0, import_react39.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];
     var addRow = function() {
         var newKeyValue = {
@@ -3771,10 +3842,18 @@ var KeyValueTable = function(param) {
     };
     return /* @__PURE__ */ import_react39.default.createElement(Container2, null, title && /* @__PURE__ */ import_react39.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react39.default.createElement(Tooltip, {
         text: tooltip || ""
+    }, /* @__PURE__ */ import_react39.default.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 4
+        }
     }, /* @__PURE__ */ import_react39.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title))), /* @__PURE__ */ import_react39.default.createElement(Table, null, /* @__PURE__ */ import_react39.default.createElement("thead", null, /* @__PURE__ */ import_react39.default.createElement("tr", null, /* @__PURE__ */ import_react39.default.createElement(Th, null, /* @__PURE__ */ import_react39.default.createElement(Text, {
+    }, title), required && /* @__PURE__ */ import_react39.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, "*")))), /* @__PURE__ */ import_react39.default.createElement(Table, null, /* @__PURE__ */ import_react39.default.createElement("thead", null, /* @__PURE__ */ import_react39.default.createElement("tr", null, /* @__PURE__ */ import_react39.default.createElement(Th, null, /* @__PURE__ */ import_react39.default.createElement(Text, {
         color: palette_default.text.grey,
         size: 14,
         style: {
@@ -3864,6 +3943,83 @@ var TextArea = function(param) {
         active: !!value
     }));
 };
+// src/design.system/multi-input/multi.input.table.tsx
+var import_react41 = __toESM(require("react"));
+var import_styled_components34 = __toESM(require("styled-components"));
+var Container3 = import_styled_components34.default.div(_templateObject101());
+var TitleWrapper3 = import_styled_components34.default.div(_templateObject102());
+var Table2 = import_styled_components34.default.table(_templateObject103(), palette_default.text.grey);
+var Th2 = import_styled_components34.default.th(_templateObject104());
+var Td2 = import_styled_components34.default.td(_templateObject105(), palette_default.text.grey, function(param) {
+    var right = param.right;
+    return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
+}, function(param) {
+    var left = param.left;
+    return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
+});
+var Input4 = import_styled_components34.default.input(_templateObject106(), palette_default.text.white);
+var AddRowButton2 = import_styled_components34.default.td(_templateObject107());
+var MultiInputTable = function(param) {
+    var values = param.values, title = param.title, tooltip = param.tooltip, onValuesChange = param.onValuesChange, required = param.required, placeholder = param.placeholder;
+    var addRow = function() {
+        onValuesChange(_to_consumable_array(values).concat([
+            ""
+        ]));
+    };
+    var deleteRow = function(index) {
+        var updatedValues = values.filter(function(_, i) {
+            return i !== index;
+        });
+        onValuesChange(updatedValues);
+    };
+    var updateValue = function(index, newValue) {
+        var updatedValues = values.map(function(value, i) {
+            return i === index ? newValue : value;
+        });
+        onValuesChange(updatedValues);
+    };
+    return /* @__PURE__ */ import_react41.default.createElement(Container3, null, title && /* @__PURE__ */ import_react41.default.createElement(TitleWrapper3, null, /* @__PURE__ */ import_react41.default.createElement(Tooltip, {
+        text: tooltip || ""
+    }, /* @__PURE__ */ import_react41.default.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 4
+        }
+    }, /* @__PURE__ */ import_react41.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, title), required && /* @__PURE__ */ import_react41.default.createElement(Text, {
+        size: 14,
+        weight: 600
+    }, "*")))), /* @__PURE__ */ import_react41.default.createElement(Table2, null, /* @__PURE__ */ import_react41.default.createElement("tbody", null, values.map(function(value, index) {
+        return /* @__PURE__ */ import_react41.default.createElement("tr", {
+            key: index
+        }, /* @__PURE__ */ import_react41.default.createElement(Td2, {
+            right: true
+        }, /* @__PURE__ */ import_react41.default.createElement(Input4, {
+            type: "text",
+            value: value,
+            onChange: function(e) {
+                return updateValue(index, e.target.value);
+            },
+            placeholder: index === 0 ? placeholder : ""
+        })), /* @__PURE__ */ import_react41.default.createElement(Td2, {
+            onClick: function() {
+                return deleteRow(index);
+            },
+            style: {
+                cursor: "pointer"
+            }
+        }, /* @__PURE__ */ import_react41.default.createElement(trash_default, null)));
+    })), /* @__PURE__ */ import_react41.default.createElement("tfoot", null, /* @__PURE__ */ import_react41.default.createElement("tr", null, /* @__PURE__ */ import_react41.default.createElement(AddRowButton2, {
+        onClick: addRow,
+        colSpan: 2
+    }, /* @__PURE__ */ import_react41.default.createElement(Text, {
+        weight: 400,
+        size: 14,
+        color: palette_default.colors.torquiz_light
+    }, "Add Row"))))));
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     ActionInput: ActionInput,
@@ -3883,6 +4039,7 @@ var TextArea = function(param) {
     Loader: Loader,
     Modal: Modal,
     MultiInput: MultiInput,
+    MultiInputTable: MultiInputTable,
     Note: Note,
     Notification: Notification,
     RadioButton: RadioButton,

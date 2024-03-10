@@ -2134,7 +2134,8 @@ var KeyValueTable = ({
   titleKey,
   titleValue,
   titleButton,
-  tooltip
+  tooltip,
+  required
 }) => {
   const [nextId, setNextId] = useState11(1);
   const addRow = () => {
@@ -2162,7 +2163,7 @@ var KeyValueTable = ({
     );
     setKeyValues(updatedKeyValues);
   };
-  return /* @__PURE__ */ React64.createElement(Container2, null, title && /* @__PURE__ */ React64.createElement(TitleWrapper2, null, /* @__PURE__ */ React64.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React64.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React64.createElement(Table, null, /* @__PURE__ */ React64.createElement("thead", null, /* @__PURE__ */ React64.createElement("tr", null, /* @__PURE__ */ React64.createElement(Th, null, /* @__PURE__ */ React64.createElement(
+  return /* @__PURE__ */ React64.createElement(Container2, null, title && /* @__PURE__ */ React64.createElement(TitleWrapper2, null, /* @__PURE__ */ React64.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React64.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React64.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React64.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React64.createElement(Table, null, /* @__PURE__ */ React64.createElement("thead", null, /* @__PURE__ */ React64.createElement("tr", null, /* @__PURE__ */ React64.createElement(Th, null, /* @__PURE__ */ React64.createElement(
     Text,
     {
       color: palette_default.text.grey,
@@ -2250,6 +2251,87 @@ var TextArea = ({
     }
   ));
 };
+
+// src/design.system/multi-input/multi.input.table.tsx
+import React66 from "react";
+import styled32 from "styled-components";
+var Container3 = styled32.div`
+  width: 100%;
+`;
+var TitleWrapper3 = styled32.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+var Table2 = styled32.table`
+  border: solid 1px ${palette_default.text.grey};
+  text-align: center;
+  border-spacing: 0;
+  border-radius: 8px;
+  width: 100%;
+`;
+var Th2 = styled32.th`
+  padding: 4px;
+`;
+var Td2 = styled32.td`
+  padding: 8px 0;
+
+  border-bottom: solid 1px ${palette_default.text.grey};
+  border-right: ${({ right }) => right ? `solid 1px ${palette_default.text.grey}` : "none"};
+  border-left: ${({ left }) => left ? `solid 1px ${palette_default.text.grey}` : "none"};
+`;
+var Input4 = styled32.input`
+  background: transparent;
+  border: none;
+  width: 94%;
+
+  outline: none;
+  color: ${palette_default.text.white};
+`;
+var AddRowButton2 = styled32.td`
+  text-align: center;
+  padding: 4px;
+  cursor: pointer;
+`;
+var MultiInputTable = ({
+  values,
+  title,
+  tooltip,
+  onValuesChange,
+  required,
+  placeholder
+}) => {
+  const addRow = () => {
+    onValuesChange([...values, ""]);
+  };
+  const deleteRow = (index) => {
+    const updatedValues = values.filter((_, i) => i !== index);
+    onValuesChange(updatedValues);
+  };
+  const updateValue = (index, newValue) => {
+    const updatedValues = values.map(
+      (value, i) => i === index ? newValue : value
+    );
+    onValuesChange(updatedValues);
+  };
+  return /* @__PURE__ */ React66.createElement(Container3, null, title && /* @__PURE__ */ React66.createElement(TitleWrapper3, null, /* @__PURE__ */ React66.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React66.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React66.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React66.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React66.createElement(Table2, null, /* @__PURE__ */ React66.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React66.createElement("tr", { key: index }, /* @__PURE__ */ React66.createElement(Td2, { right: true }, /* @__PURE__ */ React66.createElement(
+    Input4,
+    {
+      type: "text",
+      value,
+      onChange: (e) => updateValue(index, e.target.value),
+      placeholder: index === 0 ? placeholder : ""
+    }
+  )), /* @__PURE__ */ React66.createElement(
+    Td2,
+    {
+      onClick: () => deleteRow(index),
+      style: { cursor: "pointer" }
+    },
+    /* @__PURE__ */ React66.createElement(trash_default, null)
+  )))), /* @__PURE__ */ React66.createElement("tfoot", null, /* @__PURE__ */ React66.createElement("tr", null, /* @__PURE__ */ React66.createElement(AddRowButton2, { onClick: addRow, colSpan: 2 }, /* @__PURE__ */ React66.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, "Add Row"))))));
+};
 export {
   ActionInput,
   Button,
@@ -2268,6 +2350,7 @@ export {
   Loader,
   Modal,
   MultiInput,
+  MultiInputTable,
   Note,
   Notification,
   RadioButton,
