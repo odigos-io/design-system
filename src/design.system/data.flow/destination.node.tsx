@@ -59,9 +59,9 @@ export default function DestinationNode({ data, isConnectable }: any) {
     return MONITORING_OPTIONS.map((monitor) => (
       <IconWrapper
         key={monitor?.id}
-        tapped={data?.signals[monitor?.type] ? 'true' : undefined}
+        tapped={data?.signals?.[monitor?.type] ? 'true' : undefined}
       >
-        {data?.signals[monitor?.type]
+        {data?.signals?.[monitor?.type]
           ? monitor.icons.focus()
           : monitor.icons.notFocus()}
       </IconWrapper>

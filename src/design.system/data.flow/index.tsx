@@ -9,6 +9,7 @@ import ReactFlow, {
 import CenterNode from './keyval.middleware';
 import NamespaceNode from './namespace.node.tsx';
 import DestinationNode from './destination.node.tsx';
+import ActionContainer from './action.node';
 import 'reactflow/dist/style.css';
 import { ControllerWrapper, DataFlowContainer } from './data.flow.styled';
 import { IDataFlow } from './types';
@@ -20,6 +21,7 @@ const nodeTypes = {
   custom: CenterNode,
   namespace: NamespaceNode,
   destination: DestinationNode,
+  action: ActionContainer,
 };
 
 function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
