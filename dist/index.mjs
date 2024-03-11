@@ -1243,7 +1243,7 @@ function Notification({ type, message, onClose }) {
 }
 
 // src/design.system/data.flow/index.tsx
-import React55, { useEffect as useEffect6 } from "react";
+import React55, { useEffect as useEffect7 } from "react";
 import ReactFlow, {
   Background,
   useReactFlow,
@@ -1295,7 +1295,7 @@ var action_node_default = memo(({ data, isConnectable }) => {
       isConnectable,
       style: { visibility: "hidden" }
     }
-  ), ActionIcon && /* @__PURE__ */ React41.createElement(IconWrapper, null, /* @__PURE__ */ React41.createElement(ActionIcon, null)), /* @__PURE__ */ React41.createElement(TextWrapper3, null, /* @__PURE__ */ React41.createElement(Text, { size: 14, weight: 600 }, data?.spec?.actionName)), /* @__PURE__ */ React41.createElement(
+  ), ActionIcon && /* @__PURE__ */ React41.createElement(IconWrapper, null, /* @__PURE__ */ React41.createElement(ActionIcon, null)), /* @__PURE__ */ React41.createElement(TextWrapper3, null, /* @__PURE__ */ React41.createElement(Text, { size: 14, weight: 600 }, data?.spec?.actionName || "Action")), /* @__PURE__ */ React41.createElement(
     "div",
     {
       style: {
@@ -1332,9 +1332,10 @@ import styled21, { keyframes } from "styled-components";
 var flickerAnimation = keyframes`
   0% {
     opacity: 1;
+
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 `;
 var FlickerWrapper = styled21.div`
@@ -1678,7 +1679,7 @@ var ControllerWrapper = styled25.div`
 import "reactflow/dist/style.css";
 
 // src/design.system/data.flow/control.panel.tsx
-import React54 from "react";
+import React54, { useEffect as useEffect6, useState as useState8 } from "react";
 import "reactflow/dist/style.css";
 import { Controls } from "reactflow";
 import styled26 from "styled-components";
@@ -1722,7 +1723,18 @@ var MonitorIndicator = styled26.span`
   border-radius: 8px;
   margin-right: 6px;
 `;
+var TitleWrapper = styled26.div`
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+`;
 function DataFlowControlPanel() {
+  const [isOpen, setOpen] = useState8(true);
+  useEffect6(() => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 7e3);
+  }, []);
   const MONITORS2 = [
     {
       name: "Traces",
@@ -1737,7 +1749,7 @@ function DataFlowControlPanel() {
       color: palette_default.colors.metrics
     }
   ];
-  return /* @__PURE__ */ React54.createElement(React54.Fragment, null, /* @__PURE__ */ React54.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ React54.createElement(Text, { size: 14, weight: 600 }, "Supported Signals"), /* @__PURE__ */ React54.createElement(MonitorItem, null, MONITORS2.map((monitor) => /* @__PURE__ */ React54.createElement(
+  return /* @__PURE__ */ React54.createElement(React54.Fragment, null, /* @__PURE__ */ React54.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ React54.createElement(TitleWrapper, { onClick: () => setOpen(!isOpen) }, /* @__PURE__ */ React54.createElement(Text, { size: 14, weight: 600 }, "Supported Signals"), /* @__PURE__ */ React54.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ React54.createElement(MonitorItem, null, MONITORS2.map((monitor) => /* @__PURE__ */ React54.createElement(
     "div",
     {
       key: monitor.name,
@@ -1763,7 +1775,7 @@ var nodeTypes = {
 };
 function DataFlow({ nodes: nodes2, edges: edges2, ...rest }) {
   const { fitView } = useReactFlow();
-  useEffect6(() => {
+  useEffect7(() => {
     setTimeout(() => {
       fitView();
     }, 100);
@@ -1827,13 +1839,13 @@ function DangerZone({
 }
 
 // src/design.system/modal/modal.tsx
-import React58, { useCallback, useEffect as useEffect7, useRef as useRef2 } from "react";
+import React58, { useCallback, useEffect as useEffect8, useRef as useRef2 } from "react";
 
 // src/design.system/modal/portal.modal.tsx
-import { useState as useState8, useLayoutEffect } from "react";
+import { useState as useState9, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 var PortalModal = ({ children, wrapperId }) => {
-  const [portalElement, setPortalElement] = useState8(null);
+  const [portalElement, setPortalElement] = useState9(null);
   useLayoutEffect(() => {
     let element = document.getElementById(wrapperId);
     let portalCreated = false;
@@ -2005,7 +2017,7 @@ function Modal({ children, closeModal, config }) {
       closeModal();
   }, []);
   useOnClickOutside(modalRef, handleClickOutside);
-  useEffect7(() => {
+  useEffect8(() => {
     document.addEventListener("keydown", handleKeyPress);
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
@@ -2050,13 +2062,13 @@ function Modal({ children, closeModal, config }) {
 import React60 from "react";
 
 // src/design.system/theme.provider/registry.tsx
-import React59, { useState as useState9 } from "react";
+import React59, { useState as useState10 } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 function StyledComponentsRegistry({
   children
 }) {
-  const [styledComponentsStyleSheet] = useState9(() => new ServerStyleSheet());
+  const [styledComponentsStyleSheet] = useState10(() => new ServerStyleSheet());
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
     styledComponentsStyleSheet.instance.clearTag();
@@ -2158,7 +2170,7 @@ function Divider({
 }
 
 // src/design.system/note/note.tsx
-import React65, { useEffect as useEffect8 } from "react";
+import React65, { useEffect as useEffect9 } from "react";
 import styled31 from "styled-components";
 var NoteContainer = styled31.div`
   padding: 16px;
@@ -2176,7 +2188,7 @@ var TextContainer = styled31.div`
   }
 `;
 function Note({ text: text2, code }) {
-  useEffect8(() => {
+  useEffect9(() => {
     buildNote();
   }, []);
   function buildNote() {
@@ -2279,7 +2291,7 @@ function SegmentedControls({
 }
 
 // src/design.system/multi-input/index.tsx
-import React67, { useState as useState10 } from "react";
+import React67, { useState as useState11 } from "react";
 import styled33 from "styled-components";
 var MultiInput = ({
   initialList = [],
@@ -2288,8 +2300,8 @@ var MultiInput = ({
   title,
   tooltip
 }) => {
-  const [inputValue, setInputValue] = useState10("");
-  const [list, setList] = useState10(initialList);
+  const [inputValue, setInputValue] = useState11("");
+  const [list, setList] = useState11(initialList);
   const handleInputChange = (e) => {
     setInputValue(e);
   };
@@ -2306,7 +2318,7 @@ var MultiInput = ({
     setList(newList);
     onListChange && onListChange(newList);
   };
-  return /* @__PURE__ */ React67.createElement(React67.Fragment, null, title && /* @__PURE__ */ React67.createElement(TitleWrapper, null, /* @__PURE__ */ React67.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React67.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React67.createElement(Container, null, /* @__PURE__ */ React67.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React67.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React67.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React67.createElement(
+  return /* @__PURE__ */ React67.createElement(React67.Fragment, null, title && /* @__PURE__ */ React67.createElement(TitleWrapper2, null, /* @__PURE__ */ React67.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React67.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React67.createElement(Container, null, /* @__PURE__ */ React67.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React67.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React67.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React67.createElement(
     "svg",
     {
       width: "12",
@@ -2364,7 +2376,7 @@ var Input2 = styled33(Input)`
 var Button2 = styled33(Button)`
   margin-left: 10px;
 `;
-var TitleWrapper = styled33.div`
+var TitleWrapper2 = styled33.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2372,12 +2384,12 @@ var TitleWrapper = styled33.div`
 `;
 
 // src/design.system/key-value-input/index.tsx
-import React68, { useState as useState11 } from "react";
+import React68, { useState as useState12 } from "react";
 import styled34 from "styled-components";
 var Container2 = styled34.div`
   width: 100%;
 `;
-var TitleWrapper2 = styled34.div`
+var TitleWrapper3 = styled34.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2424,7 +2436,7 @@ var KeyValueTable = ({
   tooltip,
   required
 }) => {
-  const [nextId, setNextId] = useState11(1);
+  const [nextId, setNextId] = useState12(1);
   const addRow = () => {
     const newKeyValue = {
       id: nextId,
@@ -2450,7 +2462,7 @@ var KeyValueTable = ({
     );
     setKeyValues(updatedKeyValues);
   };
-  return /* @__PURE__ */ React68.createElement(Container2, null, title && /* @__PURE__ */ React68.createElement(TitleWrapper2, null, /* @__PURE__ */ React68.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React68.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React68.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React68.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React68.createElement(Table, null, /* @__PURE__ */ React68.createElement("thead", null, /* @__PURE__ */ React68.createElement("tr", null, /* @__PURE__ */ React68.createElement(Th, null, /* @__PURE__ */ React68.createElement(
+  return /* @__PURE__ */ React68.createElement(Container2, null, title && /* @__PURE__ */ React68.createElement(TitleWrapper3, null, /* @__PURE__ */ React68.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React68.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React68.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React68.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React68.createElement(Table, null, /* @__PURE__ */ React68.createElement("thead", null, /* @__PURE__ */ React68.createElement("tr", null, /* @__PURE__ */ React68.createElement(Th, null, /* @__PURE__ */ React68.createElement(
     Text,
     {
       color: palette_default.text.grey,
@@ -2545,7 +2557,7 @@ import styled36 from "styled-components";
 var Container3 = styled36.div`
   width: 100%;
 `;
-var TitleWrapper3 = styled36.div`
+var TitleWrapper4 = styled36.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2602,7 +2614,7 @@ var MultiInputTable = ({
     );
     onValuesChange(updatedValues);
   };
-  return /* @__PURE__ */ React70.createElement(Container3, null, title && /* @__PURE__ */ React70.createElement(TitleWrapper3, null, /* @__PURE__ */ React70.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React70.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React70.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React70.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React70.createElement(Table2, null, /* @__PURE__ */ React70.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React70.createElement("tr", { key: index }, /* @__PURE__ */ React70.createElement(Td2, { right: true }, /* @__PURE__ */ React70.createElement(
+  return /* @__PURE__ */ React70.createElement(Container3, null, title && /* @__PURE__ */ React70.createElement(TitleWrapper4, null, /* @__PURE__ */ React70.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React70.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React70.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React70.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React70.createElement(Table2, null, /* @__PURE__ */ React70.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React70.createElement("tr", { key: index }, /* @__PURE__ */ React70.createElement(Td2, { right: true }, /* @__PURE__ */ React70.createElement(
     Input4,
     {
       type: "text",

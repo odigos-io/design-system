@@ -1,12 +1,12 @@
 // Import React and necessary components
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'reactflow/dist/style.css';
 import { Controls } from 'reactflow';
 import theme from '@/styles/palette';
 import styled from 'styled-components';
 import { Text } from '../text/text.tsx';
+import Open from '@/assets/icons/expand-arrow.svg';
 import { ControllerWrapper } from './data.flow.styled.tsx';
-
 // Define styled components
 const ControllerPanelWrapper = styled.div`
   position: absolute;
@@ -51,6 +51,12 @@ const MonitorIndicator = styled.span<{ color: string }>`
   margin-right: 6px;
 `;
 
+const TitleWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+`;
+
 // TypeScript type for monitor items
 interface MonitorItem {
   name: string;
@@ -58,6 +64,14 @@ interface MonitorItem {
 }
 
 export function DataFlowControlPanel() {
+  const [isOpen, setOpen] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 7000);
+  }, []);
+
   const MONITORS: MonitorItem[] = [
     {
       name: 'Traces',
@@ -76,26 +90,31 @@ export function DataFlowControlPanel() {
   return (
     <>
       <ControllerPanelWrapper>
-        <Text size={14} weight={600}>
-          Supported Signals
-        </Text>
-        <MonitorItem>
-          {MONITORS.map((monitor) => (
-            <div
-              key={monitor.name}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <MonitorIndicator color={monitor.color} />
-              <Text size={12} weight={500}>
-                {monitor.name}
-              </Text>
-            </div>
-          ))}
-        </MonitorItem>
+        <TitleWrapper onClick={() => setOpen(!isOpen)}>
+          <Text size={14} weight={600}>
+            Supported Signals
+          </Text>
+          <Open />
+        </TitleWrapper>
+        {isOpen && (
+          <MonitorItem>
+            {MONITORS.map((monitor) => (
+              <div
+                key={monitor.name}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <MonitorIndicator color={monitor.color} />
+                <Text size={12} weight={500}>
+                  {monitor.name}
+                </Text>
+              </div>
+            ))}
+          </MonitorItem>
+        )}
       </ControllerPanelWrapper>
       <ControllerWrapper>
         <Controls position="top-left" showInteractive={false} />
