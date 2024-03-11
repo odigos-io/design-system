@@ -6,16 +6,17 @@ import ReactFlow, {
   useReactFlow,
   ReactFlowProvider,
 } from 'reactflow';
+import { IDataFlow } from './types';
+import theme from '@/styles/palette';
+import ActionContainer from './action.node';
 import CenterNode from './keyval.middleware';
 import NamespaceNode from './namespace.node.tsx';
 import DestinationNode from './destination.node.tsx';
-import ActionContainer from './action.node';
-import 'reactflow/dist/style.css';
 import { ControllerWrapper, DataFlowContainer } from './data.flow.styled';
-import { IDataFlow } from './types';
-import theme from '@/styles/palette';
+import 'reactflow/dist/style.css';
+import { Text } from '../text/text.tsx';
 
-const backgroundColor = theme.colors.light_dark;
+const backgroundColor = theme.colors.data_flow_bg;
 
 const nodeTypes = {
   custom: CenterNode,
@@ -25,6 +26,21 @@ const nodeTypes = {
 };
 
 function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
+  const MONITORS = [
+    {
+      name: 'Trace',
+      color: theme.colors.traces,
+    },
+    {
+      name: 'Log',
+      color: theme.colors.logs,
+    },
+    {
+      name: 'Metric',
+      color: theme.colors.metrics,
+    },
+  ];
+
   const { fitView } = useReactFlow();
 
   useEffect(() => {
@@ -43,6 +59,32 @@ function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
         nodeOrigin={[0.4, 0.4]}
         {...rest}
       >
+        <div
+          style={{
+            position: 'absolute',
+            zIndex: 999,
+            top: 20,
+            left: 70,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 10,
+          }}
+        >
+          {MONITORS.map((monitor) => (
+            <div key={monitor.name} style={{ display: 'flex' }}>
+              <span
+                style={{
+                  backgroundColor: monitor.color,
+                  width: 16,
+                  height: 16,
+                  borderRadius: 8,
+                  marginRight: 8,
+                }}
+              />
+              <Text>{monitor.name}</Text>
+            </div>
+          ))}
+        </div>
         <ControllerWrapper>
           <Controls position="top-left" showInteractive={false} />
         </ControllerWrapper>

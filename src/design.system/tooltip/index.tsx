@@ -44,13 +44,15 @@ const TooltipText = styled.div<{ isVisible: boolean }>`
 interface TooltipProps {
   children: ReactNode;
   text: string;
-  icon?: ReactNode; // Optional icon prop if you want to customize the icon
+  icon?: ReactNode;
+  showIcon?: boolean;
 }
 
 export const Tooltip: React.FC<TooltipProps> = ({
   children,
   text,
   icon = '?',
+  showIcon = true,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -67,9 +69,11 @@ export const Tooltip: React.FC<TooltipProps> = ({
           {text}
         </Text>
       </TooltipText>
-      <Icon>
-        <Question />
-      </Icon>
+      {showIcon && (
+        <Icon>
+          <Question />
+        </Icon>
+      )}
     </TooltipContainer>
   );
 };

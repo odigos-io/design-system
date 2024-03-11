@@ -13,7 +13,7 @@ const DestinationNodeContainer = styled.div`
   display: flex;
   border-radius: 12px;
   border: ${({ theme }) => `solid 1px ${theme.colors.blue_grey}`};
-  background: ${({ theme }) => theme.colors.light_dark};
+  background: ${({ theme }) => theme.colors.dark};
   align-items: center;
   justify-content: space-between;
   width: 368px;

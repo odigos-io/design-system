@@ -345,7 +345,7 @@ const buildFlowNodesAndEdges = (
       id: actionNodeId,
       type: 'action',
       position: { x: 450 + index * 100, y: 250 },
-      data: { label: `Action: ${action.spec.actionName}` },
+      data: action,
     });
     edges.push({
       id: `e${centerNodeId}-${actionNodeId}`,
