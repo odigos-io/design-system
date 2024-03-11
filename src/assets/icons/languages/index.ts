@@ -1,12 +1,12 @@
 const BASE_URL = 'https://d1n7d4xz7fr8b4.cloudfront.net/';
 
 export const LANGUAGES_LOGOS = {
-  java: `${BASE_URL}java.svg`,
-  go: `${BASE_URL}go.svg`,
-  javascript: `${BASE_URL}nodejs.svg`,
-  python: `${BASE_URL}python.svg`,
-  dotnet: `${BASE_URL}dotnet.svg`,
-  default: `${BASE_URL}default.svg`,
+  java: `${BASE_URL}java.png`,
+  go: `${BASE_URL}go.png`,
+  javascript: `${BASE_URL}nodejs.png`,
+  python: `${BASE_URL}python.png`,
+  dotnet: `${BASE_URL}dotnet.png`,
+  default: `${BASE_URL}go.png`,
 };
 
 export const LANGUAGES_COLORS = {

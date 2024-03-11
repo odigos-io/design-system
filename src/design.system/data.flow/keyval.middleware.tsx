@@ -1,9 +1,6 @@
 import React from 'react';
 import { Handle, Position } from 'reactflow';
-import { Logo } from '@/assets';
-import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
-
 const flickerAnimation = keyframes`
   0% {
     opacity: 1;
@@ -73,12 +70,11 @@ const OdigosCenterNode: React.FC<OdigosCenterNodeProps> = ({
     <FlickerWrapper>
       <InnerWrapper>
         <LogoContainer>
-          <Image
-            src={Logo}
+          {/* <Image src={logo} alt="logo" width={64} height={64} /> */}
+          <img
+            src={'https://d1n7d4xz7fr8b4.cloudfront.net/logo.png'}
             alt="logo"
-            width={64}
-            height={64}
-            style={{ borderRadius: '50%' }}
+            style={{ borderRadius: '50%', width: 64, height: 64 }}
           />
         </LogoContainer>
       </InnerWrapper>

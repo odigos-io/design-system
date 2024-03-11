@@ -41,18 +41,13 @@ interface NamespaceNodeProps {
 }
 
 export default memo(({ data, isConnectable }: NamespaceNodeProps) => {
-  const languageKey = data.languages?.[0]?.language || 'default';
+  const languageKey = data?.languages?.[0]?.language || 'default';
   const lan = LANGUAGES_LOGOS[languageKey];
 
   return (
     <NamespaceContainer>
       <ImageWrapper>
-        <Image
-          src={lan}
-          alt={languageKey || 'default'}
-          width={32}
-          height={32}
-        />
+        <img src={lan} alt={''} width={32} height={32} />
       </ImageWrapper>
       <TextWrapper>
         <Text color={'#8b92a5'}>{data.namespace}</Text>

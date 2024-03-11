@@ -7,7 +7,7 @@ import ReactFlow, {
 } from 'reactflow';
 import { IDataFlow } from './types';
 import theme from '@/styles/palette';
-import ActionNode from './action.node';
+import ActionNode from './action.node.tsx';
 import CenterNode from './keyval.middleware';
 import NamespaceNode from './namespace.node.tsx';
 import DestinationNode from './destination.node.tsx';
