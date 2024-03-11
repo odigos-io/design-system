@@ -295,7 +295,7 @@ const buildFlowNodesAndEdges = (
   nodes.push({
     id: centerNodeId,
     type: 'custom',
-    position: { x: actions?.length > 0 ? 850 : 450, y: 250 },
+    position: { x: actions?.length > 0 ? 850 : 450, y: 248 },
     data: { label: 'Center Node' },
   });
 
@@ -304,7 +304,7 @@ const buildFlowNodesAndEdges = (
     const namespaceNodeId = `namespace-${index}`;
     nodes.push({
       id: namespaceNodeId,
-      type: 'namespace',
+      type: 'source',
       position: { x: xOffsetNamespace, y: yOffset + index * 100 },
       data: source,
     });
@@ -324,7 +324,7 @@ const buildFlowNodesAndEdges = (
     nodes.push({
       id: destinationNodeId,
       type: 'destination',
-      position: { x: xOffsetDestination, y: yOffset + index * 100 },
+      position: { x: xOffsetDestination, y: yOffset + 50 + index * 100 },
       data: destination,
     });
     edges.push({
@@ -344,7 +344,7 @@ const buildFlowNodesAndEdges = (
     nodes.push({
       id: actionNodeId,
       type: 'action',
-      position: { x: 450 + index * 100, y: 250 },
+      position: { x: 450 + index * 125, y: 250 },
       data: action,
     });
     edges.push({
@@ -352,7 +352,7 @@ const buildFlowNodesAndEdges = (
       source: actionNodeId,
       target: index + 1 === actions.length ? centerNodeId : nextActionNodeId,
       animated: true,
-      style: { stroke: '#00FF00' },
+      style: { stroke: '#96f3ff8e' },
       data: null,
     });
   });

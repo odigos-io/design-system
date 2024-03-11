@@ -2,21 +2,49 @@ import React from 'react';
 import { Handle, Position } from 'reactflow';
 import { Logo } from '@/assets';
 import Image from 'next/image';
+import styled from 'styled-components';
+
+const FlickerWrapper = styled.div`
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  position: relative;
+  z-index: 90;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 60px;
+    background: #110c1f55;
+    z-index: -1;
+    animation: flicker 1s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.2;
+    }
+  }
+`;
+
+const LogoWrapper = styled.div`
+  position: relative;
+  z-index: 99;
+`;
 
 export default function OdigosCenterNode({ isConnectable }: any) {
   return (
-    <div
-      style={{
-        width: 120,
-        height: 120,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 60,
-        border: 'solid 1px #3a3a3a11',
-        background: '#110c1f55',
-      }}
-    >
+    <FlickerWrapper>
       <div
         style={{
           width: 100,
@@ -36,32 +64,34 @@ export default function OdigosCenterNode({ isConnectable }: any) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            borderRadius: 50,
+            borderRadius: 40,
             border: 'solid 1px #3a3a3aa9',
             background: '#110c1f',
           }}
         >
-          <Handle
-            type="target"
-            position={Position.Left}
-            style={{ visibility: 'hidden' }}
-          />
-          <Image
-            src={Logo}
-            alt="logo"
-            width={64}
-            height={64}
-            style={{ borderRadius: 100 }}
-          />
-          <Handle
-            type="source"
-            position={Position.Right}
-            id="a"
-            isConnectable={isConnectable}
-            style={{ visibility: 'hidden' }}
-          />
+          <LogoWrapper>
+            <Image
+              src={Logo}
+              alt="logo"
+              width={64}
+              height={64}
+              style={{ borderRadius: '50%' }}
+            />
+          </LogoWrapper>
         </div>
       </div>
-    </div>
+      <Handle
+        type="target"
+        position={Position.Left}
+        style={{ visibility: 'hidden' }}
+      />
+      <Handle
+        type="source"
+        position={Position.Right}
+        id="a"
+        isConnectable={isConnectable}
+        style={{ visibility: 'hidden' }}
+      />
+    </FlickerWrapper>
   );
 }

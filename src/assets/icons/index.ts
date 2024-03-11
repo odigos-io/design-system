@@ -5,3 +5,4 @@ import Trash from './trash.svg';
 export { Copy, Copied, Folders, Trash };
 
 export * from './actions';
+export * from './languages';

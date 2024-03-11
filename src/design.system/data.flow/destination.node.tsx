@@ -3,6 +3,7 @@ import { Handle, Position } from 'reactflow';
 import { styled } from 'styled-components';
 import { Text } from '@/design.system';
 import { MONITORING_OPTIONS } from './monitors';
+import theme from '@/styles/palette';
 
 interface IconWrapperProps {
   tapped?: boolean | undefined | string;
@@ -12,11 +13,12 @@ const DestinationNodeContainer = styled.div`
   padding: 16px 24px;
   display: flex;
   border-radius: 12px;
+  gap: 8px;
   border: ${({ theme }) => `solid 1px ${theme.colors.blue_grey}`};
   background: ${({ theme }) => theme.colors.dark};
   align-items: center;
   justify-content: space-between;
-  width: 368px;
+  width: 430px;
 `;
 
 export const NodeDataWrapper = styled.div`
@@ -29,6 +31,7 @@ const TextWrapper = styled.div`
   gap: 8px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const IMAGE_STYLE: React.CSSProperties = {
@@ -44,9 +47,8 @@ const IconWrapper = styled.div<IconWrapperProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  background: ${({ theme, tapped }) =>
-    tapped ? theme.colors.dark_blue : '#0e1c28'};
+  border-radius: 100%;
+  opacity: ${({ tapped }) => (tapped ? 1 : 0.4)};
 `;
 
 const MonitorsListWrapper = styled.div`
@@ -60,6 +62,11 @@ export default function DestinationNode({ data, isConnectable }: any) {
       <IconWrapper
         key={monitor?.id}
         tapped={data?.signals?.[monitor?.type] ? 'true' : undefined}
+        style={{
+          border: `solid 2px ${
+            (theme.colors as any)[monitor.type.toLowerCase()]
+          }`,
+        }}
       >
         {data?.signals?.[monitor?.type]
           ? monitor.icons.focus()
@@ -79,10 +86,10 @@ export default function DestinationNode({ data, isConnectable }: any) {
           alt=""
         />
         <TextWrapper>
-          <Text size={14} weight={600}>
+          <Text color={'#8b92a5'}>{data?.name}</Text>
+          <Text size={18} weight={600}>
             {data?.destination_type?.display_name}
           </Text>
-          <Text color={'#8b92a5'}>{data?.name}</Text>
         </TextWrapper>
       </NodeDataWrapper>
       <MonitorsListWrapper>{renderMonitors()}</MonitorsListWrapper>
