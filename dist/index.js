@@ -812,7 +812,7 @@ function _templateObject53() {
 }
 function _templateObject54() {
     var data = _tagged_template_literal([
-        "\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0.2;\n  }\n"
+        "\n  0% {\n    opacity: 1;\n\n  }\n  100% {\n    opacity: 0.5;\n  }\n"
     ]);
     _templateObject54 = function _templateObject() {
         return data;
@@ -996,8 +996,7 @@ function _templateObject72() {
 }
 function _templateObject73() {
     var data = _tagged_template_literal([
-        "\n  padding: 10px;\n  border: ",
-        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
+        "\n  display: flex;\n  gap: 10px;\n  cursor: pointer;\n"
     ]);
     _templateObject73 = function _templateObject() {
         return data;
@@ -1006,8 +1005,8 @@ function _templateObject73() {
 }
 function _templateObject74() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
-        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
+        "\n  padding: 10px;\n  border: ",
+        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
     ]);
     _templateObject74 = function _templateObject() {
         return data;
@@ -1016,8 +1015,8 @@ function _templateObject74() {
 }
 function _templateObject75() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
-        ";\n  cursor: pointer !important;\n"
+        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
+        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
     ]);
     _templateObject75 = function _templateObject() {
         return data;
@@ -1026,7 +1025,8 @@ function _templateObject75() {
 }
 function _templateObject76() {
     var data = _tagged_template_literal([
-        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
+        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
+        ";\n  cursor: pointer !important;\n"
     ]);
     _templateObject76 = function _templateObject() {
         return data;
@@ -1035,7 +1035,7 @@ function _templateObject76() {
 }
 function _templateObject77() {
     var data = _tagged_template_literal([
-        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
+        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
     ]);
     _templateObject77 = function _templateObject() {
         return data;
@@ -1044,11 +1044,7 @@ function _templateObject77() {
 }
 function _templateObject78() {
     var data = _tagged_template_literal([
-        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
-        ";\n  border: 1px solid ",
-        ";\n  background-color: ",
-        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n  }\n"
+        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
     ]);
     _templateObject78 = function _templateObject() {
         return data;
@@ -1059,8 +1055,8 @@ function _templateObject79() {
     var data = _tagged_template_literal([
         "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
         ";\n  border: 1px solid ",
-        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n    color: ",
+        ";\n  background-color: ",
+        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
         ";\n  }\n"
     ]);
     _templateObject79 = function _templateObject() {
@@ -1070,11 +1066,11 @@ function _templateObject79() {
 }
 function _templateObject80() {
     var data = _tagged_template_literal([
-        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
-        ";\n  align-items: ",
-        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
-        ";\n    animation-fill-mode: backwards;\n  }\n"
+        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
+        ";\n  border: 1px solid ",
+        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
+        ";\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject80 = function _templateObject() {
         return data;
@@ -1083,8 +1079,11 @@ function _templateObject80() {
 }
 function _templateObject81() {
     var data = _tagged_template_literal([
-        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
-        ";\n"
+        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
+        ";\n  align-items: ",
+        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
+        ";\n    animation-fill-mode: backwards;\n  }\n"
     ]);
     _templateObject81 = function _templateObject() {
         return data;
@@ -1093,7 +1092,8 @@ function _templateObject81() {
 }
 function _templateObject82() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
+        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
+        ";\n"
     ]);
     _templateObject82 = function _templateObject() {
         return data;
@@ -1102,7 +1102,7 @@ function _templateObject82() {
 }
 function _templateObject83() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
+        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
     ]);
     _templateObject83 = function _templateObject() {
         return data;
@@ -1111,7 +1111,7 @@ function _templateObject83() {
 }
 function _templateObject84() {
     var data = _tagged_template_literal([
-        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
+        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
     ]);
     _templateObject84 = function _templateObject() {
         return data;
@@ -1120,8 +1120,7 @@ function _templateObject84() {
 }
 function _templateObject85() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
-        ";\n"
+        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
     ]);
     _templateObject85 = function _templateObject() {
         return data;
@@ -1130,7 +1129,8 @@ function _templateObject85() {
 }
 function _templateObject86() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
+        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
+        ";\n"
     ]);
     _templateObject86 = function _templateObject() {
         return data;
@@ -1139,7 +1139,7 @@ function _templateObject86() {
 }
 function _templateObject87() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
     ]);
     _templateObject87 = function _templateObject() {
         return data;
@@ -1148,7 +1148,7 @@ function _templateObject87() {
 }
 function _templateObject88() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n"
+        "\n  display: flex;\n"
     ]);
     _templateObject88 = function _templateObject() {
         return data;
@@ -1157,8 +1157,7 @@ function _templateObject88() {
 }
 function _templateObject89() {
     var data = _tagged_template_literal([
-        "\n  opacity: ",
-        ";\n"
+        "\n  display: flex;\n  align-items: center;\n"
     ]);
     _templateObject89 = function _templateObject() {
         return data;
@@ -1167,7 +1166,8 @@ function _templateObject89() {
 }
 function _templateObject90() {
     var data = _tagged_template_literal([
-        "\n  margin: 0 8px;\n"
+        "\n  opacity: ",
+        ";\n"
     ]);
     _templateObject90 = function _templateObject() {
         return data;
@@ -1176,7 +1176,7 @@ function _templateObject90() {
 }
 function _templateObject91() {
     var data = _tagged_template_literal([
-        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
+        "\n  margin: 0 8px;\n"
     ]);
     _templateObject91 = function _templateObject() {
         return data;
@@ -1185,8 +1185,7 @@ function _templateObject91() {
 }
 function _templateObject92() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
-        ";\n"
+        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
     ]);
     _templateObject92 = function _templateObject() {
         return data;
@@ -1195,7 +1194,8 @@ function _templateObject92() {
 }
 function _templateObject93() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
+        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
+        ";\n"
     ]);
     _templateObject93 = function _templateObject() {
         return data;
@@ -1204,8 +1204,7 @@ function _templateObject93() {
 }
 function _templateObject94() {
     var data = _tagged_template_literal([
-        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
-        ";\n  border-radius: 12px;\n"
+        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
     ]);
     _templateObject94 = function _templateObject() {
         return data;
@@ -1214,8 +1213,8 @@ function _templateObject94() {
 }
 function _templateObject95() {
     var data = _tagged_template_literal([
-        "\n  line-height: 1.6;\n  code {\n    background-color: ",
-        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
+        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
+        ";\n  border-radius: 12px;\n"
     ]);
     _templateObject95 = function _templateObject() {
         return data;
@@ -1224,7 +1223,8 @@ function _templateObject95() {
 }
 function _templateObject96() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
+        "\n  line-height: 1.6;\n  code {\n    background-color: ",
+        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
     ]);
     _templateObject96 = function _templateObject() {
         return data;
@@ -1233,11 +1233,7 @@ function _templateObject96() {
 }
 function _templateObject97() {
     var data = _tagged_template_literal([
-        "\n  color: ",
-        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
-        ";\n  background-color: ",
-        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
-        ";\n  }\n"
+        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
     ]);
     _templateObject97 = function _templateObject() {
         return data;
@@ -1246,7 +1242,11 @@ function _templateObject97() {
 }
 function _templateObject98() {
     var data = _tagged_template_literal([
-        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
+        "\n  color: ",
+        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
+        ";\n  background-color: ",
+        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
+        ";\n  }\n"
     ]);
     _templateObject98 = function _templateObject() {
         return data;
@@ -1255,7 +1255,7 @@ function _templateObject98() {
 }
 function _templateObject99() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
     ]);
     _templateObject99 = function _templateObject() {
         return data;
@@ -1264,7 +1264,7 @@ function _templateObject99() {
 }
 function _templateObject100() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject100 = function _templateObject() {
         return data;
@@ -1273,8 +1273,7 @@ function _templateObject100() {
 }
 function _templateObject101() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
+        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
     ]);
     _templateObject101 = function _templateObject() {
         return data;
@@ -1283,7 +1282,8 @@ function _templateObject101() {
 }
 function _templateObject102() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 37px;\n"
+        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
     ]);
     _templateObject102 = function _templateObject() {
         return data;
@@ -1292,7 +1292,7 @@ function _templateObject102() {
 }
 function _templateObject103() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 37px;\n"
     ]);
     _templateObject103 = function _templateObject() {
         return data;
@@ -1301,7 +1301,7 @@ function _templateObject103() {
 }
 function _templateObject104() {
     var data = _tagged_template_literal([
-        "\n  margin-left: 10px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject104 = function _templateObject() {
         return data;
@@ -1310,7 +1310,7 @@ function _templateObject104() {
 }
 function _templateObject105() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  margin-left: 10px;\n"
     ]);
     _templateObject105 = function _templateObject() {
         return data;
@@ -1319,7 +1319,7 @@ function _templateObject105() {
 }
 function _templateObject106() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject106 = function _templateObject() {
         return data;
@@ -1328,7 +1328,7 @@ function _templateObject106() {
 }
 function _templateObject107() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject107 = function _templateObject() {
         return data;
@@ -1337,8 +1337,7 @@ function _templateObject107() {
 }
 function _templateObject108() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject108 = function _templateObject() {
         return data;
@@ -1347,7 +1346,8 @@ function _templateObject108() {
 }
 function _templateObject109() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject109 = function _templateObject() {
         return data;
@@ -1356,10 +1356,7 @@ function _templateObject109() {
 }
 function _templateObject110() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject110 = function _templateObject() {
         return data;
@@ -1368,7 +1365,9 @@ function _templateObject110() {
 }
 function _templateObject111() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
         ";\n"
     ]);
     _templateObject111 = function _templateObject() {
@@ -1378,8 +1377,8 @@ function _templateObject111() {
 }
 function _templateObject112() {
     var data = _tagged_template_literal([
-        "\n  text-align: center;\n  border-top: solid 1px ",
-        ";\n  padding: 4px;\n  cursor: pointer;\n"
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
     ]);
     _templateObject112 = function _templateObject() {
         return data;
@@ -1388,12 +1387,8 @@ function _templateObject112() {
 }
 function _templateObject113() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  padding: 8px 12px;\n  border-radius: 8px;\n  box-sizing: border-box;\n  resize: vertical;\n\n  outline: none;\n  color: ",
-        ";\n  font-family: ",
-        ";\n  background-color: ",
-        ";\n  border: ",
-        ";\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  text-align: center;\n  border-top: solid 1px ",
+        ";\n  padding: 4px;\n  cursor: pointer;\n"
     ]);
     _templateObject113 = function _templateObject() {
         return data;
@@ -1402,7 +1397,12 @@ function _templateObject113() {
 }
 function _templateObject114() {
     var data = _tagged_template_literal([
-        "\n  margin-bottom: 8px;\n  text-align: start;\n"
+        "\n  width: 100%;\n  padding: 8px 12px;\n  border-radius: 8px;\n  box-sizing: border-box;\n  resize: vertical;\n\n  outline: none;\n  color: ",
+        ";\n  font-family: ",
+        ";\n  background-color: ",
+        ";\n  border: ",
+        ";\n  &:hover {\n    border: ",
+        ";\n  }\n"
     ]);
     _templateObject114 = function _templateObject() {
         return data;
@@ -1411,7 +1411,7 @@ function _templateObject114() {
 }
 function _templateObject115() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
     ]);
     _templateObject115 = function _templateObject() {
         return data;
@@ -1420,7 +1420,7 @@ function _templateObject115() {
 }
 function _templateObject116() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject116 = function _templateObject() {
         return data;
@@ -1429,8 +1429,7 @@ function _templateObject116() {
 }
 function _templateObject117() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject117 = function _templateObject() {
         return data;
@@ -1439,7 +1438,8 @@ function _templateObject117() {
 }
 function _templateObject118() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject118 = function _templateObject() {
         return data;
@@ -1448,10 +1448,7 @@ function _templateObject118() {
 }
 function _templateObject119() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-bottom: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject119 = function _templateObject() {
         return data;
@@ -1460,7 +1457,9 @@ function _templateObject119() {
 }
 function _templateObject120() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        "\n  padding: 8px 0;\n\n  border-bottom: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
         ";\n"
     ]);
     _templateObject120 = function _templateObject() {
@@ -1470,9 +1469,19 @@ function _templateObject120() {
 }
 function _templateObject121() {
     var data = _tagged_template_literal([
-        "\n  text-align: center;\n  padding: 4px;\n  cursor: pointer;\n"
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
     ]);
     _templateObject121 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject122() {
+    var data = _tagged_template_literal([
+        "\n  text-align: center;\n  padding: 4px;\n  cursor: pointer;\n"
+    ]);
+    _templateObject122 = function _templateObject() {
         return data;
     };
     return data;
@@ -3107,7 +3116,7 @@ var action_node_default = (0, import_react24.memo)(function(param) {
     }), ActionIcon && /* @__PURE__ */ import_react24.default.createElement(IconWrapper, null, /* @__PURE__ */ import_react24.default.createElement(ActionIcon, null)), /* @__PURE__ */ import_react24.default.createElement(TextWrapper3, null, /* @__PURE__ */ import_react24.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, (_data = data) === null || _data === void 0 ? void 0 : (_data_spec = _data.spec) === null || _data_spec === void 0 ? void 0 : _data_spec.actionName)), /* @__PURE__ */ import_react24.default.createElement("div", {
+    }, ((_data = data) === null || _data === void 0 ? void 0 : (_data_spec = _data.spec) === null || _data_spec === void 0 ? void 0 : _data_spec.actionName) || "Action")), /* @__PURE__ */ import_react24.default.createElement("div", {
         style: {
             display: "flex",
             justifyContent: "center",
@@ -3538,7 +3547,14 @@ var MonitorIndicator = import_styled_components26.default.span(_templateObject72
     var color = param.color;
     return color;
 });
+var TitleWrapper = import_styled_components26.default.div(_templateObject73());
 function DataFlowControlPanel() {
+    var _ref = _sliced_to_array((0, import_react29.useState)(true), 2), isOpen = _ref[0], setOpen = _ref[1];
+    (0, import_react29.useEffect)(function() {
+        setTimeout(function() {
+            setOpen(false);
+        }, 7e3);
+    }, []);
     var MONITORS2 = [
         {
             name: "Traces",
@@ -3553,10 +3569,14 @@ function DataFlowControlPanel() {
             color: palette_default.colors.metrics
         }
     ];
-    return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ import_react29.default.createElement(Text, {
+    return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ import_react29.default.createElement(TitleWrapper, {
+        onClick: function() {
+            return setOpen(!isOpen);
+        }
+    }, /* @__PURE__ */ import_react29.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "Supported Signals"), /* @__PURE__ */ import_react29.default.createElement(MonitorItem, null, MONITORS2.map(function(monitor) {
+    }, "Supported Signals"), /* @__PURE__ */ import_react29.default.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ import_react29.default.createElement(MonitorItem, null, MONITORS2.map(function(monitor) {
         return /* @__PURE__ */ import_react29.default.createElement("div", {
             key: monitor.name,
             style: {
@@ -3622,15 +3642,15 @@ function KeyvalDataFlow(props) {
 // src/design.system/danger.zone/danger.zone.tsx
 var import_react31 = __toESM(require("react"));
 var import_styled_components27 = require("styled-components");
-var DangerZoneWrapper = import_styled_components27.styled.div(_templateObject73(), function(param) {
+var DangerZoneWrapper = import_styled_components27.styled.div(_templateObject74(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
-var DangerButtonWrapper = import_styled_components27.styled.div(_templateObject74(), function(param) {
+var DangerButtonWrapper = import_styled_components27.styled.div(_templateObject75(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.error;
 });
-var DangerButton = import_styled_components27.styled.button(_templateObject75(), function(param) {
+var DangerButton = import_styled_components27.styled.button(_templateObject76(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
@@ -3685,9 +3705,9 @@ var PortalModal = function(param) {
 var portal_modal_default = PortalModal;
 // src/design.system/modal/modal.styled.tsx
 var import_styled_components28 = __toESM(require("styled-components"));
-var fadeIn = import_styled_components28.keyframes(_templateObject76());
-var ModalButtonsContainer = import_styled_components28.default.div(_templateObject77());
-var ModalButtonPrimary = import_styled_components28.default.button(_templateObject78(), function(param) {
+var fadeIn = import_styled_components28.keyframes(_templateObject77());
+var ModalButtonsContainer = import_styled_components28.default.div(_templateObject78());
+var ModalButtonPrimary = import_styled_components28.default.button(_templateObject79(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.btnText;
 }, function(param) {
@@ -3700,7 +3720,7 @@ var ModalButtonPrimary = import_styled_components28.default.button(_templateObje
     var theme2 = param.theme;
     return theme2.colors.shadowMain;
 });
-var ModalButtonSecondary = import_styled_components28.default.button(_templateObject79(), function(param) {
+var ModalButtonSecondary = import_styled_components28.default.button(_templateObject80(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.main;
 }, function(param) {
@@ -3713,24 +3733,24 @@ var ModalButtonSecondary = import_styled_components28.default.button(_templateOb
     var theme2 = param.theme;
     return theme2.colors.btnText;
 });
-var Overlay = import_styled_components28.default.div(_templateObject80(), function(props) {
+var Overlay = import_styled_components28.default.div(_templateObject81(), function(props) {
     return props.showOverlay ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.1)";
 }, function(props) {
     return props.positionX ? props.positionX : "center";
 }, function(props) {
     return props.positionY ? props.positionY : "center";
 }, fadeIn);
-var ModalContainer = import_styled_components28.default.div(_templateObject81(), function(props) {
+var ModalContainer = import_styled_components28.default.div(_templateObject82(), function(props) {
     return props.padding ? props.padding : "20px";
 });
-var ModalHeader = import_styled_components28.default.header(_templateObject82());
-var Close = import_styled_components28.default.div(_templateObject83());
-var PrimaryButton = import_styled_components28.default.button(_templateObject84());
-var Content = import_styled_components28.default.div(_templateObject85(), function(param) {
+var ModalHeader = import_styled_components28.default.header(_templateObject83());
+var Close = import_styled_components28.default.div(_templateObject84());
+var PrimaryButton = import_styled_components28.default.button(_templateObject85());
+var Content = import_styled_components28.default.div(_templateObject86(), function(param) {
     var theme2 = param.theme;
     return theme2.text;
 });
-var ModalFooter = import_styled_components28.default.footer(_templateObject86());
+var ModalFooter = import_styled_components28.default.footer(_templateObject87());
 // src/assets/icons/close-modal.svg
 var React57 = __toESM(require("react"));
 var SvgCloseModal = function(props) {
@@ -3844,14 +3864,14 @@ var import_react37 = __toESM(require("react"));
 var import_react36 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
 var import_styled_components31 = __toESM(require("styled-components"));
-var StepsContainer = import_styled_components31.default.div(_templateObject87());
-var StepItemWrapper = import_styled_components31.default.div(_templateObject88());
-var FloatingBoxTextWrapper = import_styled_components31.default.div(_templateObject89(), function(param) {
+var StepsContainer = import_styled_components31.default.div(_templateObject88());
+var StepItemWrapper = import_styled_components31.default.div(_templateObject89());
+var FloatingBoxTextWrapper = import_styled_components31.default.div(_templateObject90(), function(param) {
     var disabled = param.disabled;
     return disabled ? "0.4" : "1";
 });
-var StepItemTextWrapper = (0, import_styled_components31.default)(FloatingBoxTextWrapper)(_templateObject90());
-var StepItemBorder = import_styled_components31.default.div(_templateObject91());
+var StepItemTextWrapper = (0, import_styled_components31.default)(FloatingBoxTextWrapper)(_templateObject91());
+var StepItemBorder = import_styled_components31.default.div(_templateObject92());
 // src/assets/icons/checked.svg
 var React61 = __toESM(require("react"));
 var SvgChecked = function(props) {
@@ -3901,11 +3921,11 @@ function Steps(param) {
 // src/design.system/divider/divider.tsx
 var import_react38 = __toESM(require("react"));
 var import_styled_components32 = __toESM(require("styled-components"));
-var DividerContainer = import_styled_components32.default.div(_templateObject92(), function(param) {
+var DividerContainer = import_styled_components32.default.div(_templateObject93(), function(param) {
     var margin = param.margin;
     return margin;
 });
-var DividerLine = import_styled_components32.default.div(_templateObject93());
+var DividerLine = import_styled_components32.default.div(_templateObject94());
 function Divider(param) {
     var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
     return /* @__PURE__ */ import_react38.default.createElement(DividerContainer, {
@@ -3917,11 +3937,11 @@ function Divider(param) {
 // src/design.system/note/note.tsx
 var import_react39 = __toESM(require("react"));
 var import_styled_components33 = __toESM(require("styled-components"));
-var NoteContainer = import_styled_components33.default.div(_templateObject94(), function(param) {
+var NoteContainer = import_styled_components33.default.div(_templateObject95(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
-var TextContainer = import_styled_components33.default.div(_templateObject95(), function(param) {
+var TextContainer = import_styled_components33.default.div(_templateObject96(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
@@ -3950,8 +3970,8 @@ function Note(param) {
 // src/design.system/segmented-controls/index.tsx
 var import_react40 = __toESM(require("react"));
 var import_styled_components34 = __toESM(require("styled-components"));
-var SegmentedControlsWrapper = import_styled_components34.default.div(_templateObject96());
-var SegmentedControlsOption = import_styled_components34.default.div(_templateObject97(), function(param) {
+var SegmentedControlsWrapper = import_styled_components34.default.div(_templateObject97());
+var SegmentedControlsOption = import_styled_components34.default.div(_templateObject98(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.white;
 }, function(param) {
@@ -3964,7 +3984,7 @@ var SegmentedControlsOption = import_styled_components34.default.div(_templateOb
     var theme2 = param.theme;
     return theme2.font_family.primary;
 });
-var SegmentedControlsInput = import_styled_components34.default.input(_templateObject98());
+var SegmentedControlsInput = import_styled_components34.default.input(_templateObject99());
 function SegmentedControls(param) {
     var options = param.options, selected = param.selected, onChange = param.onChange, title = param.title;
     var _options;
@@ -4015,7 +4035,7 @@ var MultiInput = function(param) {
         setList(newList);
         onListChange && onListChange(newList);
     };
-    return /* @__PURE__ */ import_react41.default.createElement(import_react41.default.Fragment, null, title && /* @__PURE__ */ import_react41.default.createElement(TitleWrapper, null, /* @__PURE__ */ import_react41.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react41.default.createElement(import_react41.default.Fragment, null, title && /* @__PURE__ */ import_react41.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react41.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react41.default.createElement(Text, {
         size: 14,
@@ -4059,29 +4079,29 @@ var MultiInput = function(param) {
         color: palette_default.text.dark_button
     }, "Add")))));
 };
-var Container = import_styled_components35.default.div(_templateObject99());
-var ListContainer = import_styled_components35.default.div(_templateObject100());
-var ListItem = import_styled_components35.default.div(_templateObject101(), palette_default.colors.light_grey);
-var InputContainer = import_styled_components35.default.div(_templateObject102());
-var Input2 = (0, import_styled_components35.default)(Input)(_templateObject103());
-var Button2 = (0, import_styled_components35.default)(Button)(_templateObject104());
-var TitleWrapper = import_styled_components35.default.div(_templateObject105());
+var Container = import_styled_components35.default.div(_templateObject100());
+var ListContainer = import_styled_components35.default.div(_templateObject101());
+var ListItem = import_styled_components35.default.div(_templateObject102(), palette_default.colors.light_grey);
+var InputContainer = import_styled_components35.default.div(_templateObject103());
+var Input2 = (0, import_styled_components35.default)(Input)(_templateObject104());
+var Button2 = (0, import_styled_components35.default)(Button)(_templateObject105());
+var TitleWrapper2 = import_styled_components35.default.div(_templateObject106());
 // src/design.system/key-value-input/index.tsx
 var import_react42 = __toESM(require("react"));
 var import_styled_components36 = __toESM(require("styled-components"));
-var Container2 = import_styled_components36.default.div(_templateObject106());
-var TitleWrapper2 = import_styled_components36.default.div(_templateObject107());
-var Table = import_styled_components36.default.table(_templateObject108(), palette_default.text.grey);
-var Th = import_styled_components36.default.th(_templateObject109());
-var Td = import_styled_components36.default.td(_templateObject110(), palette_default.text.grey, function(param) {
+var Container2 = import_styled_components36.default.div(_templateObject107());
+var TitleWrapper3 = import_styled_components36.default.div(_templateObject108());
+var Table = import_styled_components36.default.table(_templateObject109(), palette_default.text.grey);
+var Th = import_styled_components36.default.th(_templateObject110());
+var Td = import_styled_components36.default.td(_templateObject111(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input3 = import_styled_components36.default.input(_templateObject111(), palette_default.text.white);
-var AddRowButton = import_styled_components36.default.td(_templateObject112(), palette_default.text.grey);
+var Input3 = import_styled_components36.default.input(_templateObject112(), palette_default.text.white);
+var AddRowButton = import_styled_components36.default.td(_templateObject113(), palette_default.text.grey);
 var KeyValueTable = function(param) {
     var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip, required = param.required;
     var _ref = _sliced_to_array((0, import_react42.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];
@@ -4118,7 +4138,7 @@ var KeyValueTable = function(param) {
         });
         setKeyValues(updatedKeyValues);
     };
-    return /* @__PURE__ */ import_react42.default.createElement(Container2, null, title && /* @__PURE__ */ import_react42.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react42.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react42.default.createElement(Container2, null, title && /* @__PURE__ */ import_react42.default.createElement(TitleWrapper3, null, /* @__PURE__ */ import_react42.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react42.default.createElement("div", {
         style: {
@@ -4183,7 +4203,7 @@ var KeyValueTable = function(param) {
 // src/design.system/text.area/index.tsx
 var import_react43 = __toESM(require("react"));
 var import_styled_components37 = __toESM(require("styled-components"));
-var StyledTextArea = import_styled_components37.default.textarea(_templateObject113(), function(param) {
+var StyledTextArea = import_styled_components37.default.textarea(_templateObject114(), function(param) {
     var theme2 = param.theme;
     return theme2.text.white;
 }, palette_default.font_family.primary, function(param) {
@@ -4196,7 +4216,7 @@ var StyledTextArea = import_styled_components37.default.textarea(_templateObject
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.text.grey);
 });
-var LabelWrapper3 = import_styled_components37.default.div(_templateObject114());
+var LabelWrapper3 = import_styled_components37.default.div(_templateObject115());
 var TextArea = function(param) {
     var placeholder = param.placeholder, value = param.value, onChange = param.onChange, _param_rows = param.rows, rows = _param_rows === void 0 ? 4 : _param_rows, _param_cols = param.cols, cols = _param_cols === void 0 ? 50 : _param_cols, tooltip = param.tooltip, label = param.label, required = param.required;
     return /* @__PURE__ */ import_react43.default.createElement(import_react43.default.Fragment, null, label && /* @__PURE__ */ import_react43.default.createElement(LabelWrapper3, null, /* @__PURE__ */ import_react43.default.createElement(Tooltip, {
@@ -4224,19 +4244,19 @@ var TextArea = function(param) {
 // src/design.system/multi-input/multi.input.table.tsx
 var import_react44 = __toESM(require("react"));
 var import_styled_components38 = __toESM(require("styled-components"));
-var Container3 = import_styled_components38.default.div(_templateObject115());
-var TitleWrapper3 = import_styled_components38.default.div(_templateObject116());
-var Table2 = import_styled_components38.default.table(_templateObject117(), palette_default.text.grey);
-var Th2 = import_styled_components38.default.th(_templateObject118());
-var Td2 = import_styled_components38.default.td(_templateObject119(), palette_default.text.grey, function(param) {
+var Container3 = import_styled_components38.default.div(_templateObject116());
+var TitleWrapper4 = import_styled_components38.default.div(_templateObject117());
+var Table2 = import_styled_components38.default.table(_templateObject118(), palette_default.text.grey);
+var Th2 = import_styled_components38.default.th(_templateObject119());
+var Td2 = import_styled_components38.default.td(_templateObject120(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input4 = import_styled_components38.default.input(_templateObject120(), palette_default.text.white);
-var AddRowButton2 = import_styled_components38.default.td(_templateObject121());
+var Input4 = import_styled_components38.default.input(_templateObject121(), palette_default.text.white);
+var AddRowButton2 = import_styled_components38.default.td(_templateObject122());
 var MultiInputTable = function(param) {
     var values = param.values, title = param.title, tooltip = param.tooltip, onValuesChange = param.onValuesChange, required = param.required, placeholder = param.placeholder;
     var addRow = function() {
@@ -4256,7 +4276,7 @@ var MultiInputTable = function(param) {
         });
         onValuesChange(updatedValues);
     };
-    return /* @__PURE__ */ import_react44.default.createElement(Container3, null, title && /* @__PURE__ */ import_react44.default.createElement(TitleWrapper3, null, /* @__PURE__ */ import_react44.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react44.default.createElement(Container3, null, title && /* @__PURE__ */ import_react44.default.createElement(TitleWrapper4, null, /* @__PURE__ */ import_react44.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react44.default.createElement("div", {
         style: {
