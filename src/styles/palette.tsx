@@ -2,16 +2,20 @@ import { DefaultTheme } from 'styled-components';
 
 // Define your color palette
 const colors = {
-  primary: '#FF0000',
+  primary: '#07111A',
   secondary: '#0EE6F3',
   torquiz_light: '#96F2FF',
   dark: '#07111A',
+  data_flow_bg: '#0E1C28',
   light_dark: '#132330',
   dark_blue: '#203548',
   light_grey: '#CCD0D2',
   blue_grey: '#374A5B',
   white: '#fff',
   error: '#FD3F3F',
+  traces: '#4CAF50',
+  logs: '#8B4513',
+  metrics: '#FFD700',
 };
 
 const text = {

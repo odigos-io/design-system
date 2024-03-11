@@ -141,6 +141,7 @@ interface TooltipProps {
     children: ReactNode;
     text: string;
     icon?: ReactNode;
+    showIcon?: boolean;
 }
 declare const Tooltip: React.FC<TooltipProps>;
 
@@ -209,11 +210,10 @@ interface DataFlowEdge {
     id: string;
     source: string;
     target: string;
-    animated?: boolean;
-    style?: {
-        stroke: string;
-    };
-    data: any;
+    animated: boolean;
+    label?: string;
+    style?: Record<string, any>;
+    data?: any;
 }
 interface IDataFlow {
     nodes: DataFlowNode[];
@@ -348,4 +348,72 @@ interface MultiInputTableProps {
 }
 declare const MultiInputTable: React.FC<MultiInputTableProps>;
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video };
+interface Source {
+    name: string;
+    kind: string;
+    namespace: string;
+    languages: Array<{
+        container_name: string;
+        language: string;
+    }>;
+}
+interface Destination {
+    id: string;
+    name: string;
+    type: string;
+    signals: {
+        traces: boolean;
+        metrics: boolean;
+        logs: boolean;
+    };
+    fields: Record<string, any>;
+    destination_type: {
+        type: string;
+        display_name: string;
+        image_url: string;
+        supported_signals: {
+            traces: {
+                supported: boolean;
+            };
+            metrics: {
+                supported: boolean;
+            };
+            logs: {
+                supported: boolean;
+            };
+        };
+    };
+}
+interface Action {
+    id: string;
+    type: string;
+    spec: {
+        actionName: string;
+        notes: string;
+        signals: string[];
+    };
+}
+interface FlowNode {
+    id: string;
+    type: string;
+    position: {
+        x: number;
+        y: number;
+    };
+    data: any;
+}
+interface FlowEdge {
+    id: string;
+    source: string;
+    target: string;
+    animated: boolean;
+    label?: string;
+    style?: Record<string, any>;
+    data?: any;
+}
+declare const buildFlowNodesAndEdges: (sources: Source[], destinations: Destination[], actions: Action[]) => {
+    nodes: FlowNode[];
+    edges: FlowEdge[];
+};
+
+export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, buildFlowNodesAndEdges };

@@ -1,14 +1,14 @@
-import Logs from "@/assets/icons/logs-grey.svg";
-import LogsFocus from "@/assets/icons/logs-blue.svg";
-import Metrics from "@/assets/icons/chart-line-grey.svg";
-import MetricsFocus from "@/assets/icons/chart-line-blue.svg";
-import Traces from "@/assets/icons/tree-structure-grey.svg";
-import TracesFocus from "@/assets/icons/tree-structure-blue.svg";
+import Logs from '@/assets/icons/logs-grey.svg';
+import LogsFocus from '@/assets/icons/logs-blue.svg';
+import Metrics from '@/assets/icons/chart-line-grey.svg';
+import MetricsFocus from '@/assets/icons/chart-line-blue.svg';
+import Traces from '@/assets/icons/tree-structure-grey.svg';
+import TracesFocus from '@/assets/icons/tree-structure-blue.svg';
 
 const MONITORS = {
-  LOGS: "Logs",
-  METRICS: "Metrics",
-  TRACES: "Traces",
+  LOGS: 'Logs',
+  METRICS: 'Metrics',
+  TRACES: 'Traces',
 };
 
 export type MonitoringOption = {
@@ -26,7 +26,7 @@ export const MONITORING_OPTIONS = [
       focus: () => LogsFocus(),
     },
     title: MONITORS.LOGS,
-    type: "logs",
+    type: 'logs',
     tapped: true,
   },
   {
@@ -36,7 +36,7 @@ export const MONITORING_OPTIONS = [
       focus: () => MetricsFocus(),
     },
     title: MONITORS.METRICS,
-    type: "metrics",
+    type: 'metrics',
     tapped: true,
   },
   {
@@ -46,7 +46,7 @@ export const MONITORING_OPTIONS = [
       focus: () => TracesFocus(),
     },
     title: MONITORS.TRACES,
-    type: "traces",
+    type: 'traces',
     tapped: true,
   },
 ];

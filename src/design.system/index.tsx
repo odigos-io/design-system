@@ -36,3 +36,5 @@ export type { MultiInputTableProps } from './multi-input/multi.input.table';
 export type { KeyValueTableProps } from './key-value-input';
 export type { KeyValue } from './key-value-input';
 export type { TextAreaProps } from './text.area';
+
+export { buildFlowNodesAndEdges } from './data.flow/builder';

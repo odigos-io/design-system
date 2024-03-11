@@ -2,24 +2,28 @@
 import React, { useEffect } from 'react';
 import ReactFlow, {
   Background,
-  Controls,
   useReactFlow,
   ReactFlowProvider,
 } from 'reactflow';
+import { IDataFlow } from './types';
+import theme from '@/styles/palette';
+import ActionNode from './action.node.tsx';
 import CenterNode from './keyval.middleware';
 import NamespaceNode from './namespace.node.tsx';
 import DestinationNode from './destination.node.tsx';
+import SourceNode from './source.node.tsx';
+import { DataFlowContainer } from './data.flow.styled';
 import 'reactflow/dist/style.css';
-import { ControllerWrapper, DataFlowContainer } from './data.flow.styled';
-import { IDataFlow } from './types';
-import theme from '@/styles/palette';
+import { DataFlowControlPanel } from './control.panel.tsx';
 
-const backgroundColor = theme.colors.light_dark;
+const backgroundColor = theme.colors.data_flow_bg;
 
 const nodeTypes = {
   custom: CenterNode,
   namespace: NamespaceNode,
   destination: DestinationNode,
+  action: ActionNode,
+  source: SourceNode,
 };
 
 function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
@@ -41,9 +45,7 @@ function DataFlow({ nodes, edges, ...rest }: IDataFlow) {
         nodeOrigin={[0.4, 0.4]}
         {...rest}
       >
-        <ControllerWrapper>
-          <Controls position="top-left" showInteractive={false} />
-        </ControllerWrapper>
+        <DataFlowControlPanel />
         <Background gap={12} size={1} style={{ backgroundColor }} />
       </ReactFlow>
     </DataFlowContainer>
