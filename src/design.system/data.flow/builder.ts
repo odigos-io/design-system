@@ -255,10 +255,6 @@ interface Action {
     actionName: string;
     notes: string;
     signals: string[];
-    clusterAttributes: Array<{
-      attributeName: string;
-      attributeStringValue: string;
-    }>;
   };
 }
 
@@ -279,7 +275,7 @@ interface FlowEdge {
   data?: any;
 }
 
-const buildFlowNodesAndEdges = (
+export const buildFlowNodesAndEdges = (
   sources: Source[],
   destinations: Destination[],
   actions: Action[]
@@ -288,14 +284,40 @@ const buildFlowNodesAndEdges = (
     edges: FlowEdge[] = [];
   const centerNodeId = 'center-1';
   const xOffsetNamespace = 100;
-  const xOffsetDestination = actions?.length > 0 ? 1200 : 800;
-  let yOffset = 100;
+
+  const destinations_length = destinations.length;
+  let middle_index;
+
+  if (destinations_length % 2 == 1) {
+    middle_index = Math.floor(destinations_length / 2);
+  } else {
+    middle_index = destinations_length / 2 - 1;
+  }
+
+  // Desired y position for the middle node
+  const desired_y_position = 248;
+
+  // Calculate destinationyOffset
+  const destinationyOffset = desired_y_position - middle_index * 100;
+
+  const sources_length = sources.length;
+  let middle_index_sources;
+
+  if (sources_length % 2 == 1) {
+    middle_index_sources = Math.floor(sources_length / 2);
+  } else {
+    middle_index_sources = sources_length / 2 - 1;
+  }
+
+  const sourceyOffset = desired_y_position - middle_index_sources * 100;
 
   // Create the center node
+  const centerXPossition =
+    actions?.length > 0 ? actions?.length * 150 + 400 : 450;
   nodes.push({
     id: centerNodeId,
     type: 'custom',
-    position: { x: actions?.length > 0 ? 850 : 450, y: 248 },
+    position: { x: centerXPossition, y: 248 },
     data: { label: 'Center Node' },
   });
 
@@ -305,7 +327,7 @@ const buildFlowNodesAndEdges = (
     nodes.push({
       id: namespaceNodeId,
       type: 'source',
-      position: { x: xOffsetNamespace, y: yOffset + index * 100 },
+      position: { x: xOffsetNamespace, y: sourceyOffset + index * 100 },
       data: source,
     });
     edges.push({
@@ -324,7 +346,10 @@ const buildFlowNodesAndEdges = (
     nodes.push({
       id: destinationNodeId,
       type: 'destination',
-      position: { x: xOffsetDestination, y: yOffset + 50 + index * 100 },
+      position: {
+        x: centerXPossition + 400,
+        y: destinationyOffset + index * 100,
+      },
       data: destination,
     });
     edges.push({
@@ -344,7 +369,7 @@ const buildFlowNodesAndEdges = (
     nodes.push({
       id: actionNodeId,
       type: 'action',
-      position: { x: 450 + index * 125, y: 250 },
+      position: { x: 420 + index * 125, y: 250 },
       data: action,
     });
     edges.push({
@@ -366,5 +391,3 @@ export const { nodes, edges } = buildFlowNodesAndEdges(
   destinations,
   action
 );
-
-console.log(nodes, edges);
