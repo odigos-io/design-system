@@ -1,10 +1,9 @@
 import React, { memo } from 'react';
-import { Handle, Position } from 'reactflow';
-import { styled } from 'styled-components';
-import { Text } from '@/design.system';
-import { Folder } from '@/assets/icons/overview';
-import { LANGUAGES_LOGOS } from '@/assets';
 import Image from 'next/image';
+import styled from 'styled-components';
+import { Text } from '@/design.system';
+import { LANGUAGES_LOGOS } from '@/assets';
+import { Handle, Position } from 'reactflow';
 
 const NamespaceContainer = styled.div`
   display: flex;
@@ -32,14 +31,28 @@ const ImageWrapper = styled.div`
   align-items: center;
 `;
 
-export default memo(({ data, isConnectable }: any) => {
-  const lan = LANGUAGES_LOGOS[data.languages?.[0]?.language];
-  console.log({ data });
+interface NamespaceNodeProps {
+  data: {
+    namespace?: string;
+    name?: string;
+    languages?: { language: keyof typeof LANGUAGES_LOGOS }[];
+  };
+  isConnectable: boolean;
+}
+
+export default memo(({ data, isConnectable }: NamespaceNodeProps) => {
+  const languageKey = data.languages?.[0]?.language || 'default';
+  const lan = LANGUAGES_LOGOS[languageKey];
+
   return (
     <NamespaceContainer>
-      {/* <Folder width={32} /> */}
       <ImageWrapper>
-        <Image src={lan} alt={''} width={32} height={32} />
+        <Image
+          src={lan}
+          alt={languageKey || 'default'}
+          width={32}
+          height={32}
+        />
       </ImageWrapper>
       <TextWrapper>
         <Text color={'#8b92a5'}>{data.namespace}</Text>

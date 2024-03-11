@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Handle, Position } from 'reactflow';
-import { styled } from 'styled-components';
-import { Text, Tooltip } from '@/design.system';
+import styled from 'styled-components';
+import { Text } from '@/design.system';
 import { ACTION_ICONS } from '@/assets';
 import theme from '@/styles/palette';
 
@@ -21,16 +21,38 @@ const ActionContainer = styled.div`
 const TextWrapper = styled.div`
   max-width: 72px;
   height: 40px;
-  /* background-color: aliceblue; */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export default memo(({ data, isConnectable }: any) => {
+const SignalIndicator = styled.span<{ backgroundColor: string }>`
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+`;
+
+const IconWrapper = styled.div`
+  width: 24px;
+  height: 24px;
+`;
+
+interface ActionNodeProps {
+  data: {
+    type: string;
+    spec?: {
+      actionName?: string;
+      signals: string[];
+    };
+  };
+  isConnectable: boolean;
+}
+
+export default memo(({ data, isConnectable }: ActionNodeProps) => {
   const ActionIcon = ACTION_ICONS[data.type] ? ACTION_ICONS[data.type] : null;
-  console.log({ data });
+
   return (
     <ActionContainer>
       <Handle
@@ -40,9 +62,11 @@ export default memo(({ data, isConnectable }: any) => {
         isConnectable={isConnectable}
         style={{ visibility: 'hidden' }}
       />
-      <div>
-        <ActionIcon style={{ width: 24, height: 24 }} />
-      </div>
+      {ActionIcon && (
+        <IconWrapper>
+          <ActionIcon />
+        </IconWrapper>
+      )}
       <TextWrapper>
         <Text size={14} weight={600}>
           {data?.spec?.actionName}
@@ -57,17 +81,11 @@ export default memo(({ data, isConnectable }: any) => {
           width: '100%',
         }}
       >
-        {data.spec.signals.map((monitor: string) => (
-          <div key={monitor} style={{ display: 'flex' }}>
-            <span
-              style={{
-                backgroundColor: (theme.colors as any)[monitor.toLowerCase()],
-                width: 8,
-                height: 8,
-                borderRadius: 8,
-              }}
-            />
-          </div>
+        {data.spec?.signals.map((monitor: string) => (
+          <SignalIndicator
+            key={monitor}
+            backgroundColor={(theme.colors as any)[monitor.toLowerCase()]}
+          />
         ))}
       </div>
       <Handle

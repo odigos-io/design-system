@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
-import { Handle, Position } from 'reactflow';
-import { styled } from 'styled-components';
-import { Text } from '@/design.system';
-import { MONITORING_OPTIONS } from './monitors';
+import React from 'react';
 import theme from '@/styles/palette';
+import { Text } from '@/design.system';
+import { styled } from 'styled-components';
+import { Handle, Position } from 'reactflow';
+import { MONITORING_OPTIONS } from './monitors';
 
 interface IconWrapperProps {
   tapped?: boolean | undefined | string;

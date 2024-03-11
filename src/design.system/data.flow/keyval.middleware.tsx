@@ -2,7 +2,16 @@ import React from 'react';
 import { Handle, Position } from 'reactflow';
 import { Logo } from '@/assets';
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const flickerAnimation = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+`;
 
 const FlickerWrapper = styled.div`
   width: 120px;
@@ -24,62 +33,55 @@ const FlickerWrapper = styled.div`
     border-radius: 60px;
     background: #110c1f55;
     z-index: -1;
-    animation: flicker 1s infinite alternate;
-  }
-
-  @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.2;
-    }
+    animation: ${flickerAnimation} 1s infinite alternate;
   }
 `;
 
-const LogoWrapper = styled.div`
+const InnerWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: solid 1px #3a3a3a76;
+  background: #110c1f7d;
+`;
+
+const LogoContainer = styled.div`
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: solid 1px #3a3a3aa9;
+  background: #110c1f;
   position: relative;
   z-index: 99;
 `;
 
-export default function OdigosCenterNode({ isConnectable }: any) {
+// TypeScript Props Interface
+interface OdigosCenterNodeProps {
+  isConnectable: boolean;
+}
+
+const OdigosCenterNode: React.FC<OdigosCenterNodeProps> = ({
+  isConnectable,
+}) => {
   return (
     <FlickerWrapper>
-      <div
-        style={{
-          width: 100,
-          height: 100,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: 50,
-          border: 'solid 1px #3a3a3a76',
-          background: '#110c1f7d',
-        }}
-      >
-        <div
-          style={{
-            width: 80,
-            height: 80,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: 40,
-            border: 'solid 1px #3a3a3aa9',
-            background: '#110c1f',
-          }}
-        >
-          <LogoWrapper>
-            <Image
-              src={Logo}
-              alt="logo"
-              width={64}
-              height={64}
-              style={{ borderRadius: '50%' }}
-            />
-          </LogoWrapper>
-        </div>
-      </div>
+      <InnerWrapper>
+        <LogoContainer>
+          <Image
+            src={Logo}
+            alt="logo"
+            width={64}
+            height={64}
+            style={{ borderRadius: '50%' }}
+          />
+        </LogoContainer>
+      </InnerWrapper>
       <Handle
         type="target"
         position={Position.Left}
@@ -94,4 +96,6 @@ export default function OdigosCenterNode({ isConnectable }: any) {
       />
     </FlickerWrapper>
   );
-}
+};
+
+export default OdigosCenterNode;

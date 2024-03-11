@@ -6,6 +6,7 @@ export const LANGUAGES_LOGOS = {
   javascript: `${BASE_URL}nodejs.svg`,
   python: `${BASE_URL}python.svg`,
   dotnet: `${BASE_URL}dotnet.svg`,
+  default: `${BASE_URL}default.svg`,
 };
 
 export const LANGUAGES_COLORS = {
