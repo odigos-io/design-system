@@ -4,9 +4,10 @@ import styled, { keyframes } from 'styled-components';
 const flickerAnimation = keyframes`
   0% {
     opacity: 1;
+
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 `;
 

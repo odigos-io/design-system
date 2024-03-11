@@ -69,7 +69,7 @@ export default memo(({ data, isConnectable }: ActionNodeProps) => {
       )}
       <TextWrapper>
         <Text size={14} weight={600}>
-          {data?.spec?.actionName}
+          {data?.spec?.actionName || 'Action'}
         </Text>
       </TextWrapper>
       <div
