@@ -56,13 +56,13 @@ interface Item {
   disabled?: boolean;
 }
 
-interface DropdownProps {
+interface ActionItemProps {
   label: string;
   subTitle: string;
   items: Item[];
 }
 
-export const ActionItem: React.FC<DropdownProps> = ({
+export const ActionItem: React.FC<ActionItemProps> = ({
   label,
   items,
   subTitle,
