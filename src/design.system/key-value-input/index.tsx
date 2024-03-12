@@ -22,7 +22,7 @@ export const TitleWrapper = styled.div`
   margin-bottom: 8px;
 `;
 
-export const Table = styled.table`
+const Table = styled.table`
   border: solid 1px ${theme.text.grey};
   text-align: center;
   border-spacing: 0;

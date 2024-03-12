@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { DataFlow } from '..';
+import { DataFlow, Table } from '..';
 import { ActionItem } from '@/design.system/action.item';
 // import { nodes, edges } from '@/design.system/data.flow/builder';
 const n = [
