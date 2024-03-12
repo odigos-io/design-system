@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { DataFlow } from '..';
+import { ActionItem } from '@/design.system/action.item';
 // import { nodes, edges } from '@/design.system/data.flow/builder';
 const n = [
   {
@@ -753,7 +754,22 @@ const e = [
 export default function Home() {
   return (
     <div style={{ background: '#0E1C28', height: '100vh' }}>
-      <DataFlow nodes={n} edges={e} />
+      <div>
+        <ActionItem
+          label={'test'}
+          subTitle={'sfsdfdsf'}
+          items={[
+            {
+              label: 'sdfdsf',
+              onClick: () => console.log('sdfdsf'),
+              id: 'sdfdsf',
+              selected: true,
+              disabled: false,
+            },
+          ]}
+        />
+      </div>
+      {/* <DataFlow nodes={n} edges={e} /> */}
     </div>
   );
 }
