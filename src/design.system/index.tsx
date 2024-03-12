@@ -31,6 +31,10 @@ export { MultiInput } from './multi-input';
 export { KeyValueTable } from './key-value-input';
 export { TextArea } from './text.area';
 export { MultiInputTable } from './multi-input/multi.input.table';
+export { ActionsGroup } from './action.group';
+export { ActionItem } from './action.item';
+export { Pagination } from './pagination';
+export { Table } from './table';
 
 export type { MultiInputTableProps } from './multi-input/multi.input.table';
 export type { KeyValueTableProps } from './key-value-input';

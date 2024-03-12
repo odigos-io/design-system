@@ -348,6 +348,55 @@ interface MultiInputTableProps {
 }
 declare const MultiInputTable: React.FC<MultiInputTableProps>;
 
+interface Item {
+    label: string;
+    onClick: () => void;
+    id: string;
+    selected?: boolean;
+    disabled?: boolean;
+}
+interface ActionItemProps {
+    label: string;
+    subTitle: string;
+    items: Item[];
+}
+declare const ActionItem$1: React.FC<ActionItemProps>;
+
+interface ActionItem {
+    label: string;
+    onClick: () => void;
+    id: string;
+    selected?: boolean;
+    disabled?: boolean;
+}
+interface ActionGroup {
+    label: string;
+    subTitle: string;
+    items: ActionItem[];
+    condition?: boolean;
+}
+interface ActionsListProps {
+    actionGroups: ActionGroup[];
+}
+declare const ActionsGroup: React.FC<ActionsListProps>;
+
+type PaginationProps = {
+    total: number;
+    itemsPerPage: number;
+    currentPage: number;
+    onPageChange: (page: number) => void;
+};
+declare const Pagination: React.FC<PaginationProps>;
+
+type TableProps<T> = {
+    data: T[];
+    renderTableHeader: () => JSX.Element;
+    renderTableRows: (item: T, index: number) => JSX.Element;
+    renderEmptyResult: () => JSX.Element;
+    onPaginate?: (pageNumber: number) => void;
+};
+declare const Table: <T>({ data, onPaginate, renderTableRows, renderTableHeader, renderEmptyResult, }: TableProps<T>) => React.JSX.Element;
+
 interface Source {
     name: string;
     kind: string;
@@ -416,4 +465,4 @@ declare const buildFlowNodesAndEdges: (sources: Source[], destinations: Destinat
     edges: FlowEdge[];
 };
 
-export { ActionInput, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, buildFlowNodesAndEdges };
+export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, Pagination, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, buildFlowNodesAndEdges };
