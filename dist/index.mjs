@@ -185,7 +185,7 @@ function FloatBox({ children, style = {} }) {
 }
 
 // src/design.system/code.block/code.block.tsx
-import React11, { useEffect as useEffect3, useState as useState3 } from "react";
+import React13, { useEffect as useEffect3, useState as useState3 } from "react";
 
 // src/assets/icons/copy.svg
 import * as React6 from "react";
@@ -207,9 +207,19 @@ import * as React9 from "react";
 var SvgTrash = (props) => /* @__PURE__ */ React9.createElement("svg", { width: "14px", height: "14px", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React9.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: 0 }), /* @__PURE__ */ React9.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ React9.createElement("g", { id: "SVGRepo_iconCarrier" }, /* @__PURE__ */ React9.createElement("path", { d: "M20.5001 6H3.5", stroke: "#0EE6F3", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React9.createElement("path", { d: "M18.8332 8.5L18.3732 15.3991C18.1962 18.054 18.1077 19.3815 17.2427 20.1907C16.3777 21 15.0473 21 12.3865 21H11.6132C8.95235 21 7.62195 21 6.75694 20.1907C5.89194 19.3815 5.80344 18.054 5.62644 15.3991L5.1665 8.5", stroke: "#0EE6F3", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React9.createElement("path", { d: "M9.5 11L10 16", stroke: "#0EE6F3", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React9.createElement("path", { d: "M14.5 11L14 16", stroke: "#0EE6F3", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React9.createElement("path", { d: "M6.5 6C6.55588 6 6.58382 6 6.60915 5.99936C7.43259 5.97849 8.15902 5.45491 8.43922 4.68032C8.44784 4.65649 8.45667 4.62999 8.47434 4.57697L8.57143 4.28571C8.65431 4.03708 8.69575 3.91276 8.75071 3.8072C8.97001 3.38607 9.37574 3.09364 9.84461 3.01877C9.96213 3 10.0932 3 10.3553 3H13.6447C13.9068 3 14.0379 3 14.1554 3.01877C14.6243 3.09364 15.03 3.38607 15.2493 3.8072C15.3043 3.91276 15.3457 4.03708 15.4286 4.28571L15.5257 4.57697C15.5433 4.62992 15.5522 4.65651 15.5608 4.68032C15.841 5.45491 16.5674 5.97849 17.3909 5.99936C17.4162 6 17.4441 6 17.5 6", stroke: "#0EE6F3", strokeWidth: 1.5 })));
 var trash_default = SvgTrash;
 
-// src/assets/icons/actions/cluster-attr.svg
+// src/assets/icons/check.svg
 import * as React10 from "react";
-var SvgClusterAttr = (props) => /* @__PURE__ */ React10.createElement("svg", { viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React10.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: 0 }), /* @__PURE__ */ React10.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ React10.createElement("g", { id: "SVGRepo_iconCarrier" }, /* @__PURE__ */ React10.createElement("path", { d: "M4.97883 9.68508C2.99294 8.89073 2 8.49355 2 8C2 7.50645 2.99294 7.10927 4.97883 6.31492L7.7873 5.19153C9.77318 4.39718 10.7661 4 12 4C13.2339 4 14.2268 4.39718 16.2127 5.19153L19.0212 6.31492C21.0071 7.10927 22 7.50645 22 8C22 8.49355 21.0071 8.89073 19.0212 9.68508L16.2127 10.8085C14.2268 11.6028 13.2339 12 12 12C10.7661 12 9.77318 11.6028 7.7873 10.8085L4.97883 9.68508Z", stroke: "#8b92a6", strokeWidth: 1.5 }), /* @__PURE__ */ React10.createElement("path", { d: "M22 12C22 12 21.0071 12.8907 19.0212 13.6851L16.2127 14.8085C14.2268 15.6028 13.2339 16 12 16C10.7661 16 9.77318 15.6028 7.7873 14.8085L4.97883 13.6851C2.99294 12.8907 2 12 2 12", stroke: "#8b92a6", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React10.createElement("path", { d: "M22 16C22 16 21.0071 16.8907 19.0212 17.6851L16.2127 18.8085C14.2268 19.6028 13.2339 20 12 20C10.7661 20 9.77318 19.6028 7.7873 18.8085L4.97883 17.6851C2.99294 16.8907 2 16 2 16", stroke: "#8b92a6", strokeWidth: 1.5, strokeLinecap: "round" })));
+var SvgCheck = (props) => /* @__PURE__ */ React10.createElement("svg", { width: 10, height: 10, viewBox: "0 0 10 10", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React10.createElement("g", { clipPath: "url(#clip0_48_7283)" }, /* @__PURE__ */ React10.createElement("path", { d: "M1.5625 5.625L3.75 7.8125L8.75 2.8125", stroke: "#96F2FF", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" })), /* @__PURE__ */ React10.createElement("defs", null, /* @__PURE__ */ React10.createElement("clipPath", { id: "clip0_48_7283" }, /* @__PURE__ */ React10.createElement("rect", { width: 10, height: 10, fill: "white" }))));
+var check_default = SvgCheck;
+
+// src/assets/icons/expand-arrow.svg
+import * as React11 from "react";
+var SvgExpandArrow = (props) => /* @__PURE__ */ React11.createElement("svg", { width: 12, height: 13, viewBox: "0 0 12 13", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React11.createElement("path", { d: "M10.0155 5.26528L6.26552 9.01528C6.23069 9.05014 6.18934 9.0778 6.14381 9.09667C6.09829 9.11555 6.04949 9.12526 6.00021 9.12526C5.95093 9.12526 5.90213 9.11555 5.85661 9.09667C5.81108 9.0778 5.76972 9.05014 5.7349 9.01528L1.9849 5.26528C1.91453 5.19491 1.875 5.09948 1.875 4.99996C1.875 4.90045 1.91453 4.80502 1.9849 4.73465C2.05526 4.66429 2.1507 4.62476 2.25021 4.62476C2.34972 4.62476 2.44516 4.66429 2.51552 4.73465L6.00021 8.21981L9.4849 4.73465C9.51974 4.69981 9.5611 4.67217 9.60662 4.65332C9.65214 4.63446 9.70094 4.62476 9.75021 4.62476C9.79948 4.62476 9.84827 4.63446 9.8938 4.65332C9.93932 4.67217 9.98068 4.69981 10.0155 4.73465C10.0504 4.76949 10.078 4.81086 10.0969 4.85638C10.1157 4.9019 10.1254 4.95069 10.1254 4.99996C10.1254 5.04924 10.1157 5.09803 10.0969 5.14355C10.078 5.18907 10.0504 5.23044 10.0155 5.26528Z", fill: "#CCD0D2" }));
+var expand_arrow_default = SvgExpandArrow;
+
+// src/assets/icons/actions/cluster-attr.svg
+import * as React12 from "react";
+var SvgClusterAttr = (props) => /* @__PURE__ */ React12.createElement("svg", { viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React12.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: 0 }), /* @__PURE__ */ React12.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ React12.createElement("g", { id: "SVGRepo_iconCarrier" }, /* @__PURE__ */ React12.createElement("path", { d: "M4.97883 9.68508C2.99294 8.89073 2 8.49355 2 8C2 7.50645 2.99294 7.10927 4.97883 6.31492L7.7873 5.19153C9.77318 4.39718 10.7661 4 12 4C13.2339 4 14.2268 4.39718 16.2127 5.19153L19.0212 6.31492C21.0071 7.10927 22 7.50645 22 8C22 8.49355 21.0071 8.89073 19.0212 9.68508L16.2127 10.8085C14.2268 11.6028 13.2339 12 12 12C10.7661 12 9.77318 11.6028 7.7873 10.8085L4.97883 9.68508Z", stroke: "#8b92a6", strokeWidth: 1.5 }), /* @__PURE__ */ React12.createElement("path", { d: "M22 12C22 12 21.0071 12.8907 19.0212 13.6851L16.2127 14.8085C14.2268 15.6028 13.2339 16 12 16C10.7661 16 9.77318 15.6028 7.7873 14.8085L4.97883 13.6851C2.99294 12.8907 2 12 2 12", stroke: "#8b92a6", strokeWidth: 1.5, strokeLinecap: "round" }), /* @__PURE__ */ React12.createElement("path", { d: "M22 16C22 16 21.0071 16.8907 19.0212 17.6851L16.2127 18.8085C14.2268 19.6028 13.2339 20 12 20C10.7661 20 9.77318 19.6028 7.7873 18.8085L4.97883 17.6851C2.99294 16.8907 2 16 2 16", stroke: "#8b92a6", strokeWidth: 1.5, strokeLinecap: "round" })));
 var cluster_attr_default = SvgClusterAttr;
 
 // src/assets/icons/actions/index.ts
@@ -375,11 +385,11 @@ function Code({ text: text2, highlightedWord, title, onCopy }) {
     copyToClipboard(text2);
     onCopy && onCopy();
   }
-  return /* @__PURE__ */ React11.createElement(ComponentWrapper, null, title && /* @__PURE__ */ React11.createElement(Text, { size: 14 }, title), /* @__PURE__ */ React11.createElement(CodeBlockContainer, null, /* @__PURE__ */ React11.createElement(CopyIconWrapper, { onClick: handleCopy }, !clipboardState ? /* @__PURE__ */ React11.createElement(copy_default, { width: 24, height: 24 }) : /* @__PURE__ */ React11.createElement(copied_default, { width: 24, height: 24 })), /* @__PURE__ */ React11.createElement(TextWrapper2, null, text2.split(" ").map((part, index) => /* @__PURE__ */ React11.createElement("span", { key: index, style: { color: getWordColor(part) } }, `${part} `)))));
+  return /* @__PURE__ */ React13.createElement(ComponentWrapper, null, title && /* @__PURE__ */ React13.createElement(Text, { size: 14 }, title), /* @__PURE__ */ React13.createElement(CodeBlockContainer, null, /* @__PURE__ */ React13.createElement(CopyIconWrapper, { onClick: handleCopy }, !clipboardState ? /* @__PURE__ */ React13.createElement(copy_default, { width: 24, height: 24 }) : /* @__PURE__ */ React13.createElement(copied_default, { width: 24, height: 24 })), /* @__PURE__ */ React13.createElement(TextWrapper2, null, text2.split(" ").map((part, index) => /* @__PURE__ */ React13.createElement("span", { key: index, style: { color: getWordColor(part) } }, `${part} `)))));
 }
 
 // src/design.system/card/card.tsx
-import React12 from "react";
+import React14 from "react";
 
 // src/design.system/card/card.styled.tsx
 import styled6 from "styled-components";
@@ -416,13 +426,13 @@ function Card({
     if (header?.body) {
       return header?.body();
     }
-    return /* @__PURE__ */ React12.createElement(React12.Fragment, null, /* @__PURE__ */ React12.createElement(Text, { size: 20, weight: 600 }, header?.title), /* @__PURE__ */ React12.createElement(Text, { size: 14, color: "#CCD0D2" }, header?.subtitle));
+    return /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement(Text, { size: 20, weight: 600 }, header?.title), /* @__PURE__ */ React14.createElement(Text, { size: 14, color: "#CCD0D2" }, header?.subtitle));
   }
-  return /* @__PURE__ */ React12.createElement(CardContainer, { selected: focus || void 0, type }, header && /* @__PURE__ */ React12.createElement(CardHeader, null, renderHeader()), children);
+  return /* @__PURE__ */ React14.createElement(CardContainer, { selected: focus || void 0, type }, header && /* @__PURE__ */ React14.createElement(CardHeader, null, renderHeader()), children);
 }
 
 // src/design.system/tag/tag.tsx
-import React13 from "react";
+import React15 from "react";
 import styled7 from "styled-components";
 var TagWrapper = styled7.div`
   display: flex;
@@ -433,11 +443,11 @@ var TagWrapper = styled7.div`
   width: fit-content;
 `;
 function Tag({ title = "", color = "#033869" }) {
-  return /* @__PURE__ */ React13.createElement(TagWrapper, { style: { backgroundColor: color } }, /* @__PURE__ */ React13.createElement(Text, { weight: 500, size: 13, color: "#CCD0D2" }, title));
+  return /* @__PURE__ */ React15.createElement(TagWrapper, { style: { backgroundColor: color } }, /* @__PURE__ */ React15.createElement(Text, { weight: 500, size: 13, color: "#CCD0D2" }, title));
 }
 
 // src/design.system/tap/tap.tsx
-import React14 from "react";
+import React16 from "react";
 import styled8 from "styled-components";
 var TapWrapper = styled8.div`
   display: flex;
@@ -455,7 +465,7 @@ function Tap({
   style,
   onClick
 }) {
-  return /* @__PURE__ */ React14.createElement(
+  return /* @__PURE__ */ React16.createElement(
     TapWrapper,
     {
       onClick,
@@ -463,7 +473,7 @@ function Tap({
       style: { ...style, cursor: onClick ? "pointer" : "auto" }
     },
     children,
-    /* @__PURE__ */ React14.createElement(
+    /* @__PURE__ */ React16.createElement(
       Text,
       {
         weight: 400,
@@ -477,12 +487,7 @@ function Tap({
 }
 
 // src/design.system/drop.down/drop.down.tsx
-import React21, { useEffect as useEffect4, useRef, useState as useState5 } from "react";
-
-// src/assets/icons/expand-arrow.svg
-import * as React15 from "react";
-var SvgExpandArrow = (props) => /* @__PURE__ */ React15.createElement("svg", { width: 12, height: 13, viewBox: "0 0 12 13", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React15.createElement("path", { d: "M10.0155 5.26528L6.26552 9.01528C6.23069 9.05014 6.18934 9.0778 6.14381 9.09667C6.09829 9.11555 6.04949 9.12526 6.00021 9.12526C5.95093 9.12526 5.90213 9.11555 5.85661 9.09667C5.81108 9.0778 5.76972 9.05014 5.7349 9.01528L1.9849 5.26528C1.91453 5.19491 1.875 5.09948 1.875 4.99996C1.875 4.90045 1.91453 4.80502 1.9849 4.73465C2.05526 4.66429 2.1507 4.62476 2.25021 4.62476C2.34972 4.62476 2.44516 4.66429 2.51552 4.73465L6.00021 8.21981L9.4849 4.73465C9.51974 4.69981 9.5611 4.67217 9.60662 4.65332C9.65214 4.63446 9.70094 4.62476 9.75021 4.62476C9.79948 4.62476 9.84827 4.63446 9.8938 4.65332C9.93932 4.67217 9.98068 4.69981 10.0155 4.73465C10.0504 4.76949 10.078 4.81086 10.0969 4.85638C10.1157 4.9019 10.1254 4.95069 10.1254 4.99996C10.1254 5.04924 10.1157 5.09803 10.0969 5.14355C10.078 5.18907 10.0504 5.23044 10.0155 5.26528Z", fill: "#CCD0D2" }));
-var expand_arrow_default = SvgExpandArrow;
+import React22, { useEffect as useEffect4, useRef, useState as useState5 } from "react";
 
 // src/design.system/drop.down/drop.down.styled.tsx
 import styled9 from "styled-components";
@@ -556,7 +561,7 @@ var LabelWrapper = styled9.div`
 `;
 
 // src/design.system/search.input/search.input.tsx
-import React18 from "react";
+import React19 from "react";
 
 // src/design.system/search.input/search.input.styled.tsx
 import styled10 from "styled-components";
@@ -588,13 +593,13 @@ var StyledSearchInput = styled10.input`
 `;
 
 // src/assets/icons/glass.svg
-import * as React16 from "react";
-var SvgGlass = (props) => /* @__PURE__ */ React16.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React16.createElement("path", { d: "M16.1479 15.3519L12.6273 11.8321C13.6477 10.6071 14.1566 9.03577 14.048 7.44512C13.9394 5.85447 13.2217 4.36692 12.0443 3.29193C10.8668 2.21693 9.32029 1.63725 7.72635 1.67348C6.13241 1.7097 4.6138 2.35904 3.48642 3.48642C2.35904 4.6138 1.7097 6.13241 1.67348 7.72635C1.63725 9.32029 2.21693 10.8668 3.29193 12.0443C4.36692 13.2217 5.85447 13.9394 7.44512 14.048C9.03577 14.1566 10.6071 13.6477 11.8321 12.6273L15.3519 16.1479C15.4042 16.2001 15.4663 16.2416 15.5345 16.2699C15.6028 16.2982 15.676 16.3127 15.7499 16.3127C15.8238 16.3127 15.897 16.2982 15.9653 16.2699C16.0336 16.2416 16.0956 16.2001 16.1479 16.1479C16.2001 16.0956 16.2416 16.0336 16.2699 15.9653C16.2982 15.897 16.3127 15.8238 16.3127 15.7499C16.3127 15.676 16.2982 15.6028 16.2699 15.5345C16.2416 15.4663 16.2001 15.4042 16.1479 15.3519ZM2.81242 7.87492C2.81242 6.87365 3.10933 5.89487 3.6656 5.06234C4.22188 4.22982 5.01253 3.58094 5.93758 3.19778C6.86263 2.81461 7.88053 2.71435 8.86256 2.90969C9.84459 3.10503 10.7466 3.58718 11.4546 4.29519C12.1626 5.00319 12.6448 5.90524 12.8401 6.88727C13.0355 7.8693 12.9352 8.8872 12.5521 9.81225C12.1689 10.7373 11.52 11.528 10.6875 12.0842C9.85497 12.6405 8.87618 12.9374 7.87492 12.9374C6.53271 12.9359 5.24591 12.4021 4.29683 11.453C3.34775 10.5039 2.81391 9.21712 2.81242 7.87492Z", fill: "#8B92A5" }));
+import * as React17 from "react";
+var SvgGlass = (props) => /* @__PURE__ */ React17.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React17.createElement("path", { d: "M16.1479 15.3519L12.6273 11.8321C13.6477 10.6071 14.1566 9.03577 14.048 7.44512C13.9394 5.85447 13.2217 4.36692 12.0443 3.29193C10.8668 2.21693 9.32029 1.63725 7.72635 1.67348C6.13241 1.7097 4.6138 2.35904 3.48642 3.48642C2.35904 4.6138 1.7097 6.13241 1.67348 7.72635C1.63725 9.32029 2.21693 10.8668 3.29193 12.0443C4.36692 13.2217 5.85447 13.9394 7.44512 14.048C9.03577 14.1566 10.6071 13.6477 11.8321 12.6273L15.3519 16.1479C15.4042 16.2001 15.4663 16.2416 15.5345 16.2699C15.6028 16.2982 15.676 16.3127 15.7499 16.3127C15.8238 16.3127 15.897 16.2982 15.9653 16.2699C16.0336 16.2416 16.0956 16.2001 16.1479 16.1479C16.2001 16.0956 16.2416 16.0336 16.2699 15.9653C16.2982 15.897 16.3127 15.8238 16.3127 15.7499C16.3127 15.676 16.2982 15.6028 16.2699 15.5345C16.2416 15.4663 16.2001 15.4042 16.1479 15.3519ZM2.81242 7.87492C2.81242 6.87365 3.10933 5.89487 3.6656 5.06234C4.22188 4.22982 5.01253 3.58094 5.93758 3.19778C6.86263 2.81461 7.88053 2.71435 8.86256 2.90969C9.84459 3.10503 10.7466 3.58718 11.4546 4.29519C12.1626 5.00319 12.6448 5.90524 12.8401 6.88727C13.0355 7.8693 12.9352 8.8872 12.5521 9.81225C12.1689 10.7373 11.52 11.528 10.6875 12.0842C9.85497 12.6405 8.87618 12.9374 7.87492 12.9374C6.53271 12.9359 5.24591 12.4021 4.29683 11.453C3.34775 10.5039 2.81391 9.21712 2.81242 7.87492Z", fill: "#8B92A5" }));
 var glass_default = SvgGlass;
 
 // src/assets/icons/X.svg
-import * as React17 from "react";
-var SvgX = (props) => /* @__PURE__ */ React17.createElement("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React17.createElement("path", { d: "M12.8535 12.146C12.9 12.1925 12.9368 12.2476 12.962 12.3083C12.9871 12.369 13.0001 12.4341 13.0001 12.4998C13.0001 12.5655 12.9871 12.6305 12.962 12.6912C12.9368 12.7519 12.9 12.8071 12.8535 12.8535C12.8071 12.9 12.7519 12.9368 12.6912 12.962C12.6305 12.9871 12.5655 13.0001 12.4998 13.0001C12.4341 13.0001 12.369 12.9871 12.3083 12.962C12.2476 12.9368 12.1925 12.9 12.146 12.8535L7.99979 8.70666L3.85354 12.8535C3.75972 12.9474 3.63247 13.0001 3.49979 13.0001C3.36711 13.0001 3.23986 12.9474 3.14604 12.8535C3.05222 12.7597 2.99951 12.6325 2.99951 12.4998C2.99951 12.3671 3.05222 12.2399 3.14604 12.146L7.29291 7.99979L3.14604 3.85354C3.05222 3.75972 2.99951 3.63247 2.99951 3.49979C2.99951 3.36711 3.05222 3.23986 3.14604 3.14604C3.23986 3.05222 3.36711 2.99951 3.49979 2.99951C3.63247 2.99951 3.75972 3.05222 3.85354 3.14604L7.99979 7.29291L12.146 3.14604C12.2399 3.05222 12.3671 2.99951 12.4998 2.99951C12.6325 2.99951 12.7597 3.05222 12.8535 3.14604C12.9474 3.23986 13.0001 3.36711 13.0001 3.49979C13.0001 3.63247 12.9474 3.75972 12.8535 3.85354L8.70666 7.99979L12.8535 12.146Z", fill: "white" }));
+import * as React18 from "react";
+var SvgX = (props) => /* @__PURE__ */ React18.createElement("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React18.createElement("path", { d: "M12.8535 12.146C12.9 12.1925 12.9368 12.2476 12.962 12.3083C12.9871 12.369 13.0001 12.4341 13.0001 12.4998C13.0001 12.5655 12.9871 12.6305 12.962 12.6912C12.9368 12.7519 12.9 12.8071 12.8535 12.8535C12.8071 12.9 12.7519 12.9368 12.6912 12.962C12.6305 12.9871 12.5655 13.0001 12.4998 13.0001C12.4341 13.0001 12.369 12.9871 12.3083 12.962C12.2476 12.9368 12.1925 12.9 12.146 12.8535L7.99979 8.70666L3.85354 12.8535C3.75972 12.9474 3.63247 13.0001 3.49979 13.0001C3.36711 13.0001 3.23986 12.9474 3.14604 12.8535C3.05222 12.7597 2.99951 12.6325 2.99951 12.4998C2.99951 12.3671 3.05222 12.2399 3.14604 12.146L7.29291 7.99979L3.14604 3.85354C3.05222 3.75972 2.99951 3.63247 2.99951 3.49979C2.99951 3.36711 3.05222 3.23986 3.14604 3.14604C3.23986 3.05222 3.36711 2.99951 3.49979 2.99951C3.63247 2.99951 3.75972 3.05222 3.85354 3.14604L7.99979 7.29291L12.146 3.14604C12.2399 3.05222 12.3671 2.99951 12.4998 2.99951C12.6325 2.99951 12.7597 3.05222 12.8535 3.14604C12.9474 3.23986 13.0001 3.36711 13.0001 3.49979C13.0001 3.63247 12.9474 3.75972 12.8535 3.85354L8.70666 7.99979L12.8535 12.146Z", fill: "white" }));
 var X_default = SvgX;
 
 // src/design.system/search.input/search.input.tsx
@@ -614,14 +619,14 @@ function SearchInput({
     }
   }) : () => {
   };
-  return /* @__PURE__ */ React18.createElement(
+  return /* @__PURE__ */ React19.createElement(
     SearchInputWrapper,
     {
       active: !!value || void 0,
       style: { ...containerStyle }
     },
-    /* @__PURE__ */ React18.createElement(glass_default, null),
-    /* @__PURE__ */ React18.createElement(
+    /* @__PURE__ */ React19.createElement(glass_default, null),
+    /* @__PURE__ */ React19.createElement(
       StyledSearchInput,
       {
         style: { ...inputStyle },
@@ -631,17 +636,17 @@ function SearchInput({
         onChange
       }
     ),
-    showClear && /* @__PURE__ */ React18.createElement("div", { onClick: clear }, " ", /* @__PURE__ */ React18.createElement(X_default, { style: { cursor: "pointer" } }))
+    showClear && /* @__PURE__ */ React19.createElement("div", { onClick: clear }, " ", /* @__PURE__ */ React19.createElement(X_default, { style: { cursor: "pointer" } }))
   );
 }
 
 // src/assets/icons/question.svg
-import * as React19 from "react";
-var SvgQuestion = (props) => /* @__PURE__ */ React19.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React19.createElement("path", { d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z", fill: "#96F2FF" }));
+import * as React20 from "react";
+var SvgQuestion = (props) => /* @__PURE__ */ React20.createElement("svg", { width: 14, height: 14, viewBox: "0 0 14 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React20.createElement("path", { d: "M7.65625 9.84375C7.65625 9.97354 7.61776 10.1004 7.54565 10.2083C7.47354 10.3163 7.37105 10.4004 7.25114 10.45C7.13122 10.4997 6.99927 10.5127 6.87197 10.4874C6.74467 10.4621 6.62774 10.3996 6.53596 10.3078C6.44419 10.216 6.38168 10.0991 6.35636 9.97178C6.33104 9.84448 6.34404 9.71253 6.39371 9.59261C6.44338 9.4727 6.52749 9.37021 6.63541 9.2981C6.74333 9.22599 6.87021 9.1875 7 9.1875C7.17405 9.1875 7.34097 9.25664 7.46404 9.37971C7.58711 9.50278 7.65625 9.6697 7.65625 9.84375ZM7 3.9375C5.7936 3.9375 4.8125 4.8207 4.8125 5.90625V6.125C4.8125 6.24103 4.8586 6.35231 4.94064 6.43436C5.02269 6.51641 5.13397 6.5625 5.25 6.5625C5.36603 6.5625 5.47731 6.51641 5.55936 6.43436C5.64141 6.35231 5.6875 6.24103 5.6875 6.125V5.90625C5.6875 5.30469 6.27649 4.8125 7 4.8125C7.72352 4.8125 8.3125 5.30469 8.3125 5.90625C8.3125 6.50781 7.72352 7 7 7C6.88397 7 6.77269 7.04609 6.69064 7.12814C6.6086 7.21019 6.5625 7.32147 6.5625 7.4375V7.875C6.5625 7.99103 6.6086 8.10231 6.69064 8.18436C6.77269 8.26641 6.88397 8.3125 7 8.3125C7.11603 8.3125 7.22731 8.26641 7.30936 8.18436C7.39141 8.10231 7.4375 7.99103 7.4375 7.875V7.83562C8.435 7.65242 9.1875 6.85672 9.1875 5.90625C9.1875 4.8207 8.20641 3.9375 7 3.9375ZM12.6875 7C12.6875 8.12488 12.3539 9.2245 11.729 10.1598C11.104 11.0951 10.2158 11.8241 9.17651 12.2546C8.13726 12.685 6.99369 12.7977 5.89043 12.5782C4.78716 12.3588 3.77374 11.8171 2.97833 11.0217C2.18292 10.2263 1.64124 9.21284 1.42179 8.10958C1.20233 7.00631 1.31496 5.86274 1.74544 4.82349C2.17591 3.78423 2.90489 2.89597 3.8402 2.27102C4.7755 1.64607 5.87512 1.3125 7 1.3125C8.50793 1.31409 9.95365 1.91382 11.0199 2.98009C12.0862 4.04636 12.6859 5.49207 12.6875 7ZM11.8125 7C11.8125 6.04818 11.5303 5.11773 11.0014 4.32632C10.4726 3.53491 9.72104 2.91808 8.84167 2.55383C7.9623 2.18958 6.99466 2.09428 6.06113 2.27997C5.1276 2.46566 4.27009 2.92401 3.59705 3.59705C2.92401 4.27009 2.46566 5.12759 2.27997 6.06113C2.09428 6.99466 2.18959 7.9623 2.55383 8.84166C2.91808 9.72103 3.53491 10.4726 4.32632 11.0014C5.11773 11.5303 6.04818 11.8125 7 11.8125C8.27591 11.8111 9.49915 11.3036 10.4014 10.4014C11.3036 9.49915 11.8111 8.27591 11.8125 7Z", fill: "#96F2FF" }));
 var question_default = SvgQuestion;
 
 // src/design.system/tooltip/index.tsx
-import React20, { useState as useState4 } from "react";
+import React21, { useState as useState4 } from "react";
 import styled11 from "styled-components";
 var TooltipContainer = styled11.div`
   display: inline-flex;
@@ -685,8 +690,8 @@ var Tooltip = ({
   const showTooltip = () => setIsVisible(true);
   const hideTooltip = () => setIsVisible(false);
   if (!text2)
-    return /* @__PURE__ */ React20.createElement(React20.Fragment, null, children);
-  return /* @__PURE__ */ React20.createElement(TooltipContainer, { onMouseEnter: showTooltip, onMouseLeave: hideTooltip }, children, /* @__PURE__ */ React20.createElement(TooltipText, { isVisible }, /* @__PURE__ */ React20.createElement(Text, { size: 12, weight: 600 }, text2)), showIcon && /* @__PURE__ */ React20.createElement(Icon, null, /* @__PURE__ */ React20.createElement(question_default, null)));
+    return /* @__PURE__ */ React21.createElement(React21.Fragment, null, children);
+  return /* @__PURE__ */ React21.createElement(TooltipContainer, { onMouseEnter: showTooltip, onMouseLeave: hideTooltip }, children, /* @__PURE__ */ React21.createElement(TooltipText, { isVisible }, /* @__PURE__ */ React21.createElement(Text, { size: 12, weight: 600 }, text2)), showIcon && /* @__PURE__ */ React21.createElement(Icon, null, /* @__PURE__ */ React21.createElement(question_default, null)));
 };
 
 // src/design.system/drop.down/drop.down.tsx
@@ -727,7 +732,7 @@ function DropDown({
       (item) => item?.label.toLowerCase().includes(searchFilter.toLowerCase())
     ) : data;
   }
-  return /* @__PURE__ */ React21.createElement(React21.Fragment, null, label && /* @__PURE__ */ React21.createElement(LabelWrapper, null, /* @__PURE__ */ React21.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React21.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React21.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React21.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React21.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React21.createElement(
+  return /* @__PURE__ */ React22.createElement(React22.Fragment, null, label && /* @__PURE__ */ React22.createElement(LabelWrapper, null, /* @__PURE__ */ React22.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React22.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React22.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React22.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React22.createElement("div", { style: { height: 37, width }, ref: containerRef }, /* @__PURE__ */ React22.createElement(
     DropdownWrapper,
     {
       selected: isHover,
@@ -735,8 +740,8 @@ function DropDown({
       onMouseLeave: () => setHover(false),
       onClick: toggleDropdown
     },
-    /* @__PURE__ */ React21.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React21.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
-  ), isOpen && /* @__PURE__ */ React21.createElement(DropdownBody, null, /* @__PURE__ */ React21.createElement(
+    /* @__PURE__ */ React22.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React22.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
+  ), isOpen && /* @__PURE__ */ React22.createElement(DropdownBody, null, /* @__PURE__ */ React22.createElement(
     SearchInput,
     {
       value: searchFilter,
@@ -746,18 +751,18 @@ function DropDown({
       inputStyle: SEARCH_INPUT_STYLE,
       showClear: false
     }
-  ), /* @__PURE__ */ React21.createElement(DropdownListWrapper, null, getDropdownList().map((item) => /* @__PURE__ */ React21.createElement(
+  ), /* @__PURE__ */ React22.createElement(DropdownListWrapper, null, getDropdownList().map((item) => /* @__PURE__ */ React22.createElement(
     DropdownItem,
     {
       key: item.id,
       onClick: (e) => handleItemClick(item)
     },
-    /* @__PURE__ */ React21.createElement(Text, null, item.label)
+    /* @__PURE__ */ React22.createElement(Text, null, item.label)
   ))))));
 }
 
 // src/design.system/switch/switch.tsx
-import React22 from "react";
+import React23 from "react";
 
 // src/design.system/switch/switch.styled.tsx
 import styled12 from "styled-components";
@@ -803,18 +808,18 @@ function Switch({
   style,
   label = "Select All"
 }) {
-  return /* @__PURE__ */ React22.createElement(SwitchInputWrapper, null, /* @__PURE__ */ React22.createElement(
+  return /* @__PURE__ */ React23.createElement(SwitchInputWrapper, null, /* @__PURE__ */ React23.createElement(
     SwitchToggleWrapper,
     {
       active: toggle || void 0,
       onClick: handleToggleChange
     },
-    /* @__PURE__ */ React22.createElement(SwitchButtonWrapper, { disabled: toggle || void 0 })
-  ), label && /* @__PURE__ */ React22.createElement(Text, { size: 14 }, label));
+    /* @__PURE__ */ React23.createElement(SwitchButtonWrapper, { disabled: toggle || void 0 })
+  ), label && /* @__PURE__ */ React23.createElement(Text, { size: 14 }, label));
 }
 
 // src/design.system/checkbox/checkbox.tsx
-import React24 from "react";
+import React25 from "react";
 
 // src/design.system/checkbox/checkbox.styled.tsx
 import { styled as styled13 } from "styled-components";
@@ -834,8 +839,8 @@ var CheckboxItem = styled13.span`
 `;
 
 // src/assets/icons/checkbox-rect.svg
-import * as React23 from "react";
-var SvgCheckboxRect = (props) => /* @__PURE__ */ React23.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React23.createElement("rect", { x: 0.5, y: 0.5, width: 17, height: 17, rx: 3.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React23.createElement("path", { d: "M13.7727 6L7.39773 12.375L4.5 9.47727", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
+import * as React24 from "react";
+var SvgCheckboxRect = (props) => /* @__PURE__ */ React24.createElement("svg", { width: 18, height: 18, viewBox: "0 0 18 18", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React24.createElement("rect", { x: 0.5, y: 0.5, width: 17, height: 17, rx: 3.5, fill: "#96F2FF", stroke: "#96F2FF" }), /* @__PURE__ */ React24.createElement("path", { d: "M13.7727 6L7.39773 12.375L4.5 9.47727", stroke: "#132330", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" }));
 var checkbox_rect_default = SvgCheckboxRect;
 
 // src/design.system/checkbox/checkbox.tsx
@@ -845,7 +850,7 @@ function Checkbox({
   label = "",
   disabled = false
 }) {
-  return /* @__PURE__ */ React24.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React24.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React24.createElement(CheckboxItem, null), /* @__PURE__ */ React24.createElement(Text, { size: 14 }, label));
+  return /* @__PURE__ */ React25.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React25.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React25.createElement(CheckboxItem, null), /* @__PURE__ */ React25.createElement(Text, { size: 14 }, label));
 }
 
 // src/design.system/selected.counter/selected.counter.tsx
@@ -861,11 +866,6 @@ var SelectedCounterWrapper = styled14.div`
   border-radius: 14px;
   background: ${({ theme: theme2 }) => theme2.colors.dark_blue};
 `;
-
-// src/assets/icons/check.svg
-import * as React25 from "react";
-var SvgCheck = (props) => /* @__PURE__ */ React25.createElement("svg", { width: 10, height: 10, viewBox: "0 0 10 10", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React25.createElement("g", { clipPath: "url(#clip0_48_7283)" }, /* @__PURE__ */ React25.createElement("path", { d: "M1.5625 5.625L3.75 7.8125L8.75 2.8125", stroke: "#96F2FF", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" })), /* @__PURE__ */ React25.createElement("defs", null, /* @__PURE__ */ React25.createElement("clipPath", { id: "clip0_48_7283" }, /* @__PURE__ */ React25.createElement("rect", { width: 10, height: 10, fill: "white" }))));
-var check_default = SvgCheck;
 
 // src/design.system/selected.counter/selected.counter.tsx
 function SelectedCounter({ total, selected }) {
@@ -2632,6 +2632,184 @@ var MultiInputTable = ({
   )))), /* @__PURE__ */ React70.createElement("tfoot", null, /* @__PURE__ */ React70.createElement("tr", null, /* @__PURE__ */ React70.createElement(AddRowButton2, { onClick: addRow, colSpan: 2 }, /* @__PURE__ */ React70.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, "Add Row"))))));
 };
 
+// src/design.system/action.group/index.tsx
+import React72 from "react";
+
+// src/design.system/action.item/index.tsx
+import React71, { useRef as useRef3, useState as useState14 } from "react";
+import styled37 from "styled-components";
+var Label = styled37.label`
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  p {
+    color: ${({ theme: theme2 }) => theme2.colors.light_grey};
+    &:hover {
+      color: ${({ theme: theme2 }) => theme2.colors.white};
+    }
+  }
+`;
+var Popup = styled37.div`
+  display: ${(props) => props.isOpen ? "block" : "none"};
+  position: absolute;
+  right: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  flex-direction: column;
+  border-radius: 8px;
+  border: ${({ theme: theme2 }) => `1px solid ${theme2.colors.blue_grey}`};
+  background: ${({ theme: theme2 }) => theme2.colors.dark};
+  margin-top: 5px;
+`;
+var PopupItem = styled37.div`
+  display: flex;
+  padding: 7px 12px;
+  gap: 4px;
+  border-top: ${({ theme: theme2 }) => `1px solid ${theme2.colors.blue_grey}`};
+  align-items: center;
+  opacity: ${({ disabled }) => disabled ? 0.5 : 1};
+  pointer-events: ${({ disabled }) => disabled ? "none" : "auto"};
+  cursor: pointer;
+  p {
+    cursor: pointer !important;
+  }
+
+  &:hover {
+    background: ${({ theme: theme2 }) => theme2.colors.light_dark};
+  }
+`;
+var ActionItem = ({
+  label,
+  items,
+  subTitle
+}) => {
+  const [isOpen, setIsOpen] = useState14(false);
+  const ref = useRef3(null);
+  useOnClickOutside(ref, () => setIsOpen(false));
+  return /* @__PURE__ */ React71.createElement("div", { ref, style: { position: "relative" } }, /* @__PURE__ */ React71.createElement(Label, { onClick: () => setIsOpen(!isOpen) }, /* @__PURE__ */ React71.createElement(Text, { size: 12, weight: 600 }, label), /* @__PURE__ */ React71.createElement(expand_arrow_default, null)), /* @__PURE__ */ React71.createElement(Popup, { isOpen }, /* @__PURE__ */ React71.createElement("div", { style: { padding: 12, width: 120 } }, /* @__PURE__ */ React71.createElement(Text, { size: 12, weight: 600 }, subTitle)), items.map((item, index) => /* @__PURE__ */ React71.createElement(
+    PopupItem,
+    {
+      key: index,
+      onClick: item.onClick,
+      disabled: !!item.disabled
+    },
+    item.selected ? /* @__PURE__ */ React71.createElement(check_default, null) : /* @__PURE__ */ React71.createElement("div", { style: { width: 10 } }),
+    /* @__PURE__ */ React71.createElement(Text, { size: 12, weight: 600 }, item.label)
+  ))));
+};
+
+// src/design.system/action.group/index.tsx
+var ActionsGroup = ({ actionGroups }) => {
+  return /* @__PURE__ */ React72.createElement(React72.Fragment, null, actionGroups.map(
+    (group, index) => group.condition && /* @__PURE__ */ React72.createElement(ActionItem, { key: index, ...group })
+  ));
+};
+
+// src/design.system/pagination/index.tsx
+import React73 from "react";
+import styled38 from "styled-components";
+var PaginationContainer = styled38.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 2px;
+`;
+var PageButton = styled38.button`
+  background-color: ${(props) => props.isCurrentPage ? palette_default.colors.blue_grey : "transparent"};
+  color: ${(props) => props.isDisabled ? palette_default.text.grey : palette_default.text.white};
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:hover {
+    background-color: ${palette_default.colors.blue_grey};
+  }
+`;
+var Pagination = ({
+  total,
+  itemsPerPage,
+  currentPage,
+  onPageChange
+}) => {
+  const pageCount = Math.ceil(total / itemsPerPage);
+  return /* @__PURE__ */ React73.createElement(PaginationContainer, null, /* @__PURE__ */ React73.createElement(
+    PageButton,
+    {
+      onClick: () => onPageChange(currentPage - 1),
+      disabled: currentPage === 1,
+      isDisabled: currentPage === 1
+    },
+    /* @__PURE__ */ React73.createElement(expand_arrow_default, { style: { transform: "rotate(90deg)" } }),
+    "Previous"
+  ), new Array(pageCount).fill(0).map((_, index) => /* @__PURE__ */ React73.createElement(
+    PageButton,
+    {
+      key: index,
+      onClick: () => onPageChange(index + 1),
+      isCurrentPage: currentPage === index + 1
+    },
+    index + 1
+  )), /* @__PURE__ */ React73.createElement(
+    PageButton,
+    {
+      onClick: () => onPageChange(currentPage + 1),
+      disabled: currentPage === pageCount,
+      isDisabled: currentPage === pageCount
+    },
+    "Next",
+    /* @__PURE__ */ React73.createElement(expand_arrow_default, { style: { transform: "rotate(-90deg)" } })
+  ));
+};
+
+// src/design.system/table/index.tsx
+import styled39 from "styled-components";
+import React74, { useState as useState15 } from "react";
+var StyledTable = styled39.table`
+  width: 100%;
+  background-color: ${palette_default.colors.dark};
+  border: 1px solid ${palette_default.colors.blue_grey};
+  border-radius: 6px;
+  border-collapse: separate;
+  border-spacing: 0;
+`;
+var StyledTbody = styled39.tbody``;
+var Table3 = ({
+  data,
+  onPaginate,
+  renderTableRows,
+  renderTableHeader,
+  renderEmptyResult
+}) => {
+  const [currentPage, setCurrentPage] = useState15(1);
+  const [itemsPerPage, setItemsPerPage] = useState15(10);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    if (onPaginate) {
+      onPaginate(pageNumber);
+    }
+  };
+  return /* @__PURE__ */ React74.createElement(React74.Fragment, null, /* @__PURE__ */ React74.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ React74.createElement(StyledTbody, null, currentItems.map((item, index) => renderTableRows(item, index)))), data.length === 0 ? renderEmptyResult() : data.length > 10 ? /* @__PURE__ */ React74.createElement(
+    Pagination,
+    {
+      total: data.length,
+      itemsPerPage,
+      currentPage,
+      onPageChange: handlePageChange
+    }
+  ) : null);
+};
+
 // src/design.system/data.flow/builder.ts
 var sources = [
   {
@@ -2931,6 +3109,8 @@ var { nodes, edges } = buildFlowNodesAndEdges(
 );
 export {
   ActionInput,
+  ActionItem,
+  ActionsGroup,
   Button,
   Card,
   Checkbox,
@@ -2950,12 +3130,14 @@ export {
   MultiInputTable,
   Note,
   Notification,
+  Pagination,
   RadioButton,
   SearchInput,
   SegmentedControls,
   SelectedCounter,
   Steps,
   Switch,
+  Table3 as Table,
   Tag,
   Tap,
   Text,
