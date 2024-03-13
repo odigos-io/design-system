@@ -18,7 +18,7 @@ interface TapWrapperProps {
 const TapWrapper = styled.div<TapWrapperProps>`
   display: flex;
   padding: 8px 14px;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 10px;
   border-radius: 16px;
   border: ${({ theme, selected }) =>

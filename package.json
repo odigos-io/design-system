@@ -1,6 +1,6 @@
 {
   "name": "@keyval-dev/design-system",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@focus-reactive/react-yaml": "^1.1.2",
     "@svgr/core": "^8.0.0",
     "@svgr/webpack": "^8.0.1",
     "@types/node": "20.4.8",

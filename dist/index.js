@@ -2120,7 +2120,8 @@ var LANGUAGES_LOGOS = {
     javascript: "".concat(BASE_URL, "nodejs.png"),
     python: "".concat(BASE_URL, "python.png"),
     dotnet: "".concat(BASE_URL, "dotnet.png"),
-    default: "".concat(BASE_URL, "go.png")
+    default: "".concat(BASE_URL, "go.png"),
+    mysql: "".concat(BASE_URL, "mysql.png")
 };
 // src/design.system/code.block/code.block.tsx
 var import_styled_components5 = require("styled-components");

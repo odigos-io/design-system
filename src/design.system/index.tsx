@@ -35,6 +35,7 @@ export { ActionsGroup } from './action.group';
 export { ActionItem } from './action.item';
 export { Pagination } from './pagination';
 export { Table } from './table';
+export { YMLEditor } from './yml.editor';
 
 export type { MultiInputTableProps } from './multi-input/multi.input.table';
 export type { KeyValueTableProps } from './key-value-input';
