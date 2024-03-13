@@ -7,6 +7,7 @@ export const LANGUAGES_LOGOS = {
   python: `${BASE_URL}python.png`,
   dotnet: `${BASE_URL}dotnet.png`,
   default: `${BASE_URL}go.png`,
+  mysql: `${BASE_URL}mysql.png`,
 };
 
 export const LANGUAGES_COLORS = {
@@ -15,4 +16,5 @@ export const LANGUAGES_COLORS = {
   javascript: '#F7DF1E',
   python: '#306998',
   dotnet: '#512BD4',
+  mysql: '#00758F',
 };
