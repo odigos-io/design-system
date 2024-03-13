@@ -412,7 +412,7 @@ function _templateObject13() {
 }
 function _templateObject14() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 8px 14px;\n  align-items: flex-start;\n  gap: 10px;\n  border-radius: 16px;\n  border: ",
+        "\n  display: flex;\n  padding: 8px 14px;\n  align-items: flex-end;\n  gap: 10px;\n  border-radius: 16px;\n  border: ",
         ";\n  background: ",
         ";\n"
     ]);
@@ -1563,6 +1563,36 @@ function _templateObject129() {
     };
     return data;
 }
+function _templateObject130() {
+    var data = _tagged_template_literal([
+        "\n  position: relative;\n  background-color: ",
+        ";\n  border-radius: 8px;\n  padding: 4px;\n\n  div {\n    color: #f5b175;\n  }\n  .ͼb {\n    color: #64a8fd;\n  }\n  .ͼm {\n    color: ",
+        ";\n  }\n  .ͼd {\n    color: #f5b175;\n  }\n  .ͼc {\n    color: #f5b175;\n  }\n  .cm-gutters {\n    display: none;\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n"
+    ]);
+    _templateObject130 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject131() {
+    var data = _tagged_template_literal([
+        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 10; // Ensure this is higher than the editor's z-index\n"
+    ]);
+    _templateObject131 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject132() {
+    var data = _tagged_template_literal([
+        "\n  background-color: ",
+        ";\n  z-index: 999;\n  border-radius: 4px;\n  padding: 4px;\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  pointer-events: all;\n"
+    ]);
+    _templateObject132 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1734,6 +1764,9 @@ __export(src_exports, {
     },
     Video: function() {
         return Video;
+    },
+    YMLEditor: function() {
+        return YMLEditor;
     },
     buildFlowNodesAndEdges: function() {
         return buildFlowNodesAndEdges;
@@ -4375,16 +4408,24 @@ var Input4 = import_styled_components38.default.input(_templateObject121(), pale
 var AddRowButton2 = import_styled_components38.default.td(_templateObject122());
 var MultiInputTable = function(param) {
     var values = param.values, title = param.title, tooltip = param.tooltip, onValuesChange = param.onValuesChange, required = param.required, placeholder = param.placeholder;
+    var _ref = _sliced_to_array((0, import_react44.useState)(false), 2), isMounted = _ref[0], setIsMounted = _ref[1];
+    var inputRefs = (0, import_react44.useRef)([]);
     var addRow = function() {
         onValuesChange(_to_consumable_array(values).concat([
             ""
         ]));
+        inputRefs.current = _to_consumable_array(inputRefs.current).concat([
+            null
+        ]);
     };
     var deleteRow = function(index) {
         var updatedValues = values.filter(function(_, i) {
             return i !== index;
         });
         onValuesChange(updatedValues);
+        inputRefs.current = inputRefs.current.filter(function(_, i) {
+            return i !== index;
+        });
     };
     var updateValue = function(index, newValue) {
         var updatedValues = values.map(function(value, i) {
@@ -4392,6 +4433,18 @@ var MultiInputTable = function(param) {
         });
         onValuesChange(updatedValues);
     };
+    (0, import_react44.useEffect)(function() {
+        if (isMounted) {
+            var lastInputIndex = inputRefs.current.length - 1;
+            var lastInput = inputRefs.current[lastInputIndex];
+            if (lastInput) {
+                lastInput.focus();
+            }
+        }
+        values && setIsMounted(true);
+    }, [
+        values
+    ]);
     return /* @__PURE__ */ import_react44.default.createElement(Container3, null, title && /* @__PURE__ */ import_react44.default.createElement(TitleWrapper4, null, /* @__PURE__ */ import_react44.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react44.default.createElement("div", {
@@ -4416,7 +4469,10 @@ var MultiInputTable = function(param) {
             onChange: function(e) {
                 return updateValue(index, e.target.value);
             },
-            placeholder: index === 0 ? placeholder : ""
+            placeholder: index === 0 ? placeholder : "",
+            ref: function(el) {
+                return inputRefs.current[index] = el;
+            }
         })), /* @__PURE__ */ import_react44.default.createElement(Td2, {
             onClick: function() {
                 return deleteRow(index);
@@ -4589,6 +4645,49 @@ var Table3 = function(param) {
         currentPage: currentPage,
         onPageChange: handlePageChange
     }) : null);
+};
+// src/design.system/yml.editor/index.tsx
+var import_react49 = __toESM(require("react"));
+var import_react_yaml = __toESM(require("@focus-reactive/react-yaml"));
+var import_styled_components42 = __toESM(require("styled-components"));
+var Container4 = import_styled_components42.default.div(_templateObject130(), palette_default.colors.blue_grey, palette_default.colors.white);
+var EditorOverlay = import_styled_components42.default.div(_templateObject131());
+var CopyIconWrapper2 = import_styled_components42.default.div(_templateObject132(), palette_default.colors.dark);
+var YMLEditor = function(param) {
+    var data = param.data;
+    var _ref = _sliced_to_array((0, import_react49.useState)(false), 2), isCopied = _ref[0], setIsCopied = _ref[1];
+    var handleChange = function() {};
+    var handleCopy = function() {
+        navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(function() {
+            setIsCopied(true);
+            setTimeout(function() {
+                setIsCopied(false);
+            }, 3e3);
+        }).catch(function(err) {
+            return console.error("Error copying YAML to clipboard: ", err);
+        });
+    };
+    return /* @__PURE__ */ import_react49.default.createElement(import_react49.default.Fragment, null, /* @__PURE__ */ import_react49.default.createElement(Container4, null, /* @__PURE__ */ import_react49.default.createElement(CopyIconWrapper2, {
+        onClick: handleCopy
+    }, isCopied ? /* @__PURE__ */ import_react49.default.createElement(copied_default, {
+        style: {
+            width: 18,
+            height: 18
+        }
+    }) : /* @__PURE__ */ import_react49.default.createElement(copy_default, {
+        style: {
+            width: 18,
+            height: 18
+        }
+    })), /* @__PURE__ */ import_react49.default.createElement("div", {
+        style: {
+            position: "relative"
+        }
+    }, /* @__PURE__ */ import_react49.default.createElement(import_react_yaml.default, {
+        key: JSON.stringify(data),
+        json: data,
+        onChange: handleChange
+    }), /* @__PURE__ */ import_react49.default.createElement(EditorOverlay, null))));
 };
 // src/design.system/data.flow/builder.ts
 var sources = [
@@ -4955,6 +5054,7 @@ var _buildFlowNodesAndEdges = buildFlowNodesAndEdges(sources, destinations, acti
     ThemeProviderWrapper: ThemeProviderWrapper,
     Tooltip: Tooltip,
     Video: Video,
+    YMLEditor: YMLEditor,
     buildFlowNodesAndEdges: buildFlowNodesAndEdges
 });
 //# sourceMappingURL=index.js.map

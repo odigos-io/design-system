@@ -459,7 +459,7 @@ import styled8 from "styled-components";
 var TapWrapper = styled8.div`
   display: flex;
   padding: 8px 14px;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 10px;
   border-radius: 16px;
   border: ${({ theme: theme2, selected }) => `1px solid ${selected ? "transparent" : theme2.colors.dark_blue}`};
@@ -2559,7 +2559,7 @@ var TextArea = ({
 };
 
 // src/design.system/multi-input/multi.input.table.tsx
-import React71 from "react";
+import React71, { useEffect as useEffect10, useRef as useRef3, useState as useState13 } from "react";
 import styled36 from "styled-components";
 var Container3 = styled36.div`
   width: 100%;
@@ -2608,12 +2608,16 @@ var MultiInputTable = ({
   required,
   placeholder
 }) => {
+  const [isMounted, setIsMounted] = useState13(false);
+  const inputRefs = useRef3([]);
   const addRow = () => {
     onValuesChange([...values, ""]);
+    inputRefs.current = [...inputRefs.current, null];
   };
   const deleteRow = (index) => {
     const updatedValues = values.filter((_, i) => i !== index);
     onValuesChange(updatedValues);
+    inputRefs.current = inputRefs.current.filter((_, i) => i !== index);
   };
   const updateValue = (index, newValue) => {
     const updatedValues = values.map(
@@ -2621,13 +2625,24 @@ var MultiInputTable = ({
     );
     onValuesChange(updatedValues);
   };
+  useEffect10(() => {
+    if (isMounted) {
+      const lastInputIndex = inputRefs.current.length - 1;
+      const lastInput = inputRefs.current[lastInputIndex];
+      if (lastInput) {
+        lastInput.focus();
+      }
+    }
+    values && setIsMounted(true);
+  }, [values]);
   return /* @__PURE__ */ React71.createElement(Container3, null, title && /* @__PURE__ */ React71.createElement(TitleWrapper4, null, /* @__PURE__ */ React71.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React71.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React71.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React71.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React71.createElement(Table2, null, /* @__PURE__ */ React71.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React71.createElement("tr", { key: index }, /* @__PURE__ */ React71.createElement(Td2, { right: true }, /* @__PURE__ */ React71.createElement(
     Input4,
     {
       type: "text",
       value,
       onChange: (e) => updateValue(index, e.target.value),
-      placeholder: index === 0 ? placeholder : ""
+      placeholder: index === 0 ? placeholder : "",
+      ref: (el) => inputRefs.current[index] = el
     }
   )), /* @__PURE__ */ React71.createElement(
     Td2,
@@ -2643,7 +2658,7 @@ var MultiInputTable = ({
 import React73 from "react";
 
 // src/design.system/action.item/index.tsx
-import React72, { useRef as useRef3, useState as useState14 } from "react";
+import React72, { useRef as useRef4, useState as useState14 } from "react";
 import styled37 from "styled-components";
 var Label = styled37.label`
   cursor: pointer;
@@ -2691,7 +2706,7 @@ var ActionItem = ({
   subTitle
 }) => {
   const [isOpen, setIsOpen] = useState14(false);
-  const ref = useRef3(null);
+  const ref = useRef4(null);
   useOnClickOutside(ref, () => setIsOpen(false));
   return /* @__PURE__ */ React72.createElement("div", { ref, style: { position: "relative" } }, /* @__PURE__ */ React72.createElement(Label, { onClick: () => setIsOpen(!isOpen) }, /* @__PURE__ */ React72.createElement(Text, { size: 12, weight: 600 }, label), /* @__PURE__ */ React72.createElement(expand_arrow_default, null)), /* @__PURE__ */ React72.createElement(Popup, { isOpen }, /* @__PURE__ */ React72.createElement("div", { style: { padding: 12, width: 120 } }, /* @__PURE__ */ React72.createElement(Text, { size: 12, weight: 600 }, subTitle)), items.map((item, index) => /* @__PURE__ */ React72.createElement(
     PopupItem,
@@ -2815,6 +2830,81 @@ var Table3 = ({
       onPageChange: handlePageChange
     }
   ) : null);
+};
+
+// src/design.system/yml.editor/index.tsx
+import React76, { useState as useState16 } from "react";
+import YamlEditor from "@focus-reactive/react-yaml";
+import styled40 from "styled-components";
+var Container4 = styled40.div`
+  position: relative;
+  background-color: ${palette_default.colors.blue_grey};
+  border-radius: 8px;
+  padding: 4px;
+
+  div {
+    color: #f5b175;
+  }
+  .ͼb {
+    color: #64a8fd;
+  }
+  .ͼm {
+    color: ${palette_default.colors.white};
+  }
+  .ͼd {
+    color: #f5b175;
+  }
+  .ͼc {
+    color: #f5b175;
+  }
+  .cm-gutters {
+    display: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+`;
+var EditorOverlay = styled40.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10; // Ensure this is higher than the editor's z-index
+`;
+var CopyIconWrapper2 = styled40.div`
+  background-color: ${palette_default.colors.dark};
+  z-index: 999;
+  border-radius: 4px;
+  padding: 4px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+`;
+var YMLEditor = ({ data }) => {
+  const [isCopied, setIsCopied] = useState16(false);
+  const handleChange = () => {
+  };
+  const handleCopy = () => {
+    navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 3e3);
+    }).catch((err) => console.error("Error copying YAML to clipboard: ", err));
+  };
+  return /* @__PURE__ */ React76.createElement(React76.Fragment, null, /* @__PURE__ */ React76.createElement(Container4, null, /* @__PURE__ */ React76.createElement(CopyIconWrapper2, { onClick: handleCopy }, isCopied ? /* @__PURE__ */ React76.createElement(copied_default, { style: { width: 18, height: 18 } }) : /* @__PURE__ */ React76.createElement(copy_default, { style: { width: 18, height: 18 } })), /* @__PURE__ */ React76.createElement("div", { style: { position: "relative" } }, /* @__PURE__ */ React76.createElement(
+    YamlEditor,
+    {
+      key: JSON.stringify(data),
+      json: data,
+      onChange: handleChange
+    }
+  ), /* @__PURE__ */ React76.createElement(EditorOverlay, null))));
 };
 
 // src/design.system/data.flow/builder.ts
@@ -3152,6 +3242,7 @@ export {
   ThemeProviderWrapper,
   Tooltip,
   Video,
+  YMLEditor,
   buildFlowNodesAndEdges
 };
 //# sourceMappingURL=index.mjs.map

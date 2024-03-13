@@ -397,6 +397,10 @@ type TableProps<T> = {
 };
 declare const Table: <T>({ data, onPaginate, renderTableRows, renderTableHeader, renderEmptyResult, }: TableProps<T>) => React.JSX.Element;
 
+declare const YMLEditor: ({ data }: {
+    data: any;
+}) => React.JSX.Element;
+
 interface Source {
     name: string;
     kind: string;
@@ -465,4 +469,4 @@ declare const buildFlowNodesAndEdges: (sources: Source[], destinations: Destinat
     edges: FlowEdge[];
 };
 
-export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, Pagination, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, buildFlowNodesAndEdges };
+export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, Pagination, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, YMLEditor, buildFlowNodesAndEdges };

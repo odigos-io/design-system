@@ -70,19 +70,13 @@ export const MultiInputTable: React.FC<MultiInputTableProps> = ({
   required,
   placeholder,
 }) => {
-  const [isMounted, setIsMounted] = useState(false);
-  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  // Ref to track if the component has mounted
-
   const addRow = () => {
     onValuesChange([...values, '']);
-    inputRefs.current = [...inputRefs.current, null];
   };
 
   const deleteRow = (index: number) => {
     const updatedValues = values.filter((_, i) => i !== index);
     onValuesChange(updatedValues);
-    inputRefs.current = inputRefs.current.filter((_, i) => i !== index);
   };
 
   const updateValue = (index: number, newValue: string) => {
@@ -91,17 +85,6 @@ export const MultiInputTable: React.FC<MultiInputTableProps> = ({
     );
     onValuesChange(updatedValues);
   };
-
-  useEffect(() => {
-    if (isMounted) {
-      const lastInputIndex = inputRefs.current.length - 1;
-      const lastInput = inputRefs.current[lastInputIndex];
-      if (lastInput) {
-        lastInput.focus();
-      }
-    }
-    values && setIsMounted(true);
-  }, [values]);
 
   return (
     <Container>
@@ -131,7 +114,6 @@ export const MultiInputTable: React.FC<MultiInputTableProps> = ({
                   value={value}
                   onChange={(e) => updateValue(index, e.target.value)}
                   placeholder={index === 0 ? placeholder : ''}
-                  ref={(el) => (inputRefs.current[index] = el)}
                 />
               </Td>
               <Td
