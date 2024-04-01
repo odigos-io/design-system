@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, InputHTMLAttributes, useState } from 'react';
 import {
   StyledInputContainer,
   StyledInput,
@@ -11,17 +11,13 @@ import EyeOpenIcon from '@/assets/icons/eye-open.svg';
 import EyeCloseIcon from '@/assets/icons/eye-close.svg';
 import { Tooltip } from '../tooltip';
 import theme from '@/styles/palette';
-interface InputProps {
+
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   label?: string;
-  value: string;
   onChange: (value: string) => void;
-  type?: string;
   error?: string;
   style?: React.CSSProperties;
-  placeholder?: string;
-  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   tooltip?: string;
-  required?: boolean;
 }
 
 export function Input({
@@ -31,10 +27,11 @@ export function Input({
   type = 'text',
   error = '',
   style = {},
-  placeholder,
   onKeyDown,
   tooltip,
   required,
+  autoComplete = "off",
+  ...rest
 }: InputProps): JSX.Element {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -68,9 +65,9 @@ export function Input({
           type={showPassword ? 'text' : type}
           value={value}
           onChange={handleChange}
-          autoComplete="off"
-          placeholder={placeholder}
+          autoComplete={autoComplete}
           onKeyDown={onKeyDown}
+          {...rest}
         />
         {type === 'password' && (
           <DisplayIconsWrapper onClick={() => setShowPassword(!showPassword)}>
