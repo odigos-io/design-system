@@ -1,23 +1,19 @@
-import React, { FC } from 'react';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 import { StyledButton, ButtonContainer } from './button.styled';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   // Additional custom props if needed
   variant?: string;
-  children: JSX.Element | JSX.Element[];
-  onClick?: () => void;
   style?: object;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 export const Button: FC<ButtonProps> = ({
   variant = 'primary',
   children,
   style,
-  onClick,
   disabled,
   type = 'button',
+  ...rest
 }) => {
   return (
     <ButtonContainer variant={variant} disabled={disabled}>
@@ -25,8 +21,8 @@ export const Button: FC<ButtonProps> = ({
         type={type}
         variant={variant}
         disabled={disabled}
-        onClick={onClick}
         style={{ ...style }}
+        {...rest}
       >
         {children}
       </StyledButton>
