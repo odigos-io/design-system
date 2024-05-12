@@ -154,7 +154,7 @@ const action = [
     id: 'aci-f6c9f',
     type: 'AddClusterInfo',
     spec: {
-      actionName: 'Cluster  Attributes',
+      actionName: 'This is tetst test Cluster Attributes',
       notes:
         'Actions are a way to modify the OpenTelemetry data recorded by Odigos Sources, before it is exported to your Odigos Destinations.',
       signals: ['METRICS', 'TRACES'],
@@ -168,7 +168,7 @@ const action = [
   },
   {
     id: 'aci-hfgcb',
-    type: 'AddClusterInfo',
+    type: 'DeleteAttribute',
     spec: {
       actionName: 'Link',
       notes: 'Link to docs',
@@ -187,9 +187,9 @@ const action = [
   },
   {
     id: 'aci-r67mp',
-    type: 'AddClusterInfo',
+    type: 'RenameAttribute',
     spec: {
-      actionName: 'Initialize',
+      actionName: 'Initialize Initialize',
       notes: 'This is the initialization phase of the cluster.',
       signals: ['LOGS', 'METRICS', 'TRACES'],
       clusterAttributes: [

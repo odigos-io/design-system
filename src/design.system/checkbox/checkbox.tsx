@@ -1,7 +1,7 @@
-import React from "react";
-import { Text } from "../text/text";
-import { CheckboxWrapper, CheckboxItem } from "./checkbox.styled";
-import Checked from "../../assets/icons/checkbox-rect.svg";
+import React from 'react';
+import { Text } from '../text/text';
+import { CheckboxWrapper, CheckboxItem } from './checkbox.styled';
+import Checked from '../../assets/icons/checkbox-rect.svg';
 
 interface CheckboxProps {
   value: boolean;
@@ -13,7 +13,7 @@ interface CheckboxProps {
 export function Checkbox({
   onChange,
   value,
-  label = "",
+  label = '',
   disabled = false,
 }: CheckboxProps) {
   return (

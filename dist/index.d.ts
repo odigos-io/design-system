@@ -1,4 +1,4 @@
-import React, { FC, ChangeEvent, ReactNode } from 'react';
+import React, { FC, ChangeEvent, ButtonHTMLAttributes, ReactNode, InputHTMLAttributes } from 'react';
 
 interface RadioButtonProps {
     label?: string;
@@ -9,13 +9,9 @@ interface RadioButtonProps {
 }
 declare const RadioButton: FC<RadioButtonProps>;
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: string;
-    children: JSX.Element | JSX.Element[];
-    onClick?: () => void;
     style?: object;
-    disabled?: boolean;
-    type?: 'button' | 'submit' | 'reset' | undefined;
 }
 declare const Button: FC<ButtonProps>;
 
@@ -154,19 +150,14 @@ interface ImageProps {
 }
 declare function ImageComponent({ src, alt, width, height, style, }: ImageProps): React.JSX.Element;
 
-interface InputProps$1 {
+interface InputProps$1 extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
     label?: string;
-    value: string;
     onChange: (value: string) => void;
-    type?: string;
     error?: string;
     style?: React.CSSProperties;
-    placeholder?: string;
-    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     tooltip?: string;
-    required?: boolean;
 }
-declare function Input({ label, value, onChange, type, error, style, placeholder, onKeyDown, tooltip, required, }: InputProps$1): JSX.Element;
+declare function Input({ label, value, onChange, type, error, style, onKeyDown, tooltip, required, autoComplete, ...rest }: InputProps$1): JSX.Element;
 
 interface InputProps {
     value: string;

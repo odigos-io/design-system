@@ -6,7 +6,7 @@ export const LANGUAGES_LOGOS = {
   javascript: `${BASE_URL}nodejs.png`,
   python: `${BASE_URL}python.png`,
   dotnet: `${BASE_URL}dotnet.png`,
-  default: `${BASE_URL}go.png`,
+  default: `${BASE_URL}default.png`,
   mysql: `${BASE_URL}mysql.png`,
 };
 
