@@ -14,13 +14,11 @@ const ActionContainer = styled.div`
   background: ${({ theme }) => theme.colors.dark};
   align-items: center;
   gap: 4px;
-  width: 80px;
-  height: 80px;
+  min-width: 80px;
 `;
 
 const TextWrapper = styled.div`
   max-width: 72px;
-  height: 40px;
   text-align: center;
   display: flex;
   align-items: center;
