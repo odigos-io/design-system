@@ -8,6 +8,9 @@ export const LANGUAGES_LOGOS = {
   dotnet: `${BASE_URL}dotnet.png`,
   default: `${BASE_URL}default.png`,
   mysql: `${BASE_URL}mysql.png`,
+  unknown: `${BASE_URL}default.svg`, // TODO: good icon
+  processing: `${BASE_URL}default.svg`, // TODO: good icon
+  'no containers': `${BASE_URL}default.svg`, // TODO: good icon
 };
 
 export const LANGUAGES_COLORS = {
