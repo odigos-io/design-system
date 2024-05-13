@@ -2184,7 +2184,12 @@ var LANGUAGES_LOGOS = {
     python: "".concat(BASE_URL, "python.png"),
     dotnet: "".concat(BASE_URL, "dotnet.png"),
     default: "".concat(BASE_URL, "default.png"),
-    mysql: "".concat(BASE_URL, "mysql.png")
+    mysql: "".concat(BASE_URL, "mysql.png"),
+    unknown: "".concat(BASE_URL, "default.svg"),
+    // TODO: good icon
+    processing: "".concat(BASE_URL, "default.svg"),
+    // TODO: good icon
+    "no containers": "".concat(BASE_URL, "default.svg")
 };
 // src/design.system/code.block/code.block.tsx
 var import_styled_components5 = require("styled-components");
