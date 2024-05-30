@@ -472,4 +472,10 @@ declare const buildFlowNodesAndEdges: (sources: Source[], destinations: Destinat
     edges: FlowEdge[];
 };
 
-export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, Pagination, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, YMLEditor, buildFlowNodesAndEdges };
+declare function HomeIcon({ size, color, ...props }: {
+    [x: string]: any;
+    size: any;
+    color: any;
+}): React.JSX.Element;
+
+export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, Button, Card, Checkbox, Code, DangerZone, KeyvalDataFlow as DataFlow, Divider, DropDown, FloatBox, HomeIcon, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, Loader, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, Notification, Pagination, RadioButton, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, Video, YMLEditor, buildFlowNodesAndEdges };
