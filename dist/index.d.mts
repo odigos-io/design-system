@@ -396,6 +396,12 @@ interface Source {
     name: string;
     kind: string;
     namespace: string;
+    conditions?: {
+        type: string;
+        status: string;
+        message: string;
+        lastTransitionTime: string;
+    }[];
     languages: Array<{
         container_name: string;
         language: string;
@@ -411,6 +417,12 @@ interface Destination {
         logs: boolean;
     };
     fields: Record<string, any>;
+    conditions?: {
+        type: string;
+        status: string;
+        message: string;
+        lastTransitionTime: string;
+    }[];
     destination_type: {
         type: string;
         display_name: string;

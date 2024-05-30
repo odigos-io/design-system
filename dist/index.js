@@ -4964,7 +4964,13 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
         }
     });
     sources2.forEach(function(source, index) {
-        var _actions;
+        var _source, _actions;
+        var hasError = false;
+        if ((_source = source) === null || _source === void 0 ? void 0 : _source.conditions) {
+            hasError = source.conditions.some(function(condition) {
+                return condition.status === "False";
+            });
+        }
         var namespaceNodeId = "namespace-".concat(index);
         nodes2.push({
             id: namespaceNodeId,
@@ -4981,12 +4987,19 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
             target: ((_actions = actions) === null || _actions === void 0 ? void 0 : _actions.length) > 0 ? "action-0" : centerNodeId,
             animated: true,
             style: {
-                stroke: "#96f3ff8e"
+                stroke: hasError ? "#ff0000" : "#96f3ff8e"
             },
             data: null
         });
     });
     destinations2.forEach(function(destination, index) {
+        var _destination;
+        var isErrored = false;
+        if ((_destination = destination) === null || _destination === void 0 ? void 0 : _destination.conditions) {
+            isErrored = destination.conditions.some(function(condition) {
+                return condition.status === "False";
+            });
+        }
         var destinationNodeId = "destination-".concat(index);
         nodes2.push({
             id: destinationNodeId,
@@ -5003,7 +5016,7 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
             target: destinationNodeId,
             animated: true,
             style: {
-                stroke: "#96f3ff8e"
+                stroke: isErrored ? "#ff0000" : "#96f3ff8e"
             },
             data: null
         });
