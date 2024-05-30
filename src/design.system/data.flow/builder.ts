@@ -214,6 +214,12 @@ interface Source {
   name: string;
   kind: string;
   namespace: string;
+  conditions?: {
+    type: string;
+    status: string;
+    message: string;
+    lastTransitionTime: string;
+  }[];
   languages: Array<{
     container_name: string;
     language: string;
@@ -230,6 +236,12 @@ interface Destination {
     logs: boolean;
   };
   fields: Record<string, any>;
+  conditions?: {
+    type: string;
+    status: string;
+    message: string;
+    lastTransitionTime: string;
+  }[];
   destination_type: {
     type: string;
     display_name: string;
@@ -323,6 +335,12 @@ export const buildFlowNodesAndEdges = (
 
   // Create namespace nodes from sources and edges to the center
   sources.forEach((source, index) => {
+    let hasError = false;
+    if (source?.conditions) {
+      hasError = source.conditions.some(
+        (condition) => condition.status === 'False'
+      );
+    }
     const namespaceNodeId = `namespace-${index}`;
     nodes.push({
       id: namespaceNodeId,
@@ -335,13 +353,19 @@ export const buildFlowNodesAndEdges = (
       source: namespaceNodeId,
       target: actions?.length > 0 ? `action-0` : centerNodeId,
       animated: true,
-      style: { stroke: '#96f3ff8e' },
+      style: { stroke: hasError ? '#ff0000' : '#96f3ff8e' },
       data: null,
     });
   });
 
   // Create destination nodes and edges from the center
   destinations.forEach((destination, index) => {
+    let isErrored = false;
+    if (destination?.conditions) {
+      isErrored = destination.conditions.some(
+        (condition) => condition.status === 'False'
+      );
+    }
     const destinationNodeId = `destination-${index}`;
     nodes.push({
       id: destinationNodeId,
@@ -357,7 +381,7 @@ export const buildFlowNodesAndEdges = (
       source: centerNodeId,
       target: destinationNodeId,
       animated: true,
-      style: { stroke: '#96f3ff8e' },
+      style: { stroke: isErrored ? '#ff0000' : '#96f3ff8e' },
       data: null,
     });
   });
