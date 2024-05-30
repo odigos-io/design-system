@@ -4,3 +4,5 @@ export interface HomeIconProps {
 }
 export * from './monitors';
 export * from './actions';
+export * from './app';
+export * from './side.menu';
