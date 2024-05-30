@@ -1,11 +1,7 @@
 import React from 'react';
+import { HomeIconProps } from '..';
 import { IconWrapper } from '../styled';
 import { Logs, Trace, Metrics } from '@/assets/icons/monitors';
-
-interface HomeIconProps {
-  size?: number;
-  color?: string;
-}
 
 export const LogsIcon = ({ size, color, ...props }: HomeIconProps) => (
   <IconWrapper size={size} color={color} {...props}>
