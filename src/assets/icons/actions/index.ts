@@ -12,3 +12,5 @@ export const ACTION_ICONS: ActionIcons = {
   RenameAttribute: RenameAttribute,
   DeleteAttribute: DeleteAttribute,
 };
+
+export { AddClusterInfo, DeleteAttribute, RenameAttribute };
