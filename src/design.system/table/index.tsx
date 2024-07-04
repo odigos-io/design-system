@@ -2,8 +2,8 @@ import theme from '@/styles/palette';
 import styled from 'styled-components';
 import React, { useState } from 'react';
 import { Pagination } from '../pagination';
+import { Text } from '../text/text';
 
-// Updated TableProps to be generic
 type TableProps<T> = {
   data: T[];
   renderTableHeader: () => JSX.Element;
@@ -23,6 +23,30 @@ const StyledTable = styled.table`
 
 const StyledTbody = styled.tbody``;
 
+const DropdownContainer = styled.div`
+  margin: 10px 0;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const Dropdown = styled.select`
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid ${theme.colors.blue_grey};
+  background-color: ${theme.colors.dark};
+  color: ${theme.colors.white};
+  border-radius: 8px;
+  cursor: pointer;
+  border: ${({ theme }) => `1px solid  ${theme.colors.blue_grey}`};
+`;
+
+const DropdownOption = styled.option`
+  background-color: ${theme.colors.dark};
+  color: ${theme.colors.white};
+`;
+
 // Applying generic type T to the Table component
 export const Table = <T,>({
   data,
@@ -32,7 +56,7 @@ export const Table = <T,>({
   renderEmptyResult,
 }: TableProps<T>) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage, setItemsPerPage] = useState(15);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -45,8 +69,31 @@ export const Table = <T,>({
     }
   };
 
+  const handleItemsPerPageChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setItemsPerPage(Number(event.target.value));
+    setCurrentPage(1); // Reset to the first page whenever items per page changes
+  };
+
   return (
     <>
+      <DropdownContainer>
+        <Text size={12} color={theme.text.light_grey}>
+          Showing {indexOfFirstItem + 1} to {indexOfLastItem} of {data.length}{' '}
+          items
+        </Text>
+        <Dropdown
+          id="itemsPerPage"
+          value={itemsPerPage}
+          onChange={handleItemsPerPageChange}
+        >
+          <DropdownOption value={10}>10</DropdownOption>
+          <DropdownOption value={25}>25</DropdownOption>
+          <DropdownOption value={50}>50</DropdownOption>
+        </Dropdown>
+      </DropdownContainer>
+
       <StyledTable>
         {renderTableHeader()}
         <StyledTbody>
@@ -56,14 +103,14 @@ export const Table = <T,>({
 
       {data.length === 0 ? (
         renderEmptyResult()
-      ) : data.length > 10 ? (
+      ) : (
         <Pagination
           total={data.length}
           itemsPerPage={itemsPerPage}
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />
-      ) : null}
+      )}
     </>
   );
 };
