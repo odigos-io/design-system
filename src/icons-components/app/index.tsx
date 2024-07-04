@@ -21,14 +21,14 @@ import {
   Plus,
 } from '@/assets';
 
-export const PlusIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const PlusIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <Plus />
   </IconWrapper>
 );
 
-export const BackIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const BackIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <Back />
   </IconWrapper>
 );

@@ -10,38 +10,38 @@ import {
   TracesFocus,
 } from '@/assets';
 
-export const LogsIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const LogsIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <Logs />
   </IconWrapper>
 );
 
-export const LogsFocusIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const LogsFocusIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <LogsFocus />
   </IconWrapper>
 );
 
-export const TraceIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const TraceIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <Traces />
   </IconWrapper>
 );
 
-export const TraceFocusIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const TraceFocusIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <TracesFocus />
   </IconWrapper>
 );
 
-export const MetricsIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const MetricsIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <Metrics />
   </IconWrapper>
 );
 
-export const MetricsFocusIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const MetricsFocusIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <MetricsFocus />
   </IconWrapper>
 );

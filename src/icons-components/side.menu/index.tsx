@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   FocusOverview,
   UnFocusOverview,
@@ -11,66 +12,50 @@ import {
 import { HomeIconProps } from '..';
 import { IconWrapper } from '../styled';
 
-export const FocusOverviewIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const FocusOverviewIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <FocusOverview />
   </IconWrapper>
 );
 
-export const UnFocusOverviewIcon = ({
-  size,
-  color,
-  ...props
-}: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const UnFocusOverviewIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <UnFocusOverview />
   </IconWrapper>
 );
 
-export const FocusSourcesIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const FocusSourcesIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <FocusSources />
   </IconWrapper>
 );
 
-export const UnFocusSourcesIcon = ({
-  size,
-  color,
-  ...props
-}: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const UnFocusSourcesIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <UnFocusSources />
   </IconWrapper>
 );
 
-export const FocusDestinationsIcon = ({
-  size,
-  color,
-  ...props
-}: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const FocusDestinationsIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <FocusDestinations />
   </IconWrapper>
 );
 
-export const UnFocusDestinationsIcon = ({
-  size,
-  color,
-  ...props
-}: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const UnFocusDestinationsIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <UnFocusDestinations />
   </IconWrapper>
 );
 
-export const FocusActionIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const FocusActionIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <FocusAction />
   </IconWrapper>
 );
 
-export const UnFocusActionIcon = ({ size, color, ...props }: HomeIconProps) => (
-  <IconWrapper size={size} color={color} {...props}>
+export const UnFocusActionIcon = ({ ...props }: HomeIconProps) => (
+  <IconWrapper {...props}>
     <UnFocusAction />
   </IconWrapper>
 );
