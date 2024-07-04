@@ -79,7 +79,7 @@ export const Table = <T,>({
   return (
     <>
       <DropdownContainer>
-        <Text color={theme.text.light_grey}>
+        <Text size={12} color={theme.text.light_grey}>
           Showing {indexOfFirstItem + 1} to {indexOfLastItem} of {data.length}{' '}
           items
         </Text>

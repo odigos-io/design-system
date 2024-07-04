@@ -243,7 +243,9 @@ var LANGUAGES_LOGOS = {
   // TODO: good icon
   processing: `${BASE_URL}default.svg`,
   // TODO: good icon
-  "no containers": `${BASE_URL}default.svg`
+  "no containers": `${BASE_URL}default.svg`,
+  // TODO: good icon
+  "no running pods": `${BASE_URL}default.svg`
   // TODO: good icon
 };
 
@@ -2939,6 +2941,27 @@ var StyledTable = styled39.table`
   border-spacing: 0;
 `;
 var StyledTbody = styled39.tbody``;
+var DropdownContainer = styled39.div`
+  margin: 10px 0;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+var Dropdown = styled39.select`
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid ${palette_default.colors.blue_grey};
+  background-color: ${palette_default.colors.dark};
+  color: ${palette_default.colors.white};
+  border-radius: 8px;
+  cursor: pointer;
+  border: ${({ theme: theme2 }) => `1px solid  ${theme2.colors.blue_grey}`};
+`;
+var DropdownOption = styled39.option`
+  background-color: ${palette_default.colors.dark};
+  color: ${palette_default.colors.white};
+`;
 var Table3 = ({
   data,
   onPaginate,
@@ -2947,7 +2970,7 @@ var Table3 = ({
   renderEmptyResult
 }) => {
   const [currentPage, setCurrentPage] = useState15(1);
-  const [itemsPerPage, setItemsPerPage] = useState15(10);
+  const [itemsPerPage, setItemsPerPage] = useState15(15);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -2957,7 +2980,21 @@ var Table3 = ({
       onPaginate(pageNumber);
     }
   };
-  return /* @__PURE__ */ React105.createElement(React105.Fragment, null, /* @__PURE__ */ React105.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ React105.createElement(StyledTbody, null, currentItems.map((item, index) => renderTableRows(item, index)))), data.length === 0 ? renderEmptyResult() : data.length > 10 ? /* @__PURE__ */ React105.createElement(
+  const handleItemsPerPageChange = (event) => {
+    setItemsPerPage(Number(event.target.value));
+    setCurrentPage(1);
+  };
+  return /* @__PURE__ */ React105.createElement(React105.Fragment, null, /* @__PURE__ */ React105.createElement(DropdownContainer, null, /* @__PURE__ */ React105.createElement(Text, { size: 12, color: palette_default.text.light_grey }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ React105.createElement(
+    Dropdown,
+    {
+      id: "itemsPerPage",
+      value: itemsPerPage,
+      onChange: handleItemsPerPageChange
+    },
+    /* @__PURE__ */ React105.createElement(DropdownOption, { value: 10 }, "10"),
+    /* @__PURE__ */ React105.createElement(DropdownOption, { value: 25 }, "25"),
+    /* @__PURE__ */ React105.createElement(DropdownOption, { value: 50 }, "50")
+  )), /* @__PURE__ */ React105.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ React105.createElement(StyledTbody, null, currentItems.map((item, index) => renderTableRows(item, index)))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ React105.createElement(
     Pagination,
     {
       total: data.length,
@@ -2965,7 +3002,7 @@ var Table3 = ({
       currentPage,
       onPageChange: handlePageChange
     }
-  ) : null);
+  ));
 };
 
 // src/design.system/yml.editor/index.tsx

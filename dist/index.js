@@ -1583,9 +1583,7 @@ function _templateObject129() {
 }
 function _templateObject130() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  background-color: ",
-        ";\n  border-radius: 8px;\n  padding: 4px;\n\n  div {\n    color: #f5b175;\n  }\n  .ͼb {\n    color: #64a8fd;\n  }\n  .ͼm {\n    color: ",
-        ";\n  }\n  .ͼd {\n    color: #f5b175;\n  }\n  .ͼc {\n    color: #f5b175;\n  }\n  .cm-gutters {\n    display: none;\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n"
+        "\n  margin: 10px 0;\n  gap: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n"
     ]);
     _templateObject130 = function _templateObject() {
         return data;
@@ -1594,7 +1592,11 @@ function _templateObject130() {
 }
 function _templateObject131() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 10; // Ensure this is higher than the editor's z-index\n"
+        "\n  padding: 5px;\n  border-radius: 4px;\n  border: 1px solid ",
+        ";\n  background-color: ",
+        ";\n  color: ",
+        ";\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
+        ";\n"
     ]);
     _templateObject131 = function _templateObject() {
         return data;
@@ -1604,7 +1606,8 @@ function _templateObject131() {
 function _templateObject132() {
     var data = _tagged_template_literal([
         "\n  background-color: ",
-        ";\n  z-index: 999;\n  border-radius: 4px;\n  padding: 4px;\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  pointer-events: all;\n"
+        ";\n  color: ",
+        ";\n"
     ]);
     _templateObject132 = function _templateObject() {
         return data;
@@ -1613,11 +1616,41 @@ function _templateObject132() {
 }
 function _templateObject133() {
     var data = _tagged_template_literal([
+        "\n  position: relative;\n  background-color: ",
+        ";\n  border-radius: 8px;\n  padding: 4px;\n\n  div {\n    color: #f5b175;\n  }\n  .ͼb {\n    color: #64a8fd;\n  }\n  .ͼm {\n    color: ",
+        ";\n  }\n  .ͼd {\n    color: #f5b175;\n  }\n  .ͼc {\n    color: #f5b175;\n  }\n  .cm-gutters {\n    display: none;\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n"
+    ]);
+    _templateObject133 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject134() {
+    var data = _tagged_template_literal([
+        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 10; // Ensure this is higher than the editor's z-index\n"
+    ]);
+    _templateObject134 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject135() {
+    var data = _tagged_template_literal([
+        "\n  background-color: ",
+        ";\n  z-index: 999;\n  border-radius: 4px;\n  padding: 4px;\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  pointer-events: all;\n"
+    ]);
+    _templateObject135 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject136() {
+    var data = _tagged_template_literal([
         "\n  width: ",
         "px;\n  height: ",
         "px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n"
     ]);
-    _templateObject133 = function _templateObject() {
+    _templateObject136 = function _templateObject() {
         return data;
     };
     return data;
@@ -2247,7 +2280,9 @@ var LANGUAGES_LOGOS = {
     // TODO: good icon
     processing: "".concat(BASE_URL, "default.svg"),
     // TODO: good icon
-    "no containers": "".concat(BASE_URL, "default.svg")
+    "no containers": "".concat(BASE_URL, "default.svg"),
+    // TODO: good icon
+    "no running pods": "".concat(BASE_URL, "default.svg")
 };
 // src/assets/icons/monitors/logs-grey.svg
 var React13 = __toESM(require("react"));
@@ -5391,10 +5426,16 @@ var import_styled_components41 = __toESM(require("styled-components"));
 var import_react48 = __toESM(require("react"));
 var StyledTable = import_styled_components41.default.table(_templateObject128(), palette_default.colors.dark, palette_default.colors.blue_grey);
 var StyledTbody = import_styled_components41.default.tbody(_templateObject129());
+var DropdownContainer = import_styled_components41.default.div(_templateObject130());
+var Dropdown = import_styled_components41.default.select(_templateObject131(), palette_default.colors.blue_grey, palette_default.colors.dark, palette_default.colors.white, function(param) {
+    var theme2 = param.theme;
+    return "1px solid  ".concat(theme2.colors.blue_grey);
+});
+var DropdownOption = import_styled_components41.default.option(_templateObject132(), palette_default.colors.dark, palette_default.colors.white);
 var Table3 = function(param) {
     var data = param.data, onPaginate = param.onPaginate, renderTableRows = param.renderTableRows, renderTableHeader = param.renderTableHeader, renderEmptyResult = param.renderEmptyResult;
     var _ref = _sliced_to_array((0, import_react48.useState)(1), 2), currentPage = _ref[0], setCurrentPage = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react48.useState)(10), 2), itemsPerPage = _ref1[0], setItemsPerPage = _ref1[1];
+    var _ref1 = _sliced_to_array((0, import_react48.useState)(15), 2), itemsPerPage = _ref1[0], setItemsPerPage = _ref1[1];
     var indexOfLastItem = currentPage * itemsPerPage;
     var indexOfFirstItem = indexOfLastItem - itemsPerPage;
     var currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -5404,22 +5445,39 @@ var Table3 = function(param) {
             onPaginate(pageNumber);
         }
     };
-    return /* @__PURE__ */ import_react48.default.createElement(import_react48.default.Fragment, null, /* @__PURE__ */ import_react48.default.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ import_react48.default.createElement(StyledTbody, null, currentItems.map(function(item, index) {
+    var handleItemsPerPageChange = function(event) {
+        setItemsPerPage(Number(event.target.value));
+        setCurrentPage(1);
+    };
+    return /* @__PURE__ */ import_react48.default.createElement(import_react48.default.Fragment, null, /* @__PURE__ */ import_react48.default.createElement(DropdownContainer, null, /* @__PURE__ */ import_react48.default.createElement(Text, {
+        size: 12,
+        color: palette_default.text.light_grey
+    }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ import_react48.default.createElement(Dropdown, {
+        id: "itemsPerPage",
+        value: itemsPerPage,
+        onChange: handleItemsPerPageChange
+    }, /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+        value: 10
+    }, "10"), /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+        value: 25
+    }, "25"), /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+        value: 50
+    }, "50"))), /* @__PURE__ */ import_react48.default.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ import_react48.default.createElement(StyledTbody, null, currentItems.map(function(item, index) {
         return renderTableRows(item, index);
-    }))), data.length === 0 ? renderEmptyResult() : data.length > 10 ? /* @__PURE__ */ import_react48.default.createElement(Pagination, {
+    }))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ import_react48.default.createElement(Pagination, {
         total: data.length,
         itemsPerPage: itemsPerPage,
         currentPage: currentPage,
         onPageChange: handlePageChange
-    }) : null);
+    }));
 };
 // src/design.system/yml.editor/index.tsx
 var import_react49 = __toESM(require("react"));
 var import_react_yaml = __toESM(require("@focus-reactive/react-yaml"));
 var import_styled_components42 = __toESM(require("styled-components"));
-var Container4 = import_styled_components42.default.div(_templateObject130(), palette_default.colors.blue_grey, palette_default.colors.white);
-var EditorOverlay = import_styled_components42.default.div(_templateObject131());
-var CopyIconWrapper2 = import_styled_components42.default.div(_templateObject132(), palette_default.colors.dark);
+var Container4 = import_styled_components42.default.div(_templateObject133(), palette_default.colors.blue_grey, palette_default.colors.white);
+var EditorOverlay = import_styled_components42.default.div(_templateObject134());
+var CopyIconWrapper2 = import_styled_components42.default.div(_templateObject135(), palette_default.colors.dark);
 var YMLEditor = function(param) {
     var data = param.data;
     var _ref = _sliced_to_array((0, import_react49.useState)(false), 2), isCopied = _ref[0], setIsCopied = _ref[1];
@@ -5799,7 +5857,7 @@ var _buildFlowNodesAndEdges = buildFlowNodesAndEdges(sources, destinations, acti
 var import_react50 = __toESM(require("react"));
 // src/icons-components/styled.ts
 var import_styled_components43 = __toESM(require("styled-components"));
-var IconWrapper3 = import_styled_components43.default.div(_templateObject133(), function(param) {
+var IconWrapper3 = import_styled_components43.default.div(_templateObject136(), function(param) {
     var size = param.size;
     return size || 24;
 }, function(param) {
