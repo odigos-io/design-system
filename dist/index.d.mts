@@ -482,6 +482,10 @@ declare const MetricsFocusIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Ele
 declare const AddClusterInfoIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
 declare const DeleteAttributeIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
 declare const RenameAttributeIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
+declare const ErrorSamplerIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
+declare const PiiMaskingIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
+declare const LatencySamplerIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
+declare const ProbabilisticSamplerIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
 
 declare const PlusIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
 declare const BackIcon: ({ ...props }: HomeIconProps) => React$1.JSX.Element;
@@ -518,4 +522,4 @@ interface HomeIconProps {
     className?: string;
 }
 
-export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, AddClusterInfoIcon, BackIcon, BellIcon, BlueInfoIcon, Button, Card, ChargeIcon, CheckIcon, Checkbox, Code, ConnectIcon, CopiedIcon, CopyIcon, DangerZone, KeyvalDataFlow as DataFlow, DeleteAttributeIcon, Divider, DropDown, ExpandIcon, FloatBox, FocusActionIcon, FocusDestinationsIcon, FocusOverviewIcon, FocusSourcesIcon, GreenCheckIcon, HomeIconProps, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, Link, LinkIcon, Loader, LogsFocusIcon, LogsIcon, MetricsFocusIcon, MetricsIcon, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, NoteIcon, Notification, Pagination, PlusIcon, RadioButton, RedErrorIcon, RenameAttributeIcon, RightArrowIcon, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, TraceFocusIcon, TraceIcon, UnFocusActionIcon, UnFocusDestinationsIcon, UnFocusOverviewIcon, UnFocusSourcesIcon, Video, WhiteArrowIcon, YMLEditor, YamlIconIcon, buildFlowNodesAndEdges };
+export { ActionInput, ActionItem$1 as ActionItem, ActionsGroup, AddClusterInfoIcon, BackIcon, BellIcon, BlueInfoIcon, Button, Card, ChargeIcon, CheckIcon, Checkbox, Code, ConnectIcon, CopiedIcon, CopyIcon, DangerZone, KeyvalDataFlow as DataFlow, DeleteAttributeIcon, Divider, DropDown, ErrorSamplerIcon, ExpandIcon, FloatBox, FocusActionIcon, FocusDestinationsIcon, FocusOverviewIcon, FocusSourcesIcon, GreenCheckIcon, HomeIconProps, ImageComponent as Image, Input, KeyValue, KeyValueTable, KeyValueTableProps, LatencySamplerIcon, Link, LinkIcon, Loader, LogsFocusIcon, LogsIcon, MetricsFocusIcon, MetricsIcon, Modal, MultiInput, MultiInputTable, MultiInputTableProps, Note, NoteIcon, Notification, Pagination, PiiMaskingIcon, PlusIcon, ProbabilisticSamplerIcon, RadioButton, RedErrorIcon, RenameAttributeIcon, RightArrowIcon, SearchInput, SegmentedControls, SelectedCounter, Steps, Switch, Table, Tag, Tap, Text, TextArea, TextAreaProps, ThemeProviderWrapper, Tooltip, TraceFocusIcon, TraceIcon, UnFocusActionIcon, UnFocusDestinationsIcon, UnFocusOverviewIcon, UnFocusSourcesIcon, Video, WhiteArrowIcon, YMLEditor, YamlIconIcon, buildFlowNodesAndEdges };
