@@ -3,6 +3,11 @@ const sources = [
     name: 'adservice',
     kind: 'Deployment',
     namespace: 'default',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     languages: [
       {
         container_name: 'server',
@@ -14,6 +19,11 @@ const sources = [
     name: 'cartservice',
     kind: 'Deployment',
     namespace: 'default',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     languages: [
       {
         container_name: 'server',
@@ -25,6 +35,11 @@ const sources = [
     name: 'checkoutservice',
     kind: 'Deployment',
     namespace: 'default',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     languages: [
       {
         container_name: 'server',
@@ -36,6 +51,11 @@ const sources = [
     name: 'coupon',
     kind: 'Deployment',
     namespace: 'default',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     languages: [
       {
         container_name: 'coupon',
@@ -50,6 +70,11 @@ const destinations = [
     id: 'odigos.io.dest.elasticsearch-6qklw',
     name: 'Elasticsearch',
     type: 'elasticsearch',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     signals: {
       traces: true,
       metrics: false,
@@ -119,6 +144,11 @@ const destinations = [
     id: 'odigos.io.dest.s3-gk7bn',
     name: 'aws',
     type: 's3',
+    metrics: {
+      data_transfer: '3.8 KB/s',
+      cpu_usage: '3.8%',
+      memory_usage: '3.8%',
+    },
     signals: {
       traces: true,
       metrics: true,
@@ -154,7 +184,7 @@ const action = [
     id: 'aci-f6c9f',
     type: 'AddClusterInfo',
     spec: {
-      actionName: 'This is tetst test Cluster Attributes',
+      actionName: 'Cluster Attributes',
       notes:
         'Actions are a way to modify the OpenTelemetry data recorded by Odigos Sources, before it is exported to your Odigos Destinations.',
       signals: ['METRICS', 'TRACES'],
@@ -214,6 +244,7 @@ interface Source {
   name: string;
   kind: string;
   namespace: string;
+  metrics?: Record<string, string>;
   conditions?: {
     type: string;
     status: string;
@@ -230,6 +261,7 @@ interface Destination {
   id: string;
   name: string;
   type: string;
+  metrics?: Record<string, string>;
   signals: {
     traces: boolean;
     metrics: boolean;
@@ -325,7 +357,7 @@ export const buildFlowNodesAndEdges = (
 
   // Create the center node
   const centerXPossition =
-    actions?.length > 0 ? actions?.length * 150 + 400 : 450;
+    actions?.length > 0 ? actions?.length * 150 + 600 : 450;
   nodes.push({
     id: centerNodeId,
     type: 'custom',
@@ -348,14 +380,42 @@ export const buildFlowNodesAndEdges = (
       position: { x: xOffsetNamespace, y: sourceyOffset + index * 100 },
       data: source,
     });
-    edges.push({
-      id: `e${namespaceNodeId}-${centerNodeId}`,
-      source: namespaceNodeId,
-      target: actions?.length > 0 ? `action-0` : centerNodeId,
-      animated: true,
-      style: { stroke: hasError ? '#ff0000' : '#96f3ff8e' },
-      data: null,
-    });
+
+    // Create metric node if source has metrics property
+    if (source.metrics) {
+      const metricNodeId = `metric-${index}`;
+      nodes.push({
+        id: metricNodeId,
+        type: 'metric',
+        position: { x: xOffsetNamespace + 250, y: sourceyOffset + index * 100 },
+        data: { metrics: source.metrics },
+      });
+      edges.push({
+        id: `e${namespaceNodeId}-${metricNodeId}`,
+        source: metricNodeId,
+        target: actions?.length > 0 ? `action-0` : centerNodeId,
+        animated: true,
+        style: { stroke: '#96f3ff8e' },
+        data: null,
+      });
+      edges.push({
+        id: `e${namespaceNodeId}-${centerNodeId}`,
+        source: namespaceNodeId,
+        target: metricNodeId,
+        animated: true,
+        style: { stroke: hasError ? '#ff0000' : '#96f3ff8e' },
+        data: null,
+      });
+    } else {
+      edges.push({
+        id: `e${namespaceNodeId}-${centerNodeId}`,
+        source: namespaceNodeId,
+        target: actions?.length > 0 ? `action-0` : centerNodeId,
+        animated: true,
+        style: { stroke: hasError ? '#ff0000' : '#96f3ff8e' },
+        data: null,
+      });
+    }
   });
 
   // Create destination nodes and edges from the center
@@ -371,19 +431,49 @@ export const buildFlowNodesAndEdges = (
       id: destinationNodeId,
       type: 'destination',
       position: {
-        x: centerXPossition + 400,
+        x: centerXPossition + 600,
         y: destinationyOffset + index * 100,
       },
       data: destination,
     });
-    edges.push({
-      id: `e${centerNodeId}-${destinationNodeId}`,
-      source: centerNodeId,
-      target: destinationNodeId,
-      animated: true,
-      style: { stroke: isErrored ? '#ff0000' : '#96f3ff8e' },
-      data: null,
-    });
+
+    if (destination.metrics) {
+      const metricNodeId = `metric-dest-${index}`;
+      nodes.push({
+        id: metricNodeId,
+        type: 'metric',
+        position: {
+          x: centerXPossition + 250,
+          y: destinationyOffset + index * 100,
+        },
+        data: { metrics: destination.metrics },
+      });
+      edges.push({
+        id: `e${destinationNodeId}-${metricNodeId}`,
+        source: centerNodeId,
+        target: metricNodeId,
+        animated: true,
+        style: { stroke: '#96f3ff8e' },
+        data: null,
+      });
+      edges.push({
+        id: `e${destinationNodeId}-${metricNodeId}`,
+        source: metricNodeId,
+        target: destinationNodeId,
+        animated: true,
+        style: { stroke: '#96f3ff8e' },
+        data: null,
+      });
+    } else {
+      edges.push({
+        id: `e${centerNodeId}-${destinationNodeId}`,
+        source: centerNodeId,
+        target: destinationNodeId,
+        animated: true,
+        style: { stroke: isErrored ? '#ff0000' : '#96f3ff8e' },
+        data: null,
+      });
+    }
   });
 
   // Create action nodes and edges from the center
@@ -393,7 +483,7 @@ export const buildFlowNodesAndEdges = (
     nodes.push({
       id: actionNodeId,
       type: 'action',
-      position: { x: 420 + index * 125, y: 250 },
+      position: { x: 550 + index * 125, y: 250 },
       data: action,
     });
     edges.push({
@@ -408,7 +498,6 @@ export const buildFlowNodesAndEdges = (
 
   return { nodes, edges };
 };
-
 // Example usage with typed data
 export const { nodes, edges } = buildFlowNodesAndEdges(
   sources,
