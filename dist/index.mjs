@@ -40,7 +40,14 @@ var TextWrapper = styled2.p`
 `;
 
 // src/design.system/text/text.tsx
-function Text({ children, color, style, weight, size }) {
+function Text({
+  children,
+  color,
+  style,
+  weight,
+  size,
+  ...rest
+}) {
   return /* @__PURE__ */ React.createElement(
     TextWrapper,
     {
@@ -49,7 +56,8 @@ function Text({ children, color, style, weight, size }) {
         color,
         fontSize: size,
         ...style
-      }
+      },
+      ...rest
     },
     children
   );

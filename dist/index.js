@@ -1970,15 +1970,21 @@ var TextWrapper = import_styled_components2.default.p(_templateObject2(), functi
     return theme2.font_family.primary;
 });
 // src/design.system/text/text.tsx
-function Text(param) {
-    var children = param.children, color = param.color, style = param.style, weight = param.weight, size = param.size;
-    return /* @__PURE__ */ import_react.default.createElement(TextWrapper, {
+function Text(_param) {
+    var children = _param.children, color = _param.color, style = _param.style, weight = _param.weight, size = _param.size, rest = _object_without_properties(_param, [
+        "children",
+        "color",
+        "style",
+        "weight",
+        "size"
+    ]);
+    return /* @__PURE__ */ import_react.default.createElement(TextWrapper, _object_spread({
         style: _object_spread({
             fontWeight: weight,
             color: color,
             fontSize: size
         }, style)
-    }, children);
+    }, rest), children);
 }
 // src/assets/icons/checked-radio.svg
 var React2 = __toESM(require("react"));

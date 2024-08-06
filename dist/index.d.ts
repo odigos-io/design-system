@@ -30,7 +30,7 @@ type TextProps = {
     color?: string;
     size?: number;
 };
-declare function Text({ children, color, style, weight, size }: TextProps): React$1.JSX.Element;
+declare function Text({ children, color, style, weight, size, ...rest }: TextProps): React$1.JSX.Element;
 
 interface CodeProps {
     text: string;
