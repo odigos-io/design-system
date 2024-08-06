@@ -15,9 +15,14 @@ export function Checkbox({
   value,
   label = '',
   disabled = false,
+  ...rest
 }: CheckboxProps) {
   return (
-    <CheckboxWrapper disabled={disabled || undefined} onClick={onChange}>
+    <CheckboxWrapper
+      disabled={disabled || undefined}
+      onClick={onChange}
+      {...rest}
+    >
       {value ? <Checked /> : <CheckboxItem />}
       <Text size={14}>{label}</Text>
     </CheckboxWrapper>

@@ -44,6 +44,7 @@ export function DropDown({
   label,
   tooltip,
   required,
+  ...rest
 }: DropDownProps) {
   const [isOpen, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>(value || null);
@@ -99,6 +100,7 @@ export function DropDown({
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onClick={toggleDropdown}
+          {...rest}
         >
           <DropdownHeader>
             {selectedItem ? selectedItem.label : SELECTED_ITEM}

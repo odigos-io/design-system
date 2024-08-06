@@ -47,6 +47,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   tooltip,
   label,
   required,
+  ...rest
 }) => {
   return (
     <>
@@ -73,6 +74,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
         rows={rows}
         cols={cols}
         active={!!value}
+        {...rest}
       />
     </>
   );
