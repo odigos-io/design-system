@@ -3318,8 +3318,7 @@ var CardContainer = import_styled_components6.default.div(_templateObject11(), f
 });
 var CardHeader = (0, import_styled_components6.default)(CardContainer)(_templateObject12());
 // src/design.system/card/card.tsx
-function Card(param) {
-    var children = param.children, _param_focus = param.focus, focus = _param_focus === void 0 ? false : _param_focus, _param_type = param.type, type = _param_type === void 0 ? "primary" : _param_type, header = param.header;
+function Card(_param) {
     var renderHeader = function renderHeader() {
         var _header, _header1, _header2;
         if ((_header = header) === null || _header === void 0 ? void 0 : _header.body) {
@@ -3334,10 +3333,16 @@ function Card(param) {
             color: "#CCD0D2"
         }, (_header2 = header) === null || _header2 === void 0 ? void 0 : _header2.subtitle));
     };
-    return /* @__PURE__ */ import_react8.default.createElement(CardContainer, {
+    var children = _param.children, _param_focus = _param.focus, focus = _param_focus === void 0 ? false : _param_focus, _param_type = _param.type, type = _param_type === void 0 ? "primary" : _param_type, header = _param.header, rest = _object_without_properties(_param, [
+        "children",
+        "focus",
+        "type",
+        "header"
+    ]);
+    return /* @__PURE__ */ import_react8.default.createElement(CardContainer, _object_spread({
         selected: focus || void 0,
         type: type
-    }, header && /* @__PURE__ */ import_react8.default.createElement(CardHeader, null, renderHeader()), children);
+    }, rest), header && /* @__PURE__ */ import_react8.default.createElement(CardHeader, null, renderHeader()), children);
 }
 // src/design.system/tag/tag.tsx
 var import_react9 = __toESM(require("react"));
@@ -3554,8 +3559,7 @@ var CONTAINER_STYLE = {
 var SEARCH_INPUT_STYLE = {
     background: "transparent"
 };
-function DropDown(param) {
-    var _param_data = param.data, data = _param_data === void 0 ? [] : _param_data, onChange = param.onChange, _param_width = param.width, width = _param_width === void 0 ? 260 : _param_width, value = param.value, label = param.label, tooltip = param.tooltip, required = param.required;
+function DropDown(_param) {
     var getDropdownList = function getDropdownList() {
         var _data;
         return searchFilter ? (_data = data) === null || _data === void 0 ? void 0 : _data.filter(function(item) {
@@ -3563,6 +3567,15 @@ function DropDown(param) {
             return (_item = item) === null || _item === void 0 ? void 0 : _item.label.toLowerCase().includes(searchFilter.toLowerCase());
         }) : data;
     };
+    var _param_data = _param.data, data = _param_data === void 0 ? [] : _param_data, onChange = _param.onChange, _param_width = _param.width, width = _param_width === void 0 ? 260 : _param_width, value = _param.value, label = _param.label, tooltip = _param.tooltip, required = _param.required, rest = _object_without_properties(_param, [
+        "data",
+        "onChange",
+        "width",
+        "value",
+        "label",
+        "tooltip",
+        "required"
+    ]);
     var _ref = _sliced_to_array((0, import_react13.useState)(false), 2), isOpen = _ref[0], setOpen = _ref[1];
     var _ref1 = _sliced_to_array((0, import_react13.useState)(value || null), 2), selectedItem = _ref1[0], setSelectedItem = _ref1[1];
     var _ref2 = _sliced_to_array((0, import_react13.useState)(false), 2), isHover = _ref2[0], setHover = _ref2[1];
@@ -3604,7 +3617,7 @@ function DropDown(param) {
             width: width
         },
         ref: containerRef
-    }, /* @__PURE__ */ import_react13.default.createElement(DropdownWrapper, {
+    }, /* @__PURE__ */ import_react13.default.createElement(DropdownWrapper, _object_spread({
         selected: isHover,
         onMouseEnter: function() {
             return setHover(true);
@@ -3613,7 +3626,7 @@ function DropDown(param) {
             return setHover(false);
         },
         onClick: toggleDropdown
-    }, /* @__PURE__ */ import_react13.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react13.default.createElement(expand_arrow_default, {
+    }, rest), /* @__PURE__ */ import_react13.default.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ import_react13.default.createElement(expand_arrow_default, {
         className: "dropdown-arrow ".concat(isOpen && "open")
     }))), isOpen && /* @__PURE__ */ import_react13.default.createElement(DropdownBody, null, /* @__PURE__ */ import_react13.default.createElement(SearchInput, {
         value: searchFilter,
@@ -3706,12 +3719,17 @@ var SvgCheckboxRect = function(props) {
 };
 var checkbox_rect_default = SvgCheckboxRect;
 // src/design.system/checkbox/checkbox.tsx
-function Checkbox(param) {
-    var onChange = param.onChange, value = param.value, _param_label = param.label, label = _param_label === void 0 ? "" : _param_label, _param_disabled = param.disabled, disabled = _param_disabled === void 0 ? false : _param_disabled;
-    return /* @__PURE__ */ import_react15.default.createElement(CheckboxWrapper, {
+function Checkbox(_param) {
+    var onChange = _param.onChange, value = _param.value, _param_label = _param.label, label = _param_label === void 0 ? "" : _param_label, _param_disabled = _param.disabled, disabled = _param_disabled === void 0 ? false : _param_disabled, rest = _object_without_properties(_param, [
+        "onChange",
+        "value",
+        "label",
+        "disabled"
+    ]);
+    return /* @__PURE__ */ import_react15.default.createElement(CheckboxWrapper, _object_spread({
         disabled: disabled || void 0,
         onClick: onChange
-    }, value ? /* @__PURE__ */ import_react15.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react15.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react15.default.createElement(Text, {
+    }, rest), value ? /* @__PURE__ */ import_react15.default.createElement(checkbox_rect_default, null) : /* @__PURE__ */ import_react15.default.createElement(CheckboxItem, null), /* @__PURE__ */ import_react15.default.createElement(Text, {
         size: 14
     }, label));
 }
@@ -5325,8 +5343,17 @@ var StyledTextArea = import_styled_components37.default.textarea(_templateObject
     return "solid 1px ".concat(theme2.text.grey);
 });
 var LabelWrapper3 = import_styled_components37.default.div(_templateObject115());
-var TextArea = function(param) {
-    var placeholder = param.placeholder, value = param.value, onChange = param.onChange, _param_rows = param.rows, rows = _param_rows === void 0 ? 4 : _param_rows, _param_cols = param.cols, cols = _param_cols === void 0 ? 50 : _param_cols, tooltip = param.tooltip, label = param.label, required = param.required;
+var TextArea = function(_param) {
+    var placeholder = _param.placeholder, value = _param.value, onChange = _param.onChange, _param_rows = _param.rows, rows = _param_rows === void 0 ? 4 : _param_rows, _param_cols = _param.cols, cols = _param_cols === void 0 ? 50 : _param_cols, tooltip = _param.tooltip, label = _param.label, required = _param.required, rest = _object_without_properties(_param, [
+        "placeholder",
+        "value",
+        "onChange",
+        "rows",
+        "cols",
+        "tooltip",
+        "label",
+        "required"
+    ]);
     return /* @__PURE__ */ import_react43.default.createElement(import_react43.default.Fragment, null, label && /* @__PURE__ */ import_react43.default.createElement(LabelWrapper3, null, /* @__PURE__ */ import_react43.default.createElement(Tooltip, {
         text: tooltip || ""
     }, /* @__PURE__ */ import_react43.default.createElement("div", {
@@ -5340,14 +5367,14 @@ var TextArea = function(param) {
     }, label), required && /* @__PURE__ */ import_react43.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*")))), /* @__PURE__ */ import_react43.default.createElement(StyledTextArea, {
+    }, "*")))), /* @__PURE__ */ import_react43.default.createElement(StyledTextArea, _object_spread({
         placeholder: placeholder,
         value: value,
         onChange: onChange,
         rows: rows,
         cols: cols,
         active: !!value
-    }));
+    }, rest)));
 };
 // src/design.system/multi-input/multi.input.table.tsx
 var import_react44 = __toESM(require("react"));

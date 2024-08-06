@@ -19,6 +19,7 @@ export function Card({
   focus = false,
   type = 'primary',
   header,
+  ...rest
 }: CardProps) {
   function renderHeader() {
     if (header?.body) {
@@ -37,7 +38,7 @@ export function Card({
   }
 
   return (
-    <CardContainer selected={focus || undefined} type={type}>
+    <CardContainer selected={focus || undefined} type={type} {...rest}>
       {header && <CardHeader>{renderHeader()}</CardHeader>}
       {children}
     </CardContainer>

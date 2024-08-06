@@ -59,7 +59,7 @@ interface CardProps {
         body?: () => JSX.Element | JSX.Element[];
     };
 }
-declare function Card({ children, focus, type, header, }: CardProps): React$1.JSX.Element;
+declare function Card({ children, focus, type, header, ...rest }: CardProps): React$1.JSX.Element;
 
 interface TagProps {
     title: string;
@@ -90,7 +90,7 @@ interface DropDownProps {
     tooltip?: string;
     required?: boolean;
 }
-declare function DropDown({ data, onChange, width, value, label, tooltip, required, }: DropDownProps): React$1.JSX.Element;
+declare function DropDown({ data, onChange, width, value, label, tooltip, required, ...rest }: DropDownProps): React$1.JSX.Element;
 
 interface SearchInputProps {
     placeholder?: string;
@@ -117,7 +117,7 @@ interface CheckboxProps {
     label?: string;
     disabled?: boolean;
 }
-declare function Checkbox({ onChange, value, label, disabled, }: CheckboxProps): React$1.JSX.Element;
+declare function Checkbox({ onChange, value, label, disabled, ...rest }: CheckboxProps): React$1.JSX.Element;
 
 interface SelectedCounterProps {
     total: number;
