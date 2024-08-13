@@ -40,7 +40,14 @@ var TextWrapper = styled2.p`
 `;
 
 // src/design.system/text/text.tsx
-function Text({ children, color, style, weight, size }) {
+function Text({
+  children,
+  color,
+  style,
+  weight,
+  size,
+  ...rest
+}) {
   return /* @__PURE__ */ React.createElement(
     TextWrapper,
     {
@@ -49,7 +56,8 @@ function Text({ children, color, style, weight, size }) {
         color,
         fontSize: size,
         ...style
-      }
+      },
+      ...rest
     },
     children
   );
@@ -605,7 +613,8 @@ function Card({
   children,
   focus = false,
   type = "primary",
-  header
+  header,
+  ...rest
 }) {
   function renderHeader() {
     if (header?.body) {
@@ -613,7 +622,7 @@ function Card({
     }
     return /* @__PURE__ */ React49.createElement(React49.Fragment, null, /* @__PURE__ */ React49.createElement(Text, { size: 20, weight: 600 }, header?.title), /* @__PURE__ */ React49.createElement(Text, { size: 14, color: "#CCD0D2" }, header?.subtitle));
   }
-  return /* @__PURE__ */ React49.createElement(CardContainer, { selected: focus || void 0, type }, header && /* @__PURE__ */ React49.createElement(CardHeader, null, renderHeader()), children);
+  return /* @__PURE__ */ React49.createElement(CardContainer, { selected: focus || void 0, type, ...rest }, header && /* @__PURE__ */ React49.createElement(CardHeader, null, renderHeader()), children);
 }
 
 // src/design.system/tag/tag.tsx
@@ -894,7 +903,8 @@ function DropDown({
   value,
   label,
   tooltip,
-  required
+  required,
+  ...rest
 }) {
   const [isOpen, setOpen] = useState5(false);
   const [selectedItem, setSelectedItem] = useState5(value || null);
@@ -923,7 +933,8 @@ function DropDown({
       selected: isHover,
       onMouseEnter: () => setHover(true),
       onMouseLeave: () => setHover(false),
-      onClick: toggleDropdown
+      onClick: toggleDropdown,
+      ...rest
     },
     /* @__PURE__ */ React57.createElement(DropdownHeader, null, selectedItem ? selectedItem.label : SELECTED_ITEM, /* @__PURE__ */ React57.createElement(expand_arrow_default, { className: `dropdown-arrow ${isOpen && "open"}` }))
   ), isOpen && /* @__PURE__ */ React57.createElement(DropdownBody, null, /* @__PURE__ */ React57.createElement(
@@ -1033,9 +1044,19 @@ function Checkbox({
   onChange,
   value,
   label = "",
-  disabled = false
+  disabled = false,
+  ...rest
 }) {
-  return /* @__PURE__ */ React60.createElement(CheckboxWrapper, { disabled: disabled || void 0, onClick: onChange }, value ? /* @__PURE__ */ React60.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React60.createElement(CheckboxItem, null), /* @__PURE__ */ React60.createElement(Text, { size: 14 }, label));
+  return /* @__PURE__ */ React60.createElement(
+    CheckboxWrapper,
+    {
+      disabled: disabled || void 0,
+      onClick: onChange,
+      ...rest
+    },
+    value ? /* @__PURE__ */ React60.createElement(checkbox_rect_default, null) : /* @__PURE__ */ React60.createElement(CheckboxItem, null),
+    /* @__PURE__ */ React60.createElement(Text, { size: 14 }, label)
+  );
 }
 
 // src/design.system/selected.counter/selected.counter.tsx
@@ -2720,7 +2741,8 @@ var TextArea = ({
   cols = 50,
   tooltip,
   label,
-  required
+  required,
+  ...rest
 }) => {
   return /* @__PURE__ */ React104.createElement(React104.Fragment, null, label && /* @__PURE__ */ React104.createElement(LabelWrapper3, null, /* @__PURE__ */ React104.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React104.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React104.createElement(
     StyledTextArea,
@@ -2730,7 +2752,8 @@ var TextArea = ({
       onChange,
       rows,
       cols,
-      active: !!value
+      active: !!value,
+      ...rest
     }
   ));
 };

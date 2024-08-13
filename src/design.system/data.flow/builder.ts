@@ -20,7 +20,7 @@ const sources = [
     kind: 'Deployment',
     namespace: 'default',
     metrics: {
-      data_transfer: '3.8 KB/s',
+      data_transfer: '2.3 KB/s',
       cpu_usage: '3.8%',
       memory_usage: '3.8%',
     },
@@ -145,7 +145,7 @@ const destinations = [
     name: 'aws',
     type: 's3',
     metrics: {
-      data_transfer: '3.8 KB/s',
+      data_transfer: '3.8111 KB/s',
       cpu_usage: '3.8%',
       memory_usage: '3.8%',
     },

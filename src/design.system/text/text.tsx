@@ -11,7 +11,14 @@ type TextProps = {
   size?: number;
 };
 
-export function Text({ children, color, style, weight, size }: TextProps) {
+export function Text({
+  children,
+  color,
+  style,
+  weight,
+  size,
+  ...rest
+}: TextProps) {
   return (
     <TextWrapper
       style={{
@@ -20,6 +27,7 @@ export function Text({ children, color, style, weight, size }: TextProps) {
         fontSize: size,
         ...style,
       }}
+      {...rest}
     >
       {children}
     </TextWrapper>

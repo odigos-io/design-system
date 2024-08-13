@@ -25,9 +25,10 @@ const TextWrapper = styled.div`
 
 interface MetricNodeProps {
   isConnectable: boolean;
+  data: any;
 }
 
-export default memo(({ isConnectable }: MetricNodeProps) => {
+export default memo(({ isConnectable, data }: MetricNodeProps) => {
   return (
     <MetricContainer>
       <Handle
@@ -39,7 +40,9 @@ export default memo(({ isConnectable }: MetricNodeProps) => {
       />
 
       <TextWrapper>
-        <Text color={theme.colors.light_grey}>{'3.8 KB/s'}</Text>
+        <Text color={theme.colors.light_grey}>
+          {data.metrics?.data_transfer}
+        </Text>
       </TextWrapper>
 
       <Handle

@@ -1,5 +1,12 @@
 'use client';
-import { Checkbox, DataFlow, MultiInputTable, Table } from '@/design.system';
+import {
+  Button,
+  Checkbox,
+  DataFlow,
+  MultiInputTable,
+  Table,
+  Text,
+} from '@/design.system';
 import { edges, nodes } from '@/design.system/data.flow/builder';
 import React from 'react';
 
