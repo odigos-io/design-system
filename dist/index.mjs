@@ -1450,7 +1450,7 @@ function Notification({ type, message, onClose }) {
 }
 
 // src/design.system/data.flow/index.tsx
-import React90, { useEffect as useEffect7 } from "react";
+import React91, { useEffect as useEffect7 } from "react";
 import ReactFlow, {
   Background,
   useReactFlow,
@@ -1857,13 +1857,56 @@ var source_node_default = memo3(({ data, isConnectable }) => {
   ));
 });
 
-// src/design.system/data.flow/data.flow.styled.tsx
+// src/design.system/data.flow/metric.node.tsx
+import React89, { memo as memo4 } from "react";
+import { Handle as Handle6, Position as Position6 } from "reactflow";
 import styled25 from "styled-components";
-var DataFlowContainer = styled25.div`
+var MetricContainer = styled25.div`
+  display: inline-flex;
+  height: 20px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 32px;
+  border: ${({ theme: theme2 }) => `solid 1px ${theme2.colors.blue_grey}`};
+  background: ${({ theme: theme2 }) => theme2.colors.dark};
+`;
+var TextWrapper7 = styled25.div`
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+var metric_node_default = memo4(({ isConnectable, data }) => {
+  return /* @__PURE__ */ React89.createElement(MetricContainer, null, /* @__PURE__ */ React89.createElement(
+    Handle6,
+    {
+      type: "target",
+      position: Position6.Left,
+      id: "b",
+      isConnectable,
+      style: { visibility: "hidden" }
+    }
+  ), /* @__PURE__ */ React89.createElement(TextWrapper7, null, /* @__PURE__ */ React89.createElement(Text, { color: palette_default.colors.light_grey }, data.metrics?.data_transfer)), /* @__PURE__ */ React89.createElement(
+    Handle6,
+    {
+      type: "source",
+      position: Position6.Right,
+      id: "a",
+      isConnectable,
+      style: { visibility: "hidden" }
+    }
+  ));
+});
+
+// src/design.system/data.flow/data.flow.styled.tsx
+import styled26 from "styled-components";
+var DataFlowContainer = styled26.div`
   width: 100%;
   height: 100%;
 `;
-var ControllerWrapper = styled25.div`
+var ControllerWrapper = styled26.div`
   button {
     display: flex;
     padding: 8px;
@@ -1884,11 +1927,11 @@ var ControllerWrapper = styled25.div`
 import "reactflow/dist/style.css";
 
 // src/design.system/data.flow/control.panel.tsx
-import React89, { useEffect as useEffect6, useState as useState8 } from "react";
+import React90, { useEffect as useEffect6, useState as useState8 } from "react";
 import "reactflow/dist/style.css";
 import { Controls } from "reactflow";
-import styled26 from "styled-components";
-var ControllerPanelWrapper = styled26.div`
+import styled27 from "styled-components";
+var ControllerPanelWrapper = styled27.div`
   position: absolute;
   z-index: 999;
   top: 15px;
@@ -1915,20 +1958,20 @@ var ControllerPanelWrapper = styled26.div`
     fill: #fff;
   }
 `;
-var MonitorItem = styled26.div`
+var MonitorItem = styled27.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
 `;
-var MonitorIndicator = styled26.span`
+var MonitorIndicator = styled27.span`
   background-color: ${({ color }) => color};
   width: 10px;
   height: 10px;
   border-radius: 8px;
   margin-right: 6px;
 `;
-var TitleWrapper = styled26.div`
+var TitleWrapper = styled27.div`
   display: flex;
   gap: 10px;
   cursor: pointer;
@@ -1954,7 +1997,7 @@ function DataFlowControlPanel() {
       color: palette_default.colors.metrics
     }
   ];
-  return /* @__PURE__ */ React89.createElement(React89.Fragment, null, /* @__PURE__ */ React89.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ React89.createElement(TitleWrapper, { onClick: () => setOpen(!isOpen) }, /* @__PURE__ */ React89.createElement(Text, { size: 14, weight: 600 }, "Supported Signals"), /* @__PURE__ */ React89.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ React89.createElement(MonitorItem, null, MONITORS2.map((monitor) => /* @__PURE__ */ React89.createElement(
+  return /* @__PURE__ */ React90.createElement(React90.Fragment, null, /* @__PURE__ */ React90.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ React90.createElement(TitleWrapper, { onClick: () => setOpen(!isOpen) }, /* @__PURE__ */ React90.createElement(Text, { size: 14, weight: 600 }, "Supported Signals"), /* @__PURE__ */ React90.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ React90.createElement(MonitorItem, null, MONITORS2.map((monitor) => /* @__PURE__ */ React90.createElement(
     "div",
     {
       key: monitor.name,
@@ -1964,9 +2007,9 @@ function DataFlowControlPanel() {
         justifyContent: "center"
       }
     },
-    /* @__PURE__ */ React89.createElement(MonitorIndicator, { color: monitor.color }),
-    /* @__PURE__ */ React89.createElement(Text, { size: 12, weight: 500 }, monitor.name)
-  )))), /* @__PURE__ */ React89.createElement(ControllerWrapper, null, /* @__PURE__ */ React89.createElement(Controls, { position: "top-left", showInteractive: false })));
+    /* @__PURE__ */ React90.createElement(MonitorIndicator, { color: monitor.color }),
+    /* @__PURE__ */ React90.createElement(Text, { size: 12, weight: 500 }, monitor.name)
+  )))), /* @__PURE__ */ React90.createElement(ControllerWrapper, null, /* @__PURE__ */ React90.createElement(Controls, { position: "top-left", showInteractive: false })));
 }
 
 // src/design.system/data.flow/index.tsx
@@ -1976,7 +2019,8 @@ var nodeTypes = {
   namespace: namespace_node_default,
   destination: DestinationNode,
   action: action_node_default,
-  source: source_node_default
+  source: source_node_default,
+  metric: metric_node_default
 };
 function DataFlow({ nodes: nodes2, edges: edges2, ...rest }) {
   const { fitView } = useReactFlow();
@@ -1985,7 +2029,7 @@ function DataFlow({ nodes: nodes2, edges: edges2, ...rest }) {
       fitView();
     }, 100);
   }, [fitView, nodes2, edges2]);
-  return /* @__PURE__ */ React90.createElement(DataFlowContainer, null, /* @__PURE__ */ React90.createElement(
+  return /* @__PURE__ */ React91.createElement(DataFlowContainer, null, /* @__PURE__ */ React91.createElement(
     ReactFlow,
     {
       nodes: nodes2,
@@ -1995,18 +2039,18 @@ function DataFlow({ nodes: nodes2, edges: edges2, ...rest }) {
       nodeOrigin: [0.4, 0.4],
       ...rest
     },
-    /* @__PURE__ */ React90.createElement(DataFlowControlPanel, null),
-    /* @__PURE__ */ React90.createElement(Background, { gap: 12, size: 1, style: { backgroundColor } })
+    /* @__PURE__ */ React91.createElement(DataFlowControlPanel, null),
+    /* @__PURE__ */ React91.createElement(Background, { gap: 12, size: 1, style: { backgroundColor } })
   ));
 }
 function KeyvalDataFlow(props) {
-  return /* @__PURE__ */ React90.createElement(ReactFlowProvider, null, /* @__PURE__ */ React90.createElement(DataFlow, { ...props }));
+  return /* @__PURE__ */ React91.createElement(ReactFlowProvider, null, /* @__PURE__ */ React91.createElement(DataFlow, { ...props }));
 }
 
 // src/design.system/danger.zone/danger.zone.tsx
-import React91 from "react";
-import { styled as styled27 } from "styled-components";
-var DangerZoneWrapper = styled27.div`
+import React92 from "react";
+import { styled as styled28 } from "styled-components";
+var DangerZoneWrapper = styled28.div`
   padding: 10px;
   border: ${({ theme: theme2 }) => `1px solid ${theme2.colors.blue_grey}`};
   border-radius: 8px;
@@ -2016,7 +2060,7 @@ var DangerZoneWrapper = styled27.div`
   flex-direction: column;
   gap: 8px;
 `;
-var DangerButtonWrapper = styled27.div`
+var DangerButtonWrapper = styled28.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -2027,7 +2071,7 @@ var DangerButtonWrapper = styled27.div`
     }
   }
 `;
-var DangerButton = styled27.button`
+var DangerButton = styled28.button`
   padding: 8px 12px;
   border-radius: 4px;
   background: transparent;
@@ -2040,11 +2084,11 @@ function DangerZone({
   btnText,
   onClick
 }) {
-  return /* @__PURE__ */ React91.createElement(React91.Fragment, null, /* @__PURE__ */ React91.createElement(DangerZoneWrapper, null, /* @__PURE__ */ React91.createElement(Text, { size: 14, weight: 600 }, title), /* @__PURE__ */ React91.createElement(Text, { size: 12 }, subTitle), /* @__PURE__ */ React91.createElement(DangerButtonWrapper, null, /* @__PURE__ */ React91.createElement(DangerButton, { onClick }, /* @__PURE__ */ React91.createElement(Text, { weight: 500, size: 14, color: palette_default.colors.error }, btnText)))));
+  return /* @__PURE__ */ React92.createElement(React92.Fragment, null, /* @__PURE__ */ React92.createElement(DangerZoneWrapper, null, /* @__PURE__ */ React92.createElement(Text, { size: 14, weight: 600 }, title), /* @__PURE__ */ React92.createElement(Text, { size: 12 }, subTitle), /* @__PURE__ */ React92.createElement(DangerButtonWrapper, null, /* @__PURE__ */ React92.createElement(DangerButton, { onClick }, /* @__PURE__ */ React92.createElement(Text, { weight: 500, size: 14, color: palette_default.colors.error }, btnText)))));
 }
 
 // src/design.system/modal/modal.tsx
-import React93, { useCallback, useEffect as useEffect8, useRef as useRef2 } from "react";
+import React94, { useCallback, useEffect as useEffect8, useRef as useRef2 } from "react";
 
 // src/design.system/modal/portal.modal.tsx
 import { useState as useState9, useLayoutEffect } from "react";
@@ -2078,7 +2122,7 @@ var PortalModal = ({ children, wrapperId }) => {
 var portal_modal_default = PortalModal;
 
 // src/design.system/modal/modal.styled.tsx
-import styled28, { keyframes as keyframes2 } from "styled-components";
+import styled29, { keyframes as keyframes2 } from "styled-components";
 var fadeIn = keyframes2`
   from {
     opacity: 0;
@@ -2087,14 +2131,14 @@ var fadeIn = keyframes2`
     opacity: 1;
   }
 `;
-var ModalButtonsContainer = styled28.div`
+var ModalButtonsContainer = styled29.div`
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 `;
-var ModalButtonPrimary = styled28.button`
+var ModalButtonPrimary = styled29.button`
   display: block;
   padding: 10px 30px;
   border-radius: 3px;
@@ -2109,7 +2153,7 @@ var ModalButtonPrimary = styled28.button`
     background-color: ${({ theme: theme2 }) => theme2.colors.shadowMain};
   }
 `;
-var ModalButtonSecondary = styled28.button`
+var ModalButtonSecondary = styled29.button`
   display: block;
   padding: 10px 30px;
   border-radius: 3px;
@@ -2125,7 +2169,7 @@ var ModalButtonSecondary = styled28.button`
     color: ${({ theme: theme2 }) => theme2.colors.btnText};
   }
 `;
-var Overlay = styled28.div`
+var Overlay = styled29.div`
   width: 100vw;
   height: 100vh;
   z-index: 9999;
@@ -2144,7 +2188,7 @@ var Overlay = styled28.div`
     animation-fill-mode: backwards;
   }
 `;
-var ModalContainer = styled28.div`
+var ModalContainer = styled29.div`
   min-width: 500px;
   min-height: 50px;
   /* background-color: #ffffff; */
@@ -2156,13 +2200,13 @@ var ModalContainer = styled28.div`
 
   padding: ${(props) => props.padding ? props.padding : "20px"};
 `;
-var ModalHeader = styled28.header`
+var ModalHeader = styled29.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
 `;
-var Close = styled28.div`
+var Close = styled29.div`
   position: absolute;
   top: 20px;
   right: 15px;
@@ -2179,7 +2223,7 @@ var Close = styled28.div`
     fill: #fff;
   }
 `;
-var PrimaryButton = styled28.button`
+var PrimaryButton = styled29.button`
   background-color: #ededed8b;
   border: 1px solid #d4d2d2;
   width: 100%;
@@ -2191,14 +2235,14 @@ var PrimaryButton = styled28.button`
     background-color: #ededed;
   }
 `;
-var Content = styled28.div`
+var Content = styled29.div`
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   color: ${({ theme: theme2 }) => theme2.text};
 `;
-var ModalFooter = styled28.footer`
+var ModalFooter = styled29.footer`
   width: 100%;
   display: flex;
   gap: 1rem;
@@ -2209,8 +2253,8 @@ var ModalFooter = styled28.footer`
 `;
 
 // src/assets/icons/close-modal.svg
-import * as React92 from "react";
-var SvgCloseModal = (props) => /* @__PURE__ */ React92.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", ...props }, /* @__PURE__ */ React92.createElement("rect", { width: 16, height: 16, rx: 2, fill: "#0E1C28" }), /* @__PURE__ */ React92.createElement("path", { d: "M12.8538 12.146C12.9002 12.1925 12.9371 12.2476 12.9622 12.3083C12.9874 12.369 13.0003 12.4341 13.0003 12.4998C13.0003 12.5655 12.9874 12.6305 12.9622 12.6912C12.9371 12.7519 12.9002 12.8071 12.8538 12.8535C12.8073 12.9 12.7522 12.9368 12.6915 12.962C12.6308 12.9871 12.5657 13.0001 12.5 13.0001C12.4343 13.0001 12.3693 12.9871 12.3086 12.962C12.2479 12.9368 12.1927 12.9 12.1463 12.8535L8.00003 8.70666L3.85378 12.8535C3.75996 12.9474 3.63272 13.0001 3.50003 13.0001C3.36735 13.0001 3.2401 12.9474 3.14628 12.8535C3.05246 12.7597 2.99976 12.6325 2.99976 12.4998C2.99976 12.3671 3.05246 12.2399 3.14628 12.146L7.29316 7.99979L3.14628 3.85354C3.05246 3.75972 2.99976 3.63247 2.99976 3.49979C2.99976 3.36711 3.05246 3.23986 3.14628 3.14604C3.2401 3.05222 3.36735 2.99951 3.50003 2.99951C3.63272 2.99951 3.75996 3.05222 3.85378 3.14604L8.00003 7.29291L12.1463 3.14604C12.2401 3.05222 12.3674 2.99951 12.5 2.99951C12.6327 2.99951 12.76 3.05222 12.8538 3.14604C12.9476 3.23986 13.0003 3.36711 13.0003 3.49979C13.0003 3.63247 12.9476 3.75972 12.8538 3.85354L8.70691 7.99979L12.8538 12.146Z", fill: "white" }));
+import * as React93 from "react";
+var SvgCloseModal = (props) => /* @__PURE__ */ React93.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", ...props }, /* @__PURE__ */ React93.createElement("rect", { width: 16, height: 16, rx: 2, fill: "#0E1C28" }), /* @__PURE__ */ React93.createElement("path", { d: "M12.8538 12.146C12.9002 12.1925 12.9371 12.2476 12.9622 12.3083C12.9874 12.369 13.0003 12.4341 13.0003 12.4998C13.0003 12.5655 12.9874 12.6305 12.9622 12.6912C12.9371 12.7519 12.9002 12.8071 12.8538 12.8535C12.8073 12.9 12.7522 12.9368 12.6915 12.962C12.6308 12.9871 12.5657 13.0001 12.5 13.0001C12.4343 13.0001 12.3693 12.9871 12.3086 12.962C12.2479 12.9368 12.1927 12.9 12.1463 12.8535L8.00003 8.70666L3.85378 12.8535C3.75996 12.9474 3.63272 13.0001 3.50003 13.0001C3.36735 13.0001 3.2401 12.9474 3.14628 12.8535C3.05246 12.7597 2.99976 12.6325 2.99976 12.4998C2.99976 12.3671 3.05246 12.2399 3.14628 12.146L7.29316 7.99979L3.14628 3.85354C3.05246 3.75972 2.99976 3.63247 2.99976 3.49979C2.99976 3.36711 3.05246 3.23986 3.14628 3.14604C3.2401 3.05222 3.36735 2.99951 3.50003 2.99951C3.63272 2.99951 3.75996 3.05222 3.85378 3.14604L8.00003 7.29291L12.1463 3.14604C12.2401 3.05222 12.3674 2.99951 12.5 2.99951C12.6327 2.99951 12.76 3.05222 12.8538 3.14604C12.9476 3.23986 13.0003 3.36711 13.0003 3.49979C13.0003 3.63247 12.9476 3.75972 12.8538 3.85354L8.70691 7.99979L12.8538 12.146Z", fill: "white" }));
 var close_modal_default = SvgCloseModal;
 
 // src/design.system/modal/modal.tsx
@@ -2228,7 +2272,7 @@ function Modal({ children, closeModal, config }) {
       document.removeEventListener("keydown", handleKeyPress);
     };
   }, [handleKeyPress]);
-  return /* @__PURE__ */ React93.createElement(React93.Fragment, null, /* @__PURE__ */ React93.createElement(portal_modal_default, { wrapperId: "modal-portal" }, /* @__PURE__ */ React93.createElement(
+  return /* @__PURE__ */ React94.createElement(React94.Fragment, null, /* @__PURE__ */ React94.createElement(portal_modal_default, { wrapperId: "modal-portal" }, /* @__PURE__ */ React94.createElement(
     Overlay,
     {
       showOverlay: config.showOverlay,
@@ -2239,35 +2283,35 @@ function Modal({ children, closeModal, config }) {
         animationDelay: "0"
       }
     },
-    /* @__PURE__ */ React93.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React93.createElement(ModalHeader, null, /* @__PURE__ */ React93.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React93.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React93.createElement(close_modal_default, null)), /* @__PURE__ */ React93.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React93.createElement(ModalFooter, { style: { ...config.footer.style } }, config.footer.link && /* @__PURE__ */ React93.createElement(
+    /* @__PURE__ */ React94.createElement(ModalContainer, { padding: config.padding, ref: modalRef }, config.showHeader && /* @__PURE__ */ React94.createElement(ModalHeader, null, /* @__PURE__ */ React94.createElement(Text, { size: 24, weight: 700 }, config.title)), /* @__PURE__ */ React94.createElement(Close, { onClick: closeModal }, /* @__PURE__ */ React94.createElement(close_modal_default, null)), /* @__PURE__ */ React94.createElement(Content, null, children), config?.footer && /* @__PURE__ */ React94.createElement(ModalFooter, { style: { ...config.footer.style } }, config.footer.link && /* @__PURE__ */ React94.createElement(
       Link,
       {
         onClick: config.footer.link.onClick,
         value: config.footer.link.text
       }
-    ), config.footer.secondaryBtnText && /* @__PURE__ */ React93.createElement(
+    ), config.footer.secondaryBtnText && /* @__PURE__ */ React94.createElement(
       Button,
       {
         variant: "secondary",
         onClick: config.footer.secondaryBtnAction
       },
-      /* @__PURE__ */ React93.createElement(Text, { size: 16, weight: 700 }, config.footer.secondaryBtnText)
-    ), /* @__PURE__ */ React93.createElement(
+      /* @__PURE__ */ React94.createElement(Text, { size: 16, weight: 700 }, config.footer.secondaryBtnText)
+    ), /* @__PURE__ */ React94.createElement(
       Button,
       {
         disabled: config.footer.isDisabled,
         onClick: config.footer.primaryBtnAction
       },
-      /* @__PURE__ */ React93.createElement(Text, { size: 16, weight: 700, color: palette_default.text.dark_button }, config.footer.primaryBtnText)
+      /* @__PURE__ */ React94.createElement(Text, { size: 16, weight: 700, color: palette_default.text.dark_button }, config.footer.primaryBtnText)
     )))
   )));
 }
 
 // src/design.system/theme.provider/theme.provider.tsx
-import React95 from "react";
+import React96 from "react";
 
 // src/design.system/theme.provider/registry.tsx
-import React94, { useState as useState10 } from "react";
+import React95, { useState as useState10 } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 function StyledComponentsRegistry({
@@ -2277,11 +2321,11 @@ function StyledComponentsRegistry({
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement();
     styledComponentsStyleSheet.instance.clearTag();
-    return /* @__PURE__ */ React94.createElement(React94.Fragment, null, styles);
+    return /* @__PURE__ */ React95.createElement(React95.Fragment, null, styles);
   });
   if (typeof window !== "undefined")
-    return /* @__PURE__ */ React94.createElement(React94.Fragment, null, children);
-  return /* @__PURE__ */ React94.createElement(StyleSheetManager, { sheet: styledComponentsStyleSheet.instance }, children);
+    return /* @__PURE__ */ React95.createElement(React95.Fragment, null, children);
+  return /* @__PURE__ */ React95.createElement(StyleSheetManager, { sheet: styledComponentsStyleSheet.instance }, children);
 }
 
 // src/design.system/theme.provider/theme.provider.tsx
@@ -2289,31 +2333,31 @@ import { ThemeProvider } from "styled-components";
 var ThemeProviderWrapper = ({
   children
 }) => {
-  return /* @__PURE__ */ React95.createElement(ThemeProvider, { theme: palette_default }, /* @__PURE__ */ React95.createElement(StyledComponentsRegistry, null, children));
+  return /* @__PURE__ */ React96.createElement(ThemeProvider, { theme: palette_default }, /* @__PURE__ */ React96.createElement(StyledComponentsRegistry, null, children));
 };
 
 // src/design.system/steps/steps.tsx
-import React98 from "react";
+import React99 from "react";
 
 // src/design.system/steps/step.item.tsx
-import React97 from "react";
+import React98 from "react";
 
 // src/design.system/steps/steps.styled.tsx
-import styled29 from "styled-components";
-var StepsContainer = styled29.div`
+import styled30 from "styled-components";
+var StepsContainer = styled30.div`
   display: flex;
 `;
-var StepItemWrapper = styled29.div`
+var StepItemWrapper = styled30.div`
   display: flex;
   align-items: center;
 `;
-var FloatingBoxTextWrapper = styled29.div`
+var FloatingBoxTextWrapper = styled30.div`
   opacity: ${({ disabled }) => disabled ? "0.4" : "1"};
 `;
-var StepItemTextWrapper = styled29(FloatingBoxTextWrapper)`
+var StepItemTextWrapper = styled30(FloatingBoxTextWrapper)`
   margin: 0 8px;
 `;
-var StepItemBorder = styled29.div`
+var StepItemBorder = styled30.div`
   width: 54px;
   height: 1px;
   background-color: #8b92a5;
@@ -2322,8 +2366,8 @@ var StepItemBorder = styled29.div`
 `;
 
 // src/assets/icons/checked.svg
-import * as React96 from "react";
-var SvgChecked = (props) => /* @__PURE__ */ React96.createElement("svg", { width: 20, height: 14, viewBox: "0 0 20 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React96.createElement("path", { d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z", fill: "white" }));
+import * as React97 from "react";
+var SvgChecked = (props) => /* @__PURE__ */ React97.createElement("svg", { width: 20, height: 14, viewBox: "0 0 20 14", fill: "none", xmlns: "http://www.w3.org/2000/svg", ...props }, /* @__PURE__ */ React97.createElement("path", { d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z", fill: "white" }));
 var checked_default = SvgChecked;
 
 // src/design.system/steps/step.item.tsx
@@ -2333,13 +2377,13 @@ function StepItem({
   status,
   isLast
 }) {
-  return /* @__PURE__ */ React97.createElement(StepItemWrapper, null, /* @__PURE__ */ React97.createElement(FloatBox, null, status === "done" /* Done */ ? /* @__PURE__ */ React97.createElement(checked_default, null) : /* @__PURE__ */ React97.createElement(FloatingBoxTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React97.createElement(Text, { weight: 700 }, index))), /* @__PURE__ */ React97.createElement(StepItemTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React97.createElement(Text, { weight: 600 }, title)), !isLast && /* @__PURE__ */ React97.createElement(StepItemBorder, null));
+  return /* @__PURE__ */ React98.createElement(StepItemWrapper, null, /* @__PURE__ */ React98.createElement(FloatBox, null, status === "done" /* Done */ ? /* @__PURE__ */ React98.createElement(checked_default, null) : /* @__PURE__ */ React98.createElement(FloatingBoxTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React98.createElement(Text, { weight: 700 }, index))), /* @__PURE__ */ React98.createElement(StepItemTextWrapper, { disabled: status !== "active" /* Active */ }, /* @__PURE__ */ React98.createElement(Text, { weight: 600 }, title)), !isLast && /* @__PURE__ */ React98.createElement(StepItemBorder, null));
 }
 
 // src/design.system/steps/steps.tsx
 function Steps({ data }) {
   function renderSteps() {
-    return data?.map(({ title, status }, index) => /* @__PURE__ */ React98.createElement(
+    return data?.map(({ title, status }, index) => /* @__PURE__ */ React99.createElement(
       StepItem,
       {
         key: `${index}_${title}`,
@@ -2350,20 +2394,20 @@ function Steps({ data }) {
       }
     ));
   }
-  return /* @__PURE__ */ React98.createElement(StepsContainer, null, renderSteps());
+  return /* @__PURE__ */ React99.createElement(StepsContainer, null, renderSteps());
 }
 
 // src/design.system/divider/divider.tsx
-import React99 from "react";
-import styled30 from "styled-components";
-var DividerContainer = styled30.div`
+import React100 from "react";
+import styled31 from "styled-components";
+var DividerContainer = styled31.div`
   width: 100%;
   display: flex;
   align-items: center;
   gap: 23px;
   margin: ${({ margin }) => margin};
 `;
-var DividerLine = styled30.div`
+var DividerLine = styled31.div`
   width: 100%;
   border-top: 1px solid #8b92a5;
 `;
@@ -2371,20 +2415,20 @@ function Divider({
   margin = "32px 0",
   label = "or"
 }) {
-  return /* @__PURE__ */ React99.createElement(DividerContainer, { margin }, /* @__PURE__ */ React99.createElement(DividerLine, null), /* @__PURE__ */ React99.createElement(Text, { size: 14 }, label), /* @__PURE__ */ React99.createElement(DividerLine, null));
+  return /* @__PURE__ */ React100.createElement(DividerContainer, { margin }, /* @__PURE__ */ React100.createElement(DividerLine, null), /* @__PURE__ */ React100.createElement(Text, { size: 14 }, label), /* @__PURE__ */ React100.createElement(DividerLine, null));
 }
 
 // src/design.system/note/note.tsx
-import React100, { useEffect as useEffect9 } from "react";
-import styled31 from "styled-components";
-var NoteContainer = styled31.div`
+import React101, { useEffect as useEffect9 } from "react";
+import styled32 from "styled-components";
+var NoteContainer = styled32.div`
   padding: 16px;
   display: flex;
   justify-content: flex-start !important;
   border: 1px solid ${({ theme: theme2 }) => theme2.colors.dark_blue};
   border-radius: 12px;
 `;
-var TextContainer = styled31.div`
+var TextContainer = styled32.div`
   line-height: 1.6;
   code {
     background-color: ${({ theme: theme2 }) => theme2.colors.dark_blue};
@@ -2403,7 +2447,7 @@ function Note({ text: text2, code }) {
         value = value.replace(`$code${index}`, `<code>${c}</code>`);
       });
     }
-    return /* @__PURE__ */ React100.createElement(
+    return /* @__PURE__ */ React101.createElement(
       TextContainer,
       {
         dangerouslySetInnerHTML: {
@@ -2412,13 +2456,13 @@ function Note({ text: text2, code }) {
       }
     );
   }
-  return /* @__PURE__ */ React100.createElement(NoteContainer, null, /* @__PURE__ */ React100.createElement(Text, { size: 14 }, buildNote()));
+  return /* @__PURE__ */ React101.createElement(NoteContainer, null, /* @__PURE__ */ React101.createElement(Text, { size: 14 }, buildNote()));
 }
 
 // src/design.system/segmented-controls/index.tsx
-import React101 from "react";
-import styled32 from "styled-components";
-var SegmentedControlsWrapper = styled32.div`
+import React102 from "react";
+import styled33 from "styled-components";
+var SegmentedControlsWrapper = styled33.div`
   display: inline-flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -2426,7 +2470,7 @@ var SegmentedControlsWrapper = styled32.div`
   overflow: hidden;
   position: relative;
 `;
-var SegmentedControlsOption = styled32.div`
+var SegmentedControlsOption = styled33.div`
   color: ${({ theme: theme2 }) => theme2.colors.white};
   padding: 8px 12px;
   position: relative;
@@ -2456,7 +2500,7 @@ var SegmentedControlsOption = styled32.div`
     font-family: ${({ theme: theme2 }) => theme2.font_family.primary};
   }
 `;
-var SegmentedControlsInput = styled32.input`
+var SegmentedControlsInput = styled33.input`
   opacity: 0;
   margin: 0;
   top: 0;
@@ -2474,14 +2518,14 @@ function SegmentedControls({
   onChange,
   title
 }) {
-  return /* @__PURE__ */ React101.createElement("div", null, title && /* @__PURE__ */ React101.createElement(Text, { size: 14, style: { marginBottom: 10 } }, title), /* @__PURE__ */ React101.createElement(SegmentedControlsWrapper, null, options?.map((option) => /* @__PURE__ */ React101.createElement(
+  return /* @__PURE__ */ React102.createElement("div", null, title && /* @__PURE__ */ React102.createElement(Text, { size: 14, style: { marginBottom: 10 } }, title), /* @__PURE__ */ React102.createElement(SegmentedControlsWrapper, null, options?.map((option) => /* @__PURE__ */ React102.createElement(
     SegmentedControlsOption,
     {
       key: option.id,
       className: `${option.id === selected ? "active" : ""}`
     },
-    /* @__PURE__ */ React101.createElement(folders_default, null),
-    /* @__PURE__ */ React101.createElement(
+    /* @__PURE__ */ React102.createElement(folders_default, null),
+    /* @__PURE__ */ React102.createElement(
       SegmentedControlsInput,
       {
         type: "radio",
@@ -2491,13 +2535,13 @@ function SegmentedControls({
         checked: option.id === selected
       }
     ),
-    /* @__PURE__ */ React101.createElement(Text, null, option.label)
+    /* @__PURE__ */ React102.createElement(Text, null, option.label)
   ))));
 }
 
 // src/design.system/multi-input/index.tsx
-import React102, { useState as useState11 } from "react";
-import styled33 from "styled-components";
+import React103, { useState as useState11 } from "react";
+import styled34 from "styled-components";
 var MultiInput = ({
   initialList = [],
   onListChange,
@@ -2523,7 +2567,7 @@ var MultiInput = ({
     setList(newList);
     onListChange && onListChange(newList);
   };
-  return /* @__PURE__ */ React102.createElement(React102.Fragment, null, title && /* @__PURE__ */ React102.createElement(TitleWrapper2, null, /* @__PURE__ */ React102.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React102.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React102.createElement(Container, null, /* @__PURE__ */ React102.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React102.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React102.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React102.createElement(
+  return /* @__PURE__ */ React103.createElement(React103.Fragment, null, title && /* @__PURE__ */ React103.createElement(TitleWrapper2, null, /* @__PURE__ */ React103.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React103.createElement(Text, { size: 14, weight: 600 }, title))), /* @__PURE__ */ React103.createElement(Container, null, /* @__PURE__ */ React103.createElement(ListContainer, null, list.map((item, index) => /* @__PURE__ */ React103.createElement(ListItem, { key: index, onClick: () => handleRemoveFromList(index) }, /* @__PURE__ */ React103.createElement(Text, { size: 12, color: palette_default.text.dark_button }, item), /* @__PURE__ */ React103.createElement(
     "svg",
     {
       width: "12",
@@ -2532,14 +2576,14 @@ var MultiInput = ({
       fill: "#0e1c28",
       xmlns: "http://www.w3.org/2000/svg"
     },
-    /* @__PURE__ */ React102.createElement(
+    /* @__PURE__ */ React103.createElement(
       "path",
       {
         d: "M12.8535 12.146C12.9 12.1925 12.9368 12.2476 12.962 12.3083C12.9871 12.369 13.0001 12.4341 13.0001 12.4998C13.0001 12.5655 12.9871 12.6305 12.962 12.6912C12.9368 12.7519 12.9 12.8071 12.8535 12.8535C12.8071 12.9 12.7519 12.9368 12.6912 12.962C12.6305 12.9871 12.5655 13.0001 12.4998 13.0001C12.4341 13.0001 12.369 12.9871 12.3083 12.962C12.2476 12.9368 12.1925 12.9 12.146 12.8535L7.99979 8.70666L3.85354 12.8535C3.75972 12.9474 3.63247 13.0001 3.49979 13.0001C3.36711 13.0001 3.23986 12.9474 3.14604 12.8535C3.05222 12.7597 2.99951 12.6325 2.99951 12.4998C2.99951 12.3671 3.05222 12.2399 3.14604 12.146L7.29291 7.99979L3.14604 3.85354C3.05222 3.75972 2.99951 3.63247 2.99951 3.49979C2.99951 3.36711 3.05222 3.23986 3.14604 3.14604C3.23986 3.05222 3.36711 2.99951 3.49979 2.99951C3.63247 2.99951 3.75972 3.05222 3.85354 3.14604L7.99979 7.29291L12.146 3.14604C12.2399 3.05222 12.3671 2.99951 12.4998 2.99951C12.6325 2.99951 12.7597 3.05222 12.8535 3.14604C12.9474 3.23986 13.0001 3.36711 13.0001 3.49979C13.0001 3.63247 12.9474 3.75972 12.8535 3.85354L8.70666 7.99979L12.8535 12.146Z",
         fill: "#0e1c28"
       }
     )
-  )))), /* @__PURE__ */ React102.createElement(InputContainer, null, /* @__PURE__ */ React102.createElement(
+  )))), /* @__PURE__ */ React103.createElement(InputContainer, null, /* @__PURE__ */ React103.createElement(
     Input2,
     {
       style: { width: "100%" },
@@ -2547,17 +2591,17 @@ var MultiInput = ({
       placeholder,
       onChange: (e) => handleInputChange(e)
     }
-  ), /* @__PURE__ */ React102.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React102.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add")))));
+  ), /* @__PURE__ */ React103.createElement(Button2, { onClick: handleAddToList, style: { marginLeft: 10 } }, /* @__PURE__ */ React103.createElement(Text, { size: 14, weight: 600, color: palette_default.text.dark_button }, "Add")))));
 };
-var Container = styled33.div`
+var Container = styled34.div`
   width: 100%;
 `;
-var ListContainer = styled33.div`
+var ListContainer = styled34.div`
   display: flex;
   width: 110%;
   flex-wrap: wrap;
 `;
-var ListItem = styled33.div`
+var ListItem = styled34.div`
   cursor: pointer;
   padding: 2px 8px;
   margin: 3px;
@@ -2569,19 +2613,19 @@ var ListItem = styled33.div`
   gap: 5px;
   min-height: 30px;
 `;
-var InputContainer = styled33.div`
+var InputContainer = styled34.div`
   display: flex;
   gap: 10px;
   width: 100%;
   height: 37px;
 `;
-var Input2 = styled33(Input)`
+var Input2 = styled34(Input)`
   width: 100%;
 `;
-var Button2 = styled33(Button)`
+var Button2 = styled34(Button)`
   margin-left: 10px;
 `;
-var TitleWrapper2 = styled33.div`
+var TitleWrapper2 = styled34.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2589,35 +2633,35 @@ var TitleWrapper2 = styled33.div`
 `;
 
 // src/design.system/key-value-input/index.tsx
-import React103, { useState as useState12 } from "react";
-import styled34 from "styled-components";
-var Container2 = styled34.div`
+import React104, { useState as useState12 } from "react";
+import styled35 from "styled-components";
+var Container2 = styled35.div`
   width: 100%;
 `;
-var TitleWrapper3 = styled34.div`
+var TitleWrapper3 = styled35.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
 `;
-var Table = styled34.table`
+var Table = styled35.table`
   border: solid 1px ${palette_default.text.grey};
   text-align: center;
   border-spacing: 0;
   border-radius: 8px;
   width: 100%;
 `;
-var Th = styled34.th`
+var Th = styled35.th`
   padding: 4px;
 `;
-var Td = styled34.td`
+var Td = styled35.td`
   padding: 8px 0;
 
   border-top: solid 1px ${palette_default.text.grey};
   border-right: ${({ right }) => right ? `solid 1px ${palette_default.text.grey}` : "none"};
   border-left: ${({ left }) => left ? `solid 1px ${palette_default.text.grey}` : "none"};
 `;
-var Input3 = styled34.input`
+var Input3 = styled35.input`
   background: transparent;
   border: none;
   width: 94%;
@@ -2625,7 +2669,7 @@ var Input3 = styled34.input`
   outline: none;
   color: ${palette_default.text.white};
 `;
-var AddRowButton = styled34.td`
+var AddRowButton = styled35.td`
   text-align: center;
   border-top: solid 1px ${palette_default.text.grey};
   padding: 4px;
@@ -2667,7 +2711,7 @@ var KeyValueTable = ({
     );
     setKeyValues(updatedKeyValues);
   };
-  return /* @__PURE__ */ React103.createElement(Container2, null, title && /* @__PURE__ */ React103.createElement(TitleWrapper3, null, /* @__PURE__ */ React103.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React103.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React103.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React103.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React103.createElement(Table, null, /* @__PURE__ */ React103.createElement("thead", null, /* @__PURE__ */ React103.createElement("tr", null, /* @__PURE__ */ React103.createElement(Th, null, /* @__PURE__ */ React103.createElement(
+  return /* @__PURE__ */ React104.createElement(Container2, null, title && /* @__PURE__ */ React104.createElement(TitleWrapper3, null, /* @__PURE__ */ React104.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React104.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React104.createElement(Table, null, /* @__PURE__ */ React104.createElement("thead", null, /* @__PURE__ */ React104.createElement("tr", null, /* @__PURE__ */ React104.createElement(Th, null, /* @__PURE__ */ React104.createElement(
     Text,
     {
       color: palette_default.text.grey,
@@ -2676,7 +2720,7 @@ var KeyValueTable = ({
       weight: 300
     },
     titleKey || "Key"
-  )), /* @__PURE__ */ React103.createElement(Th, null, /* @__PURE__ */ React103.createElement(
+  )), /* @__PURE__ */ React104.createElement(Th, null, /* @__PURE__ */ React104.createElement(
     Text,
     {
       color: palette_default.text.grey,
@@ -2685,35 +2729,35 @@ var KeyValueTable = ({
       weight: 300
     },
     titleValue || "Value"
-  )))), /* @__PURE__ */ React103.createElement("tbody", null, keyValues.map((kv) => /* @__PURE__ */ React103.createElement("tr", { key: kv.id }, /* @__PURE__ */ React103.createElement(Td, { right: true }, /* @__PURE__ */ React103.createElement(
+  )))), /* @__PURE__ */ React104.createElement("tbody", null, keyValues.map((kv) => /* @__PURE__ */ React104.createElement("tr", { key: kv.id }, /* @__PURE__ */ React104.createElement(Td, { right: true }, /* @__PURE__ */ React104.createElement(
     Input3,
     {
       type: "text",
       value: kv.key,
       onChange: (e) => updateKey(kv.id, e.target.value)
     }
-  )), /* @__PURE__ */ React103.createElement(Td, null, /* @__PURE__ */ React103.createElement(
+  )), /* @__PURE__ */ React104.createElement(Td, null, /* @__PURE__ */ React104.createElement(
     Input3,
     {
       type: "text",
       value: kv.value,
       onChange: (e) => updateValue(kv.id, e.target.value)
     }
-  )), /* @__PURE__ */ React103.createElement(
+  )), /* @__PURE__ */ React104.createElement(
     Td,
     {
       style: { cursor: "pointer" },
       left: true,
       onClick: () => deleteRow(kv.id)
     },
-    /* @__PURE__ */ React103.createElement(trash_default, null)
-  )))), /* @__PURE__ */ React103.createElement("tfoot", null, /* @__PURE__ */ React103.createElement("tr", null, /* @__PURE__ */ React103.createElement(AddRowButton, { onClick: addRow, colSpan: 3 }, /* @__PURE__ */ React103.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, titleButton || "Add Row"))))));
+    /* @__PURE__ */ React104.createElement(trash_default, null)
+  )))), /* @__PURE__ */ React104.createElement("tfoot", null, /* @__PURE__ */ React104.createElement("tr", null, /* @__PURE__ */ React104.createElement(AddRowButton, { onClick: addRow, colSpan: 3 }, /* @__PURE__ */ React104.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, titleButton || "Add Row"))))));
 };
 
 // src/design.system/text.area/index.tsx
-import React104 from "react";
-import styled35 from "styled-components";
-var StyledTextArea = styled35.textarea`
+import React105 from "react";
+import styled36 from "styled-components";
+var StyledTextArea = styled36.textarea`
   width: 100%;
   padding: 8px 12px;
   border-radius: 8px;
@@ -2729,7 +2773,7 @@ var StyledTextArea = styled35.textarea`
     border: ${({ theme: theme2 }) => `solid 1px ${theme2.text.grey}`};
   }
 `;
-var LabelWrapper3 = styled35.div`
+var LabelWrapper3 = styled36.div`
   margin-bottom: 8px;
   text-align: start;
 `;
@@ -2744,7 +2788,7 @@ var TextArea = ({
   required,
   ...rest
 }) => {
-  return /* @__PURE__ */ React104.createElement(React104.Fragment, null, label && /* @__PURE__ */ React104.createElement(LabelWrapper3, null, /* @__PURE__ */ React104.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React104.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React104.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React104.createElement(
+  return /* @__PURE__ */ React105.createElement(React105.Fragment, null, label && /* @__PURE__ */ React105.createElement(LabelWrapper3, null, /* @__PURE__ */ React105.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React105.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React105.createElement(Text, { size: 14, weight: 600 }, label), required && /* @__PURE__ */ React105.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React105.createElement(
     StyledTextArea,
     {
       placeholder,
@@ -2759,35 +2803,35 @@ var TextArea = ({
 };
 
 // src/design.system/multi-input/multi.input.table.tsx
-import React105 from "react";
-import styled36 from "styled-components";
-var Container3 = styled36.div`
+import React106 from "react";
+import styled37 from "styled-components";
+var Container3 = styled37.div`
   width: 100%;
 `;
-var TitleWrapper4 = styled36.div`
+var TitleWrapper4 = styled37.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
 `;
-var Table2 = styled36.table`
+var Table2 = styled37.table`
   border: solid 1px ${palette_default.text.grey};
   text-align: center;
   border-spacing: 0;
   border-radius: 8px;
   width: 100%;
 `;
-var Th2 = styled36.th`
+var Th2 = styled37.th`
   padding: 4px;
 `;
-var Td2 = styled36.td`
+var Td2 = styled37.td`
   padding: 8px 0;
 
   border-bottom: solid 1px ${palette_default.text.grey};
   border-right: ${({ right }) => right ? `solid 1px ${palette_default.text.grey}` : "none"};
   border-left: ${({ left }) => left ? `solid 1px ${palette_default.text.grey}` : "none"};
 `;
-var Input4 = styled36.input`
+var Input4 = styled37.input`
   background: transparent;
   border: none;
   width: 94%;
@@ -2795,7 +2839,7 @@ var Input4 = styled36.input`
   outline: none;
   color: ${palette_default.text.white};
 `;
-var AddRowButton2 = styled36.td`
+var AddRowButton2 = styled37.td`
   text-align: center;
   padding: 4px;
   cursor: pointer;
@@ -2821,7 +2865,7 @@ var MultiInputTable = ({
     );
     onValuesChange(updatedValues);
   };
-  return /* @__PURE__ */ React105.createElement(Container3, null, title && /* @__PURE__ */ React105.createElement(TitleWrapper4, null, /* @__PURE__ */ React105.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React105.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React105.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React105.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React105.createElement(Table2, null, /* @__PURE__ */ React105.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React105.createElement("tr", { key: index }, /* @__PURE__ */ React105.createElement(Td2, { right: true }, /* @__PURE__ */ React105.createElement(
+  return /* @__PURE__ */ React106.createElement(Container3, null, title && /* @__PURE__ */ React106.createElement(TitleWrapper4, null, /* @__PURE__ */ React106.createElement(Tooltip, { text: tooltip || "" }, /* @__PURE__ */ React106.createElement("div", { style: { display: "flex", gap: 4 } }, /* @__PURE__ */ React106.createElement(Text, { size: 14, weight: 600 }, title), required && /* @__PURE__ */ React106.createElement(Text, { size: 14, weight: 600 }, "*")))), /* @__PURE__ */ React106.createElement(Table2, null, /* @__PURE__ */ React106.createElement("tbody", null, values.map((value, index) => /* @__PURE__ */ React106.createElement("tr", { key: index }, /* @__PURE__ */ React106.createElement(Td2, { right: true }, /* @__PURE__ */ React106.createElement(
     Input4,
     {
       type: "text",
@@ -2829,23 +2873,23 @@ var MultiInputTable = ({
       onChange: (e) => updateValue(index, e.target.value),
       placeholder: index === 0 ? placeholder : ""
     }
-  )), /* @__PURE__ */ React105.createElement(
+  )), /* @__PURE__ */ React106.createElement(
     Td2,
     {
       onClick: () => deleteRow(index),
       style: { cursor: "pointer" }
     },
-    /* @__PURE__ */ React105.createElement(trash_default, null)
-  )))), /* @__PURE__ */ React105.createElement("tfoot", null, /* @__PURE__ */ React105.createElement("tr", null, /* @__PURE__ */ React105.createElement(AddRowButton2, { onClick: addRow, colSpan: 2 }, /* @__PURE__ */ React105.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, "Add Row"))))));
+    /* @__PURE__ */ React106.createElement(trash_default, null)
+  )))), /* @__PURE__ */ React106.createElement("tfoot", null, /* @__PURE__ */ React106.createElement("tr", null, /* @__PURE__ */ React106.createElement(AddRowButton2, { onClick: addRow, colSpan: 2 }, /* @__PURE__ */ React106.createElement(Text, { weight: 400, size: 14, color: palette_default.colors.torquiz_light }, "Add Row"))))));
 };
 
 // src/design.system/action.group/index.tsx
-import React107 from "react";
+import React108 from "react";
 
 // src/design.system/action.item/index.tsx
-import React106, { useRef as useRef4, useState as useState14 } from "react";
-import styled37 from "styled-components";
-var Label = styled37.label`
+import React107, { useRef as useRef4, useState as useState14 } from "react";
+import styled38 from "styled-components";
+var Label = styled38.label`
   cursor: pointer;
   display: flex;
   gap: 4px;
@@ -2856,7 +2900,7 @@ var Label = styled37.label`
     }
   }
 `;
-var Popup = styled37.div`
+var Popup = styled38.div`
   display: ${(props) => props.isOpen ? "block" : "none"};
   position: absolute;
   right: 0px;
@@ -2868,7 +2912,7 @@ var Popup = styled37.div`
   background: ${({ theme: theme2 }) => theme2.colors.dark};
   margin-top: 5px;
 `;
-var PopupItem = styled37.div`
+var PopupItem = styled38.div`
   display: flex;
   padding: 7px 12px;
   gap: 4px;
@@ -2893,35 +2937,35 @@ var ActionItem = ({
   const [isOpen, setIsOpen] = useState14(false);
   const ref = useRef4(null);
   useOnClickOutside(ref, () => setIsOpen(false));
-  return /* @__PURE__ */ React106.createElement("div", { ref, style: { position: "relative" } }, /* @__PURE__ */ React106.createElement(Label, { onClick: () => setIsOpen(!isOpen) }, /* @__PURE__ */ React106.createElement(Text, { size: 12, weight: 600 }, label), /* @__PURE__ */ React106.createElement(expand_arrow_default, null)), /* @__PURE__ */ React106.createElement(Popup, { isOpen }, /* @__PURE__ */ React106.createElement("div", { style: { padding: 12, width: 120 } }, /* @__PURE__ */ React106.createElement(Text, { size: 12, weight: 600 }, subTitle)), items.map((item, index) => /* @__PURE__ */ React106.createElement(
+  return /* @__PURE__ */ React107.createElement("div", { ref, style: { position: "relative" } }, /* @__PURE__ */ React107.createElement(Label, { onClick: () => setIsOpen(!isOpen) }, /* @__PURE__ */ React107.createElement(Text, { size: 12, weight: 600 }, label), /* @__PURE__ */ React107.createElement(expand_arrow_default, null)), /* @__PURE__ */ React107.createElement(Popup, { isOpen }, /* @__PURE__ */ React107.createElement("div", { style: { padding: 12, width: 120 } }, /* @__PURE__ */ React107.createElement(Text, { size: 12, weight: 600 }, subTitle)), items.map((item, index) => /* @__PURE__ */ React107.createElement(
     PopupItem,
     {
       key: index,
       onClick: item.onClick,
       disabled: !!item.disabled
     },
-    item.selected ? /* @__PURE__ */ React106.createElement(check_default, null) : /* @__PURE__ */ React106.createElement("div", { style: { width: 10 } }),
-    /* @__PURE__ */ React106.createElement(Text, { size: 12, weight: 600 }, item.label)
+    item.selected ? /* @__PURE__ */ React107.createElement(check_default, null) : /* @__PURE__ */ React107.createElement("div", { style: { width: 10 } }),
+    /* @__PURE__ */ React107.createElement(Text, { size: 12, weight: 600 }, item.label)
   ))));
 };
 
 // src/design.system/action.group/index.tsx
 var ActionsGroup = ({ actionGroups }) => {
-  return /* @__PURE__ */ React107.createElement(React107.Fragment, null, actionGroups.map(
-    (group, index) => group.condition && /* @__PURE__ */ React107.createElement(ActionItem, { key: index, ...group })
+  return /* @__PURE__ */ React108.createElement(React108.Fragment, null, actionGroups.map(
+    (group, index) => group.condition && /* @__PURE__ */ React108.createElement(ActionItem, { key: index, ...group })
   ));
 };
 
 // src/design.system/pagination/index.tsx
-import React108 from "react";
-import styled38 from "styled-components";
-var PaginationContainer = styled38.div`
+import React109 from "react";
+import styled39 from "styled-components";
+var PaginationContainer = styled39.div`
   display: flex;
   justify-content: center;
   padding: 20px;
   gap: 2px;
 `;
-var PageButton = styled38.button`
+var PageButton = styled39.button`
   background-color: ${(props) => props.isCurrentPage ? palette_default.colors.blue_grey : "transparent"};
   color: ${(props) => props.isDisabled ? palette_default.text.grey : palette_default.text.white};
   border: none;
@@ -2947,16 +2991,16 @@ var Pagination = ({
   onPageChange
 }) => {
   const pageCount = Math.ceil(total / itemsPerPage);
-  return /* @__PURE__ */ React108.createElement(PaginationContainer, null, /* @__PURE__ */ React108.createElement(
+  return /* @__PURE__ */ React109.createElement(PaginationContainer, null, /* @__PURE__ */ React109.createElement(
     PageButton,
     {
       onClick: () => onPageChange(currentPage - 1),
       disabled: currentPage === 1,
       isDisabled: currentPage === 1
     },
-    /* @__PURE__ */ React108.createElement(expand_arrow_default, { style: { transform: "rotate(90deg)" } }),
+    /* @__PURE__ */ React109.createElement(expand_arrow_default, { style: { transform: "rotate(90deg)" } }),
     "Previous"
-  ), new Array(pageCount).fill(0).map((_, index) => /* @__PURE__ */ React108.createElement(
+  ), new Array(pageCount).fill(0).map((_, index) => /* @__PURE__ */ React109.createElement(
     PageButton,
     {
       key: index,
@@ -2964,7 +3008,7 @@ var Pagination = ({
       isCurrentPage: currentPage === index + 1
     },
     index + 1
-  )), /* @__PURE__ */ React108.createElement(
+  )), /* @__PURE__ */ React109.createElement(
     PageButton,
     {
       onClick: () => onPageChange(currentPage + 1),
@@ -2972,14 +3016,14 @@ var Pagination = ({
       isDisabled: currentPage === pageCount
     },
     "Next",
-    /* @__PURE__ */ React108.createElement(expand_arrow_default, { style: { transform: "rotate(-90deg)" } })
+    /* @__PURE__ */ React109.createElement(expand_arrow_default, { style: { transform: "rotate(-90deg)" } })
   ));
 };
 
 // src/design.system/table/index.tsx
-import styled39 from "styled-components";
-import React109, { useState as useState15 } from "react";
-var StyledTable = styled39.table`
+import styled40 from "styled-components";
+import React110, { useState as useState15 } from "react";
+var StyledTable = styled40.table`
   width: 100%;
   background-color: ${palette_default.colors.dark};
   border: 1px solid ${palette_default.colors.blue_grey};
@@ -2987,15 +3031,15 @@ var StyledTable = styled39.table`
   border-collapse: separate;
   border-spacing: 0;
 `;
-var StyledTbody = styled39.tbody``;
-var DropdownContainer = styled39.div`
+var StyledTbody = styled40.tbody``;
+var DropdownContainer = styled40.div`
   margin: 10px 0;
   gap: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 `;
-var Dropdown = styled39.select`
+var Dropdown = styled40.select`
   padding: 5px;
   border-radius: 4px;
   border: 1px solid ${palette_default.colors.blue_grey};
@@ -3005,7 +3049,7 @@ var Dropdown = styled39.select`
   cursor: pointer;
   border: ${({ theme: theme2 }) => `1px solid  ${theme2.colors.blue_grey}`};
 `;
-var DropdownOption = styled39.option`
+var DropdownOption = styled40.option`
   background-color: ${palette_default.colors.dark};
   color: ${palette_default.colors.white};
 `;
@@ -3031,17 +3075,17 @@ var Table3 = ({
     setItemsPerPage(Number(event.target.value));
     setCurrentPage(1);
   };
-  return /* @__PURE__ */ React109.createElement(React109.Fragment, null, /* @__PURE__ */ React109.createElement(DropdownContainer, null, /* @__PURE__ */ React109.createElement(Text, { size: 12, color: palette_default.text.light_grey }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ React109.createElement(
+  return /* @__PURE__ */ React110.createElement(React110.Fragment, null, /* @__PURE__ */ React110.createElement(DropdownContainer, null, /* @__PURE__ */ React110.createElement(Text, { size: 12, color: palette_default.text.light_grey }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ React110.createElement(
     Dropdown,
     {
       id: "itemsPerPage",
       value: itemsPerPage,
       onChange: handleItemsPerPageChange
     },
-    /* @__PURE__ */ React109.createElement(DropdownOption, { value: 10 }, "10"),
-    /* @__PURE__ */ React109.createElement(DropdownOption, { value: 25 }, "25"),
-    /* @__PURE__ */ React109.createElement(DropdownOption, { value: 50 }, "50")
-  )), /* @__PURE__ */ React109.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ React109.createElement(StyledTbody, null, currentItems.map((item, index) => renderTableRows(item, index)))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ React109.createElement(
+    /* @__PURE__ */ React110.createElement(DropdownOption, { value: 10 }, "10"),
+    /* @__PURE__ */ React110.createElement(DropdownOption, { value: 25 }, "25"),
+    /* @__PURE__ */ React110.createElement(DropdownOption, { value: 50 }, "50")
+  )), /* @__PURE__ */ React110.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ React110.createElement(StyledTbody, null, currentItems.map((item, index) => renderTableRows(item, index)))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ React110.createElement(
     Pagination,
     {
       total: data.length,
@@ -3053,10 +3097,10 @@ var Table3 = ({
 };
 
 // src/design.system/yml.editor/index.tsx
-import React110, { useState as useState16 } from "react";
+import React111, { useState as useState16 } from "react";
 import YamlEditor from "@focus-reactive/react-yaml";
-import styled40 from "styled-components";
-var Container4 = styled40.div`
+import styled41 from "styled-components";
+var Container4 = styled41.div`
   position: relative;
   background-color: ${palette_default.colors.blue_grey};
   border-radius: 8px;
@@ -3083,7 +3127,7 @@ var Container4 = styled40.div`
     border-top-right-radius: 8px;
   }
 `;
-var EditorOverlay = styled40.div`
+var EditorOverlay = styled41.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -3091,7 +3135,7 @@ var EditorOverlay = styled40.div`
   bottom: 0;
   z-index: 10; // Ensure this is higher than the editor's z-index
 `;
-var CopyIconWrapper2 = styled40.div`
+var CopyIconWrapper2 = styled41.div`
   background-color: ${palette_default.colors.dark};
   z-index: 999;
   border-radius: 4px;
@@ -3117,14 +3161,14 @@ var YMLEditor = ({ data }) => {
       }, 3e3);
     }).catch((err) => console.error("Error copying YAML to clipboard: ", err));
   };
-  return /* @__PURE__ */ React110.createElement(React110.Fragment, null, /* @__PURE__ */ React110.createElement(Container4, null, /* @__PURE__ */ React110.createElement(CopyIconWrapper2, { onClick: handleCopy }, isCopied ? /* @__PURE__ */ React110.createElement(copied_default, { style: { width: 18, height: 18 } }) : /* @__PURE__ */ React110.createElement(copy_default, { style: { width: 18, height: 18 } })), /* @__PURE__ */ React110.createElement("div", { style: { position: "relative" } }, /* @__PURE__ */ React110.createElement(
+  return /* @__PURE__ */ React111.createElement(React111.Fragment, null, /* @__PURE__ */ React111.createElement(Container4, null, /* @__PURE__ */ React111.createElement(CopyIconWrapper2, { onClick: handleCopy }, isCopied ? /* @__PURE__ */ React111.createElement(copied_default, { style: { width: 18, height: 18 } }) : /* @__PURE__ */ React111.createElement(copy_default, { style: { width: 18, height: 18 } })), /* @__PURE__ */ React111.createElement("div", { style: { position: "relative" } }, /* @__PURE__ */ React111.createElement(
     YamlEditor,
     {
       key: JSON.stringify(data),
       json: data,
       onChange: handleChange
     }
-  ), /* @__PURE__ */ React110.createElement(EditorOverlay, null))));
+  ), /* @__PURE__ */ React111.createElement(EditorOverlay, null))));
 };
 
 // src/design.system/data.flow/builder.ts
@@ -3133,6 +3177,11 @@ var sources = [
     name: "adservice",
     kind: "Deployment",
     namespace: "default",
+    metrics: {
+      data_transfer: "3.8 KB/s",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     languages: [
       {
         container_name: "server",
@@ -3144,6 +3193,11 @@ var sources = [
     name: "cartservice",
     kind: "Deployment",
     namespace: "default",
+    metrics: {
+      data_transfer: "2.3 KB/s",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     languages: [
       {
         container_name: "server",
@@ -3155,6 +3209,11 @@ var sources = [
     name: "checkoutservice",
     kind: "Deployment",
     namespace: "default",
+    metrics: {
+      data_transfer: "0 Byte transfered",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     languages: [
       {
         container_name: "server",
@@ -3166,6 +3225,11 @@ var sources = [
     name: "coupon",
     kind: "Deployment",
     namespace: "default",
+    metrics: {
+      data_transfer: "3.8 KB/s",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     languages: [
       {
         container_name: "coupon",
@@ -3179,6 +3243,11 @@ var destinations = [
     id: "odigos.io.dest.elasticsearch-6qklw",
     name: "Elasticsearch",
     type: "elasticsearch",
+    metrics: {
+      data_transfer: "3.8 KB/s",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     signals: {
       traces: true,
       metrics: false,
@@ -3246,6 +3315,11 @@ var destinations = [
     id: "odigos.io.dest.s3-gk7bn",
     name: "aws",
     type: "s3",
+    metrics: {
+      data_transfer: "3.8111 KB/s",
+      cpu_usage: "3.8%",
+      memory_usage: "3.8%"
+    },
     signals: {
       traces: true,
       metrics: true,
@@ -3280,7 +3354,7 @@ var action = [
     id: "aci-f6c9f",
     type: "AddClusterInfo",
     spec: {
-      actionName: "This is tetst test Cluster Attributes",
+      actionName: "Cluster Attributes",
       notes: "Actions are a way to modify the OpenTelemetry data recorded by Odigos Sources, before it is exported to your Odigos Destinations.",
       signals: ["METRICS", "TRACES"],
       clusterAttributes: [
@@ -3355,7 +3429,7 @@ var buildFlowNodesAndEdges = (sources2, destinations2, actions) => {
     middle_index_sources = sources_length / 2 - 1;
   }
   const sourceyOffset = desired_y_position - middle_index_sources * 100;
-  const centerXPossition = actions?.length > 0 ? actions?.length * 150 + 400 : 450;
+  const centerXPossition = actions?.length > 0 ? actions?.length * 150 + 600 : 600;
   nodes2.push({
     id: centerNodeId,
     type: "custom",
@@ -3376,14 +3450,40 @@ var buildFlowNodesAndEdges = (sources2, destinations2, actions) => {
       position: { x: xOffsetNamespace, y: sourceyOffset + index * 100 },
       data: source
     });
-    edges2.push({
-      id: `e${namespaceNodeId}-${centerNodeId}`,
-      source: namespaceNodeId,
-      target: actions?.length > 0 ? `action-0` : centerNodeId,
-      animated: true,
-      style: { stroke: hasError ? "#ff0000" : "#96f3ff8e" },
-      data: null
-    });
+    if (source.metrics) {
+      const metricNodeId = `metric-${index}`;
+      nodes2.push({
+        id: metricNodeId,
+        type: "metric",
+        position: { x: xOffsetNamespace + 300, y: sourceyOffset + index * 100 },
+        data: { metrics: source.metrics }
+      });
+      edges2.push({
+        id: `e${namespaceNodeId}-${metricNodeId}`,
+        source: metricNodeId,
+        target: actions?.length > 0 ? `action-0` : centerNodeId,
+        animated: true,
+        style: { stroke: "#96f3ff8e" },
+        data: null
+      });
+      edges2.push({
+        id: `e${namespaceNodeId}-${centerNodeId}`,
+        source: namespaceNodeId,
+        target: metricNodeId,
+        animated: true,
+        style: { stroke: hasError ? "#ff0000" : "#96f3ff8e" },
+        data: null
+      });
+    } else {
+      edges2.push({
+        id: `e${namespaceNodeId}-${centerNodeId}`,
+        source: namespaceNodeId,
+        target: actions?.length > 0 ? `action-0` : centerNodeId,
+        animated: true,
+        style: { stroke: hasError ? "#ff0000" : "#96f3ff8e" },
+        data: null
+      });
+    }
   });
   destinations2.forEach((destination, index) => {
     let isErrored = false;
@@ -3397,19 +3497,48 @@ var buildFlowNodesAndEdges = (sources2, destinations2, actions) => {
       id: destinationNodeId,
       type: "destination",
       position: {
-        x: centerXPossition + 400,
+        x: centerXPossition + 600,
         y: destinationyOffset + index * 100
       },
       data: destination
     });
-    edges2.push({
-      id: `e${centerNodeId}-${destinationNodeId}`,
-      source: centerNodeId,
-      target: destinationNodeId,
-      animated: true,
-      style: { stroke: isErrored ? "#ff0000" : "#96f3ff8e" },
-      data: null
-    });
+    if (destination.metrics) {
+      const metricNodeId = `metric-dest-${index}`;
+      nodes2.push({
+        id: metricNodeId,
+        type: "metric",
+        position: {
+          x: centerXPossition + 250,
+          y: destinationyOffset + index * 100
+        },
+        data: { metrics: destination.metrics }
+      });
+      edges2.push({
+        id: `e${destinationNodeId}-${metricNodeId}`,
+        source: centerNodeId,
+        target: metricNodeId,
+        animated: true,
+        style: { stroke: "#96f3ff8e" },
+        data: null
+      });
+      edges2.push({
+        id: `e${destinationNodeId}-${metricNodeId}`,
+        source: metricNodeId,
+        target: destinationNodeId,
+        animated: true,
+        style: { stroke: "#96f3ff8e" },
+        data: null
+      });
+    } else {
+      edges2.push({
+        id: `e${centerNodeId}-${destinationNodeId}`,
+        source: centerNodeId,
+        target: destinationNodeId,
+        animated: true,
+        style: { stroke: isErrored ? "#ff0000" : "#96f3ff8e" },
+        data: null
+      });
+    }
   });
   actions.forEach((action2, index) => {
     const actionNodeId = `action-${index}`;
@@ -3417,7 +3546,7 @@ var buildFlowNodesAndEdges = (sources2, destinations2, actions) => {
     nodes2.push({
       id: actionNodeId,
       type: "action",
-      position: { x: 420 + index * 125, y: 250 },
+      position: { x: 620 + index * 125, y: 250 },
       data: action2
     });
     edges2.push({
@@ -3438,11 +3567,11 @@ var { nodes, edges } = buildFlowNodesAndEdges(
 );
 
 // src/icons-components/monitors/index.tsx
-import React111 from "react";
+import React112 from "react";
 
 // src/icons-components/styled.ts
-import styled41 from "styled-components";
-var IconWrapper3 = styled41.div`
+import styled42 from "styled-components";
+var IconWrapper3 = styled42.div`
   width: ${({ size }) => size || 24}px;
   height: ${({ size }) => size || 24}px;
   display: inline-flex;
@@ -3451,53 +3580,53 @@ var IconWrapper3 = styled41.div`
 `;
 
 // src/icons-components/monitors/index.tsx
-var LogsIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(logs_grey_default, null));
-var LogsFocusIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(logs_blue_default, null));
-var TraceIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(tree_structure_grey_default, null));
-var TraceFocusIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(tree_structure_blue_default, null));
-var MetricsIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(chart_line_grey_default, null));
-var MetricsFocusIcon = ({ ...props }) => /* @__PURE__ */ React111.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React111.createElement(chart_line_blue_default, null));
+var LogsIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(logs_grey_default, null));
+var LogsFocusIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(logs_blue_default, null));
+var TraceIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(tree_structure_grey_default, null));
+var TraceFocusIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(tree_structure_blue_default, null));
+var MetricsIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(chart_line_grey_default, null));
+var MetricsFocusIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(chart_line_blue_default, null));
 
 // src/icons-components/actions/index.tsx
-import React112 from "react";
-var AddClusterInfoIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(cluster_attr_default, null));
-var DeleteAttributeIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(delete_attr_default, null));
-var RenameAttributeIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(rename_attr_default, null));
-var ErrorSamplerIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(error_sampler_default, null));
-var PiiMaskingIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(pii_masking_default, null));
-var LatencySamplerIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(latency_sampler_default, null));
-var ProbabilisticSamplerIcon = ({ ...props }) => /* @__PURE__ */ React112.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React112.createElement(probabilistic_sampler_default, null));
+import React113 from "react";
+var AddClusterInfoIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(cluster_attr_default, null));
+var DeleteAttributeIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(delete_attr_default, null));
+var RenameAttributeIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(rename_attr_default, null));
+var ErrorSamplerIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(error_sampler_default, null));
+var PiiMaskingIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(pii_masking_default, null));
+var LatencySamplerIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(latency_sampler_default, null));
+var ProbabilisticSamplerIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(probabilistic_sampler_default, null));
 
 // src/icons-components/app/index.tsx
-import React113 from "react";
-var PlusIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(plus_default, null));
-var BackIcon = ({ ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React113.createElement(back_default, null));
-var RightArrowIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(arrow_right_default, null));
-var ChargeIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(charge_rect_default, null));
-var ConnectIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(connect_default, null));
-var NoteIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(note_default, null));
-var WhiteArrowIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(white_arrow_right_default, null));
-var LinkIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(link_default, null));
-var ExpandIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(expand_arrow_default, null));
-var CheckIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(check_default, null));
-var CopyIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(copy_default, null));
-var CopiedIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(copied_default, null));
-var YamlIconIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(yaml_default, null));
-var GreenCheckIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(green_check_default, null));
-var RedErrorIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(red_error_default, null));
-var BlueInfoIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(blue_info_default, null));
-var BellIcon = ({ size, color, ...props }) => /* @__PURE__ */ React113.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React113.createElement(bell_default, null));
+import React114 from "react";
+var PlusIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(plus_default, null));
+var BackIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(back_default, null));
+var RightArrowIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(arrow_right_default, null));
+var ChargeIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(charge_rect_default, null));
+var ConnectIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(connect_default, null));
+var NoteIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(note_default, null));
+var WhiteArrowIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(white_arrow_right_default, null));
+var LinkIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(link_default, null));
+var ExpandIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(expand_arrow_default, null));
+var CheckIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(check_default, null));
+var CopyIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(copy_default, null));
+var CopiedIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(copied_default, null));
+var YamlIconIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(yaml_default, null));
+var GreenCheckIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(green_check_default, null));
+var RedErrorIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(red_error_default, null));
+var BlueInfoIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(blue_info_default, null));
+var BellIcon = ({ size, color, ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { size, color, ...props }, /* @__PURE__ */ React114.createElement(bell_default, null));
 
 // src/icons-components/side.menu/index.tsx
-import React114 from "react";
-var FocusOverviewIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(focus_overview_default, null));
-var UnFocusOverviewIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(unfocus_overview_default, null));
-var FocusSourcesIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(sources_focus_default, null));
-var UnFocusSourcesIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(sources_unfocus_default, null));
-var FocusDestinationsIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(destinations_focus_default, null));
-var UnFocusDestinationsIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(destinations_unfocus_default, null));
-var FocusActionIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(transform_focus_default, null));
-var UnFocusActionIcon = ({ ...props }) => /* @__PURE__ */ React114.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React114.createElement(transform_unfocus_default, null));
+import React115 from "react";
+var FocusOverviewIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(focus_overview_default, null));
+var UnFocusOverviewIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(unfocus_overview_default, null));
+var FocusSourcesIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(sources_focus_default, null));
+var UnFocusSourcesIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(sources_unfocus_default, null));
+var FocusDestinationsIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(destinations_focus_default, null));
+var UnFocusDestinationsIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(destinations_unfocus_default, null));
+var FocusActionIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(transform_focus_default, null));
+var UnFocusActionIcon = ({ ...props }) => /* @__PURE__ */ React115.createElement(IconWrapper3, { ...props }, /* @__PURE__ */ React115.createElement(transform_unfocus_default, null));
 export {
   ActionInput,
   ActionItem,

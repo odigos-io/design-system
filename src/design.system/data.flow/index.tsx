@@ -12,6 +12,7 @@ import CenterNode from './keyval.middleware';
 import NamespaceNode from './namespace.node.tsx';
 import DestinationNode from './destination.node.tsx';
 import SourceNode from './source.node.tsx';
+import MetricNode from './metric.node.tsx';
 import { DataFlowContainer } from './data.flow.styled';
 import 'reactflow/dist/style.css';
 import { DataFlowControlPanel } from './control.panel.tsx';
@@ -24,6 +25,7 @@ const nodeTypes = {
   destination: DestinationNode,
   action: ActionNode,
   source: SourceNode,
+  metric: MetricNode,
 };
 
 function DataFlow({ nodes, edges, ...rest }: IDataFlow) {

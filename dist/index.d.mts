@@ -396,6 +396,7 @@ interface Source {
     name: string;
     kind: string;
     namespace: string;
+    metrics?: Record<string, string>;
     conditions?: {
         type: string;
         status: string;
@@ -411,6 +412,7 @@ interface Destination {
     id: string;
     name: string;
     type: string;
+    metrics?: Record<string, string>;
     signals: {
         traces: boolean;
         metrics: boolean;
