@@ -964,7 +964,9 @@ function _templateObject67() {
 }
 function _templateObject68() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  height: 100%;\n"
+        "\n  display: inline-flex;\n  height: 20px;\n  padding: 4px 8px;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  border-radius: 32px;\n  border: ",
+        ";\n  background: ",
+        ";\n"
     ]);
     _templateObject68 = function _templateObject() {
         return data;
@@ -973,8 +975,7 @@ function _templateObject68() {
 }
 function _templateObject69() {
     var data = _tagged_template_literal([
-        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
-        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
+        "\n  text-align: center;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"
     ]);
     _templateObject69 = function _templateObject() {
         return data;
@@ -983,10 +984,7 @@ function _templateObject69() {
 }
 function _templateObject70() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  z-index: 999;\n  top: 15px;\n  left: 60px;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n  background-color: ",
-        ";\n  padding: 10px;\n  border-radius: 8px;\n  border: 1px solid ",
-        ";\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
-        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
+        "\n  width: 100%;\n  height: 100%;\n"
     ]);
     _templateObject70 = function _templateObject() {
         return data;
@@ -995,7 +993,8 @@ function _templateObject70() {
 }
 function _templateObject71() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 14px;\n"
+        "\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
+        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
     ]);
     _templateObject71 = function _templateObject() {
         return data;
@@ -1004,8 +1003,10 @@ function _templateObject71() {
 }
 function _templateObject72() {
     var data = _tagged_template_literal([
-        "\n  background-color: ",
-        ";\n  width: 10px;\n  height: 10px;\n  border-radius: 8px;\n  margin-right: 6px;\n"
+        "\n  position: absolute;\n  z-index: 999;\n  top: 15px;\n  left: 60px;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n  background-color: ",
+        ";\n  padding: 10px;\n  border-radius: 8px;\n  border: 1px solid ",
+        ";\n  button {\n    display: flex;\n    padding: 8px;\n    align-items: center;\n    gap: 10px;\n    border-radius: 8px;\n    border: ",
+        ";\n    background: #0e1c28 !important;\n    margin-bottom: 8px;\n  }\n\n  .react-flow__controls button path {\n    fill: #fff;\n  }\n"
     ]);
     _templateObject72 = function _templateObject() {
         return data;
@@ -1014,7 +1015,7 @@ function _templateObject72() {
 }
 function _templateObject73() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 10px;\n  cursor: pointer;\n"
+        "\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 14px;\n"
     ]);
     _templateObject73 = function _templateObject() {
         return data;
@@ -1023,8 +1024,8 @@ function _templateObject73() {
 }
 function _templateObject74() {
     var data = _tagged_template_literal([
-        "\n  padding: 10px;\n  border: ",
-        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
+        "\n  background-color: ",
+        ";\n  width: 10px;\n  height: 10px;\n  border-radius: 8px;\n  margin-right: 6px;\n"
     ]);
     _templateObject74 = function _templateObject() {
         return data;
@@ -1033,8 +1034,7 @@ function _templateObject74() {
 }
 function _templateObject75() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
-        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
+        "\n  display: flex;\n  gap: 10px;\n  cursor: pointer;\n"
     ]);
     _templateObject75 = function _templateObject() {
         return data;
@@ -1043,8 +1043,8 @@ function _templateObject75() {
 }
 function _templateObject76() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
-        ";\n  cursor: pointer !important;\n"
+        "\n  padding: 10px;\n  border: ",
+        ";\n  border-radius: 8px;\n  width: fit-content;\n  width: 344px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n"
     ]);
     _templateObject76 = function _templateObject() {
         return data;
@@ -1053,7 +1053,8 @@ function _templateObject76() {
 }
 function _templateObject77() {
     var data = _tagged_template_literal([
-        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
+        "\n  width: 100%;\n  display: flex;\n  justify-content: flex-end;\n  :hover {\n    background: ",
+        ";\n    p {\n      color: #fff !important;\n    }\n  }\n"
     ]);
     _templateObject77 = function _templateObject() {
         return data;
@@ -1062,7 +1063,8 @@ function _templateObject77() {
 }
 function _templateObject78() {
     var data = _tagged_template_literal([
-        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
+        "\n  padding: 8px 12px;\n  border-radius: 4px;\n  background: transparent;\n  border: ",
+        ";\n  cursor: pointer !important;\n"
     ]);
     _templateObject78 = function _templateObject() {
         return data;
@@ -1071,11 +1073,7 @@ function _templateObject78() {
 }
 function _templateObject79() {
     var data = _tagged_template_literal([
-        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
-        ";\n  border: 1px solid ",
-        ";\n  background-color: ",
-        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n  }\n"
+        "\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"
     ]);
     _templateObject79 = function _templateObject() {
         return data;
@@ -1084,11 +1082,7 @@ function _templateObject79() {
 }
 function _templateObject80() {
     var data = _tagged_template_literal([
-        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
-        ";\n  border: 1px solid ",
-        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
-        ";\n    color: ",
-        ";\n  }\n"
+        "\n  padding: 40px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 20px;\n"
     ]);
     _templateObject80 = function _templateObject() {
         return data;
@@ -1097,11 +1091,11 @@ function _templateObject80() {
 }
 function _templateObject81() {
     var data = _tagged_template_literal([
-        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
-        ";\n  align-items: ",
-        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
-        ";\n    animation-fill-mode: backwards;\n  }\n"
+        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
+        ";\n  border: 1px solid ",
+        ";\n  background-color: ",
+        ";\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
+        ";\n  }\n"
     ]);
     _templateObject81 = function _templateObject() {
         return data;
@@ -1110,8 +1104,11 @@ function _templateObject81() {
 }
 function _templateObject82() {
     var data = _tagged_template_literal([
-        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
-        ";\n"
+        "\n  display: block;\n  padding: 10px 30px;\n  border-radius: 3px;\n  color: ",
+        ";\n  border: 1px solid ",
+        ";\n  background-color: transparent;\n  font-family: 'Robot', sans-serif;\n  font-weight: 500;\n  transition: 0.3s ease all;\n\n  &:hover {\n    background-color: ",
+        ";\n    color: ",
+        ";\n  }\n"
     ]);
     _templateObject82 = function _templateObject() {
         return data;
@@ -1120,7 +1117,11 @@ function _templateObject82() {
 }
 function _templateObject83() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
+        "\n  width: 100vw;\n  height: 100vh;\n  z-index: 9999;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: ",
+        ";\n  align-items: ",
+        ";\n  padding: 40px;\n\n  @media (prefers-reduced-motion: no-preference) {\n    animation-name: ",
+        ";\n    animation-fill-mode: backwards;\n  }\n"
     ]);
     _templateObject83 = function _templateObject() {
         return data;
@@ -1129,7 +1130,8 @@ function _templateObject83() {
 }
 function _templateObject84() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
+        "\n  min-width: 500px;\n  min-height: 50px;\n  /* background-color: #ffffff; */\n  position: relative;\n  /* border-radius: 8px; */\n  border-radius: 12px;\n  border: 0.95px solid var(--dark-mode-dark-3, #203548);\n  background: var(--dark-mode-dark-2, #0e1c28);\n\n  padding: ",
+        ";\n"
     ]);
     _templateObject84 = function _templateObject() {
         return data;
@@ -1138,7 +1140,7 @@ function _templateObject84() {
 }
 function _templateObject85() {
     var data = _tagged_template_literal([
-        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
+        "\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-bottom: 20px;\n"
     ]);
     _templateObject85 = function _templateObject() {
         return data;
@@ -1147,8 +1149,7 @@ function _templateObject85() {
 }
 function _templateObject86() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
-        ";\n"
+        "\n  position: absolute;\n  top: 20px;\n  right: 15px;\n  border: none;\n  background-color: transparent;\n  transition: 0.3s ease all;\n  border-radius: 3px;\n  color: '#d1345b';\n  cursor: pointer;\n\n  svg {\n    width: 24px;\n    height: 24px;\n    fill: #fff;\n  }\n"
     ]);
     _templateObject86 = function _templateObject() {
         return data;
@@ -1157,7 +1158,7 @@ function _templateObject86() {
 }
 function _templateObject87() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
+        "\n  background-color: #ededed8b;\n  border: 1px solid #d4d2d2;\n  width: 100%;\n  height: 36px;\n  border-radius: 8px;\n  cursor: pointer;\n\n  &:hover {\n    background-color: #ededed;\n  }\n"
     ]);
     _templateObject87 = function _templateObject() {
         return data;
@@ -1166,7 +1167,8 @@ function _templateObject87() {
 }
 function _templateObject88() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n"
+        "\n  display: flex;\n  width: 100%;\n  flex-direction: column;\n  align-items: center;\n  color: ",
+        ";\n"
     ]);
     _templateObject88 = function _templateObject() {
         return data;
@@ -1175,7 +1177,7 @@ function _templateObject88() {
 }
 function _templateObject89() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  align-items: center;\n"
+        "\n  width: 100%;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n  justify-content: flex-end;\n  margin-top: 20px;\n  padding-top: 20px;\n"
     ]);
     _templateObject89 = function _templateObject() {
         return data;
@@ -1184,8 +1186,7 @@ function _templateObject89() {
 }
 function _templateObject90() {
     var data = _tagged_template_literal([
-        "\n  opacity: ",
-        ";\n"
+        "\n  display: flex;\n"
     ]);
     _templateObject90 = function _templateObject() {
         return data;
@@ -1194,7 +1195,7 @@ function _templateObject90() {
 }
 function _templateObject91() {
     var data = _tagged_template_literal([
-        "\n  margin: 0 8px;\n"
+        "\n  display: flex;\n  align-items: center;\n"
     ]);
     _templateObject91 = function _templateObject() {
         return data;
@@ -1203,7 +1204,8 @@ function _templateObject91() {
 }
 function _templateObject92() {
     var data = _tagged_template_literal([
-        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
+        "\n  opacity: ",
+        ";\n"
     ]);
     _templateObject92 = function _templateObject() {
         return data;
@@ -1212,8 +1214,7 @@ function _templateObject92() {
 }
 function _templateObject93() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
-        ";\n"
+        "\n  margin: 0 8px;\n"
     ]);
     _templateObject93 = function _templateObject() {
         return data;
@@ -1222,7 +1223,7 @@ function _templateObject93() {
 }
 function _templateObject94() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
+        "\n  width: 54px;\n  height: 1px;\n  background-color: #8b92a5;\n  margin-top: 2px;\n  margin-right: 8px;\n"
     ]);
     _templateObject94 = function _templateObject() {
         return data;
@@ -1231,8 +1232,8 @@ function _templateObject94() {
 }
 function _templateObject95() {
     var data = _tagged_template_literal([
-        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
-        ";\n  border-radius: 12px;\n"
+        "\n  width: 100%;\n  display: flex;\n  align-items: center;\n  gap: 23px;\n  margin: ",
+        ";\n"
     ]);
     _templateObject95 = function _templateObject() {
         return data;
@@ -1241,8 +1242,7 @@ function _templateObject95() {
 }
 function _templateObject96() {
     var data = _tagged_template_literal([
-        "\n  line-height: 1.6;\n  code {\n    background-color: ",
-        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
+        "\n  width: 100%;\n  border-top: 1px solid #8b92a5;\n"
     ]);
     _templateObject96 = function _templateObject() {
         return data;
@@ -1251,7 +1251,8 @@ function _templateObject96() {
 }
 function _templateObject97() {
     var data = _tagged_template_literal([
-        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
+        "\n  padding: 16px;\n  display: flex;\n  justify-content: flex-start !important;\n  border: 1px solid ",
+        ";\n  border-radius: 12px;\n"
     ]);
     _templateObject97 = function _templateObject() {
         return data;
@@ -1260,11 +1261,8 @@ function _templateObject97() {
 }
 function _templateObject98() {
     var data = _tagged_template_literal([
-        "\n  color: ",
-        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
-        ";\n  background-color: ",
-        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
-        ";\n  }\n"
+        "\n  line-height: 1.6;\n  code {\n    background-color: ",
+        ";\n    padding: 2px 4px;\n    border-radius: 6px;\n  }\n"
     ]);
     _templateObject98 = function _templateObject() {
         return data;
@@ -1273,7 +1271,7 @@ function _templateObject98() {
 }
 function _templateObject99() {
     var data = _tagged_template_literal([
-        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
+        "\n  display: inline-flex;\n  justify-content: space-between;\n  border-radius: 10px;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n"
     ]);
     _templateObject99 = function _templateObject() {
         return data;
@@ -1282,7 +1280,11 @@ function _templateObject99() {
 }
 function _templateObject100() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  color: ",
+        ";\n  padding: 8px 12px;\n  position: relative;\n  text-align: center;\n  display: flex;\n  gap: 8px;\n  align-items: center;\n  justify-content: center;\n  z-index: 1;\n  border: ",
+        ";\n  background-color: ",
+        ";\n  filter: brightness(50%);\n  &.active {\n    filter: brightness(100%);\n  }\n  &:first-child {\n    border-top-left-radius: 10px;\n    border-bottom-left-radius: 10px;\n    padding-left: 16px;\n  }\n  &:last-child {\n    border-top-right-radius: 10px;\n    border-bottom-right-radius: 10px;\n    padding-right: 16px;\n  }\n  label {\n    font-family: ",
+        ";\n  }\n"
     ]);
     _templateObject100 = function _templateObject() {
         return data;
@@ -1291,7 +1293,7 @@ function _templateObject100() {
 }
 function _templateObject101() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
+        "\n  opacity: 0;\n  margin: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  width: 100%;\n  cursor: pointer;\n  height: 100%;\n"
     ]);
     _templateObject101 = function _templateObject() {
         return data;
@@ -1300,8 +1302,7 @@ function _templateObject101() {
 }
 function _templateObject102() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
-        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject102 = function _templateObject() {
         return data;
@@ -1310,7 +1311,7 @@ function _templateObject102() {
 }
 function _templateObject103() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 37px;\n"
+        "\n  display: flex;\n  width: 110%;\n  flex-wrap: wrap;\n"
     ]);
     _templateObject103 = function _templateObject() {
         return data;
@@ -1319,7 +1320,8 @@ function _templateObject103() {
 }
 function _templateObject104() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  cursor: pointer;\n  padding: 2px 8px;\n  margin: 3px;\n  border-radius: 5px;\n  background: ",
+        ";\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5px;\n  min-height: 30px;\n"
     ]);
     _templateObject104 = function _templateObject() {
         return data;
@@ -1328,7 +1330,7 @@ function _templateObject104() {
 }
 function _templateObject105() {
     var data = _tagged_template_literal([
-        "\n  margin-left: 10px;\n"
+        "\n  display: flex;\n  gap: 10px;\n  width: 100%;\n  height: 37px;\n"
     ]);
     _templateObject105 = function _templateObject() {
         return data;
@@ -1337,7 +1339,7 @@ function _templateObject105() {
 }
 function _templateObject106() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject106 = function _templateObject() {
         return data;
@@ -1346,7 +1348,7 @@ function _templateObject106() {
 }
 function _templateObject107() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  margin-left: 10px;\n"
     ]);
     _templateObject107 = function _templateObject() {
         return data;
@@ -1364,8 +1366,7 @@ function _templateObject108() {
 }
 function _templateObject109() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject109 = function _templateObject() {
         return data;
@@ -1374,7 +1375,7 @@ function _templateObject109() {
 }
 function _templateObject110() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject110 = function _templateObject() {
         return data;
@@ -1383,10 +1384,8 @@ function _templateObject110() {
 }
 function _templateObject111() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject111 = function _templateObject() {
         return data;
@@ -1395,8 +1394,7 @@ function _templateObject111() {
 }
 function _templateObject112() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject112 = function _templateObject() {
         return data;
@@ -1405,8 +1403,10 @@ function _templateObject112() {
 }
 function _templateObject113() {
     var data = _tagged_template_literal([
-        "\n  text-align: center;\n  border-top: solid 1px ",
-        ";\n  padding: 4px;\n  cursor: pointer;\n"
+        "\n  padding: 8px 0;\n\n  border-top: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
+        ";\n"
     ]);
     _templateObject113 = function _templateObject() {
         return data;
@@ -1415,12 +1415,8 @@ function _templateObject113() {
 }
 function _templateObject114() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  padding: 8px 12px;\n  border-radius: 8px;\n  box-sizing: border-box;\n  resize: vertical;\n\n  outline: none;\n  color: ",
-        ";\n  font-family: ",
-        ";\n  background-color: ",
-        ";\n  border: ",
-        ";\n  &:hover {\n    border: ",
-        ";\n  }\n"
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
     ]);
     _templateObject114 = function _templateObject() {
         return data;
@@ -1429,7 +1425,8 @@ function _templateObject114() {
 }
 function _templateObject115() {
     var data = _tagged_template_literal([
-        "\n  margin-bottom: 8px;\n  text-align: start;\n"
+        "\n  text-align: center;\n  border-top: solid 1px ",
+        ";\n  padding: 4px;\n  cursor: pointer;\n"
     ]);
     _templateObject115 = function _templateObject() {
         return data;
@@ -1438,7 +1435,12 @@ function _templateObject115() {
 }
 function _templateObject116() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n"
+        "\n  width: 100%;\n  padding: 8px 12px;\n  border-radius: 8px;\n  box-sizing: border-box;\n  resize: vertical;\n\n  outline: none;\n  color: ",
+        ";\n  font-family: ",
+        ";\n  background-color: ",
+        ";\n  border: ",
+        ";\n  &:hover {\n    border: ",
+        ";\n  }\n"
     ]);
     _templateObject116 = function _templateObject() {
         return data;
@@ -1447,7 +1449,7 @@ function _templateObject116() {
 }
 function _templateObject117() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
+        "\n  margin-bottom: 8px;\n  text-align: start;\n"
     ]);
     _templateObject117 = function _templateObject() {
         return data;
@@ -1456,8 +1458,7 @@ function _templateObject117() {
 }
 function _templateObject118() {
     var data = _tagged_template_literal([
-        "\n  border: solid 1px ",
-        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
+        "\n  width: 100%;\n"
     ]);
     _templateObject118 = function _templateObject() {
         return data;
@@ -1466,7 +1467,7 @@ function _templateObject118() {
 }
 function _templateObject119() {
     var data = _tagged_template_literal([
-        "\n  padding: 4px;\n"
+        "\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 8px;\n"
     ]);
     _templateObject119 = function _templateObject() {
         return data;
@@ -1475,10 +1476,8 @@ function _templateObject119() {
 }
 function _templateObject120() {
     var data = _tagged_template_literal([
-        "\n  padding: 8px 0;\n\n  border-bottom: solid 1px ",
-        ";\n  border-right: ",
-        ";\n  border-left: ",
-        ";\n"
+        "\n  border: solid 1px ",
+        ";\n  text-align: center;\n  border-spacing: 0;\n  border-radius: 8px;\n  width: 100%;\n"
     ]);
     _templateObject120 = function _templateObject() {
         return data;
@@ -1487,8 +1486,7 @@ function _templateObject120() {
 }
 function _templateObject121() {
     var data = _tagged_template_literal([
-        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
-        ";\n"
+        "\n  padding: 4px;\n"
     ]);
     _templateObject121 = function _templateObject() {
         return data;
@@ -1497,7 +1495,10 @@ function _templateObject121() {
 }
 function _templateObject122() {
     var data = _tagged_template_literal([
-        "\n  text-align: center;\n  padding: 4px;\n  cursor: pointer;\n"
+        "\n  padding: 8px 0;\n\n  border-bottom: solid 1px ",
+        ";\n  border-right: ",
+        ";\n  border-left: ",
+        ";\n"
     ]);
     _templateObject122 = function _templateObject() {
         return data;
@@ -1506,9 +1507,8 @@ function _templateObject122() {
 }
 function _templateObject123() {
     var data = _tagged_template_literal([
-        "\n  cursor: pointer;\n  display: flex;\n  gap: 4px;\n  p {\n    color: ",
-        ";\n    &:hover {\n      color: ",
-        ";\n    }\n  }\n"
+        "\n  background: transparent;\n  border: none;\n  width: 94%;\n\n  outline: none;\n  color: ",
+        ";\n"
     ]);
     _templateObject123 = function _templateObject() {
         return data;
@@ -1517,10 +1517,7 @@ function _templateObject123() {
 }
 function _templateObject124() {
     var data = _tagged_template_literal([
-        "\n  display: ",
-        ";\n  position: absolute;\n  right: 0px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 9999;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
-        ";\n  background: ",
-        ";\n  margin-top: 5px;\n"
+        "\n  text-align: center;\n  padding: 4px;\n  cursor: pointer;\n"
     ]);
     _templateObject124 = function _templateObject() {
         return data;
@@ -1529,11 +1526,9 @@ function _templateObject124() {
 }
 function _templateObject125() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  padding: 7px 12px;\n  gap: 4px;\n  border-top: ",
-        ";\n  align-items: center;\n  opacity: ",
-        ";\n  pointer-events: ",
-        ";\n  cursor: pointer;\n  p {\n    cursor: pointer !important;\n  }\n\n  &:hover {\n    background: ",
-        ";\n  }\n"
+        "\n  cursor: pointer;\n  display: flex;\n  gap: 4px;\n  p {\n    color: ",
+        ";\n    &:hover {\n      color: ",
+        ";\n    }\n  }\n"
     ]);
     _templateObject125 = function _templateObject() {
         return data;
@@ -1542,7 +1537,10 @@ function _templateObject125() {
 }
 function _templateObject126() {
     var data = _tagged_template_literal([
-        "\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n  gap: 2px;\n"
+        "\n  display: ",
+        ";\n  position: absolute;\n  right: 0px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 9999;\n  flex-direction: column;\n  border-radius: 8px;\n  border: ",
+        ";\n  background: ",
+        ";\n  margin-top: 5px;\n"
     ]);
     _templateObject126 = function _templateObject() {
         return data;
@@ -1551,9 +1549,10 @@ function _templateObject126() {
 }
 function _templateObject127() {
     var data = _tagged_template_literal([
-        "\n  background-color: ",
-        ";\n  color: ",
-        ";\n  border: none;\n  border-radius: 4px;\n  padding: 4px 8px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  gap: 4px;\n\n  &:disabled {\n    cursor: default;\n  }\n\n  &:hover {\n    background-color: ",
+        "\n  display: flex;\n  padding: 7px 12px;\n  gap: 4px;\n  border-top: ",
+        ";\n  align-items: center;\n  opacity: ",
+        ";\n  pointer-events: ",
+        ";\n  cursor: pointer;\n  p {\n    cursor: pointer !important;\n  }\n\n  &:hover {\n    background: ",
         ";\n  }\n"
     ]);
     _templateObject127 = function _templateObject() {
@@ -1563,9 +1562,7 @@ function _templateObject127() {
 }
 function _templateObject128() {
     var data = _tagged_template_literal([
-        "\n  width: 100%;\n  background-color: ",
-        ";\n  border: 1px solid ",
-        ";\n  border-radius: 6px;\n  border-collapse: separate;\n  border-spacing: 0;\n"
+        "\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n  gap: 2px;\n"
     ]);
     _templateObject128 = function _templateObject() {
         return data;
@@ -1574,7 +1571,10 @@ function _templateObject128() {
 }
 function _templateObject129() {
     var data = _tagged_template_literal([
-        ""
+        "\n  background-color: ",
+        ";\n  color: ",
+        ";\n  border: none;\n  border-radius: 4px;\n  padding: 4px 8px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  gap: 4px;\n\n  &:disabled {\n    cursor: default;\n  }\n\n  &:hover {\n    background-color: ",
+        ";\n  }\n"
     ]);
     _templateObject129 = function _templateObject() {
         return data;
@@ -1583,7 +1583,9 @@ function _templateObject129() {
 }
 function _templateObject130() {
     var data = _tagged_template_literal([
-        "\n  margin: 10px 0;\n  gap: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n"
+        "\n  width: 100%;\n  background-color: ",
+        ";\n  border: 1px solid ",
+        ";\n  border-radius: 6px;\n  border-collapse: separate;\n  border-spacing: 0;\n"
     ]);
     _templateObject130 = function _templateObject() {
         return data;
@@ -1592,11 +1594,7 @@ function _templateObject130() {
 }
 function _templateObject131() {
     var data = _tagged_template_literal([
-        "\n  padding: 5px;\n  border-radius: 4px;\n  border: 1px solid ",
-        ";\n  background-color: ",
-        ";\n  color: ",
-        ";\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
-        ";\n"
+        ""
     ]);
     _templateObject131 = function _templateObject() {
         return data;
@@ -1605,9 +1603,7 @@ function _templateObject131() {
 }
 function _templateObject132() {
     var data = _tagged_template_literal([
-        "\n  background-color: ",
-        ";\n  color: ",
-        ";\n"
+        "\n  margin: 10px 0;\n  gap: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n"
     ]);
     _templateObject132 = function _templateObject() {
         return data;
@@ -1616,9 +1612,11 @@ function _templateObject132() {
 }
 function _templateObject133() {
     var data = _tagged_template_literal([
-        "\n  position: relative;\n  background-color: ",
-        ";\n  border-radius: 8px;\n  padding: 4px;\n\n  div {\n    color: #f5b175;\n  }\n  .ͼb {\n    color: #64a8fd;\n  }\n  .ͼm {\n    color: ",
-        ";\n  }\n  .ͼd {\n    color: #f5b175;\n  }\n  .ͼc {\n    color: #f5b175;\n  }\n  .cm-gutters {\n    display: none;\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n"
+        "\n  padding: 5px;\n  border-radius: 4px;\n  border: 1px solid ",
+        ";\n  background-color: ",
+        ";\n  color: ",
+        ";\n  border-radius: 8px;\n  cursor: pointer;\n  border: ",
+        ";\n"
     ]);
     _templateObject133 = function _templateObject() {
         return data;
@@ -1627,7 +1625,9 @@ function _templateObject133() {
 }
 function _templateObject134() {
     var data = _tagged_template_literal([
-        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 10; // Ensure this is higher than the editor's z-index\n"
+        "\n  background-color: ",
+        ";\n  color: ",
+        ";\n"
     ]);
     _templateObject134 = function _templateObject() {
         return data;
@@ -1636,8 +1636,9 @@ function _templateObject134() {
 }
 function _templateObject135() {
     var data = _tagged_template_literal([
-        "\n  background-color: ",
-        ";\n  z-index: 999;\n  border-radius: 4px;\n  padding: 4px;\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  pointer-events: all;\n"
+        "\n  position: relative;\n  background-color: ",
+        ";\n  border-radius: 8px;\n  padding: 4px;\n\n  div {\n    color: #f5b175;\n  }\n  .ͼb {\n    color: #64a8fd;\n  }\n  .ͼm {\n    color: ",
+        ";\n  }\n  .ͼd {\n    color: #f5b175;\n  }\n  .ͼc {\n    color: #f5b175;\n  }\n  .cm-gutters {\n    display: none;\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n"
     ]);
     _templateObject135 = function _templateObject() {
         return data;
@@ -1646,11 +1647,30 @@ function _templateObject135() {
 }
 function _templateObject136() {
     var data = _tagged_template_literal([
+        "\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 10; // Ensure this is higher than the editor's z-index\n"
+    ]);
+    _templateObject136 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject137() {
+    var data = _tagged_template_literal([
+        "\n  background-color: ",
+        ";\n  z-index: 999;\n  border-radius: 4px;\n  padding: 4px;\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  pointer-events: all;\n"
+    ]);
+    _templateObject137 = function _templateObject() {
+        return data;
+    };
+    return data;
+}
+function _templateObject138() {
+    var data = _tagged_template_literal([
         "\n  width: ",
         "px;\n  height: ",
         "px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n"
     ]);
-    _templateObject136 = function _templateObject() {
+    _templateObject138 = function _templateObject() {
         return data;
     };
     return data;
@@ -4214,8 +4234,8 @@ function Notification(param) {
     })));
 }
 // src/design.system/data.flow/index.tsx
-var import_react30 = __toESM(require("react"));
-var import_reactflow7 = __toESM(require("reactflow"));
+var import_react31 = __toESM(require("react"));
+var import_reactflow8 = __toESM(require("reactflow"));
 // src/design.system/data.flow/action.node.tsx
 var import_react24 = __toESM(require("react"));
 var import_reactflow = require("reactflow");
@@ -4656,33 +4676,68 @@ var source_node_default = (0, import_react28.memo)(function(param) {
         }
     }));
 });
-// src/design.system/data.flow/data.flow.styled.tsx
+// src/design.system/data.flow/metric.node.tsx
+var import_react29 = __toESM(require("react"));
+var import_reactflow6 = require("reactflow");
 var import_styled_components25 = __toESM(require("styled-components"));
-var DataFlowContainer = import_styled_components25.default.div(_templateObject68());
-var ControllerWrapper = import_styled_components25.default.div(_templateObject69(), function(param) {
+var MetricContainer = import_styled_components25.default.div(_templateObject68(), function(param) {
+    var theme2 = param.theme;
+    return "solid 1px ".concat(theme2.colors.blue_grey);
+}, function(param) {
+    var theme2 = param.theme;
+    return theme2.colors.dark;
+});
+var TextWrapper7 = import_styled_components25.default.div(_templateObject69());
+var metric_node_default = (0, import_react29.memo)(function(param) {
+    var isConnectable = param.isConnectable, data = param.data;
+    var _data_metrics;
+    return /* @__PURE__ */ import_react29.default.createElement(MetricContainer, null, /* @__PURE__ */ import_react29.default.createElement(import_reactflow6.Handle, {
+        type: "target",
+        position: import_reactflow6.Position.Left,
+        id: "b",
+        isConnectable: isConnectable,
+        style: {
+            visibility: "hidden"
+        }
+    }), /* @__PURE__ */ import_react29.default.createElement(TextWrapper7, null, /* @__PURE__ */ import_react29.default.createElement(Text, {
+        color: palette_default.colors.light_grey
+    }, (_data_metrics = data.metrics) === null || _data_metrics === void 0 ? void 0 : _data_metrics.data_transfer)), /* @__PURE__ */ import_react29.default.createElement(import_reactflow6.Handle, {
+        type: "source",
+        position: import_reactflow6.Position.Right,
+        id: "a",
+        isConnectable: isConnectable,
+        style: {
+            visibility: "hidden"
+        }
+    }));
+});
+// src/design.system/data.flow/data.flow.styled.tsx
+var import_styled_components26 = __toESM(require("styled-components"));
+var DataFlowContainer = import_styled_components26.default.div(_templateObject70());
+var ControllerWrapper = import_styled_components26.default.div(_templateObject71(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
 // src/design.system/data.flow/index.tsx
 var import_style2 = require("reactflow/dist/style.css");
 // src/design.system/data.flow/control.panel.tsx
-var import_react29 = __toESM(require("react"));
+var import_react30 = __toESM(require("react"));
 var import_style = require("reactflow/dist/style.css");
-var import_reactflow6 = require("reactflow");
-var import_styled_components26 = __toESM(require("styled-components"));
-var ControllerPanelWrapper = import_styled_components26.default.div(_templateObject70(), palette_default.colors.dark, palette_default.colors.blue_grey, function(param) {
+var import_reactflow7 = require("reactflow");
+var import_styled_components27 = __toESM(require("styled-components"));
+var ControllerPanelWrapper = import_styled_components27.default.div(_templateObject72(), palette_default.colors.dark, palette_default.colors.blue_grey, function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
-var MonitorItem = import_styled_components26.default.div(_templateObject71());
-var MonitorIndicator = import_styled_components26.default.span(_templateObject72(), function(param) {
+var MonitorItem = import_styled_components27.default.div(_templateObject73());
+var MonitorIndicator = import_styled_components27.default.span(_templateObject74(), function(param) {
     var color = param.color;
     return color;
 });
-var TitleWrapper = import_styled_components26.default.div(_templateObject73());
+var TitleWrapper = import_styled_components27.default.div(_templateObject75());
 function DataFlowControlPanel() {
-    var _ref = _sliced_to_array((0, import_react29.useState)(true), 2), isOpen = _ref[0], setOpen = _ref[1];
-    (0, import_react29.useEffect)(function() {
+    var _ref = _sliced_to_array((0, import_react30.useState)(true), 2), isOpen = _ref[0], setOpen = _ref[1];
+    (0, import_react30.useEffect)(function() {
         setTimeout(function() {
             setOpen(false);
         }, 7e3);
@@ -4701,28 +4756,28 @@ function DataFlowControlPanel() {
             color: palette_default.colors.metrics
         }
     ];
-    return /* @__PURE__ */ import_react29.default.createElement(import_react29.default.Fragment, null, /* @__PURE__ */ import_react29.default.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ import_react29.default.createElement(TitleWrapper, {
+    return /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, /* @__PURE__ */ import_react30.default.createElement(ControllerPanelWrapper, null, /* @__PURE__ */ import_react30.default.createElement(TitleWrapper, {
         onClick: function() {
             return setOpen(!isOpen);
         }
-    }, /* @__PURE__ */ import_react29.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react30.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "Supported Signals"), /* @__PURE__ */ import_react29.default.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ import_react29.default.createElement(MonitorItem, null, MONITORS2.map(function(monitor) {
-        return /* @__PURE__ */ import_react29.default.createElement("div", {
+    }, "Supported Signals"), /* @__PURE__ */ import_react30.default.createElement(expand_arrow_default, null)), isOpen && /* @__PURE__ */ import_react30.default.createElement(MonitorItem, null, MONITORS2.map(function(monitor) {
+        return /* @__PURE__ */ import_react30.default.createElement("div", {
             key: monitor.name,
             style: {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
             }
-        }, /* @__PURE__ */ import_react29.default.createElement(MonitorIndicator, {
+        }, /* @__PURE__ */ import_react30.default.createElement(MonitorIndicator, {
             color: monitor.color
-        }), /* @__PURE__ */ import_react29.default.createElement(Text, {
+        }), /* @__PURE__ */ import_react30.default.createElement(Text, {
             size: 12,
             weight: 500
         }, monitor.name));
-    }))), /* @__PURE__ */ import_react29.default.createElement(ControllerWrapper, null, /* @__PURE__ */ import_react29.default.createElement(import_reactflow6.Controls, {
+    }))), /* @__PURE__ */ import_react30.default.createElement(ControllerWrapper, null, /* @__PURE__ */ import_react30.default.createElement(import_reactflow7.Controls, {
         position: "top-left",
         showInteractive: false
     })));
@@ -4734,15 +4789,16 @@ var nodeTypes = {
     namespace: namespace_node_default,
     destination: DestinationNode,
     action: action_node_default,
-    source: source_node_default
+    source: source_node_default,
+    metric: metric_node_default
 };
 function DataFlow(_param) {
     var nodes2 = _param.nodes, edges2 = _param.edges, rest = _object_without_properties(_param, [
         "nodes",
         "edges"
     ]);
-    var fitView = (0, import_reactflow7.useReactFlow)().fitView;
-    (0, import_react30.useEffect)(function() {
+    var fitView = (0, import_reactflow8.useReactFlow)().fitView;
+    (0, import_react31.useEffect)(function() {
         setTimeout(function() {
             fitView();
         }, 100);
@@ -4751,7 +4807,7 @@ function DataFlow(_param) {
         nodes2,
         edges2
     ]);
-    return /* @__PURE__ */ import_react30.default.createElement(DataFlowContainer, null, /* @__PURE__ */ import_react30.default.createElement(import_reactflow7.default, _object_spread({
+    return /* @__PURE__ */ import_react31.default.createElement(DataFlowContainer, null, /* @__PURE__ */ import_react31.default.createElement(import_reactflow8.default, _object_spread({
         nodes: nodes2,
         edges: edges2,
         nodeTypes: nodeTypes,
@@ -4760,7 +4816,7 @@ function DataFlow(_param) {
             0.4,
             0.4
         ]
-    }, rest), /* @__PURE__ */ import_react30.default.createElement(DataFlowControlPanel, null), /* @__PURE__ */ import_react30.default.createElement(import_reactflow7.Background, {
+    }, rest), /* @__PURE__ */ import_react31.default.createElement(DataFlowControlPanel, null), /* @__PURE__ */ import_react31.default.createElement(import_reactflow8.Background, {
         gap: 12,
         size: 1,
         style: {
@@ -4769,47 +4825,47 @@ function DataFlow(_param) {
     })));
 }
 function KeyvalDataFlow(props) {
-    return /* @__PURE__ */ import_react30.default.createElement(import_reactflow7.ReactFlowProvider, null, /* @__PURE__ */ import_react30.default.createElement(DataFlow, _object_spread({}, props)));
+    return /* @__PURE__ */ import_react31.default.createElement(import_reactflow8.ReactFlowProvider, null, /* @__PURE__ */ import_react31.default.createElement(DataFlow, _object_spread({}, props)));
 }
 // src/design.system/danger.zone/danger.zone.tsx
-var import_react31 = __toESM(require("react"));
-var import_styled_components27 = require("styled-components");
-var DangerZoneWrapper = import_styled_components27.styled.div(_templateObject74(), function(param) {
+var import_react32 = __toESM(require("react"));
+var import_styled_components28 = require("styled-components");
+var DangerZoneWrapper = import_styled_components28.styled.div(_templateObject76(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
-var DangerButtonWrapper = import_styled_components27.styled.div(_templateObject75(), function(param) {
+var DangerButtonWrapper = import_styled_components28.styled.div(_templateObject77(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.error;
 });
-var DangerButton = import_styled_components27.styled.button(_templateObject76(), function(param) {
+var DangerButton = import_styled_components28.styled.button(_templateObject78(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 });
 function DangerZone(param) {
     var title = param.title, subTitle = param.subTitle, btnText = param.btnText, onClick = param.onClick;
-    return /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null, /* @__PURE__ */ import_react31.default.createElement(DangerZoneWrapper, null, /* @__PURE__ */ import_react31.default.createElement(Text, {
+    return /* @__PURE__ */ import_react32.default.createElement(import_react32.default.Fragment, null, /* @__PURE__ */ import_react32.default.createElement(DangerZoneWrapper, null, /* @__PURE__ */ import_react32.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title), /* @__PURE__ */ import_react31.default.createElement(Text, {
+    }, title), /* @__PURE__ */ import_react32.default.createElement(Text, {
         size: 12
-    }, subTitle), /* @__PURE__ */ import_react31.default.createElement(DangerButtonWrapper, null, /* @__PURE__ */ import_react31.default.createElement(DangerButton, {
+    }, subTitle), /* @__PURE__ */ import_react32.default.createElement(DangerButtonWrapper, null, /* @__PURE__ */ import_react32.default.createElement(DangerButton, {
         onClick: onClick
-    }, /* @__PURE__ */ import_react31.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react32.default.createElement(Text, {
         weight: 500,
         size: 14,
         color: palette_default.colors.error
     }, btnText)))));
 }
 // src/design.system/modal/modal.tsx
-var import_react33 = __toESM(require("react"));
+var import_react34 = __toESM(require("react"));
 // src/design.system/modal/portal.modal.tsx
-var import_react32 = require("react");
+var import_react33 = require("react");
 var import_react_dom = require("react-dom");
 var PortalModal = function(param) {
     var children = param.children, wrapperId = param.wrapperId;
-    var _ref = _sliced_to_array((0, import_react32.useState)(null), 2), portalElement = _ref[0], setPortalElement = _ref[1];
-    (0, import_react32.useLayoutEffect)(function() {
+    var _ref = _sliced_to_array((0, import_react33.useState)(null), 2), portalElement = _ref[0], setPortalElement = _ref[1];
+    (0, import_react33.useLayoutEffect)(function() {
         var element = document.getElementById(wrapperId);
         var portalCreated = false;
         if (!element) {
@@ -4836,10 +4892,10 @@ var PortalModal = function(param) {
 };
 var portal_modal_default = PortalModal;
 // src/design.system/modal/modal.styled.tsx
-var import_styled_components28 = __toESM(require("styled-components"));
-var fadeIn = import_styled_components28.keyframes(_templateObject77());
-var ModalButtonsContainer = import_styled_components28.default.div(_templateObject78());
-var ModalButtonPrimary = import_styled_components28.default.button(_templateObject79(), function(param) {
+var import_styled_components29 = __toESM(require("styled-components"));
+var fadeIn = import_styled_components29.keyframes(_templateObject79());
+var ModalButtonsContainer = import_styled_components29.default.div(_templateObject80());
+var ModalButtonPrimary = import_styled_components29.default.button(_templateObject81(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.btnText;
 }, function(param) {
@@ -4852,7 +4908,7 @@ var ModalButtonPrimary = import_styled_components28.default.button(_templateObje
     var theme2 = param.theme;
     return theme2.colors.shadowMain;
 });
-var ModalButtonSecondary = import_styled_components28.default.button(_templateObject80(), function(param) {
+var ModalButtonSecondary = import_styled_components29.default.button(_templateObject82(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.main;
 }, function(param) {
@@ -4865,39 +4921,39 @@ var ModalButtonSecondary = import_styled_components28.default.button(_templateOb
     var theme2 = param.theme;
     return theme2.colors.btnText;
 });
-var Overlay = import_styled_components28.default.div(_templateObject81(), function(props) {
+var Overlay = import_styled_components29.default.div(_templateObject83(), function(props) {
     return props.showOverlay ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.1)";
 }, function(props) {
     return props.positionX ? props.positionX : "center";
 }, function(props) {
     return props.positionY ? props.positionY : "center";
 }, fadeIn);
-var ModalContainer = import_styled_components28.default.div(_templateObject82(), function(props) {
+var ModalContainer = import_styled_components29.default.div(_templateObject84(), function(props) {
     return props.padding ? props.padding : "20px";
 });
-var ModalHeader = import_styled_components28.default.header(_templateObject83());
-var Close = import_styled_components28.default.div(_templateObject84());
-var PrimaryButton = import_styled_components28.default.button(_templateObject85());
-var Content = import_styled_components28.default.div(_templateObject86(), function(param) {
+var ModalHeader = import_styled_components29.default.header(_templateObject85());
+var Close = import_styled_components29.default.div(_templateObject86());
+var PrimaryButton = import_styled_components29.default.button(_templateObject87());
+var Content = import_styled_components29.default.div(_templateObject88(), function(param) {
     var theme2 = param.theme;
     return theme2.text;
 });
-var ModalFooter = import_styled_components28.default.footer(_templateObject87());
+var ModalFooter = import_styled_components29.default.footer(_templateObject89());
 // src/assets/icons/close-modal.svg
-var React92 = __toESM(require("react"));
+var React93 = __toESM(require("react"));
 var SvgCloseModal = function(props) {
-    return /* @__PURE__ */ React92.createElement("svg", _object_spread({
+    return /* @__PURE__ */ React93.createElement("svg", _object_spread({
         xmlns: "http://www.w3.org/2000/svg",
         width: 16,
         height: 16,
         viewBox: "0 0 16 16",
         fill: "none"
-    }, props), /* @__PURE__ */ React92.createElement("rect", {
+    }, props), /* @__PURE__ */ React93.createElement("rect", {
         width: 16,
         height: 16,
         rx: 2,
         fill: "#0E1C28"
-    }), /* @__PURE__ */ React92.createElement("path", {
+    }), /* @__PURE__ */ React93.createElement("path", {
         d: "M12.8538 12.146C12.9002 12.1925 12.9371 12.2476 12.9622 12.3083C12.9874 12.369 13.0003 12.4341 13.0003 12.4998C13.0003 12.5655 12.9874 12.6305 12.9622 12.6912C12.9371 12.7519 12.9002 12.8071 12.8538 12.8535C12.8073 12.9 12.7522 12.9368 12.6915 12.962C12.6308 12.9871 12.5657 13.0001 12.5 13.0001C12.4343 13.0001 12.3693 12.9871 12.3086 12.962C12.2479 12.9368 12.1927 12.9 12.1463 12.8535L8.00003 8.70666L3.85378 12.8535C3.75996 12.9474 3.63272 13.0001 3.50003 13.0001C3.36735 13.0001 3.2401 12.9474 3.14628 12.8535C3.05246 12.7597 2.99976 12.6325 2.99976 12.4998C2.99976 12.3671 3.05246 12.2399 3.14628 12.146L7.29316 7.99979L3.14628 3.85354C3.05246 3.75972 2.99976 3.63247 2.99976 3.49979C2.99976 3.36711 3.05246 3.23986 3.14628 3.14604C3.2401 3.05222 3.36735 2.99951 3.50003 2.99951C3.63272 2.99951 3.75996 3.05222 3.85378 3.14604L8.00003 7.29291L12.1463 3.14604C12.2401 3.05222 12.3674 2.99951 12.5 2.99951C12.6327 2.99951 12.76 3.05222 12.8538 3.14604C12.9476 3.23986 13.0003 3.36711 13.0003 3.49979C13.0003 3.63247 12.9476 3.75972 12.8538 3.85354L8.70691 7.99979L12.8538 12.146Z",
         fill: "white"
     }));
@@ -4907,15 +4963,15 @@ var close_modal_default = SvgCloseModal;
 function Modal(param) {
     var children = param.children, closeModal = param.closeModal, config = param.config;
     var _config;
-    var modalRef = (0, import_react33.useRef)(null);
+    var modalRef = (0, import_react34.useRef)(null);
     var handleClickOutside = function() {
         return closeModal();
     };
-    var handleKeyPress = (0, import_react33.useCallback)(function(event) {
+    var handleKeyPress = (0, import_react34.useCallback)(function(event) {
         if (event.key === "Escape") closeModal();
     }, []);
     useOnClickOutside(modalRef, handleClickOutside);
-    (0, import_react33.useEffect)(function() {
+    (0, import_react34.useEffect)(function() {
         document.addEventListener("keydown", handleKeyPress);
         return function() {
             document.removeEventListener("keydown", handleKeyPress);
@@ -4923,9 +4979,9 @@ function Modal(param) {
     }, [
         handleKeyPress
     ]);
-    return /* @__PURE__ */ import_react33.default.createElement(import_react33.default.Fragment, null, /* @__PURE__ */ import_react33.default.createElement(portal_modal_default, {
+    return /* @__PURE__ */ import_react34.default.createElement(import_react34.default.Fragment, null, /* @__PURE__ */ import_react34.default.createElement(portal_modal_default, {
         wrapperId: "modal-portal"
-    }, /* @__PURE__ */ import_react33.default.createElement(Overlay, {
+    }, /* @__PURE__ */ import_react34.default.createElement(Overlay, {
         showOverlay: config.showOverlay,
         positionX: config.positionX,
         positionY: config.positionY,
@@ -4933,87 +4989,87 @@ function Modal(param) {
             animationDuration: "400ms",
             animationDelay: "0"
         }
-    }, /* @__PURE__ */ import_react33.default.createElement(ModalContainer, {
+    }, /* @__PURE__ */ import_react34.default.createElement(ModalContainer, {
         padding: config.padding,
         ref: modalRef
-    }, config.showHeader && /* @__PURE__ */ import_react33.default.createElement(ModalHeader, null, /* @__PURE__ */ import_react33.default.createElement(Text, {
+    }, config.showHeader && /* @__PURE__ */ import_react34.default.createElement(ModalHeader, null, /* @__PURE__ */ import_react34.default.createElement(Text, {
         size: 24,
         weight: 700
-    }, config.title)), /* @__PURE__ */ import_react33.default.createElement(Close, {
+    }, config.title)), /* @__PURE__ */ import_react34.default.createElement(Close, {
         onClick: closeModal
-    }, /* @__PURE__ */ import_react33.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react33.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react33.default.createElement(ModalFooter, {
+    }, /* @__PURE__ */ import_react34.default.createElement(close_modal_default, null)), /* @__PURE__ */ import_react34.default.createElement(Content, null, children), ((_config = config) === null || _config === void 0 ? void 0 : _config.footer) && /* @__PURE__ */ import_react34.default.createElement(ModalFooter, {
         style: _object_spread({}, config.footer.style)
-    }, config.footer.link && /* @__PURE__ */ import_react33.default.createElement(Link, {
+    }, config.footer.link && /* @__PURE__ */ import_react34.default.createElement(Link, {
         onClick: config.footer.link.onClick,
         value: config.footer.link.text
-    }), config.footer.secondaryBtnText && /* @__PURE__ */ import_react33.default.createElement(Button, {
+    }), config.footer.secondaryBtnText && /* @__PURE__ */ import_react34.default.createElement(Button, {
         variant: "secondary",
         onClick: config.footer.secondaryBtnAction
-    }, /* @__PURE__ */ import_react33.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react34.default.createElement(Text, {
         size: 16,
         weight: 700
-    }, config.footer.secondaryBtnText)), /* @__PURE__ */ import_react33.default.createElement(Button, {
+    }, config.footer.secondaryBtnText)), /* @__PURE__ */ import_react34.default.createElement(Button, {
         disabled: config.footer.isDisabled,
         onClick: config.footer.primaryBtnAction
-    }, /* @__PURE__ */ import_react33.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react34.default.createElement(Text, {
         size: 16,
         weight: 700,
         color: palette_default.text.dark_button
     }, config.footer.primaryBtnText)))))));
 }
 // src/design.system/theme.provider/theme.provider.tsx
-var import_react35 = __toESM(require("react"));
+var import_react36 = __toESM(require("react"));
 // src/design.system/theme.provider/registry.tsx
-var import_react34 = __toESM(require("react"));
+var import_react35 = __toESM(require("react"));
 var import_navigation = require("next/navigation");
-var import_styled_components29 = require("styled-components");
+var import_styled_components30 = require("styled-components");
 function StyledComponentsRegistry(param) {
     var children = param.children;
-    var _ref = _sliced_to_array((0, import_react34.useState)(function() {
-        return new import_styled_components29.ServerStyleSheet();
+    var _ref = _sliced_to_array((0, import_react35.useState)(function() {
+        return new import_styled_components30.ServerStyleSheet();
     }), 1), styledComponentsStyleSheet = _ref[0];
     (0, import_navigation.useServerInsertedHTML)(function() {
         var styles = styledComponentsStyleSheet.getStyleElement();
         styledComponentsStyleSheet.instance.clearTag();
-        return /* @__PURE__ */ import_react34.default.createElement(import_react34.default.Fragment, null, styles);
+        return /* @__PURE__ */ import_react35.default.createElement(import_react35.default.Fragment, null, styles);
     });
-    if (typeof window !== "undefined") return /* @__PURE__ */ import_react34.default.createElement(import_react34.default.Fragment, null, children);
-    return /* @__PURE__ */ import_react34.default.createElement(import_styled_components29.StyleSheetManager, {
+    if (typeof window !== "undefined") return /* @__PURE__ */ import_react35.default.createElement(import_react35.default.Fragment, null, children);
+    return /* @__PURE__ */ import_react35.default.createElement(import_styled_components30.StyleSheetManager, {
         sheet: styledComponentsStyleSheet.instance
     }, children);
 }
 // src/design.system/theme.provider/theme.provider.tsx
-var import_styled_components30 = require("styled-components");
+var import_styled_components31 = require("styled-components");
 var ThemeProviderWrapper = function(param) {
     var children = param.children;
-    return /* @__PURE__ */ import_react35.default.createElement(import_styled_components30.ThemeProvider, {
+    return /* @__PURE__ */ import_react36.default.createElement(import_styled_components31.ThemeProvider, {
         theme: palette_default
-    }, /* @__PURE__ */ import_react35.default.createElement(StyledComponentsRegistry, null, children));
+    }, /* @__PURE__ */ import_react36.default.createElement(StyledComponentsRegistry, null, children));
 };
 // src/design.system/steps/steps.tsx
-var import_react37 = __toESM(require("react"));
+var import_react38 = __toESM(require("react"));
 // src/design.system/steps/step.item.tsx
-var import_react36 = __toESM(require("react"));
+var import_react37 = __toESM(require("react"));
 // src/design.system/steps/steps.styled.tsx
-var import_styled_components31 = __toESM(require("styled-components"));
-var StepsContainer = import_styled_components31.default.div(_templateObject88());
-var StepItemWrapper = import_styled_components31.default.div(_templateObject89());
-var FloatingBoxTextWrapper = import_styled_components31.default.div(_templateObject90(), function(param) {
+var import_styled_components32 = __toESM(require("styled-components"));
+var StepsContainer = import_styled_components32.default.div(_templateObject90());
+var StepItemWrapper = import_styled_components32.default.div(_templateObject91());
+var FloatingBoxTextWrapper = import_styled_components32.default.div(_templateObject92(), function(param) {
     var disabled = param.disabled;
     return disabled ? "0.4" : "1";
 });
-var StepItemTextWrapper = (0, import_styled_components31.default)(FloatingBoxTextWrapper)(_templateObject91());
-var StepItemBorder = import_styled_components31.default.div(_templateObject92());
+var StepItemTextWrapper = (0, import_styled_components32.default)(FloatingBoxTextWrapper)(_templateObject93());
+var StepItemBorder = import_styled_components32.default.div(_templateObject94());
 // src/assets/icons/checked.svg
-var React96 = __toESM(require("react"));
+var React97 = __toESM(require("react"));
 var SvgChecked = function(props) {
-    return /* @__PURE__ */ React96.createElement("svg", _object_spread({
+    return /* @__PURE__ */ React97.createElement("svg", _object_spread({
         width: 20,
         height: 14,
         viewBox: "0 0 20 14",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg"
-    }, props), /* @__PURE__ */ React96.createElement("path", {
+    }, props), /* @__PURE__ */ React97.createElement("path", {
         d: "M19.1767 1.88786L7.48781 13.675C7.386 13.778 7.26503 13.8597 7.13183 13.9155C6.99863 13.9713 6.85583 14 6.7116 14C6.56737 14 6.42456 13.9713 6.29136 13.9155C6.15816 13.8597 6.03719 13.778 5.93539 13.675L0.821518 8.51812C0.719584 8.41532 0.638726 8.29329 0.58356 8.15899C0.528394 8.02469 0.5 7.88074 0.5 7.73538C0.5 7.59001 0.528394 7.44606 0.58356 7.31176C0.638726 7.17746 0.719584 7.05543 0.821518 6.95264C0.923451 6.84985 1.04446 6.76831 1.17765 6.71268C1.31083 6.65705 1.45357 6.62842 1.59773 6.62842C1.74189 6.62842 1.88463 6.65705 2.01781 6.71268C2.151 6.76831 2.27201 6.84985 2.37394 6.95264L6.71251 11.3277L17.6261 0.324221C17.8319 0.116626 18.1111 0 18.4023 0C18.6934 0 18.9726 0.116626 19.1785 0.324221C19.3843 0.531816 19.5 0.813376 19.5 1.10696C19.5 1.40054 19.3843 1.6821 19.1785 1.8897L19.1767 1.88786Z",
         fill: "white"
     }));
@@ -5022,15 +5078,15 @@ var checked_default = SvgChecked;
 // src/design.system/steps/step.item.tsx
 function StepItem(param) {
     var title = param.title, index = param.index, status = param.status, isLast = param.isLast;
-    return /* @__PURE__ */ import_react36.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react36.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react36.default.createElement(checked_default, null) : /* @__PURE__ */ import_react36.default.createElement(FloatingBoxTextWrapper, {
+    return /* @__PURE__ */ import_react37.default.createElement(StepItemWrapper, null, /* @__PURE__ */ import_react37.default.createElement(FloatBox, null, status === "done" /* Done */  ? /* @__PURE__ */ import_react37.default.createElement(checked_default, null) : /* @__PURE__ */ import_react37.default.createElement(FloatingBoxTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react36.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react37.default.createElement(Text, {
         weight: 700
-    }, index))), /* @__PURE__ */ import_react36.default.createElement(StepItemTextWrapper, {
+    }, index))), /* @__PURE__ */ import_react37.default.createElement(StepItemTextWrapper, {
         disabled: status !== "active" /* Active */ 
-    }, /* @__PURE__ */ import_react36.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react37.default.createElement(Text, {
         weight: 600
-    }, title)), !isLast && /* @__PURE__ */ import_react36.default.createElement(StepItemBorder, null));
+    }, title)), !isLast && /* @__PURE__ */ import_react37.default.createElement(StepItemBorder, null));
 }
 // src/design.system/steps/steps.tsx
 function Steps(param) {
@@ -5039,7 +5095,7 @@ function Steps(param) {
         var _data;
         return (_data = data) === null || _data === void 0 ? void 0 : _data.map(function(param, index) {
             var title = param.title, status = param.status;
-            return /* @__PURE__ */ import_react37.default.createElement(StepItem, {
+            return /* @__PURE__ */ import_react38.default.createElement(StepItem, {
                 key: "".concat(index, "_").concat(title),
                 title: title,
                 status: status,
@@ -5048,32 +5104,32 @@ function Steps(param) {
             });
         });
     };
-    return /* @__PURE__ */ import_react37.default.createElement(StepsContainer, null, renderSteps());
+    return /* @__PURE__ */ import_react38.default.createElement(StepsContainer, null, renderSteps());
 }
 // src/design.system/divider/divider.tsx
-var import_react38 = __toESM(require("react"));
-var import_styled_components32 = __toESM(require("styled-components"));
-var DividerContainer = import_styled_components32.default.div(_templateObject93(), function(param) {
+var import_react39 = __toESM(require("react"));
+var import_styled_components33 = __toESM(require("styled-components"));
+var DividerContainer = import_styled_components33.default.div(_templateObject95(), function(param) {
     var margin = param.margin;
     return margin;
 });
-var DividerLine = import_styled_components32.default.div(_templateObject94());
+var DividerLine = import_styled_components33.default.div(_templateObject96());
 function Divider(param) {
     var _param_margin = param.margin, margin = _param_margin === void 0 ? "32px 0" : _param_margin, _param_label = param.label, label = _param_label === void 0 ? "or" : _param_label;
-    return /* @__PURE__ */ import_react38.default.createElement(DividerContainer, {
+    return /* @__PURE__ */ import_react39.default.createElement(DividerContainer, {
         margin: margin
-    }, /* @__PURE__ */ import_react38.default.createElement(DividerLine, null), /* @__PURE__ */ import_react38.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react39.default.createElement(DividerLine, null), /* @__PURE__ */ import_react39.default.createElement(Text, {
         size: 14
-    }, label), /* @__PURE__ */ import_react38.default.createElement(DividerLine, null));
+    }, label), /* @__PURE__ */ import_react39.default.createElement(DividerLine, null));
 }
 // src/design.system/note/note.tsx
-var import_react39 = __toESM(require("react"));
-var import_styled_components33 = __toESM(require("styled-components"));
-var NoteContainer = import_styled_components33.default.div(_templateObject95(), function(param) {
+var import_react40 = __toESM(require("react"));
+var import_styled_components34 = __toESM(require("styled-components"));
+var NoteContainer = import_styled_components34.default.div(_templateObject97(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
-var TextContainer = import_styled_components33.default.div(_templateObject96(), function(param) {
+var TextContainer = import_styled_components34.default.div(_templateObject98(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.dark_blue;
 });
@@ -5086,24 +5142,24 @@ function Note(param) {
                 value = value.replace("$code".concat(index), "<code>".concat(c, "</code>"));
             });
         }
-        return /* @__PURE__ */ import_react39.default.createElement(TextContainer, {
+        return /* @__PURE__ */ import_react40.default.createElement(TextContainer, {
             dangerouslySetInnerHTML: {
                 __html: "<p><strong>Note: </strong>".concat(value, "</p>")
             }
         });
     };
-    (0, import_react39.useEffect)(function() {
+    (0, import_react40.useEffect)(function() {
         buildNote();
     }, []);
-    return /* @__PURE__ */ import_react39.default.createElement(NoteContainer, null, /* @__PURE__ */ import_react39.default.createElement(Text, {
+    return /* @__PURE__ */ import_react40.default.createElement(NoteContainer, null, /* @__PURE__ */ import_react40.default.createElement(Text, {
         size: 14
     }, buildNote()));
 }
 // src/design.system/segmented-controls/index.tsx
-var import_react40 = __toESM(require("react"));
-var import_styled_components34 = __toESM(require("styled-components"));
-var SegmentedControlsWrapper = import_styled_components34.default.div(_templateObject97());
-var SegmentedControlsOption = import_styled_components34.default.div(_templateObject98(), function(param) {
+var import_react41 = __toESM(require("react"));
+var import_styled_components35 = __toESM(require("styled-components"));
+var SegmentedControlsWrapper = import_styled_components35.default.div(_templateObject99());
+var SegmentedControlsOption = import_styled_components35.default.div(_templateObject100(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.white;
 }, function(param) {
@@ -5116,20 +5172,20 @@ var SegmentedControlsOption = import_styled_components34.default.div(_templateOb
     var theme2 = param.theme;
     return theme2.font_family.primary;
 });
-var SegmentedControlsInput = import_styled_components34.default.input(_templateObject99());
+var SegmentedControlsInput = import_styled_components35.default.input(_templateObject101());
 function SegmentedControls(param) {
     var options = param.options, selected = param.selected, onChange = param.onChange, title = param.title;
     var _options;
-    return /* @__PURE__ */ import_react40.default.createElement("div", null, title && /* @__PURE__ */ import_react40.default.createElement(Text, {
+    return /* @__PURE__ */ import_react41.default.createElement("div", null, title && /* @__PURE__ */ import_react41.default.createElement(Text, {
         size: 14,
         style: {
             marginBottom: 10
         }
-    }, title), /* @__PURE__ */ import_react40.default.createElement(SegmentedControlsWrapper, null, (_options = options) === null || _options === void 0 ? void 0 : _options.map(function(option) {
-        return /* @__PURE__ */ import_react40.default.createElement(SegmentedControlsOption, {
+    }, title), /* @__PURE__ */ import_react41.default.createElement(SegmentedControlsWrapper, null, (_options = options) === null || _options === void 0 ? void 0 : _options.map(function(option) {
+        return /* @__PURE__ */ import_react41.default.createElement(SegmentedControlsOption, {
             key: option.id,
             className: "".concat(option.id === selected ? "active" : "")
-        }, /* @__PURE__ */ import_react40.default.createElement(folders_default, null), /* @__PURE__ */ import_react40.default.createElement(SegmentedControlsInput, {
+        }, /* @__PURE__ */ import_react41.default.createElement(folders_default, null), /* @__PURE__ */ import_react41.default.createElement(SegmentedControlsInput, {
             type: "radio",
             value: option.id,
             name: option.label,
@@ -5137,16 +5193,16 @@ function SegmentedControls(param) {
                 return onChange(option.id);
             },
             checked: option.id === selected
-        }), /* @__PURE__ */ import_react40.default.createElement(Text, null, option.label));
+        }), /* @__PURE__ */ import_react41.default.createElement(Text, null, option.label));
     })));
 }
 // src/design.system/multi-input/index.tsx
-var import_react41 = __toESM(require("react"));
-var import_styled_components35 = __toESM(require("styled-components"));
+var import_react42 = __toESM(require("react"));
+var import_styled_components36 = __toESM(require("styled-components"));
 var MultiInput = function(param) {
     var _param_initialList = param.initialList, initialList = _param_initialList === void 0 ? [] : _param_initialList, onListChange = param.onListChange, _param_placeholder = param.placeholder, placeholder = _param_placeholder === void 0 ? "Add item to list" : _param_placeholder, title = param.title, tooltip = param.tooltip;
-    var _ref = _sliced_to_array((0, import_react41.useState)(""), 2), inputValue = _ref[0], setInputValue = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react41.useState)(initialList), 2), list = _ref1[0], setList = _ref1[1];
+    var _ref = _sliced_to_array((0, import_react42.useState)(""), 2), inputValue = _ref[0], setInputValue = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react42.useState)(initialList), 2), list = _ref1[0], setList = _ref1[1];
     var handleInputChange = function(e) {
         setInputValue(e);
     };
@@ -5167,31 +5223,31 @@ var MultiInput = function(param) {
         setList(newList);
         onListChange && onListChange(newList);
     };
-    return /* @__PURE__ */ import_react41.default.createElement(import_react41.default.Fragment, null, title && /* @__PURE__ */ import_react41.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react41.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react42.default.createElement(import_react42.default.Fragment, null, title && /* @__PURE__ */ import_react42.default.createElement(TitleWrapper2, null, /* @__PURE__ */ import_react42.default.createElement(Tooltip, {
         text: tooltip || ""
-    }, /* @__PURE__ */ import_react41.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react42.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title))), /* @__PURE__ */ import_react41.default.createElement(Container, null, /* @__PURE__ */ import_react41.default.createElement(ListContainer, null, list.map(function(item, index) {
-        return /* @__PURE__ */ import_react41.default.createElement(ListItem, {
+    }, title))), /* @__PURE__ */ import_react42.default.createElement(Container, null, /* @__PURE__ */ import_react42.default.createElement(ListContainer, null, list.map(function(item, index) {
+        return /* @__PURE__ */ import_react42.default.createElement(ListItem, {
             key: index,
             onClick: function() {
                 return handleRemoveFromList(index);
             }
-        }, /* @__PURE__ */ import_react41.default.createElement(Text, {
+        }, /* @__PURE__ */ import_react42.default.createElement(Text, {
             size: 12,
             color: palette_default.text.dark_button
-        }, item), /* @__PURE__ */ import_react41.default.createElement("svg", {
+        }, item), /* @__PURE__ */ import_react42.default.createElement("svg", {
             width: "12",
             height: "12",
             viewBox: "0 0 16 16",
             fill: "#0e1c28",
             xmlns: "http://www.w3.org/2000/svg"
-        }, /* @__PURE__ */ import_react41.default.createElement("path", {
+        }, /* @__PURE__ */ import_react42.default.createElement("path", {
             d: "M12.8535 12.146C12.9 12.1925 12.9368 12.2476 12.962 12.3083C12.9871 12.369 13.0001 12.4341 13.0001 12.4998C13.0001 12.5655 12.9871 12.6305 12.962 12.6912C12.9368 12.7519 12.9 12.8071 12.8535 12.8535C12.8071 12.9 12.7519 12.9368 12.6912 12.962C12.6305 12.9871 12.5655 13.0001 12.4998 13.0001C12.4341 13.0001 12.369 12.9871 12.3083 12.962C12.2476 12.9368 12.1925 12.9 12.146 12.8535L7.99979 8.70666L3.85354 12.8535C3.75972 12.9474 3.63247 13.0001 3.49979 13.0001C3.36711 13.0001 3.23986 12.9474 3.14604 12.8535C3.05222 12.7597 2.99951 12.6325 2.99951 12.4998C2.99951 12.3671 3.05222 12.2399 3.14604 12.146L7.29291 7.99979L3.14604 3.85354C3.05222 3.75972 2.99951 3.63247 2.99951 3.49979C2.99951 3.36711 3.05222 3.23986 3.14604 3.14604C3.23986 3.05222 3.36711 2.99951 3.49979 2.99951C3.63247 2.99951 3.75972 3.05222 3.85354 3.14604L7.99979 7.29291L12.146 3.14604C12.2399 3.05222 12.3671 2.99951 12.4998 2.99951C12.6325 2.99951 12.7597 3.05222 12.8535 3.14604C12.9474 3.23986 13.0001 3.36711 13.0001 3.49979C13.0001 3.63247 12.9474 3.75972 12.8535 3.85354L8.70666 7.99979L12.8535 12.146Z",
             fill: "#0e1c28"
         })));
-    })), /* @__PURE__ */ import_react41.default.createElement(InputContainer, null, /* @__PURE__ */ import_react41.default.createElement(Input2, {
+    })), /* @__PURE__ */ import_react42.default.createElement(InputContainer, null, /* @__PURE__ */ import_react42.default.createElement(Input2, {
         style: {
             width: "100%"
         },
@@ -5200,43 +5256,43 @@ var MultiInput = function(param) {
         onChange: function(e) {
             return handleInputChange(e);
         }
-    }), /* @__PURE__ */ import_react41.default.createElement(Button2, {
+    }), /* @__PURE__ */ import_react42.default.createElement(Button2, {
         onClick: handleAddToList,
         style: {
             marginLeft: 10
         }
-    }, /* @__PURE__ */ import_react41.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react42.default.createElement(Text, {
         size: 14,
         weight: 600,
         color: palette_default.text.dark_button
     }, "Add")))));
 };
-var Container = import_styled_components35.default.div(_templateObject100());
-var ListContainer = import_styled_components35.default.div(_templateObject101());
-var ListItem = import_styled_components35.default.div(_templateObject102(), palette_default.colors.light_grey);
-var InputContainer = import_styled_components35.default.div(_templateObject103());
-var Input2 = (0, import_styled_components35.default)(Input)(_templateObject104());
-var Button2 = (0, import_styled_components35.default)(Button)(_templateObject105());
-var TitleWrapper2 = import_styled_components35.default.div(_templateObject106());
+var Container = import_styled_components36.default.div(_templateObject102());
+var ListContainer = import_styled_components36.default.div(_templateObject103());
+var ListItem = import_styled_components36.default.div(_templateObject104(), palette_default.colors.light_grey);
+var InputContainer = import_styled_components36.default.div(_templateObject105());
+var Input2 = (0, import_styled_components36.default)(Input)(_templateObject106());
+var Button2 = (0, import_styled_components36.default)(Button)(_templateObject107());
+var TitleWrapper2 = import_styled_components36.default.div(_templateObject108());
 // src/design.system/key-value-input/index.tsx
-var import_react42 = __toESM(require("react"));
-var import_styled_components36 = __toESM(require("styled-components"));
-var Container2 = import_styled_components36.default.div(_templateObject107());
-var TitleWrapper3 = import_styled_components36.default.div(_templateObject108());
-var Table = import_styled_components36.default.table(_templateObject109(), palette_default.text.grey);
-var Th = import_styled_components36.default.th(_templateObject110());
-var Td = import_styled_components36.default.td(_templateObject111(), palette_default.text.grey, function(param) {
+var import_react43 = __toESM(require("react"));
+var import_styled_components37 = __toESM(require("styled-components"));
+var Container2 = import_styled_components37.default.div(_templateObject109());
+var TitleWrapper3 = import_styled_components37.default.div(_templateObject110());
+var Table = import_styled_components37.default.table(_templateObject111(), palette_default.text.grey);
+var Th = import_styled_components37.default.th(_templateObject112());
+var Td = import_styled_components37.default.td(_templateObject113(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input3 = import_styled_components36.default.input(_templateObject112(), palette_default.text.white);
-var AddRowButton = import_styled_components36.default.td(_templateObject113(), palette_default.text.grey);
+var Input3 = import_styled_components37.default.input(_templateObject114(), palette_default.text.white);
+var AddRowButton = import_styled_components37.default.td(_templateObject115(), palette_default.text.grey);
 var KeyValueTable = function(param) {
     var keyValues = param.keyValues, setKeyValues = param.setKeyValues, title = param.title, titleKey = param.titleKey, titleValue = param.titleValue, titleButton = param.titleButton, tooltip = param.tooltip, required = param.required;
-    var _ref = _sliced_to_array((0, import_react42.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];
+    var _ref = _sliced_to_array((0, import_react43.useState)(1), 2), nextId = _ref[0], setNextId = _ref[1];
     var addRow = function() {
         var newKeyValue = {
             id: nextId,
@@ -5270,51 +5326,51 @@ var KeyValueTable = function(param) {
         });
         setKeyValues(updatedKeyValues);
     };
-    return /* @__PURE__ */ import_react42.default.createElement(Container2, null, title && /* @__PURE__ */ import_react42.default.createElement(TitleWrapper3, null, /* @__PURE__ */ import_react42.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react43.default.createElement(Container2, null, title && /* @__PURE__ */ import_react43.default.createElement(TitleWrapper3, null, /* @__PURE__ */ import_react43.default.createElement(Tooltip, {
         text: tooltip || ""
-    }, /* @__PURE__ */ import_react42.default.createElement("div", {
+    }, /* @__PURE__ */ import_react43.default.createElement("div", {
         style: {
             display: "flex",
             gap: 4
         }
-    }, /* @__PURE__ */ import_react42.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react43.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title), required && /* @__PURE__ */ import_react42.default.createElement(Text, {
+    }, title), required && /* @__PURE__ */ import_react43.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*")))), /* @__PURE__ */ import_react42.default.createElement(Table, null, /* @__PURE__ */ import_react42.default.createElement("thead", null, /* @__PURE__ */ import_react42.default.createElement("tr", null, /* @__PURE__ */ import_react42.default.createElement(Th, null, /* @__PURE__ */ import_react42.default.createElement(Text, {
+    }, "*")))), /* @__PURE__ */ import_react43.default.createElement(Table, null, /* @__PURE__ */ import_react43.default.createElement("thead", null, /* @__PURE__ */ import_react43.default.createElement("tr", null, /* @__PURE__ */ import_react43.default.createElement(Th, null, /* @__PURE__ */ import_react43.default.createElement(Text, {
         color: palette_default.text.grey,
         size: 14,
         style: {
             display: "flex"
         },
         weight: 300
-    }, titleKey || "Key")), /* @__PURE__ */ import_react42.default.createElement(Th, null, /* @__PURE__ */ import_react42.default.createElement(Text, {
+    }, titleKey || "Key")), /* @__PURE__ */ import_react43.default.createElement(Th, null, /* @__PURE__ */ import_react43.default.createElement(Text, {
         color: palette_default.text.grey,
         size: 14,
         style: {
             display: "flex"
         },
         weight: 300
-    }, titleValue || "Value")))), /* @__PURE__ */ import_react42.default.createElement("tbody", null, keyValues.map(function(kv) {
-        return /* @__PURE__ */ import_react42.default.createElement("tr", {
+    }, titleValue || "Value")))), /* @__PURE__ */ import_react43.default.createElement("tbody", null, keyValues.map(function(kv) {
+        return /* @__PURE__ */ import_react43.default.createElement("tr", {
             key: kv.id
-        }, /* @__PURE__ */ import_react42.default.createElement(Td, {
+        }, /* @__PURE__ */ import_react43.default.createElement(Td, {
             right: true
-        }, /* @__PURE__ */ import_react42.default.createElement(Input3, {
+        }, /* @__PURE__ */ import_react43.default.createElement(Input3, {
             type: "text",
             value: kv.key,
             onChange: function(e) {
                 return updateKey(kv.id, e.target.value);
             }
-        })), /* @__PURE__ */ import_react42.default.createElement(Td, null, /* @__PURE__ */ import_react42.default.createElement(Input3, {
+        })), /* @__PURE__ */ import_react43.default.createElement(Td, null, /* @__PURE__ */ import_react43.default.createElement(Input3, {
             type: "text",
             value: kv.value,
             onChange: function(e) {
                 return updateValue(kv.id, e.target.value);
             }
-        })), /* @__PURE__ */ import_react42.default.createElement(Td, {
+        })), /* @__PURE__ */ import_react43.default.createElement(Td, {
             style: {
                 cursor: "pointer"
             },
@@ -5322,20 +5378,20 @@ var KeyValueTable = function(param) {
             onClick: function() {
                 return deleteRow(kv.id);
             }
-        }, /* @__PURE__ */ import_react42.default.createElement(trash_default, null)));
-    })), /* @__PURE__ */ import_react42.default.createElement("tfoot", null, /* @__PURE__ */ import_react42.default.createElement("tr", null, /* @__PURE__ */ import_react42.default.createElement(AddRowButton, {
+        }, /* @__PURE__ */ import_react43.default.createElement(trash_default, null)));
+    })), /* @__PURE__ */ import_react43.default.createElement("tfoot", null, /* @__PURE__ */ import_react43.default.createElement("tr", null, /* @__PURE__ */ import_react43.default.createElement(AddRowButton, {
         onClick: addRow,
         colSpan: 3
-    }, /* @__PURE__ */ import_react42.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react43.default.createElement(Text, {
         weight: 400,
         size: 14,
         color: palette_default.colors.torquiz_light
     }, titleButton || "Add Row"))))));
 };
 // src/design.system/text.area/index.tsx
-var import_react43 = __toESM(require("react"));
-var import_styled_components37 = __toESM(require("styled-components"));
-var StyledTextArea = import_styled_components37.default.textarea(_templateObject114(), function(param) {
+var import_react44 = __toESM(require("react"));
+var import_styled_components38 = __toESM(require("styled-components"));
+var StyledTextArea = import_styled_components38.default.textarea(_templateObject116(), function(param) {
     var theme2 = param.theme;
     return theme2.text.white;
 }, palette_default.font_family.primary, function(param) {
@@ -5348,7 +5404,7 @@ var StyledTextArea = import_styled_components37.default.textarea(_templateObject
     var theme2 = param.theme;
     return "solid 1px ".concat(theme2.text.grey);
 });
-var LabelWrapper3 = import_styled_components37.default.div(_templateObject115());
+var LabelWrapper3 = import_styled_components38.default.div(_templateObject117());
 var TextArea = function(_param) {
     var placeholder = _param.placeholder, value = _param.value, onChange = _param.onChange, _param_rows = _param.rows, rows = _param_rows === void 0 ? 4 : _param_rows, _param_cols = _param.cols, cols = _param_cols === void 0 ? 50 : _param_cols, tooltip = _param.tooltip, label = _param.label, required = _param.required, rest = _object_without_properties(_param, [
         "placeholder",
@@ -5360,20 +5416,20 @@ var TextArea = function(_param) {
         "label",
         "required"
     ]);
-    return /* @__PURE__ */ import_react43.default.createElement(import_react43.default.Fragment, null, label && /* @__PURE__ */ import_react43.default.createElement(LabelWrapper3, null, /* @__PURE__ */ import_react43.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react44.default.createElement(import_react44.default.Fragment, null, label && /* @__PURE__ */ import_react44.default.createElement(LabelWrapper3, null, /* @__PURE__ */ import_react44.default.createElement(Tooltip, {
         text: tooltip || ""
-    }, /* @__PURE__ */ import_react43.default.createElement("div", {
+    }, /* @__PURE__ */ import_react44.default.createElement("div", {
         style: {
             display: "flex",
             gap: 4
         }
-    }, /* @__PURE__ */ import_react43.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react44.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, label), required && /* @__PURE__ */ import_react43.default.createElement(Text, {
+    }, label), required && /* @__PURE__ */ import_react44.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*")))), /* @__PURE__ */ import_react43.default.createElement(StyledTextArea, _object_spread({
+    }, "*")))), /* @__PURE__ */ import_react44.default.createElement(StyledTextArea, _object_spread({
         placeholder: placeholder,
         value: value,
         onChange: onChange,
@@ -5383,21 +5439,21 @@ var TextArea = function(_param) {
     }, rest)));
 };
 // src/design.system/multi-input/multi.input.table.tsx
-var import_react44 = __toESM(require("react"));
-var import_styled_components38 = __toESM(require("styled-components"));
-var Container3 = import_styled_components38.default.div(_templateObject116());
-var TitleWrapper4 = import_styled_components38.default.div(_templateObject117());
-var Table2 = import_styled_components38.default.table(_templateObject118(), palette_default.text.grey);
-var Th2 = import_styled_components38.default.th(_templateObject119());
-var Td2 = import_styled_components38.default.td(_templateObject120(), palette_default.text.grey, function(param) {
+var import_react45 = __toESM(require("react"));
+var import_styled_components39 = __toESM(require("styled-components"));
+var Container3 = import_styled_components39.default.div(_templateObject118());
+var TitleWrapper4 = import_styled_components39.default.div(_templateObject119());
+var Table2 = import_styled_components39.default.table(_templateObject120(), palette_default.text.grey);
+var Th2 = import_styled_components39.default.th(_templateObject121());
+var Td2 = import_styled_components39.default.td(_templateObject122(), palette_default.text.grey, function(param) {
     var right = param.right;
     return right ? "solid 1px ".concat(palette_default.text.grey) : "none";
 }, function(param) {
     var left = param.left;
     return left ? "solid 1px ".concat(palette_default.text.grey) : "none";
 });
-var Input4 = import_styled_components38.default.input(_templateObject121(), palette_default.text.white);
-var AddRowButton2 = import_styled_components38.default.td(_templateObject122());
+var Input4 = import_styled_components39.default.input(_templateObject123(), palette_default.text.white);
+var AddRowButton2 = import_styled_components39.default.td(_templateObject124());
 var MultiInputTable = function(param) {
     var values = param.values, title = param.title, tooltip = param.tooltip, onValuesChange = param.onValuesChange, required = param.required, placeholder = param.placeholder;
     var addRow = function() {
@@ -5417,61 +5473,61 @@ var MultiInputTable = function(param) {
         });
         onValuesChange(updatedValues);
     };
-    return /* @__PURE__ */ import_react44.default.createElement(Container3, null, title && /* @__PURE__ */ import_react44.default.createElement(TitleWrapper4, null, /* @__PURE__ */ import_react44.default.createElement(Tooltip, {
+    return /* @__PURE__ */ import_react45.default.createElement(Container3, null, title && /* @__PURE__ */ import_react45.default.createElement(TitleWrapper4, null, /* @__PURE__ */ import_react45.default.createElement(Tooltip, {
         text: tooltip || ""
-    }, /* @__PURE__ */ import_react44.default.createElement("div", {
+    }, /* @__PURE__ */ import_react45.default.createElement("div", {
         style: {
             display: "flex",
             gap: 4
         }
-    }, /* @__PURE__ */ import_react44.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react45.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, title), required && /* @__PURE__ */ import_react44.default.createElement(Text, {
+    }, title), required && /* @__PURE__ */ import_react45.default.createElement(Text, {
         size: 14,
         weight: 600
-    }, "*")))), /* @__PURE__ */ import_react44.default.createElement(Table2, null, /* @__PURE__ */ import_react44.default.createElement("tbody", null, values.map(function(value, index) {
-        return /* @__PURE__ */ import_react44.default.createElement("tr", {
+    }, "*")))), /* @__PURE__ */ import_react45.default.createElement(Table2, null, /* @__PURE__ */ import_react45.default.createElement("tbody", null, values.map(function(value, index) {
+        return /* @__PURE__ */ import_react45.default.createElement("tr", {
             key: index
-        }, /* @__PURE__ */ import_react44.default.createElement(Td2, {
+        }, /* @__PURE__ */ import_react45.default.createElement(Td2, {
             right: true
-        }, /* @__PURE__ */ import_react44.default.createElement(Input4, {
+        }, /* @__PURE__ */ import_react45.default.createElement(Input4, {
             type: "text",
             value: value,
             onChange: function(e) {
                 return updateValue(index, e.target.value);
             },
             placeholder: index === 0 ? placeholder : ""
-        })), /* @__PURE__ */ import_react44.default.createElement(Td2, {
+        })), /* @__PURE__ */ import_react45.default.createElement(Td2, {
             onClick: function() {
                 return deleteRow(index);
             },
             style: {
                 cursor: "pointer"
             }
-        }, /* @__PURE__ */ import_react44.default.createElement(trash_default, null)));
-    })), /* @__PURE__ */ import_react44.default.createElement("tfoot", null, /* @__PURE__ */ import_react44.default.createElement("tr", null, /* @__PURE__ */ import_react44.default.createElement(AddRowButton2, {
+        }, /* @__PURE__ */ import_react45.default.createElement(trash_default, null)));
+    })), /* @__PURE__ */ import_react45.default.createElement("tfoot", null, /* @__PURE__ */ import_react45.default.createElement("tr", null, /* @__PURE__ */ import_react45.default.createElement(AddRowButton2, {
         onClick: addRow,
         colSpan: 2
-    }, /* @__PURE__ */ import_react44.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react45.default.createElement(Text, {
         weight: 400,
         size: 14,
         color: palette_default.colors.torquiz_light
     }, "Add Row"))))));
 };
 // src/design.system/action.group/index.tsx
-var import_react46 = __toESM(require("react"));
+var import_react47 = __toESM(require("react"));
 // src/design.system/action.item/index.tsx
-var import_react45 = __toESM(require("react"));
-var import_styled_components39 = __toESM(require("styled-components"));
-var Label = import_styled_components39.default.label(_templateObject123(), function(param) {
+var import_react46 = __toESM(require("react"));
+var import_styled_components40 = __toESM(require("styled-components"));
+var Label = import_styled_components40.default.label(_templateObject125(), function(param) {
     var theme2 = param.theme;
     return theme2.colors.light_grey;
 }, function(param) {
     var theme2 = param.theme;
     return theme2.colors.white;
 });
-var Popup = import_styled_components39.default.div(_templateObject124(), function(props) {
+var Popup = import_styled_components40.default.div(_templateObject126(), function(props) {
     return props.isOpen ? "block" : "none";
 }, function(param) {
     var theme2 = param.theme;
@@ -5480,7 +5536,7 @@ var Popup = import_styled_components39.default.div(_templateObject124(), functio
     var theme2 = param.theme;
     return theme2.colors.dark;
 });
-var PopupItem = import_styled_components39.default.div(_templateObject125(), function(param) {
+var PopupItem = import_styled_components40.default.div(_templateObject127(), function(param) {
     var theme2 = param.theme;
     return "1px solid ".concat(theme2.colors.blue_grey);
 }, function(param) {
@@ -5495,43 +5551,43 @@ var PopupItem = import_styled_components39.default.div(_templateObject125(), fun
 });
 var ActionItem = function(param) {
     var label = param.label, items = param.items, subTitle = param.subTitle;
-    var _ref = _sliced_to_array((0, import_react45.useState)(false), 2), isOpen = _ref[0], setIsOpen = _ref[1];
-    var ref = (0, import_react45.useRef)(null);
+    var _ref = _sliced_to_array((0, import_react46.useState)(false), 2), isOpen = _ref[0], setIsOpen = _ref[1];
+    var ref = (0, import_react46.useRef)(null);
     useOnClickOutside(ref, function() {
         return setIsOpen(false);
     });
-    return /* @__PURE__ */ import_react45.default.createElement("div", {
+    return /* @__PURE__ */ import_react46.default.createElement("div", {
         ref: ref,
         style: {
             position: "relative"
         }
-    }, /* @__PURE__ */ import_react45.default.createElement(Label, {
+    }, /* @__PURE__ */ import_react46.default.createElement(Label, {
         onClick: function() {
             return setIsOpen(!isOpen);
         }
-    }, /* @__PURE__ */ import_react45.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react46.default.createElement(Text, {
         size: 12,
         weight: 600
-    }, label), /* @__PURE__ */ import_react45.default.createElement(expand_arrow_default, null)), /* @__PURE__ */ import_react45.default.createElement(Popup, {
+    }, label), /* @__PURE__ */ import_react46.default.createElement(expand_arrow_default, null)), /* @__PURE__ */ import_react46.default.createElement(Popup, {
         isOpen: isOpen
-    }, /* @__PURE__ */ import_react45.default.createElement("div", {
+    }, /* @__PURE__ */ import_react46.default.createElement("div", {
         style: {
             padding: 12,
             width: 120
         }
-    }, /* @__PURE__ */ import_react45.default.createElement(Text, {
+    }, /* @__PURE__ */ import_react46.default.createElement(Text, {
         size: 12,
         weight: 600
     }, subTitle)), items.map(function(item, index) {
-        return /* @__PURE__ */ import_react45.default.createElement(PopupItem, {
+        return /* @__PURE__ */ import_react46.default.createElement(PopupItem, {
             key: index,
             onClick: item.onClick,
             disabled: !!item.disabled
-        }, item.selected ? /* @__PURE__ */ import_react45.default.createElement(check_default, null) : /* @__PURE__ */ import_react45.default.createElement("div", {
+        }, item.selected ? /* @__PURE__ */ import_react46.default.createElement(check_default, null) : /* @__PURE__ */ import_react46.default.createElement("div", {
             style: {
                 width: 10
             }
-        }), /* @__PURE__ */ import_react45.default.createElement(Text, {
+        }), /* @__PURE__ */ import_react46.default.createElement(Text, {
             size: 12,
             weight: 600
         }, item.label));
@@ -5540,17 +5596,17 @@ var ActionItem = function(param) {
 // src/design.system/action.group/index.tsx
 var ActionsGroup = function(param) {
     var actionGroups = param.actionGroups;
-    return /* @__PURE__ */ import_react46.default.createElement(import_react46.default.Fragment, null, actionGroups.map(function(group, index) {
-        return group.condition && /* @__PURE__ */ import_react46.default.createElement(ActionItem, _object_spread({
+    return /* @__PURE__ */ import_react47.default.createElement(import_react47.default.Fragment, null, actionGroups.map(function(group, index) {
+        return group.condition && /* @__PURE__ */ import_react47.default.createElement(ActionItem, _object_spread({
             key: index
         }, group));
     }));
 };
 // src/design.system/pagination/index.tsx
-var import_react47 = __toESM(require("react"));
-var import_styled_components40 = __toESM(require("styled-components"));
-var PaginationContainer = import_styled_components40.default.div(_templateObject126());
-var PageButton = import_styled_components40.default.button(_templateObject127(), function(props) {
+var import_react48 = __toESM(require("react"));
+var import_styled_components41 = __toESM(require("styled-components"));
+var PaginationContainer = import_styled_components41.default.div(_templateObject128());
+var PageButton = import_styled_components41.default.button(_templateObject129(), function(props) {
     return props.isCurrentPage ? palette_default.colors.blue_grey : "transparent";
 }, function(props) {
     return props.isDisabled ? palette_default.text.grey : palette_default.text.white;
@@ -5558,51 +5614,51 @@ var PageButton = import_styled_components40.default.button(_templateObject127(),
 var Pagination = function(param) {
     var total = param.total, itemsPerPage = param.itemsPerPage, currentPage = param.currentPage, onPageChange = param.onPageChange;
     var pageCount = Math.ceil(total / itemsPerPage);
-    return /* @__PURE__ */ import_react47.default.createElement(PaginationContainer, null, /* @__PURE__ */ import_react47.default.createElement(PageButton, {
+    return /* @__PURE__ */ import_react48.default.createElement(PaginationContainer, null, /* @__PURE__ */ import_react48.default.createElement(PageButton, {
         onClick: function() {
             return onPageChange(currentPage - 1);
         },
         disabled: currentPage === 1,
         isDisabled: currentPage === 1
-    }, /* @__PURE__ */ import_react47.default.createElement(expand_arrow_default, {
+    }, /* @__PURE__ */ import_react48.default.createElement(expand_arrow_default, {
         style: {
             transform: "rotate(90deg)"
         }
     }), "Previous"), new Array(pageCount).fill(0).map(function(_, index) {
-        return /* @__PURE__ */ import_react47.default.createElement(PageButton, {
+        return /* @__PURE__ */ import_react48.default.createElement(PageButton, {
             key: index,
             onClick: function() {
                 return onPageChange(index + 1);
             },
             isCurrentPage: currentPage === index + 1
         }, index + 1);
-    }), /* @__PURE__ */ import_react47.default.createElement(PageButton, {
+    }), /* @__PURE__ */ import_react48.default.createElement(PageButton, {
         onClick: function() {
             return onPageChange(currentPage + 1);
         },
         disabled: currentPage === pageCount,
         isDisabled: currentPage === pageCount
-    }, "Next", /* @__PURE__ */ import_react47.default.createElement(expand_arrow_default, {
+    }, "Next", /* @__PURE__ */ import_react48.default.createElement(expand_arrow_default, {
         style: {
             transform: "rotate(-90deg)"
         }
     })));
 };
 // src/design.system/table/index.tsx
-var import_styled_components41 = __toESM(require("styled-components"));
-var import_react48 = __toESM(require("react"));
-var StyledTable = import_styled_components41.default.table(_templateObject128(), palette_default.colors.dark, palette_default.colors.blue_grey);
-var StyledTbody = import_styled_components41.default.tbody(_templateObject129());
-var DropdownContainer = import_styled_components41.default.div(_templateObject130());
-var Dropdown = import_styled_components41.default.select(_templateObject131(), palette_default.colors.blue_grey, palette_default.colors.dark, palette_default.colors.white, function(param) {
+var import_styled_components42 = __toESM(require("styled-components"));
+var import_react49 = __toESM(require("react"));
+var StyledTable = import_styled_components42.default.table(_templateObject130(), palette_default.colors.dark, palette_default.colors.blue_grey);
+var StyledTbody = import_styled_components42.default.tbody(_templateObject131());
+var DropdownContainer = import_styled_components42.default.div(_templateObject132());
+var Dropdown = import_styled_components42.default.select(_templateObject133(), palette_default.colors.blue_grey, palette_default.colors.dark, palette_default.colors.white, function(param) {
     var theme2 = param.theme;
     return "1px solid  ".concat(theme2.colors.blue_grey);
 });
-var DropdownOption = import_styled_components41.default.option(_templateObject132(), palette_default.colors.dark, palette_default.colors.white);
+var DropdownOption = import_styled_components42.default.option(_templateObject134(), palette_default.colors.dark, palette_default.colors.white);
 var Table3 = function(param) {
     var data = param.data, onPaginate = param.onPaginate, renderTableRows = param.renderTableRows, renderTableHeader = param.renderTableHeader, renderEmptyResult = param.renderEmptyResult;
-    var _ref = _sliced_to_array((0, import_react48.useState)(1), 2), currentPage = _ref[0], setCurrentPage = _ref[1];
-    var _ref1 = _sliced_to_array((0, import_react48.useState)(15), 2), itemsPerPage = _ref1[0], setItemsPerPage = _ref1[1];
+    var _ref = _sliced_to_array((0, import_react49.useState)(1), 2), currentPage = _ref[0], setCurrentPage = _ref[1];
+    var _ref1 = _sliced_to_array((0, import_react49.useState)(15), 2), itemsPerPage = _ref1[0], setItemsPerPage = _ref1[1];
     var indexOfLastItem = currentPage * itemsPerPage;
     var indexOfFirstItem = indexOfLastItem - itemsPerPage;
     var currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
@@ -5616,22 +5672,22 @@ var Table3 = function(param) {
         setItemsPerPage(Number(event.target.value));
         setCurrentPage(1);
     };
-    return /* @__PURE__ */ import_react48.default.createElement(import_react48.default.Fragment, null, /* @__PURE__ */ import_react48.default.createElement(DropdownContainer, null, /* @__PURE__ */ import_react48.default.createElement(Text, {
+    return /* @__PURE__ */ import_react49.default.createElement(import_react49.default.Fragment, null, /* @__PURE__ */ import_react49.default.createElement(DropdownContainer, null, /* @__PURE__ */ import_react49.default.createElement(Text, {
         size: 12,
         color: palette_default.text.light_grey
-    }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ import_react48.default.createElement(Dropdown, {
+    }, "Showing ", indexOfFirstItem + 1, " to ", indexOfLastItem, " of ", data.length, " ", "items"), /* @__PURE__ */ import_react49.default.createElement(Dropdown, {
         id: "itemsPerPage",
         value: itemsPerPage,
         onChange: handleItemsPerPageChange
-    }, /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+    }, /* @__PURE__ */ import_react49.default.createElement(DropdownOption, {
         value: 10
-    }, "10"), /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+    }, "10"), /* @__PURE__ */ import_react49.default.createElement(DropdownOption, {
         value: 25
-    }, "25"), /* @__PURE__ */ import_react48.default.createElement(DropdownOption, {
+    }, "25"), /* @__PURE__ */ import_react49.default.createElement(DropdownOption, {
         value: 50
-    }, "50"))), /* @__PURE__ */ import_react48.default.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ import_react48.default.createElement(StyledTbody, null, currentItems.map(function(item, index) {
+    }, "50"))), /* @__PURE__ */ import_react49.default.createElement(StyledTable, null, renderTableHeader(), /* @__PURE__ */ import_react49.default.createElement(StyledTbody, null, currentItems.map(function(item, index) {
         return renderTableRows(item, index);
-    }))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ import_react48.default.createElement(Pagination, {
+    }))), data.length === 0 ? renderEmptyResult() : /* @__PURE__ */ import_react49.default.createElement(Pagination, {
         total: data.length,
         itemsPerPage: itemsPerPage,
         currentPage: currentPage,
@@ -5639,15 +5695,15 @@ var Table3 = function(param) {
     }));
 };
 // src/design.system/yml.editor/index.tsx
-var import_react49 = __toESM(require("react"));
+var import_react50 = __toESM(require("react"));
 var import_react_yaml = __toESM(require("@focus-reactive/react-yaml"));
-var import_styled_components42 = __toESM(require("styled-components"));
-var Container4 = import_styled_components42.default.div(_templateObject133(), palette_default.colors.blue_grey, palette_default.colors.white);
-var EditorOverlay = import_styled_components42.default.div(_templateObject134());
-var CopyIconWrapper2 = import_styled_components42.default.div(_templateObject135(), palette_default.colors.dark);
+var import_styled_components43 = __toESM(require("styled-components"));
+var Container4 = import_styled_components43.default.div(_templateObject135(), palette_default.colors.blue_grey, palette_default.colors.white);
+var EditorOverlay = import_styled_components43.default.div(_templateObject136());
+var CopyIconWrapper2 = import_styled_components43.default.div(_templateObject137(), palette_default.colors.dark);
 var YMLEditor = function(param) {
     var data = param.data;
-    var _ref = _sliced_to_array((0, import_react49.useState)(false), 2), isCopied = _ref[0], setIsCopied = _ref[1];
+    var _ref = _sliced_to_array((0, import_react50.useState)(false), 2), isCopied = _ref[0], setIsCopied = _ref[1];
     var handleChange = function() {};
     var handleCopy = function() {
         navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(function() {
@@ -5659,27 +5715,27 @@ var YMLEditor = function(param) {
             return console.error("Error copying YAML to clipboard: ", err);
         });
     };
-    return /* @__PURE__ */ import_react49.default.createElement(import_react49.default.Fragment, null, /* @__PURE__ */ import_react49.default.createElement(Container4, null, /* @__PURE__ */ import_react49.default.createElement(CopyIconWrapper2, {
+    return /* @__PURE__ */ import_react50.default.createElement(import_react50.default.Fragment, null, /* @__PURE__ */ import_react50.default.createElement(Container4, null, /* @__PURE__ */ import_react50.default.createElement(CopyIconWrapper2, {
         onClick: handleCopy
-    }, isCopied ? /* @__PURE__ */ import_react49.default.createElement(copied_default, {
+    }, isCopied ? /* @__PURE__ */ import_react50.default.createElement(copied_default, {
         style: {
             width: 18,
             height: 18
         }
-    }) : /* @__PURE__ */ import_react49.default.createElement(copy_default, {
+    }) : /* @__PURE__ */ import_react50.default.createElement(copy_default, {
         style: {
             width: 18,
             height: 18
         }
-    })), /* @__PURE__ */ import_react49.default.createElement("div", {
+    })), /* @__PURE__ */ import_react50.default.createElement("div", {
         style: {
             position: "relative"
         }
-    }, /* @__PURE__ */ import_react49.default.createElement(import_react_yaml.default, {
+    }, /* @__PURE__ */ import_react50.default.createElement(import_react_yaml.default, {
         key: JSON.stringify(data),
         json: data,
         onChange: handleChange
-    }), /* @__PURE__ */ import_react49.default.createElement(EditorOverlay, null))));
+    }), /* @__PURE__ */ import_react50.default.createElement(EditorOverlay, null))));
 };
 // src/design.system/data.flow/builder.ts
 var sources = [
@@ -5687,6 +5743,11 @@ var sources = [
         name: "adservice",
         kind: "Deployment",
         namespace: "default",
+        metrics: {
+            data_transfer: "3.8 KB/s",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         languages: [
             {
                 container_name: "server",
@@ -5698,6 +5759,11 @@ var sources = [
         name: "cartservice",
         kind: "Deployment",
         namespace: "default",
+        metrics: {
+            data_transfer: "2.3 KB/s",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         languages: [
             {
                 container_name: "server",
@@ -5709,6 +5775,11 @@ var sources = [
         name: "checkoutservice",
         kind: "Deployment",
         namespace: "default",
+        metrics: {
+            data_transfer: "0 Byte transfered",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         languages: [
             {
                 container_name: "server",
@@ -5720,6 +5791,11 @@ var sources = [
         name: "coupon",
         kind: "Deployment",
         namespace: "default",
+        metrics: {
+            data_transfer: "3.8 KB/s",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         languages: [
             {
                 container_name: "coupon",
@@ -5733,6 +5809,11 @@ var destinations = [
         id: "odigos.io.dest.elasticsearch-6qklw",
         name: "Elasticsearch",
         type: "elasticsearch",
+        metrics: {
+            data_transfer: "3.8 KB/s",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         signals: {
             traces: true,
             metrics: false,
@@ -5800,6 +5881,11 @@ var destinations = [
         id: "odigos.io.dest.s3-gk7bn",
         name: "aws",
         type: "s3",
+        metrics: {
+            data_transfer: "3.8111 KB/s",
+            cpu_usage: "3.8%",
+            memory_usage: "3.8%"
+        },
         signals: {
             traces: true,
             metrics: true,
@@ -5834,7 +5920,7 @@ var action = [
         id: "aci-f6c9f",
         type: "AddClusterInfo",
         spec: {
-            actionName: "This is tetst test Cluster Attributes",
+            actionName: "Cluster Attributes",
             notes: "Actions are a way to modify the OpenTelemetry data recorded by Odigos Sources, before it is exported to your Odigos Destinations.",
             signals: [
                 "METRICS",
@@ -5921,7 +6007,7 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
         middle_index_sources = sources_length / 2 - 1;
     }
     var sourceyOffset = desired_y_position - middle_index_sources * 100;
-    var centerXPossition = ((_actions = actions) === null || _actions === void 0 ? void 0 : _actions.length) > 0 ? ((_actions1 = actions) === null || _actions1 === void 0 ? void 0 : _actions1.length) * 150 + 400 : 450;
+    var centerXPossition = ((_actions = actions) === null || _actions === void 0 ? void 0 : _actions.length) > 0 ? ((_actions1 = actions) === null || _actions1 === void 0 ? void 0 : _actions1.length) * 150 + 600 : 600;
     nodes2.push({
         id: centerNodeId,
         type: "custom",
@@ -5934,7 +6020,7 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
         }
     });
     sources2.forEach(function(source, index) {
-        var _source, _actions;
+        var _source;
         var hasError = false;
         if ((_source = source) === null || _source === void 0 ? void 0 : _source.conditions) {
             hasError = source.conditions.some(function(condition) {
@@ -5951,16 +6037,53 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
             },
             data: source
         });
-        edges2.push({
-            id: "e".concat(namespaceNodeId, "-").concat(centerNodeId),
-            source: namespaceNodeId,
-            target: ((_actions = actions) === null || _actions === void 0 ? void 0 : _actions.length) > 0 ? "action-0" : centerNodeId,
-            animated: true,
-            style: {
-                stroke: hasError ? "#ff0000" : "#96f3ff8e"
-            },
-            data: null
-        });
+        if (source.metrics) {
+            var _actions;
+            var metricNodeId = "metric-".concat(index);
+            nodes2.push({
+                id: metricNodeId,
+                type: "metric",
+                position: {
+                    x: xOffsetNamespace + 300,
+                    y: sourceyOffset + index * 100
+                },
+                data: {
+                    metrics: source.metrics
+                }
+            });
+            edges2.push({
+                id: "e".concat(namespaceNodeId, "-").concat(metricNodeId),
+                source: metricNodeId,
+                target: ((_actions = actions) === null || _actions === void 0 ? void 0 : _actions.length) > 0 ? "action-0" : centerNodeId,
+                animated: true,
+                style: {
+                    stroke: "#96f3ff8e"
+                },
+                data: null
+            });
+            edges2.push({
+                id: "e".concat(namespaceNodeId, "-").concat(centerNodeId),
+                source: namespaceNodeId,
+                target: metricNodeId,
+                animated: true,
+                style: {
+                    stroke: hasError ? "#ff0000" : "#96f3ff8e"
+                },
+                data: null
+            });
+        } else {
+            var _actions1;
+            edges2.push({
+                id: "e".concat(namespaceNodeId, "-").concat(centerNodeId),
+                source: namespaceNodeId,
+                target: ((_actions1 = actions) === null || _actions1 === void 0 ? void 0 : _actions1.length) > 0 ? "action-0" : centerNodeId,
+                animated: true,
+                style: {
+                    stroke: hasError ? "#ff0000" : "#96f3ff8e"
+                },
+                data: null
+            });
+        }
     });
     destinations2.forEach(function(destination, index) {
         var _destination;
@@ -5975,21 +6098,56 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
             id: destinationNodeId,
             type: "destination",
             position: {
-                x: centerXPossition + 400,
+                x: centerXPossition + 600,
                 y: destinationyOffset + index * 100
             },
             data: destination
         });
-        edges2.push({
-            id: "e".concat(centerNodeId, "-").concat(destinationNodeId),
-            source: centerNodeId,
-            target: destinationNodeId,
-            animated: true,
-            style: {
-                stroke: isErrored ? "#ff0000" : "#96f3ff8e"
-            },
-            data: null
-        });
+        if (destination.metrics) {
+            var metricNodeId = "metric-dest-".concat(index);
+            nodes2.push({
+                id: metricNodeId,
+                type: "metric",
+                position: {
+                    x: centerXPossition + 250,
+                    y: destinationyOffset + index * 100
+                },
+                data: {
+                    metrics: destination.metrics
+                }
+            });
+            edges2.push({
+                id: "e".concat(destinationNodeId, "-").concat(metricNodeId),
+                source: centerNodeId,
+                target: metricNodeId,
+                animated: true,
+                style: {
+                    stroke: "#96f3ff8e"
+                },
+                data: null
+            });
+            edges2.push({
+                id: "e".concat(destinationNodeId, "-").concat(metricNodeId),
+                source: metricNodeId,
+                target: destinationNodeId,
+                animated: true,
+                style: {
+                    stroke: "#96f3ff8e"
+                },
+                data: null
+            });
+        } else {
+            edges2.push({
+                id: "e".concat(centerNodeId, "-").concat(destinationNodeId),
+                source: centerNodeId,
+                target: destinationNodeId,
+                animated: true,
+                style: {
+                    stroke: isErrored ? "#ff0000" : "#96f3ff8e"
+                },
+                data: null
+            });
+        }
     });
     actions.forEach(function(action2, index) {
         var actionNodeId = "action-".concat(index);
@@ -5998,7 +6156,7 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
             id: actionNodeId,
             type: "action",
             position: {
-                x: 420 + index * 125,
+                x: 620 + index * 125,
                 y: 250
             },
             data: action2
@@ -6021,10 +6179,10 @@ var buildFlowNodesAndEdges = function(sources2, destinations2, actions) {
 };
 var _buildFlowNodesAndEdges = buildFlowNodesAndEdges(sources, destinations, action), nodes = _buildFlowNodesAndEdges.nodes, edges = _buildFlowNodesAndEdges.edges;
 // src/icons-components/monitors/index.tsx
-var import_react50 = __toESM(require("react"));
+var import_react51 = __toESM(require("react"));
 // src/icons-components/styled.ts
-var import_styled_components43 = __toESM(require("styled-components"));
-var IconWrapper3 = import_styled_components43.default.div(_templateObject136(), function(param) {
+var import_styled_components44 = __toESM(require("styled-components"));
+var IconWrapper3 = import_styled_components44.default.div(_templateObject138(), function(param) {
     var size = param.size;
     return size || 24;
 }, function(param) {
@@ -6034,251 +6192,251 @@ var IconWrapper3 = import_styled_components43.default.div(_templateObject136(), 
 // src/icons-components/monitors/index.tsx
 var LogsIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(logs_grey_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(logs_grey_default, null));
 };
 var LogsFocusIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(logs_blue_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(logs_blue_default, null));
 };
 var TraceIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(tree_structure_grey_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(tree_structure_grey_default, null));
 };
 var TraceFocusIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(tree_structure_blue_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(tree_structure_blue_default, null));
 };
 var MetricsIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(chart_line_grey_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(chart_line_grey_default, null));
 };
 var MetricsFocusIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react50.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react50.default.createElement(chart_line_blue_default, null));
+    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(chart_line_blue_default, null));
 };
 // src/icons-components/actions/index.tsx
-var import_react51 = __toESM(require("react"));
+var import_react52 = __toESM(require("react"));
 var AddClusterInfoIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(cluster_attr_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(cluster_attr_default, null));
 };
 var DeleteAttributeIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(delete_attr_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(delete_attr_default, null));
 };
 var RenameAttributeIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(rename_attr_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(rename_attr_default, null));
 };
 var ErrorSamplerIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(error_sampler_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(error_sampler_default, null));
 };
 var PiiMaskingIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(pii_masking_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(pii_masking_default, null));
 };
 var LatencySamplerIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(latency_sampler_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(latency_sampler_default, null));
 };
 var ProbabilisticSamplerIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react51.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react51.default.createElement(probabilistic_sampler_default, null));
+    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(probabilistic_sampler_default, null));
 };
 // src/icons-components/app/index.tsx
-var import_react52 = __toESM(require("react"));
+var import_react53 = __toESM(require("react"));
 var PlusIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(plus_default, null));
+    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(plus_default, null));
 };
 var BackIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react52.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react52.default.createElement(back_default, null));
+    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(back_default, null));
 };
 var RightArrowIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(arrow_right_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(arrow_right_default, null));
 };
 var ChargeIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(charge_rect_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(charge_rect_default, null));
 };
 var ConnectIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(connect_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(connect_default, null));
 };
 var NoteIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(note_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(note_default, null));
 };
 var WhiteArrowIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(white_arrow_right_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(white_arrow_right_default, null));
 };
 var LinkIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(link_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(link_default, null));
 };
 var ExpandIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(expand_arrow_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(expand_arrow_default, null));
 };
 var CheckIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(check_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(check_default, null));
 };
 var CopyIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(copy_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(copy_default, null));
 };
 var CopiedIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(copied_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(copied_default, null));
 };
 var YamlIconIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(yaml_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(yaml_default, null));
 };
 var GreenCheckIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(green_check_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(green_check_default, null));
 };
 var RedErrorIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(red_error_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(red_error_default, null));
 };
 var BlueInfoIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(blue_info_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(blue_info_default, null));
 };
 var BellIcon = function(_param) /* @__PURE__ */ {
     var size = _param.size, color = _param.color, props = _object_without_properties(_param, [
         "size",
         "color"
     ]);
-    return import_react52.default.createElement(IconWrapper3, _object_spread({
+    return import_react53.default.createElement(IconWrapper3, _object_spread({
         size: size,
         color: color
-    }, props), /* @__PURE__ */ import_react52.default.createElement(bell_default, null));
+    }, props), /* @__PURE__ */ import_react53.default.createElement(bell_default, null));
 };
 // src/icons-components/side.menu/index.tsx
-var import_react53 = __toESM(require("react"));
+var import_react54 = __toESM(require("react"));
 var FocusOverviewIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(focus_overview_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(focus_overview_default, null));
 };
 var UnFocusOverviewIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(unfocus_overview_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(unfocus_overview_default, null));
 };
 var FocusSourcesIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(sources_focus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(sources_focus_default, null));
 };
 var UnFocusSourcesIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(sources_unfocus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(sources_unfocus_default, null));
 };
 var FocusDestinationsIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(destinations_focus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(destinations_focus_default, null));
 };
 var UnFocusDestinationsIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(destinations_unfocus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(destinations_unfocus_default, null));
 };
 var FocusActionIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(transform_focus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(transform_focus_default, null));
 };
 var UnFocusActionIcon = function(_param) /* @__PURE__ */ {
     var props = _extends({}, _object_destructuring_empty(_param));
-    return import_react53.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react53.default.createElement(transform_unfocus_default, null));
+    return import_react54.default.createElement(IconWrapper3, _object_spread({}, props), /* @__PURE__ */ import_react54.default.createElement(transform_unfocus_default, null));
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

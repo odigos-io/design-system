@@ -36,7 +36,7 @@ const sources = [
     kind: 'Deployment',
     namespace: 'default',
     metrics: {
-      data_transfer: '3.8 KB/s',
+      data_transfer: '0 Byte transfered',
       cpu_usage: '3.8%',
       memory_usage: '3.8%',
     },
@@ -357,7 +357,7 @@ export const buildFlowNodesAndEdges = (
 
   // Create the center node
   const centerXPossition =
-    actions?.length > 0 ? actions?.length * 150 + 600 : 450;
+    actions?.length > 0 ? actions?.length * 150 + 600 : 600;
   nodes.push({
     id: centerNodeId,
     type: 'custom',
@@ -387,7 +387,7 @@ export const buildFlowNodesAndEdges = (
       nodes.push({
         id: metricNodeId,
         type: 'metric',
-        position: { x: xOffsetNamespace + 250, y: sourceyOffset + index * 100 },
+        position: { x: xOffsetNamespace + 300, y: sourceyOffset + index * 100 },
         data: { metrics: source.metrics },
       });
       edges.push({
@@ -483,7 +483,7 @@ export const buildFlowNodesAndEdges = (
     nodes.push({
       id: actionNodeId,
       type: 'action',
-      position: { x: 550 + index * 125, y: 250 },
+      position: { x: 620 + index * 125, y: 250 },
       data: action,
     });
     edges.push({
