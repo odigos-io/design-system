@@ -277,7 +277,9 @@ var LANGUAGES_LOGOS = {
   // TODO: good icon
   "no containers": `${BASE_URL}default.svg`,
   // TODO: good icon
-  "no running pods": `${BASE_URL}default.svg`
+  "no running pods": `${BASE_URL}default.svg`,
+  // TODO: good icon
+  nginx: `${BASE_URL}nginx.svg`
   // TODO: good icon
 };
 

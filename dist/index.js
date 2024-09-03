@@ -2442,7 +2442,9 @@ var LANGUAGES_LOGOS = {
     // TODO: good icon
     "no containers": "".concat(BASE_URL, "default.svg"),
     // TODO: good icon
-    "no running pods": "".concat(BASE_URL, "default.svg")
+    "no running pods": "".concat(BASE_URL, "default.svg"),
+    // TODO: good icon
+    nginx: "".concat(BASE_URL, "nginx.svg")
 };
 // src/assets/icons/monitors/logs-grey.svg
 var React17 = __toESM(require("react"));
